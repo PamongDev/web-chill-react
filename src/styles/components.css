@@ -1,20 +1,37 @@
 /* =========================================================
    CHILL — REUSABLE COMPONENTS
+   Komponen yang dipakai di lebih dari satu halaman.
    ========================================================= */
+
+
+/* =========================================================
+   BUTTON
+   Pakai: .button + .button-primary | .button-secondary | .button-outline
+   Opsional: .button-block (full width)
+========================================================= */
 
 .button {
     min-height: 46px;
+
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 0.55rem;
-    padding: 0.7rem 1.15rem;
+    gap: var(--space-2);
+
+    padding: var(--space-3) var(--space-5);
+
     border: 1px solid transparent;
-    border-radius: 0.5rem;
-    font-size: 0.9rem;
-    font-weight: 800;
+    border-radius: var(--radius-md);
+
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+
     cursor: pointer;
-    transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast);
+
+    transition:
+        transform var(--transition-fast),
+        background-color var(--transition-fast),
+        border-color var(--transition-fast);
 }
 
 .button:hover {
@@ -24,70 +41,24 @@
 .button:active {
     transform: translateY(0);
 }
-.hero-mute-button {
-    position: absolute;
-    right: var(--container-padding);
-    bottom: var(--space-8);
 
-    width: 44px;
-    height: 44px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 0;
-
-    background: var(--color-overlay);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-full);
-
-    color: var(--color-text-primary);
-
-    cursor: pointer;
-
-    z-index: 3;
-
-    transition:
-        background-color var(--transition-fast),
-        border-color var(--transition-fast),
-        transform var(--transition-fast);
-}
-
-.hero-mute-button:hover {
-    background: var(--color-surface-hover);
-    border-color: var(--color-border-hover);
-    transform: scale(1.05);
-}
-
-.hero-mute-button:active {
-    transform: scale(0.95);
-}
-
-.hero-mute-button:focus-visible {
+.button:focus-visible {
     outline: 2px solid var(--color-border-focus);
     outline-offset: 2px;
 }
 
-.hero-mute-icon {
-    width: 20px;
-    height: 20px;
-
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 1.8;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+.button:disabled,
+.button[aria-disabled="true"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
 }
 
-/* Default: video muted */
-.icon-unmuted {
-    display: none;
+.button-block {
+    width: 100%;
 }
 
-.icon-muted {
-    display: block;
-}
+/* Primary */
 
 .button-primary {
     background: var(--color-primary);
@@ -102,6 +73,8 @@
     background: var(--color-primary-active);
 }
 
+/* Secondary (di atas gambar/video, ada blur) */
+
 .button-secondary {
     background: var(--color-overlay-light);
     border-color: var(--color-border-hover);
@@ -113,17 +86,199 @@
     background: var(--color-overlay);
 }
 
+.button-secondary:active {
+    background: var(--color-overlay-heavy);
+}
+
+/* Outline (pengganti .btn-google) */
+
+.button-outline {
+    background: transparent;
+    border-color: var(--color-border);
+    color: var(--color-text-primary);
+}
+
+.button-outline:hover {
+    background: var(--color-card-hover);
+    border-color: var(--color-border-hover);
+}
+
+.button-outline:active {
+    background: var(--color-card-active);
+}
+
+
+/* =========================================================
+   ICON BUTTON
+========================================================= */
+
+.icon-button {
+    width: 40px;
+    height: 40px;
+
+    display: grid;
+    place-items: center;
+
+    background: transparent;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+
+    color: var(--color-text-primary);
+
+    cursor: pointer;
+
+    transition:
+        background-color var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+.icon-button:hover {
+    background: var(--color-surface-hover);
+    border-color: var(--color-border-hover);
+}
+
+.icon-button:focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 2px;
+}
+
+.icon-button span {
+    font-size: 1.5rem;
+    line-height: 1;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   EYEBROW (label kecil di atas judul)
+   Pengganti .hero-kicker, .section-eyebrow, .welcome-label
+   Variasi: .eyebrow-accent (warna merah)
+========================================================= */
+
+.eyebrow {
+    display: block;
+
+    margin: 0 0 var(--space-2);
+
+    color: var(--color-text-secondary);
+
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-extrabold);
+    letter-spacing: 0.18em;
+}
+
+.eyebrow-accent {
+    color: var(--color-primary-light);
+}
+
+
+/* =========================================================
+   FORM
+   Pakai: .form-group > label + input.input
+========================================================= */
+
+.form-group {
+    margin-bottom: var(--space-5);
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: var(--space-2);
+
+    color: var(--color-text-primary);
+
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+}
+
+.input {
+    width: 100%;
+
+    padding: var(--space-3) var(--space-4);
+
+    color: var(--color-text-primary);
+    background-color: var(--color-input);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    outline: none;
+
+    transition:
+        border-color var(--transition-fast),
+        background-color var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+.input::placeholder {
+    color: var(--color-input-placeholder);
+}
+
+.input:hover {
+    background-color: var(--color-input-hover);
+    border-color: var(--color-border-hover);
+}
+
+.input:focus {
+    background-color: var(--color-input-focus);
+    border-color: var(--color-border-focus);
+    box-shadow: 0 0 0 3px var(--color-primary-alpha-12);
+}
+
+.input:disabled {
+    background-color: var(--color-input-disabled);
+    color: var(--color-text-disabled);
+    cursor: not-allowed;
+}
+
+/* Garis pemisah "atau" */
+
+.form-divider {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+
+    margin: var(--space-6) 0;
+
+    color: var(--color-text-muted);
+
+    font-size: var(--font-size-xs);
+}
+
+.form-divider::before,
+.form-divider::after {
+    content: "";
+
+    flex: 1;
+    height: 1px;
+
+    background-color: var(--color-border);
+}
+
+.form-divider span {
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   MOVIE CARD
+========================================================= */
+
 .movie-card {
     position: relative;
-    flex: 0 0 180px;
+
     overflow: hidden;
+
     border-radius: var(--radius-md);
     background: var(--color-card);
+
     cursor: pointer;
 }
 
 .movie-poster-wrap {
     position: relative;
+
     aspect-ratio: 2 / 3;
     overflow: hidden;
 }
@@ -131,14 +286,12 @@
 .movie-poster {
     width: 100%;
     height: 100%;
+
     display: block;
     object-fit: cover;
+
     transition: transform var(--transition-normal);
 }
-
-/* ========================================
-   MOVIE CARD OVERLAY
-======================================== */
 
 .movie-card-overlay {
     position: absolute;
@@ -164,23 +317,35 @@
     pointer-events: none;
 }
 
-.movie-card:hover .movie-card-overlay {
+/* Hover hanya di perangkat yang punya mouse */
+@media (hover: hover) {
+    .movie-card:hover .movie-card-overlay {
+        opacity: 1;
+    }
+
+    .movie-card:hover .movie-poster {
+        transform: scale(1.04);
+    }
+}
+
+/* Keyboard: overlay muncul saat card/link di dalamnya difokus */
+.movie-card:focus-within .movie-card-overlay {
     opacity: 1;
 }
 
-.movie-card:hover .movie-poster {
-    transform: scale(1.04);
-}
 .movie-title {
     margin: 0;
 
     color: var(--color-text-primary);
+
     font-size: var(--font-size-md);
     font-weight: var(--font-weight-semibold);
     line-height: var(--line-height-snug);
 
     display: -webkit-box;
     -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
     overflow: hidden;
 }
 
@@ -210,26 +375,30 @@
 .loading-card,
 .error-card {
     min-height: 260px;
+
     display: grid;
     place-items: center;
+
+    padding: var(--space-4);
+
     border: 1px solid var(--color-border);
-    border-radius: 0.55rem;
+    border-radius: var(--radius-md);
+
     background: var(--color-card);
     color: var(--color-text-secondary);
     text-align: center;
-    padding: 1rem;
 }
-/* ========================================
+
+
+/* =========================================================
    PROFILE MENU
-======================================== */
+========================================================= */
 
 .profile-menu {
     position: relative;
 }
 
-/* ========================================
-   PROFILE TRIGGER
-======================================== */
+/* Trigger */
 
 .profile-trigger {
     display: flex;
@@ -244,6 +413,12 @@
     color: var(--color-text-primary);
 
     cursor: pointer;
+}
+
+.profile-trigger:focus-visible {
+    outline: 2px solid var(--color-border-focus);
+    outline-offset: 4px;
+    border-radius: var(--radius-md);
 }
 
 .profile-avatar {
@@ -285,15 +460,13 @@
     transform: rotate(180deg);
 }
 
-/* ========================================
-   DROPDOWN
-======================================== */
+/* Dropdown */
 
 .profile-dropdown {
     position: absolute;
-
     top: calc(100% + var(--space-3));
     right: 0;
+    z-index: 100;
 
     width: 240px;
 
@@ -314,8 +487,6 @@
         opacity var(--transition-fast),
         visibility var(--transition-fast),
         transform var(--transition-fast);
-
-    z-index: 100;
 }
 
 .profile-menu.is-open .profile-dropdown {
@@ -324,14 +495,9 @@
     transform: translateY(0);
 }
 
-/* ========================================
-   DROPDOWN HEADER
-======================================== */
-
 .profile-dropdown-header {
     display: flex;
     align-items: center;
-
     gap: var(--space-3);
 
     padding: var(--space-3);
@@ -344,7 +510,6 @@
     object-fit: cover;
 
     border-radius: var(--radius-md);
-
     border: 1px solid var(--color-border);
 }
 
@@ -366,17 +531,12 @@
     margin-top: 2px;
 
     color: var(--color-text-muted);
-
     font-size: var(--font-size-xs);
 
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
-
-/* ========================================
-   DIVIDER
-======================================== */
 
 .profile-dropdown-divider {
     height: 1px;
@@ -385,10 +545,6 @@
 
     background: var(--color-border);
 }
-
-/* ========================================
-   DROPDOWN ITEM
-======================================== */
 
 .profile-dropdown-item {
     width: 100%;
@@ -417,20 +573,19 @@
         color var(--transition-fast);
 }
 
-.profile-dropdown-item:hover {
+.profile-dropdown-item:hover,
+.profile-dropdown-item:focus-visible {
     background: var(--color-card-hover);
     color: var(--color-text-primary);
+    outline: none;
 }
-
-/* ========================================
-   LOGOUT
-======================================== */
 
 .profile-logout {
     color: var(--color-danger);
 }
 
-.profile-logout:hover {
-    background: rgba(229, 9, 20, 0.10);
+.profile-logout:hover,
+.profile-logout:focus-visible {
+    background: var(--color-primary-alpha-10);
     color: var(--color-primary-light);
 }
