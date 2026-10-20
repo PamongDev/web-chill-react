@@ -64,7 +64,7 @@ function Login(){
                                 </label>
 
                                 <Link to="/forgot-password" className="forgot-link">
-                                Forgot Password?
+                                 Forgot Password?
                                 </Link>
                             </div>
 
