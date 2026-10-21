@@ -1,7 +1,98 @@
-import { Link } from "react-router-dom";
+import { data, Link } from "react-router-dom";
 import '../../styles/auth.css';
+import { useState } from "react";
+
+
+
 
 function Register() {
+
+    const ErrorMessage = ({message}) =>{
+        if (!message) return null;
+
+        return (
+            <span className="error-text">{message}</span>
+        );
+    }
+
+    const database = [{
+        username : "fahmi",
+        email : "fahmi@gmail.com",
+        password : "123",
+        cpassword : "123"
+    }];
+
+    const [dataProfile, setDataProfile] = useState(
+        {
+            username : "",
+            email : "",
+            password : "",
+            cpassword : ""
+        }
+    );
+
+    const [message, setMessage] = useState({
+        username : "",
+        email : "",
+        password : "",
+        global : ""
+    });
+
+
+
+    const handleChange = (e) =>{
+        const { name, value } = e.target;
+        setDataProfile({
+            ...dataProfile,
+            [name] : value
+        })
+        
+        if (name === "username"){            
+            if (database[0].username === value){
+                setMessage({...message, username : "Username telah terdaftar, coba gunakan username lain"});
+                console.log(value);
+            }else{
+                setMessage({...message, username : ""});
+            }
+        }
+        if (name === "email"){
+            if (database[0].email === value){
+                setMessage({...message, email : "Email telah terdaftar, coba gunakan email lain"});
+            }else{
+                setMessage("");
+            }
+        }
+        if (name === "cpassword"){
+            if (value !== dataProfile.password){
+                setMessage({...message, password : "Password tidak cocok"});
+            }else {
+                setMessage({...message, password : ""})
+            }
+        }
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        // validasi kosong
+
+        if (!dataProfile.username || !dataProfile.email || !dataProfile.password || !dataProfile.cpassword){
+            setMessage({...message, global : "Semua data wajib diisi"})
+            return;
+        }
+        // validasi password cocok
+        if (dataProfile.password !== dataProfile.cpassword){
+            setMessage({...message, global : "data password tidak cocok"})
+            return;
+        }
+        // username belum digunakan
+
+        // berhasil
+        setMessage({...message, global : "akun berhasil dibuat"})
+        console.log("data akan dikirimkan ke database");
+    }
+
+
     return (
         <div className="page">
 
@@ -41,11 +132,7 @@ function Register() {
                     </div>
 
 
-                    <form
-                        action="/register"
-                        method="post"
-                        className="login-form"
-                    >
+                    <form onSubmit={handleSubmit}>
 
                         <div className="form-group">
 
@@ -55,14 +142,16 @@ function Register() {
 
                             <input
                                 type="text"
-                                id="username"
                                 name="username"
                                 placeholder="Choose a username"
-                                autocomplete="off"
+                                autoComplete="off"
                                 className="input"
+                                value={dataProfile.username}
+                                onChange={handleChange}
                                 required
-                                
+
                             />
+                            <ErrorMessage message={message.username}/>
 
                         </div>
 
@@ -74,13 +163,15 @@ function Register() {
 
                             <input
                                 type="email"
-                                id="email"
                                 name="email"
                                 placeholder="Enter your email"
-                                autocomplete="off"
+                                autoComplete="off"
                                 className="input"
+                                value={dataProfile.email}
+                                onChange={handleChange}
                                 required
                             />
+                            <ErrorMessage message={message.email}/>
 
                         </div>
 
@@ -92,11 +183,12 @@ function Register() {
 
                             <input
                                 type="password"
-                                id="password"
                                 name="password"
                                 placeholder="Create a password"
-                                autocomplete="new-password"
+                                autoComplete="new-password"
                                 className="input"
+                                value={dataProfile.password}
+                                onChange={handleChange}
                                 required
                             />
 
@@ -110,16 +202,18 @@ function Register() {
 
                             <input
                                 type="password"
-                                id="confirm-password"
-                                name="confirm_password"
+                                name="cpassword"
                                 placeholder="Repeat your password"
-                                autocomplete="new-password"
+                                autoComplete="new-password"
                                 className="input"
+                                value={dataProfile.cpassword}
+                                onChange={handleChange}
                                 required
                             />
+                            <ErrorMessage message={message.password}/>
 
                         </div>
-
+                        <ErrorMessage message={message.global}/>
                         <button
                             type="submit"
                             className="button button-primary button-block"
@@ -149,7 +243,6 @@ function Register() {
             </p>
 
         </footer>
-
     </div>
     )
 }
