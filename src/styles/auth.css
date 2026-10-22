@@ -39,7 +39,7 @@
 
 .login-card {
     width: 100%;
-    max-width: 820px;
+    max-width: var(--auth-card-max-width);
 
     display: grid;
     grid-template-columns: 40% 60%;
@@ -47,11 +47,10 @@
     overflow: hidden;
 
     background-color: var(--color-card);
-
     border: 1px solid var(--color-border);
-    border-radius: var(--radius-xl);
+    border-radius: var(--auth-radius);
 
-    box-shadow: var(--shadow-xl);
+    box-shadow: var(--shadow-lg);
 }
 
 
@@ -216,8 +215,7 @@
     justify-content: center;
 
     min-width: 0;
-
-    padding: var(--space-8);
+    padding: var(--auth-panel-padding);
 
     background-color: var(--color-surface);
 }
@@ -226,7 +224,7 @@
 /* Form heading */
 
 .form-header {
-    margin-bottom: var(--space-6);
+    margin-bottom: var(--auth-header-gap);
 }
 
 .form-header h2 {
@@ -246,6 +244,10 @@
 
     font-size: var(--font-size-sm);
     line-height: var(--line-height-normal);
+}
+
+.login-form-panel .form-group {
+    margin-bottom: var(--auth-field-gap);
 }
 
 
@@ -269,11 +271,8 @@
 
 .login-form-panel .input {
     box-sizing: border-box;
-
     width: 100%;
-    min-width: 0;
-    min-height: 42px;
-
+    min-height: var(--auth-input-height);
     padding: 10px 12px;
 
     font-size: var(--font-size-sm);
@@ -283,10 +282,7 @@
 /* Buttons */
 
 .login-form-panel .button {
-    box-sizing: border-box;
-
-    min-height: 42px;
-
+    min-height: var(--auth-button-height);
     padding: 10px 14px;
 
     font-size: var(--font-size-sm);
