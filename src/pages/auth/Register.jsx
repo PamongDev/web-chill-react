@@ -1,26 +1,21 @@
-import { data, Link } from "react-router-dom";
-import '../../styles/auth.css';
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import '../../styles/auth.css';
 
 
 
 
 function Register() {
+    const navigate = useNavigate();
+    const ErrorMessage = ({ message }) => {
+    return (
+        <span className="error-text" aria-live="polite">
+            {message || "\u00A0"}
+        </span>
+    );
+    };
 
-    const ErrorMessage = ({message}) =>{
-        if (!message) return null;
-
-        return (
-            <span className="error-text">{message}</span>
-        );
-    }
-
-    const database = [{
-        username : "fahmi",
-        email : "fahmi@gmail.com",
-        password : "123",
-        cpassword : "123"
-    }];
+    const apiKey = "http://localhost:3000/users";
 
     const [dataProfile, setDataProfile] = useState(
         {
@@ -38,59 +33,104 @@ function Register() {
         global : ""
     });
 
-
-
-    const handleChange = (e) =>{
+    const handleChange = (e) => {
         const { name, value } = e.target;
+        
+        // 1. Update data form
         setDataProfile({
             ...dataProfile,
-            [name] : value
-        })
+            [name]: value
+        });
         
-        if (name === "username"){            
-            if (database[0].username === value){
-                setMessage({...message, username : "Username telah terdaftar, coba gunakan username lain"});
-                console.log(value);
-            }else{
-                setMessage({...message, username : ""});
+        // 2. Siapkan wadah untuk pesan baru agar tidak bentrok
+        let newMessages = { ...message, global: "" };
+
+        // 3. Validasi Real-time HANYA untuk Password & Hapus error saat ngetik
+        if (name === "username") newMessages.username = "";
+        if (name === "email") newMessages.email = "";
+        
+        if (name === "cpassword" || name === "password") {
+            const currentPass = name === "password" ? value : dataProfile.password;
+            const currentCPass = name === "cpassword" ? value : dataProfile.cpassword;
+            
+            if (currentCPass !== "" && currentPass !== currentCPass) {
+                newMessages.password = "Password tidak cocok";
+            } else {
+                newMessages.password = "";
             }
         }
-        if (name === "email"){
-            if (database[0].email === value){
-                setMessage({...message, email : "Email telah terdaftar, coba gunakan email lain"});
-            }else{
-                setMessage("");
-            }
-        }
-        if (name === "cpassword"){
-            if (value !== dataProfile.password){
-                setMessage({...message, password : "Password tidak cocok"});
-            }else {
-                setMessage({...message, password : ""})
-            }
-        }
-    }
+
+        setMessage(newMessages);
+        };
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        // validasi kosong
-
-        if (!dataProfile.username || !dataProfile.email || !dataProfile.password || !dataProfile.cpassword){
-            setMessage({...message, global : "Semua data wajib diisi"})
-            return;
+        // 1. Validasi Kosong (Pengecekan awal)
+        if (!dataProfile.username || !dataProfile.email || !dataProfile.password || !dataProfile.cpassword) {
+            setMessage({ ...message, global: "Semua data wajib diisi" });
+            return; // Stop fungsi di sini
         }
-        // validasi password cocok
-        if (dataProfile.password !== dataProfile.cpassword){
-            setMessage({...message, global : "data password tidak cocok"})
-            return;
-        }
-        // username belum digunakan
 
-        // berhasil
-        setMessage({...message, global : "akun berhasil dibuat"})
-        console.log("data akan dikirimkan ke database");
-    }
+        // 2. Validasi Password Cocok
+        if (dataProfile.password !== dataProfile.cpassword) {
+            setMessage({ ...message, password: "Password tidak cocok" });
+            return; // Stop fungsi di sini
+        }
+
+        // 3. Cek ke json-server (GET) apakah username/email sudah terdaftar
+        fetch(apiKey)
+            .then((response) => response.json())
+            .then((database) => {
+                // Mengecek ke seluruh data (bukan cuma index [0])
+                const isUsernameExist = database.some((user) => user.username === dataProfile.username);
+                const isEmailExist = database.some((user) => user.email === dataProfile.email);
+
+                if (isUsernameExist) {
+                    setMessage({ ...message, username: "Username telah terdaftar, coba yang lain." });
+                    return; // Stop fungsi di sini
+                }
+
+                if (isEmailExist) {
+                    setMessage({ ...message, email: "Email telah terdaftar, coba yang lain." });
+                    return; // Stop fungsi di sini
+                }
+
+                // 4. Jika semua validasi LOLOS, simpan data ke json-server (POST)
+                const newUser = {
+                    username: dataProfile.username,
+                    email: dataProfile.email,
+                    password: dataProfile.password
+                    // cpassword tidak usah disimpan ke database
+                };
+
+                fetch(apiKey, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(newUser)
+                })
+                .then((response) => {
+                    if (response.ok) {
+                        alert("Registrasi Berhasil! Data sudah masuk ke users.json");
+                        
+                        // Kosongkan form
+                        setDataProfile({ username: "", email: "", password: "", cpassword: "" });
+                        setMessage({ username: "", email: "", password: "", global: "" });
+                        
+                        // Di sini kamu bisa pakai useNavigate dari react-router-dom untuk redirect ke /login
+                        navigate("/sign-in");
+                    }
+                })
+                .catch((error) => console.error("Gagal POST data:", error));
+
+            })
+            .catch((error) => {
+                console.error("Gagal GET data:", error);
+                setMessage({ ...message, global: "Gagal terhubung ke server." });
+            });
+    };
 
 
     return (
@@ -149,10 +189,8 @@ function Register() {
                                 value={dataProfile.username}
                                 onChange={handleChange}
                                 required
-
                             />
                             <ErrorMessage message={message.username}/>
-
                         </div>
 
                         <div className="form-group">
@@ -191,6 +229,7 @@ function Register() {
                                 onChange={handleChange}
                                 required
                             />
+                            <ErrorMessage message={message.password}/>
 
                         </div>
 
@@ -213,7 +252,6 @@ function Register() {
                             <ErrorMessage message={message.password}/>
 
                         </div>
-                        <ErrorMessage message={message.global}/>
                         <button
                             type="submit"
                             className="button button-primary button-block"
