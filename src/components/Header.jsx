@@ -1,4 +1,14 @@
-export default function Header() {
+import { useNavigate } from "react-router-dom";
+import useDropdown from "../hooks/useDropdown";
+import "../styles/components.css";
+export default function Header({ username, email }) {
+    const navigate = useNavigate();
+    const { isOpen, handletoogle, menuRef } = useDropdown();
+
+    const handleLogout = () => {
+        localStorage.removeItem("userLoggedIn");
+        navigate("/sign-in");
+    }
     return (
         <header className="site-header">
             <div className="container navbar-wrap">
@@ -20,13 +30,14 @@ export default function Header() {
                             <span aria-hidden="true">⌕</span>
                         </button>
 
-                        <div className="profile-menu">
+                        <div className={`profile-menu ${isOpen ? "is-open" : ""}`} ref={menuRef}>
 
                             <button
                                 className="profile-trigger"
                                 type="button"
+                                onClick={handletoogle}
                                 aria-label="Open profile menu"
-                                aria-expanded="false"
+                                aria-expanded={isOpen}
                             >
                                 <img
                                     src="assets/images/main/logo app.png"
@@ -53,8 +64,8 @@ export default function Header() {
                                     />
 
                                     <div className="profile-user-info">
-                                        <span className="profile-name">{user.username}</span>
-                                        <span className="profile-email">{user.email}</span>
+                                        <span className="profile-name">{username}</span>
+                                        <span className="profile-email">{email}</span>
                                     </div>
                                 </div>
 
@@ -84,7 +95,7 @@ export default function Header() {
 
                                 <button
                                     className="profile-dropdown-item profile-logout"
-                                    type="button"
+                                    type="button" onClick={handleLogout}
                                 >
                                     <span>Logout</span>
                                 </button>
