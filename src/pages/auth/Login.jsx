@@ -1,7 +1,69 @@
+import { useState,  } from 'react';
 import '../../styles/auth.css';
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 function Login(){
+    const ErrorMessage = ({ message }) => {
+        return (
+            <span className="error-text" aria-live="polite">
+                {message || "\u00A0"}
+            </span>
+        );
+    };
+    const [ dataLogin, setdataLogin ] = useState({
+        username : "",
+        password : ""
+    });
+    const apiKey = "http://localhost:3000/users";
+    const navigate = useNavigate();
+
+    const [ message, setMessage ] = useState("");
+
+    const handleChange = (e) =>{
+        const {name, value} = e.target;
+        setdataLogin({
+            ...dataLogin,
+            [name]:value
+        })
+    }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        if (!dataLogin.username || !dataLogin.password){
+            setMessage("Username dan Password wajib diisi");
+            return
+        }
+        fetch(apiKey)
+            .then((response)=>response.json())
+            .then((database)=>{
+                const foundUser = database.find((user)=> user.username === dataLogin.username);
+                if(!foundUser){
+                    setMessage("Username belum terdaftar");
+                    return;
+                }
+                const isCorrectPassword = foundUser.password === dataLogin.password;
+                if(!isCorrectPassword){
+                    setMessage("Username & Password salah");
+                    return;
+                }
+                setMessage("Berhasil Login");
+                console.log("berhasil login")
+                
+                const userSession = {
+                    username : foundUser.username,
+                    email : foundUser.email
+                };
+                localStorage.setItem("userLoggedIn", JSON.stringify(userSession))
+                navigate("/");
+
+                
+            })
+            .catch((error)=>{
+                console.error("Gagal Terhubung ke Server", error)
+                setMessage("Terjadi Kesalahan");
+            })
+
+    } 
+    
     return (
         <div className='page'>
             <main className="auth-main">
@@ -37,9 +99,10 @@ function Login(){
                         <h2>Sign in</h2>
                         <p>Enter your account details to continue.</p>
                     </div>
+                    <ErrorMessage message={message}/>
 
 
-                    <form action="/login" method="post" className="login-form">
+                    <form className="login-form" onSubmit={handleSubmit}>
 
                         <div className="form-group">
                             <label htmlFor="username">
@@ -53,6 +116,7 @@ function Login(){
                                 className="input"
                                 placeholder="Enter your username"
                                 autoComplete="off"
+                                onChange={handleChange}
                                 required
                             />
                         </div>
@@ -74,6 +138,7 @@ function Login(){
                                 name="password"
                                 placeholder="Enter your password"
                                 autoComplete="current-password"
+                                onChange={handleChange}
                                 className="input"
                                 required
                             />

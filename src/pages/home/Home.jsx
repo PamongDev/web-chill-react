@@ -1,6 +1,25 @@
 import '../../styles/home.css';
+import { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
 
 function Home(){
+    const navigate = useNavigate();
+    const [user, setUser] = useState(null);
+
+    useEffect(()=> {
+        // cek localstorage
+        const sessionData = localStorage.getItem('userLoggedIn');
+        if(sessionData){
+            setUser(JSON.parse(sessionData));
+            
+        } else{
+            navigate("/sign-in")
+        }
+    }, [navigate])
+
+    // ni kalo user masih kosong, tidak ada isinya, jangan nampilin apa2
+    if (!user) return null;
+
     return(
         <>
         <header className="site-header">
@@ -56,8 +75,8 @@ function Home(){
                                     />
 
                                     <div className="profile-user-info">
-                                        <span className="profile-name">Muhamad Fahmi Ammar</span>
-                                        <span className="profile-email">muhamad@fahmi.am</span>
+                                        <span className="profile-name">{user.username}</span>
+                                        <span className="profile-email">{user.email}</span>
                                     </div>
                                 </div>
 
@@ -265,7 +284,7 @@ function Home(){
                 </div>
             </div>
         </footer>
-        <script src="script/main.js" defer></script>
+        <script src="../../script/main.js" defer></script>
     </>)
 }
 
