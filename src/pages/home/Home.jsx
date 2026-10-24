@@ -1,11 +1,33 @@
 import '../../styles/home.css';
 import { useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Header from '../../components/Header';
+import MovieCard from '../../components/MovieCard';
+
+
+function normalizeMovie(movie, index) {
+    return {
+        id: movie.id ?? index + 1,
+        title: movie.title ?? `Movie ${index + 1}`,
+        poster: movie.poster ?? movie.posterPath ?? movie.image ?? "",
+        trailer: movie.trailer ?? movie.trailerPath ?? movie.video ?? "",
+        year: movie.year ?? movie.releaseYear ?? "—",
+        rating: movie.rating ?? "—",
+        duration: movie.duration ?? "—",
+        genres: Array.isArray(movie.genres) ? movie.genres : 
+                Array.isArray(movie.genre) ? movie.genre : 
+                typeof movie.genre === "string" ? movie.genre.split(",").map(i => i.trim()) : [],
+    };
+}
 
 function Home(){
+
+    // login logic
     const navigate = useNavigate();
     const [user, setUser] = useState(null);
+
+    const [movies, setMovies] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(()=> {
         // cek localstorage
@@ -17,9 +39,38 @@ function Home(){
             navigate("/sign-in")
         }
     }, [navigate])
+    
+    // rendering movies
+     useEffect(() => {
+        const loadMovies = async () => {
+            try {
+                // Pastikan file dummy-movie.json ada di folder public/data/
+                const response = await fetch("../data/dummy-movie.json");
+                if (!response.ok) throw new Error("Gagal mengambil data");
+                
+                const json = await response.json();
+                const rawMovies = Array.isArray(json) ? json : json.movies;
+                
+                setMovies(rawMovies.map(normalizeMovie));
+            } catch (error) {
+                console.log("cek");
+                console.error("Error:", error);
+            } finally {
+                setIsLoading(false);
+            }
+        };
+
+        loadMovies();
+    }, []);
 
     // ni kalo user masih kosong, tidak ada isinya, jangan nampilin apa2
-    if (!user) return null;
+    if (!user) return null;   
+
+    // Pecah data film seperti di skrip lamamu
+    const continueWatching = movies.slice(0, 6);
+    const topMovies = movies.slice(3, 9);
+    const trending = movies.slice(7, 13);
+    const newReleases = movies.slice(-6);
 
     return(
         <>
@@ -116,9 +167,13 @@ function Home(){
                             <p className="section-eyebrow">KEEP WATCHING</p>
                             <h2 id="continue-title">Continue Watching</h2>
                         </div>
-                        <a className="section-link" href="#">See All <span aria-hidden="true">→</span></a>
+                        <Link className="section-link" to="/movies">See All <span aria-hidden="true">→</span></Link>
                     </div>
-                    <div className="movie-row" id="continue-watching-row"></div>
+                    <div className="movie-row" id="continue-watching-row">
+                        {isLoading ? <p>Loading movies...</p> : continueWatching.map(movie => (
+                                <MovieCard key={movie.id} movie={movie} />
+                            ))}
+                    </div>
                 </section>
 
                 <section className="movie-section" aria-labelledby="top-title">
@@ -127,9 +182,13 @@ function Home(){
                             <p className="section-eyebrow">POPULAR RIGHT NOW</p>
                             <h2 id="top-title">Top Movies &amp; Series</h2>
                         </div>
-                        <a className="section-link" href="#">See All <span aria-hidden="true">→</span></a>
+                        <Link className="section-link" to="/movies">See All <span aria-hidden="true">→</span></Link>
                     </div>
-                    <div className="movie-row" id="top-movies-row"></div>
+                    <div className="movie-row" id="top-movies-row">
+                        {isLoading ? <p>Loading movies...</p> : topMovies.map(movie => (
+                                <MovieCard key={movie.id} movie={movie} />
+                            ))}
+                    </div>
                 </section>
 
                 <section className="movie-section" aria-labelledby="trending-title">
@@ -138,9 +197,13 @@ function Home(){
                             <p className="section-eyebrow">WHAT PEOPLE ARE WATCHING</p>
                             <h2 id="trending-title">Trending Now</h2>
                         </div>
-                        <a className="section-link" href="#">See All <span aria-hidden="true">→</span></a>
+                        <Link className="section-link" to="/movies">See All <span aria-hidden="true">→</span></Link>
                     </div>
-                    <div className="movie-row" id="trending-row"></div>
+                    <div className="movie-row" id="trending-row">
+                        {isLoading ? <p>Loading movies...</p> : trending.map(movie => (
+                                <MovieCard key={movie.id} movie={movie} />
+                            ))}
+                    </div>
                 </section>
 
                 <section className="movie-section" id="series" aria-labelledby="release-title">
@@ -149,9 +212,13 @@ function Home(){
                             <p className="section-eyebrow">JUST ADDED</p>
                             <h2 id="release-title">New Releases</h2>
                         </div>
-                        <a className="section-link" href="#">See All <span aria-hidden="true">→</span></a>
+                        <Link className="section-link" to="/movies">See All <span aria-hidden="true">→</span></Link>
                     </div>
-                    <div className="movie-row" id="new-releases-row"></div>
+                    <div className="movie-row" id="new-releases-row">
+                        {isLoading ? <p>Loading movies...</p> : newReleases.map(movie => (
+                                <MovieCard key={movie.id} movie={movie} />
+                            ))}
+                    </div>
                 </section>
             </div>
         </main>

@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import useDropdown from "../hooks/useDropdown";
 import ProfileDropdown from "./ProfileDropdown";
 import "../styles/components.css";
+import HeaderNavbarMenus from "./HeaderNavbarMenus";
 export default function Header({ username, email }) {
     const navigate = useNavigate();
     const { isOpen, handletoogle, menuRef } = useDropdown();
@@ -18,12 +19,7 @@ export default function Header({ username, email }) {
                         <img src="assets/images/main/logo only no bg.png" alt="Chill"/>
                     </a>
 
-                    <div className="desktop-nav">
-                        <a href="#">Home</a>
-                        <a href="#movies">Movies</a>
-                        <a href="#series">Series</a>
-                        <a href="#playlist">Playlist</a>
-                    </div>
+                    <HeaderNavbarMenus></HeaderNavbarMenus>
 
                     <div className="nav-actions">
 
@@ -32,30 +28,11 @@ export default function Header({ username, email }) {
                         </button>
 
                         <div className={`profile-menu ${isOpen ? "is-open" : ""}`} ref={menuRef}>
-
-                            <button
-                                className="profile-trigger"
-                                type="button"
-                                onClick={handletoogle}
-                                aria-label="Open profile menu"
-                                aria-expanded={isOpen}
-                            >
-                                <img
-                                    src="assets/images/main/logo app.png"
-                                    alt="Fahmi"
-                                    className="profile-avatar"
-                                />
-
-                                <svg
-                                    className="profile-chevron"
-                                    viewBox="0 0 24 24"
-                                    aria-hidden="true"
-                                >
-                                    <path d="M6 9L12 15L18 9"></path>
-                                </svg>
-                            </button>
-
-                            <ProfileDropdown username={username} email={email} handleLogout={handleLogout}></ProfileDropdown>
+                            <ProfileDropdown username={username} email={email} 
+                            handleLogout={handleLogout}
+                            isOpen={isOpen}
+                            handletoogle={handletoogle}>
+                            </ProfileDropdown>
                         </div>
 
                     </div>

@@ -9,6 +9,11 @@ import Setting from "../pages/home/Settings.jsx";
 import HelpCenter from "../pages/home/HelpCenter.jsx";
 import Profile from "../pages/home/Profile.jsx";
 import Playlist from "../pages/home/Playlist.jsx";
+import Genres from "../pages/home/Genres.jsx";
+import Movies from "../pages/home/Movies.jsx";
+import Series from "../pages/home/Series.jsx";
+
+
 
 export const router = createBrowserRouter([
     {
@@ -46,5 +51,17 @@ export const router = createBrowserRouter([
     {
         path : "/settings",
         element : <Setting />
+    },
+    {
+        path : "/movies",
+        element : <Movies />
+    },
+    {
+        path : "/series",
+        element : <Series />
+    },
+    {
+        path : "/genres",
+        element : <Genres />
     },
 ])
