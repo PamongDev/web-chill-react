@@ -21,6 +21,7 @@ export function normalizeMovie(movie, index) {
         title: movie.title ?? `Movie ${index + 1}`,
         poster: movie.poster ?? movie.posterPath ?? movie.image ?? "",
         trailer: movie.trailer ?? movie.trailerPath ?? movie.video ?? "",
+        key: movie.key ?? movie.videoid ?? movie.link ?? "", 
         year: movie.year ?? movie.releaseYear ?? "—",
         rating: movie.rating ?? "—",
         duration: movie.duration ?? "—",

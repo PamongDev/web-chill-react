@@ -103,7 +103,6 @@
 
 .hero {
     position: relative;
-
     min-height: min(78vh, 800px);
 
     display: flex;
@@ -111,6 +110,7 @@
 
     overflow: hidden;
     isolation: isolate;
+    background: #0e0e0e;
 }
 
 .hero-video,
@@ -122,21 +122,48 @@
     height: 100%;
 }
 
+/* Container video berada di belakang konten */
 .hero-video {
+    position: absolute;
     z-index: -2;
 
-    object-fit: cover;
-    object-position: center;
+    top: 50%;
+    left: 50%;
 
-    filter: saturate(0.95);
+    /*
+      Memperbesar iframe untuk mengisi hero.
+      Rasio dasar video YouTube: 16:9.
+    */
+    width: max(100%, 177.78vh);
+    height: max(100%, 56.25vw);
+
+    transform: translate(-50%, -50%);
+    border: 0;
+
+    pointer-events: none;
 }
 
 .hero-overlay {
+    position: absolute;
+    inset: 0;
     z-index: -1;
 
-    background: 
-        linear-gradient(to right, rgba(14, 14, 14, 0.95) 0%, rgba(14, 14, 14, 0.4) 55%, transparent 100%),
-        linear-gradient(to top, var(--color-bg) 0%, rgba(14, 14, 14, 0) 25%);
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(14, 14, 14, 0.95) 0%,
+            rgba(14, 14, 14, 0.65) 35%,
+            rgba(14, 14, 14, 0.15) 75%,
+            rgba(14, 14, 14, 0.1) 100%
+        ),
+        linear-gradient(
+            to top,
+            var(--color-bg) 0%,
+            rgba(14, 14, 14, 0.3) 35%,
+            transparent 75%
+        );
 }
 
 .hero-content {
