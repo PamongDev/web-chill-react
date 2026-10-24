@@ -1,18 +1,42 @@
 import { useNavigate } from "react-router-dom";
+import { useState, useRef, useEffect } from "react";
+
 import useDropdown from "../hooks/useDropdown";
 import ProfileDropdown from "./ProfileDropdown";
 import "../styles/components.css";
 import HeaderNavbarMenus from "./HeaderNavbarMenus";
+
 export default function Header({ username, email }) {
     const navigate = useNavigate();
     const { isOpen, handletoogle, menuRef } = useDropdown();
+
+    // logic header
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(()=>{
+        const handleScroll = ()=>{
+            if(window.scrollY > 50){
+                setIsScrolled(true);
+            }else{
+                setIsScrolled(false)
+            }
+        }
+
+        window.addEventListener("scroll", handleScroll);
+
+        return () =>{
+            window.removeEventListener("scroll", handleScroll)
+        }
+    }, []);
+
+    
 
     const handleLogout = () => {
         localStorage.removeItem("userLoggedIn");
         navigate("/sign-in");
     }
     return (
-        <header className="site-header">
+        <header className={`site-header ${isScrolled ? "scrolled" : ""}`}>
             <div className="container navbar-wrap">
                 <nav className="navbar" aria-label="Main navigation">
                     <a className="brand" href="#" aria-label="Chill home">
