@@ -5,50 +5,8 @@
       "username": "fahmi",
       "email": "fahmi@gmail.com",
       "password": "123",
-      "cpassword": "123"
-    },
-    {
-      "username": "fahmi ammar",
-      "email": "fahmi123@gmail.com",
-      "password": "123",
-      "id": "uY78px2Enrg"
-    },
-    {
-      "username": "fahmi1233",
-      "email": "fahmi1232@gmail.com",
-      "password": "123",
-      "id": "p2FgvS17BKQ"
-    },
-    {
-      "username": "ammar",
-      "email": "ammar@gmail.com",
-      "password": "123",
-      "id": "dGZlhJoutsg"
-    },
-    {
-      "username": "fahmi333",
-      "email": "fahmi222@gmail.com",
-      "password": "123",
-      "id": "QmtdszOJpcw"
-    },
-    {
-      "username": "fahmi222",
-      "email": "fahmi212@gmail.com",
-      "password": "123",
-      "id": "IVawKw52ERg"
-    },
-    {
-      "username": "hello",
-      "email": "hello123@gmail.com",
-      "password": "123",
-      "id": "AggZ5NbY3TU"
-    },
-    {
-      "username": "fahmizzz",
-      "email": "fahmizzz@gmail.com",
-      "password": "123",
-      "id": "OoPlW99aTFE"
+      "cpassword": "123",
+      "members": true
     }
-  ],
-  "$schema": "./node_modules/json-server/schema.json"
+  ]
 }

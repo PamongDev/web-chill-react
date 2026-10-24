@@ -305,6 +305,7 @@
     scroll-snap-type: x proximity;
     scrollbar-width: thin;
     scrollbar-color: var(--color-border) transparent;
+    scroll-behavior: smooth;
 }
 
 .movie-row::-webkit-scrollbar {
@@ -320,7 +321,75 @@
     border-radius: var(--radius-full);
 }
 
+/* --- WADAH SLIDER UTAMA --- */
+.slider-wrapper {
+    position: relative;
+    /* display: flex; */
+    align-items: center;
+    /* Margin negatif agar tombol bisa agak ke luar area card jika perlu */
+    margin: 0 -var(--space-4, 16px);
+}
+/* --- WADAH SLIDER UTAMA --- */
+.slider-wrapper {
+    position: relative;
+    /* Kita hapus display flex karena .movie-row kamu sudah pakai Grid. Cukup relative saja. */
+}
 
+/* --- TOMBOL KIRI KANAN (SLIDER) --- */
+.slider-button {
+    position: absolute;
+    top: 0;
+    bottom: var(--space-4); /* Mengimbangi padding bottom di movie-row */
+    z-index: 10;
+    
+    width: 50px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    
+    font-size: 2rem;
+    cursor: pointer;
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-fast, 0.2s) ease-in-out;
+}
+
+/* Tombol Kiri: Diberi gradasi hitam memudar ke kanan */
+.slider-button.left { 
+    left: 0; 
+    background: linear-gradient(to right, rgba(8,8,8, 0.9) 0%, rgba(8,8,8, 0) 100%);
+}
+
+/* Tombol Kanan: Diberi gradasi hitam memudar ke kiri */
+.slider-button.right { 
+    right: 0; 
+    background: linear-gradient(to left, rgba(8,8,8, 0.9) 0%, rgba(8,8,8, 0) 100%);
+}
+
+/* Tampilkan tombol HANYA saat area baris film disentuh mouse */
+.slider-wrapper:hover .slider-button {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Efek membesar saat tombol panah disorot */
+.slider-button:hover {
+    font-size: 2.8rem;
+    color: white; /* Kamu bisa ganti ke var(--color-primary) jika ingin warna merah */
+}
+
+/* Sembunyikan tombol slider di HP (layar sentuh) karena user HP cukup di-swipe */
+@media (max-width: 900px) {
+    .slider-button {
+        display: none;
+    }
+}
 /* =========================================================
    FOOTER
 ========================================================= */

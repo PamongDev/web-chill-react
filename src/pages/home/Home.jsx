@@ -2,9 +2,24 @@ import '../../styles/home.css';
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import Header from '../../components/Header';
-import MovieCard from '../../components/MovieCard';
+import MovieSection from '../../components/MovieSection';
 
+const shuffleArray = (array) => {
+    return [...array].sort(() => 0.5 - Math.random());
+};
 
+function normalizeSeries(seriesItem, index) {
+    return {
+        id: seriesItem.id ?? `s-${index}`,
+        title: seriesItem.title ?? `Series ${index + 1}`,
+        // Map thumbnail ke poster agar MovieCard tidak error
+        poster: seriesItem.thumbnail ?? "",
+        year: seriesItem.year ?? "—",
+        rating: "TV-MA", // Default rating karena di JSON tidak ada
+        duration: `${seriesItem.seasons?.length || 1} Season`,
+        genres: Array.isArray(seriesItem.genre) ? seriesItem.genre : [],
+    };
+}
 function normalizeMovie(movie, index) {
     return {
         id: movie.id ?? index + 1,
@@ -27,6 +42,7 @@ function Home(){
     const [user, setUser] = useState(null);
 
     const [movies, setMovies] = useState([]);
+    const [series, setSeries] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(()=> {
@@ -49,9 +65,18 @@ function Home(){
                 if (!response.ok) throw new Error("Gagal mengambil data");
                 
                 const json = await response.json();
+
                 const rawMovies = Array.isArray(json) ? json : json.movies;
+                const rawSeries = Array.isArray(json) ? json : json.series;
                 
-                setMovies(rawMovies.map(normalizeMovie));
+               const normalizedMovies = rawMovies.map(normalizeMovie);
+               const normalizedSeries = rawSeries.map(normalizeSeries);
+
+               const shuffleMovies = shuffleArray(normalizedMovies);
+
+               setMovies(shuffleMovies);
+               setSeries(normalizedSeries);
+
             } catch (error) {
                 console.log("cek");
                 console.error("Error:", error);
@@ -67,10 +92,11 @@ function Home(){
     if (!user) return null;   
 
     // Pecah data film seperti di skrip lamamu
-    const continueWatching = movies.slice(0, 6);
-    const topMovies = movies.slice(3, 9);
-    const trending = movies.slice(7, 13);
-    const newReleases = movies.slice(-6);
+    const continueWatching = movies.slice(0, 15);
+    const topMovies = movies.slice(1, 16);
+    const trending = movies.slice(2, 17);
+    const newReleases = movies.slice(-15);
+    const topSeries = series;
 
     return(
         <>
@@ -161,65 +187,45 @@ function Home(){
             </section>
 
             <div className="container page-content">
-                <section className="movie-section" id="movies" aria-labelledby="continue-title">
-                    <div className="section-heading">
-                        <div>
-                            <p className="section-eyebrow">KEEP WATCHING</p>
-                            <h2 id="continue-title">Continue Watching</h2>
-                        </div>
-                        <Link className="section-link" to="/movies">See All <span aria-hidden="true">→</span></Link>
-                    </div>
-                    <div className="movie-row" id="continue-watching-row">
-                        {isLoading ? <p>Loading movies...</p> : continueWatching.map(movie => (
-                                <MovieCard key={movie.id} movie={movie} />
-                            ))}
-                    </div>
-                </section>
+                <MovieSection 
+                    eyebrow="KEEP WATCHING" 
+                    title="Continue Watching" 
+                    linkTo="/movies" 
+                    movies={continueWatching} 
+                    isLoading={isLoading} 
+                />
+                
+                <MovieSection 
+                    eyebrow="POPULAR RIGHT NOW" 
+                    title="Top Movies & Series" 
+                    linkTo="/movies" 
+                    movies={topMovies} 
+                    isLoading={isLoading} 
+                />
+                
+                <MovieSection 
+                    eyebrow="WHAT PEOPLE ARE WATCHING" 
+                    title="Trending Now" 
+                    linkTo="/movies" 
+                    movies={trending} 
+                    isLoading={isLoading} 
+                />
 
-                <section className="movie-section" aria-labelledby="top-title">
-                    <div className="section-heading">
-                        <div>
-                            <p className="section-eyebrow">POPULAR RIGHT NOW</p>
-                            <h2 id="top-title">Top Movies &amp; Series</h2>
-                        </div>
-                        <Link className="section-link" to="/movies">See All <span aria-hidden="true">→</span></Link>
-                    </div>
-                    <div className="movie-row" id="top-movies-row">
-                        {isLoading ? <p>Loading movies...</p> : topMovies.map(movie => (
-                                <MovieCard key={movie.id} movie={movie} />
-                            ))}
-                    </div>
-                </section>
+                <MovieSection 
+                    eyebrow="JUST ADDED" 
+                    title="New Releases" 
+                    linkTo="/movies" 
+                    movies={newReleases} 
+                    isLoading={isLoading} 
+                />
 
-                <section className="movie-section" aria-labelledby="trending-title">
-                    <div className="section-heading">
-                        <div>
-                            <p className="section-eyebrow">WHAT PEOPLE ARE WATCHING</p>
-                            <h2 id="trending-title">Trending Now</h2>
-                        </div>
-                        <Link className="section-link" to="/movies">See All <span aria-hidden="true">→</span></Link>
-                    </div>
-                    <div className="movie-row" id="trending-row">
-                        {isLoading ? <p>Loading movies...</p> : trending.map(movie => (
-                                <MovieCard key={movie.id} movie={movie} />
-                            ))}
-                    </div>
-                </section>
-
-                <section className="movie-section" id="series" aria-labelledby="release-title">
-                    <div className="section-heading">
-                        <div>
-                            <p className="section-eyebrow">JUST ADDED</p>
-                            <h2 id="release-title">New Releases</h2>
-                        </div>
-                        <Link className="section-link" to="/movies">See All <span aria-hidden="true">→</span></Link>
-                    </div>
-                    <div className="movie-row" id="new-releases-row">
-                        {isLoading ? <p>Loading movies...</p> : newReleases.map(movie => (
-                                <MovieCard key={movie.id} movie={movie} />
-                            ))}
-                    </div>
-                </section>
+                <MovieSection 
+                    eyebrow="BINGE WORTHY" 
+                    title="Top Series" 
+                    linkTo="/series" 
+                    movies={topSeries} 
+                    isLoading={isLoading} 
+                />
             </div>
         </main>
 
