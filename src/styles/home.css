@@ -115,24 +115,34 @@
 .hero-overlay {
     z-index: -1;
 
-    background:
-        linear-gradient(90deg, rgba(8, 8, 8, 0.95) 0%, rgba(8, 8, 8, 0.74) 34%, rgba(8, 8, 8, 0.18) 74%, rgba(8, 8, 8, 0.35) 100%),
-        linear-gradient(0deg, var(--color-bg) 0%, rgba(8, 8, 8, 0.16) 32%, rgba(8, 8, 8, 0.05) 72%, rgba(8, 8, 8, 0.45) 100%);
+    background: 
+        linear-gradient(to right, rgba(14, 14, 14, 0.95) 0%, rgba(14, 14, 14, 0.4) 55%, transparent 100%),
+        linear-gradient(to top, var(--color-bg) 0%, rgba(14, 14, 14, 0) 25%);
 }
 
 .hero-content {
-    padding-top: clamp(10rem, 25vh, 15rem);
-    padding-bottom: clamp(3.5rem, 9vw, 7rem);
+    width: 100%;
+    /* Gunakan padding kiri yang responsif agar selalu rapi di berbagai ukuran layar */
+    padding-top: clamp(5rem, 15vh, 8rem);
+    padding-left: clamp(1rem, 5vw, 4rem);
+    padding-bottom: clamp(3rem, 10vh, 5rem);
+    
+    /* Batasi lebar konten agar teks tidak menyeberang ke sisi kanan layar (menutupi video) */
+    max-width: 50vw; 
+    min-width: 600px;
 }
 
 .hero-title {
-    max-width: 800px;
-
-    margin: 0;
-
-    font-size: clamp(2.35rem, 6vw, 5.25rem);
-    line-height: 0.98;
-    letter-spacing: -0.045em;
+    margin: 0.5rem 0;
+    
+    color: #ffffff;
+    font-size: clamp(3rem, 5vw, 5.5rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    
+    /* Text shadow membuat judul tetap terbaca walau video di belakangnya terang */
+    text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.8);
 }
 
 .hero-meta {
@@ -160,13 +170,12 @@
 }
 
 .hero-description {
-    max-width: 620px;
-
-    margin: 1.1rem 0 1.6rem;
-
-    color: var(--color-text-soft);
-
-    font-size: clamp(0.95rem, 1.2vw, 1.06rem);
+    margin: 1.2rem 0 2rem;
+    
+    color: #e5e5e5;
+    font-size: clamp(1rem, 1.2vw, 1.15rem);
+    line-height: 1.5;
+    text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 .hero-actions {
@@ -175,6 +184,24 @@
     gap: 0.75rem;
 }
 
+.hero-actions .button-primary {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.8rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.hero-actions .button-primary:hover {
+    background-color: #e52121; /* Putih agak abu saat di-hover */
+}
+
+.hero-actions .button-secondary {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.8rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+.hero-actions .button-secondary:hover {
+    background-color: #323030;
+}
 
 /* Tombol mute video hero */
 
@@ -248,15 +275,13 @@
 ========================================================= */
 
 .page-content {
-    position: relative;
-    z-index: 2;
-
-    padding-top: 0.5rem;
-    padding-bottom: var(--space-16);
+    max-width: 100%;
+    padding-left: clamp(1.5rem, 4vw, 3.5rem);
+    padding-right: clamp(1.5rem, 4vw, 3.5rem);
 }
 
 .movie-section {
-    padding-top: 2.25rem;
+    padding-top: 2rem;
 }
 
 .section-heading {
@@ -295,46 +320,40 @@
 .movie-row {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: minmax(160px, 18.2%);
-    gap: 0.9rem;
+    grid-auto-columns: minmax(200px, 20%);
+    gap: 1.2rem;
 
     overflow-x: auto;
 
-    padding: 0.35rem 0.05rem var(--space-4);
+    padding-left: clamp(1.5rem, 4vw, 3.5rem);
+    padding-right: clamp(1.5rem, 4vw, 3.5rem);
+    padding-bottom: 1rem;
 
     scroll-snap-type: x proximity;
     scrollbar-width: thin;
     scrollbar-color: var(--color-border) transparent;
     scroll-behavior: smooth;
 }
-
 .movie-row::-webkit-scrollbar {
-    height: 7px;
+    display: none;
 }
 
-.movie-row::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.movie-row::-webkit-scrollbar-thumb {
-    background: var(--color-border);
-    border-radius: var(--radius-full);
+/* Untuk Firefox, IE, dan Edge */
+.movie-row {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
 }
 
 /* --- WADAH SLIDER UTAMA --- */
 .slider-wrapper {
     position: relative;
-    /* display: flex; */
+    display: flex;
     align-items: center;
-    /* Margin negatif agar tombol bisa agak ke luar area card jika perlu */
-    margin: 0 -var(--space-4, 16px);
+    /* Nilai negatif dari padding .page-content agar menembus batas */
+    margin-left: calc(-1 * clamp(1.5rem, 4vw, 3.5rem));
+    margin-right: calc(-1 * clamp(1.5rem, 4vw, 3.5rem));
 }
 /* --- WADAH SLIDER UTAMA --- */
-.slider-wrapper {
-    position: relative;
-    /* Kita hapus display flex karena .movie-row kamu sudah pakai Grid. Cukup relative saja. */
-}
-
 /* --- TOMBOL KIRI KANAN (SLIDER) --- */
 .slider-button {
     position: absolute;
@@ -352,7 +371,7 @@
     color: white;
     border: none;
     
-    font-size: 2rem;
+    font-size: 1rem;
     cursor: pointer;
     
     opacity: 0;
@@ -380,7 +399,7 @@
 
 /* Efek membesar saat tombol panah disorot */
 .slider-button:hover {
-    font-size: 2.8rem;
+    font-size: 1.2rem;
     color: white; /* Kamu bisa ganti ke var(--color-primary) jika ingin warna merah */
 }
 
@@ -482,7 +501,7 @@
     }
 
     .movie-row {
-        grid-auto-columns: minmax(145px, 22%);
+        grid-auto-columns: minmax(170px, 25%);
     }
 
     .footer-grid {
@@ -519,13 +538,17 @@
     }
 
     .hero-overlay {
-        background:
-            linear-gradient(180deg, rgba(8, 8, 8, 0.18) 0%, rgba(8, 8, 8, 0.18) 28%, rgba(8, 8, 8, 0.82) 67%, var(--color-bg) 100%);
+        background: 
+            linear-gradient(to top, rgba(14, 14, 14, 1) 0%, rgba(14, 14, 14, 0.6) 50%, transparent 100%);
     }
 
     .hero-content {
-        padding-top: 14rem;
+        padding-top: 8rem;
         padding-bottom: var(--space-8);
+        max-width: 100%;
+        min-width: 100%;
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
     }
 
     .hero-description {
@@ -542,7 +565,7 @@
     }
 
     .movie-row {
-        grid-auto-columns: minmax(135px, 38vw);
+        grid-auto-columns: minmax(150px, 42vw);
         gap: 0.7rem;
     }
 
@@ -550,4 +573,5 @@
         grid-template-columns: 1fr;
         gap: var(--space-8);
     }
+    
 }

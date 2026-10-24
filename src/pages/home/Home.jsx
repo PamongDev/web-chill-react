@@ -163,7 +163,7 @@ function Home(){
                     </span>
                 </button>
 
-                <div className="container hero-content">
+                <div className="hero-content">
                     <p className="eyebrow">CHILL ORIGINAL EXPERIENCE</p>
                     <h1 className="hero-title">Black Clover: Sword of the Wizard King</h1>
                     <div className="hero-meta">
@@ -186,7 +186,7 @@ function Home(){
                 </div>
             </section>
 
-            <div className="container page-content">
+            <div className="page-content">
                 <MovieSection 
                     eyebrow="KEEP WATCHING" 
                     title="Continue Watching" 

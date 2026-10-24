@@ -279,7 +279,7 @@
 .movie-poster-wrap {
     position: relative;
 
-    aspect-ratio: 2 / 3;
+    aspect-ratio: 2/3;
     overflow: hidden;
 }
 
@@ -289,6 +289,7 @@
 
     display: block;
     object-fit: cover;
+
 
     transition: transform var(--transition-normal);
 }
