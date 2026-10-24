@@ -14,5 +14,11 @@ export function useAuth(){
         }
     }, [navigate]);
 
-    return { user };
+    const handleLogout = () => {
+        localStorage.removeItem("userLoggedIn");
+        navigate("/sign-in");
+    }
+
+    return { user, handleLogout };
 }
+

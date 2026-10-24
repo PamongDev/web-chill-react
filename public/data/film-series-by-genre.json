@@ -1,0 +1,2580 @@
+{
+    "genres": {
+        "Action": [
+            {
+                "id": 0,
+                "title": "Black Clover: Sword of the Wizard King",
+                "poster": "assets/images/poster-movies/21_poster black clover.jpg",
+                "trailer": "assets/videos/trailer-movies/t21_bcwk.mp4",
+                "year": 2023,
+                "rating": "PG-13",
+                "duration": "1h 53m",
+                "rate": 8.9,
+                "genres": [
+                    "Action",
+                    "Adventure",
+                    "Fantasy",
+                    "Animation"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 1,
+                "title": "Dune: Part Two",
+                "poster": "assets/images/poster-movies/1_poster dune2.jpg",
+                "trailer": "assets/videos/trailer-movies/t1_dp2-compress.mp4",
+                "year": 2024,
+                "rating": "PG-13",
+                "duration": "2h 46m",
+                "rate": 8.9,
+                "genres": [
+                    "Action",
+                    "Adventure"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 2,
+                "title": "Deadpool & Wolverine",
+                "poster": "assets/images/poster-movies/2_poster_deadpoolnwolverine.jpg",
+                "trailer": "assets/videos/trailer-movies/t2_dw-compress.mp4",
+                "year": 2024,
+                "rating": "R",
+                "duration": "2h 8m",
+                "rate": 8.9,
+                "genres": [
+                    "Action",
+                    "Comedy"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 5,
+                "title": "Gladiator II",
+                "poster": "assets/images/poster-movies/5_poster gladiator2.jpeg",
+                "trailer": "assets/videos/trailer-movies/t5_g2-compress.mp4",
+                "year": 2024,
+                "rating": "R",
+                "duration": "2h 28m",
+                "rate": 8.9,
+                "genres": [
+                    "Action",
+                    "Drama"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 8,
+                "title": "The Fall Guy",
+                "poster": "assets/images/poster-movies/8_poster_tfg.jpg",
+                "trailer": "assets/videos/trailer-movies/t8_tfg-compress.mp4",
+                "year": 2024,
+                "rating": "PG-13",
+                "duration": "2h 6m",
+                "rate": 8.9,
+                "genres": [
+                    "Action",
+                    "Comedy"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 12,
+                "title": "John Wick: Chapter 4",
+                "poster": "assets/images/poster-movies/12_poster js4.jpg",
+                "trailer": "assets/videos/trailer-movies/t12_jw4-compress.mp4",
+                "year": 2023,
+                "rating": "R",
+                "duration": "2h 49m",
+                "rate": 8.9,
+                "genres": [
+                    "Action",
+                    "Thriller"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 15,
+                "title": "Bad Boys: Ride or Die",
+                "poster": "assets/images/poster-movies/15_poster bad boys.webp",
+                "trailer": "assets/videos/trailer-movies/t15_bbrod-compress.mp4",
+                "year": 2024,
+                "rating": "R",
+                "duration": "1h 55m",
+                "rate": 8.9,
+                "genres": [
+                    "Action",
+                    "Comedy"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 18,
+                "title": "Mission: Impossible — Dead Reckoning",
+                "poster": "assets/images/poster-movies/18_poster MSDR.jpg",
+                "trailer": "assets/videos/trailer-movies/t18_mi-compress.mp4",
+                "year": 2023,
+                "rating": "PG-13",
+                "duration": "2h 43m",
+                "rate": 8.9,
+                "genres": [
+                    "Action",
+                    "Spy"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 20,
+                "title": "The Batman Part II",
+                "poster": "assets/images/poster-movies/20_poster tb2.jpg",
+                "trailer": "assets/videos/trailer-movies/t20_batman2-compress.mp4",
+                "year": 2026,
+                "rating": "PG-13",
+                "duration": "TBA",
+                "rate": 8.9,
+                "genres": [
+                    "Action",
+                    "Crime"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": "s-001",
+                "title": "The Last of Us",
+                "synopsis": "Dua puluh tahun setelah peradaban hancur akibat jamur mematikan, seorang pria harus menyelundupkan gadis muda yang kebal melintasi Amerika.",
+                "year": 2023,
+                "genre": [
+                    "Action",
+                    "Horror",
+                    "Drama"
+                ],
+                "thumbnail": "assets/images/poster-series/1_the last of us.webp",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-001",
+                                "episode_number": 1,
+                                "title": "When You're Lost in the Darkness",
+                                "duration": "81 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=T+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-002",
+                                "episode_number": 2,
+                                "title": "Infected",
+                                "duration": "53 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=T+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-003",
+                                "episode_number": 3,
+                                "title": "Long, Long Time",
+                                "duration": "75 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=T+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-002",
+                "title": "Arcane",
+                "synopsis": "Kisah asal usul dua juara ikonik League of Legends yang terpisah di dua kota berseteru, Piltover dan Zaun.",
+                "year": 2021,
+                "genre": [
+                    "Animation",
+                    "Action",
+                    "Drama"
+                ],
+                "thumbnail": "assets/images/poster-series/2_arcane.webp",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-004",
+                                "episode_number": 1,
+                                "title": "Welcome to the Playground",
+                                "duration": "43 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=A+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-005",
+                                "episode_number": 2,
+                                "title": "Some Mysteries Are Better Left Unsolved",
+                                "duration": "41 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=A+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-006",
+                                "episode_number": 3,
+                                "title": "The Base Violence Necessary for Change",
+                                "duration": "44 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=A+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-005",
+                "title": "House of the Dragon",
+                "synopsis": "Kisah klan Targaryen 200 tahun sebelum peristiwa Game of Thrones yang berujung pada perang saudara raksasa.",
+                "year": 2022,
+                "genre": [
+                    "Fantasy",
+                    "Action",
+                    "Drama"
+                ],
+                "thumbnail": "assets/images/poster-series/5_house of the dragon.jpg",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-013",
+                                "episode_number": 1,
+                                "title": "The Heirs of the Dragon",
+                                "duration": "66 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=HOTD+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-014",
+                                "episode_number": 2,
+                                "title": "The Rogue Prince",
+                                "duration": "54 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=HOTD+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-015",
+                                "episode_number": 3,
+                                "title": "Second of His Name",
+                                "duration": "63 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=HOTD+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-009",
+                "title": "The Mandalorian",
+                "synopsis": "Seorang pemburu hadiah Mandalorian menjalani petualangan di galaksi jauh setelah jatuhnya Kekaisaran.",
+                "year": 2019,
+                "genre": [
+                    "Sci-Fi",
+                    "Action",
+                    "Adventure"
+                ],
+                "thumbnail": "assets/images/poster-series/9_themandalorian.jpg",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-025",
+                                "episode_number": 1,
+                                "title": "Chapter 1: The Mandalorian",
+                                "duration": "40 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TM+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-026",
+                                "episode_number": 2,
+                                "title": "Chapter 2: The Child",
+                                "duration": "32 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TM+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-027",
+                                "episode_number": 3,
+                                "title": "Chapter 3: The Sin",
+                                "duration": "37 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TM+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-010",
+                "title": "One Piece",
+                "synopsis": "Monkey D. Luffy berlayar bersama kru Topi Jerami untuk mencari harta legendaris One Piece.",
+                "year": 1999,
+                "genre": [
+                    "Animation",
+                    "Adventure",
+                    "Action"
+                ],
+                "thumbnail": "assets/images/poster-series/10_onepiece.webp",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-028",
+                                "episode_number": 1,
+                                "title": "I'm Luffy! The Man Who's Gonna Be King of the Pirates!",
+                                "duration": "24 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=OP+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-029",
+                                "episode_number": 2,
+                                "title": "The Great Swordsman Appears! Pirate Hunter, Roronoa Zoro!",
+                                "duration": "24 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=OP+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-030",
+                                "episode_number": 3,
+                                "title": "Morgan vs. Luffy! Who's the Mysterious Pretty Girl?",
+                                "duration": "24 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=OP+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-013",
+                "title": "The Boys",
+                "synopsis": "Sekelompok vigilante berusaha mengungkap dan menghentikan para superhero korup yang menyalahgunakan kekuatan.",
+                "year": 2019,
+                "genre": [
+                    "Action",
+                    "Comedy",
+                    "Drama"
+                ],
+                "thumbnail": "assets/images/poster-series/13_theboys.jpg",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-037",
+                                "episode_number": 1,
+                                "title": "The Name of the Game",
+                                "duration": "61 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TB+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-038",
+                                "episode_number": 2,
+                                "title": "Cherry",
+                                "duration": "57 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TB+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-039",
+                                "episode_number": 3,
+                                "title": "Get Some",
+                                "duration": "55 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TB+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-015",
+                "title": "Fallout",
+                "synopsis": "Seorang perempuan meninggalkan tempat perlindungan bawah tanah dan menjelajahi dunia pasca-apokaliptik yang berbahaya.",
+                "year": 2024,
+                "genre": [
+                    "Sci-Fi",
+                    "Action",
+                    "Adventure"
+                ],
+                "thumbnail": "assets/images/poster-series/15_fallout.jpg",
+                "rate": 9.0,
+                "rating": "PG",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-043",
+                                "episode_number": 1,
+                                "title": "The End",
+                                "duration": "65 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=F+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-044",
+                                "episode_number": 2,
+                                "title": "The Target",
+                                "duration": "55 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=F+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-045",
+                                "episode_number": 3,
+                                "title": "The Head",
+                                "duration": "55 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=F+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            }
+        ],
+        "Adventure": [
+            {
+                "id": 0,
+                "title": "Black Clover: Sword of the Wizard King",
+                "poster": "assets/images/poster-movies/21_poster black clover.jpg",
+                "trailer": "assets/videos/trailer-movies/t21_bcwk.mp4",
+                "year": 2023,
+                "rating": "PG-13",
+                "duration": "1h 53m",
+                "rate": 8.9,
+                "genres": [
+                    "Action",
+                    "Adventure",
+                    "Fantasy",
+                    "Animation"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 1,
+                "title": "Dune: Part Two",
+                "poster": "assets/images/poster-movies/1_poster dune2.jpg",
+                "trailer": "assets/videos/trailer-movies/t1_dp2-compress.mp4",
+                "year": 2024,
+                "rating": "PG-13",
+                "duration": "2h 46m",
+                "rate": 8.9,
+                "genres": [
+                    "Action",
+                    "Adventure"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 6,
+                "title": "Kung Fu Panda 4",
+                "poster": "assets/images/poster-movies/6_poster KF4.png",
+                "trailer": "assets/videos/trailer-movies/t6_kp4-compress.mp4",
+                "year": 2024,
+                "rating": "PG",
+                "duration": "1h 34m",
+                "rate": 8.9,
+                "genres": [
+                    "Animation",
+                    "Adventure"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 14,
+                "title": "Moana 2",
+                "poster": "assets/images/poster-movies/14_poster moana2.webp",
+                "trailer": "assets/videos/trailer-movies/t14_m2-compress.mp4",
+                "year": 2024,
+                "rating": "PG",
+                "duration": "1h 40m",
+                "rate": 8.9,
+                "genres": [
+                    "Animation",
+                    "Adventure"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 17,
+                "title": "Toy Story 5",
+                "poster": "assets/images/poster-movies/17_poster TS5.jpg",
+                "trailer": "assets/videos/trailer-movies/t17_ts5-compress.mp4",
+                "year": 2026,
+                "rating": "PG",
+                "duration": "1h 40m",
+                "rate": 8.9,
+                "genres": [
+                    "Animation",
+                    "Adventure"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": "s-009",
+                "title": "The Mandalorian",
+                "synopsis": "Seorang pemburu hadiah Mandalorian menjalani petualangan di galaksi jauh setelah jatuhnya Kekaisaran.",
+                "year": 2019,
+                "genre": [
+                    "Sci-Fi",
+                    "Action",
+                    "Adventure"
+                ],
+                "thumbnail": "assets/images/poster-series/9_themandalorian.jpg",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-025",
+                                "episode_number": 1,
+                                "title": "Chapter 1: The Mandalorian",
+                                "duration": "40 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TM+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-026",
+                                "episode_number": 2,
+                                "title": "Chapter 2: The Child",
+                                "duration": "32 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TM+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-027",
+                                "episode_number": 3,
+                                "title": "Chapter 3: The Sin",
+                                "duration": "37 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TM+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-010",
+                "title": "One Piece",
+                "synopsis": "Monkey D. Luffy berlayar bersama kru Topi Jerami untuk mencari harta legendaris One Piece.",
+                "year": 1999,
+                "genre": [
+                    "Animation",
+                    "Adventure",
+                    "Action"
+                ],
+                "thumbnail": "assets/images/poster-series/10_onepiece.webp",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-028",
+                                "episode_number": 1,
+                                "title": "I'm Luffy! The Man Who's Gonna Be King of the Pirates!",
+                                "duration": "24 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=OP+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-029",
+                                "episode_number": 2,
+                                "title": "The Great Swordsman Appears! Pirate Hunter, Roronoa Zoro!",
+                                "duration": "24 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=OP+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-030",
+                                "episode_number": 3,
+                                "title": "Morgan vs. Luffy! Who's the Mysterious Pretty Girl?",
+                                "duration": "24 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=OP+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-014",
+                "title": "Avatar: The Last Airbender",
+                "synopsis": "Aang, pengendali udara terakhir, harus menguasai empat elemen untuk menghentikan perang yang melanda dunia.",
+                "year": 2005,
+                "genre": [
+                    "Animation",
+                    "Adventure",
+                    "Fantasy"
+                ],
+                "thumbnail": "assets/images/poster-series/14_avatar.webp",
+                "rate": 9.0,
+                "rating": "PG-13",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-040",
+                                "episode_number": 1,
+                                "title": "The Boy in the Iceberg",
+                                "duration": "24 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ATLA+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-041",
+                                "episode_number": 2,
+                                "title": "The Avatar Returns",
+                                "duration": "24 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ATLA+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-042",
+                                "episode_number": 3,
+                                "title": "The Southern Air Temple",
+                                "duration": "24 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ATLA+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-015",
+                "title": "Fallout",
+                "synopsis": "Seorang perempuan meninggalkan tempat perlindungan bawah tanah dan menjelajahi dunia pasca-apokaliptik yang berbahaya.",
+                "year": 2024,
+                "genre": [
+                    "Sci-Fi",
+                    "Action",
+                    "Adventure"
+                ],
+                "thumbnail": "assets/images/poster-series/15_fallout.jpg",
+                "rate": 9.0,
+                "rating": "PG",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-043",
+                                "episode_number": 1,
+                                "title": "The End",
+                                "duration": "65 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=F+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-044",
+                                "episode_number": 2,
+                                "title": "The Target",
+                                "duration": "55 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=F+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-045",
+                                "episode_number": 3,
+                                "title": "The Head",
+                                "duration": "55 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=F+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            }
+        ],
+        "Animation": [
+            {
+                "id": 0,
+                "title": "Black Clover: Sword of the Wizard King",
+                "poster": "assets/images/poster-movies/21_poster black clover.jpg",
+                "trailer": "assets/videos/trailer-movies/t21_bcwk.mp4",
+                "year": 2023,
+                "rating": "PG-13",
+                "duration": "1h 53m",
+                "rate": 8.9,
+                "genres": [
+                    "Action",
+                    "Adventure",
+                    "Fantasy",
+                    "Animation"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 3,
+                "title": "Inside Out 2",
+                "poster": "assets/images/poster-movies/3_poster_insideout2.jpg",
+                "trailer": "assets/videos/trailer-movies/t3_io2-compress.mp4",
+                "year": 2024,
+                "rating": "PG",
+                "duration": "1h 40m",
+                "rate": 8.9,
+                "genres": [
+                    "Animation",
+                    "Comedy"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 6,
+                "title": "Kung Fu Panda 4",
+                "poster": "assets/images/poster-movies/6_poster KF4.png",
+                "trailer": "assets/videos/trailer-movies/t6_kp4-compress.mp4",
+                "year": 2024,
+                "rating": "PG",
+                "duration": "1h 34m",
+                "rate": 8.9,
+                "genres": [
+                    "Animation",
+                    "Adventure"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 11,
+                "title": "Despicable Me 4",
+                "poster": "assets/images/poster-movies/11_poster DM4.jpg",
+                "trailer": "assets/videos/trailer-movies/t11_dm4-compress.mp4",
+                "year": 2024,
+                "rating": "PG",
+                "duration": "1h 35m",
+                "rate": 8.9,
+                "genres": [
+                    "Animation",
+                    "Comedy"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 14,
+                "title": "Moana 2",
+                "poster": "assets/images/poster-movies/14_poster moana2.webp",
+                "trailer": "assets/videos/trailer-movies/t14_m2-compress.mp4",
+                "year": 2024,
+                "rating": "PG",
+                "duration": "1h 40m",
+                "rate": 8.9,
+                "genres": [
+                    "Animation",
+                    "Adventure"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 17,
+                "title": "Toy Story 5",
+                "poster": "assets/images/poster-movies/17_poster TS5.jpg",
+                "trailer": "assets/videos/trailer-movies/t17_ts5-compress.mp4",
+                "year": 2026,
+                "rating": "PG",
+                "duration": "1h 40m",
+                "rate": 8.9,
+                "genres": [
+                    "Animation",
+                    "Adventure"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": "s-002",
+                "title": "Arcane",
+                "synopsis": "Kisah asal usul dua juara ikonik League of Legends yang terpisah di dua kota berseteru, Piltover dan Zaun.",
+                "year": 2021,
+                "genre": [
+                    "Animation",
+                    "Action",
+                    "Drama"
+                ],
+                "thumbnail": "assets/images/poster-series/2_arcane.webp",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-004",
+                                "episode_number": 1,
+                                "title": "Welcome to the Playground",
+                                "duration": "43 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=A+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-005",
+                                "episode_number": 2,
+                                "title": "Some Mysteries Are Better Left Unsolved",
+                                "duration": "41 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=A+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-006",
+                                "episode_number": 3,
+                                "title": "The Base Violence Necessary for Change",
+                                "duration": "44 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=A+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-010",
+                "title": "One Piece",
+                "synopsis": "Monkey D. Luffy berlayar bersama kru Topi Jerami untuk mencari harta legendaris One Piece.",
+                "year": 1999,
+                "genre": [
+                    "Animation",
+                    "Adventure",
+                    "Action"
+                ],
+                "thumbnail": "assets/images/poster-series/10_onepiece.webp",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-028",
+                                "episode_number": 1,
+                                "title": "I'm Luffy! The Man Who's Gonna Be King of the Pirates!",
+                                "duration": "24 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=OP+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-029",
+                                "episode_number": 2,
+                                "title": "The Great Swordsman Appears! Pirate Hunter, Roronoa Zoro!",
+                                "duration": "24 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=OP+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-030",
+                                "episode_number": 3,
+                                "title": "Morgan vs. Luffy! Who's the Mysterious Pretty Girl?",
+                                "duration": "24 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=OP+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-014",
+                "title": "Avatar: The Last Airbender",
+                "synopsis": "Aang, pengendali udara terakhir, harus menguasai empat elemen untuk menghentikan perang yang melanda dunia.",
+                "year": 2005,
+                "genre": [
+                    "Animation",
+                    "Adventure",
+                    "Fantasy"
+                ],
+                "thumbnail": "assets/images/poster-series/14_avatar.webp",
+                "rate": 9.0,
+                "rating": "PG-13",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-040",
+                                "episode_number": 1,
+                                "title": "The Boy in the Iceberg",
+                                "duration": "24 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ATLA+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-041",
+                                "episode_number": 2,
+                                "title": "The Avatar Returns",
+                                "duration": "24 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ATLA+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-042",
+                                "episode_number": 3,
+                                "title": "The Southern Air Temple",
+                                "duration": "24 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ATLA+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            }
+        ],
+        "Comedy": [
+            {
+                "id": 2,
+                "title": "Deadpool & Wolverine",
+                "poster": "assets/images/poster-movies/2_poster_deadpoolnwolverine.jpg",
+                "trailer": "assets/videos/trailer-movies/t2_dw-compress.mp4",
+                "year": 2024,
+                "rating": "R",
+                "duration": "2h 8m",
+                "rate": 8.9,
+                "genres": [
+                    "Action",
+                    "Comedy"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 3,
+                "title": "Inside Out 2",
+                "poster": "assets/images/poster-movies/3_poster_insideout2.jpg",
+                "trailer": "assets/videos/trailer-movies/t3_io2-compress.mp4",
+                "year": 2024,
+                "rating": "PG",
+                "duration": "1h 40m",
+                "rate": 8.9,
+                "genres": [
+                    "Animation",
+                    "Comedy"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 8,
+                "title": "The Fall Guy",
+                "poster": "assets/images/poster-movies/8_poster_tfg.jpg",
+                "trailer": "assets/videos/trailer-movies/t8_tfg-compress.mp4",
+                "year": 2024,
+                "rating": "PG-13",
+                "duration": "2h 6m",
+                "rate": 8.9,
+                "genres": [
+                    "Action",
+                    "Comedy"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 11,
+                "title": "Despicable Me 4",
+                "poster": "assets/images/poster-movies/11_poster DM4.jpg",
+                "trailer": "assets/videos/trailer-movies/t11_dm4-compress.mp4",
+                "year": 2024,
+                "rating": "PG",
+                "duration": "1h 35m",
+                "rate": 8.9,
+                "genres": [
+                    "Animation",
+                    "Comedy"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 15,
+                "title": "Bad Boys: Ride or Die",
+                "poster": "assets/images/poster-movies/15_poster bad boys.webp",
+                "trailer": "assets/videos/trailer-movies/t15_bbrod-compress.mp4",
+                "year": 2024,
+                "rating": "R",
+                "duration": "1h 55m",
+                "rate": 8.9,
+                "genres": [
+                    "Action",
+                    "Comedy"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 19,
+                "title": "Anyone But You",
+                "poster": "assets/images/poster-movies/19_poster anyone but you.jpeg",
+                "trailer": "assets/videos/trailer-movies/t19_aby-compress.mp4",
+                "year": 2023,
+                "rating": "R",
+                "duration": "1h 43m",
+                "rate": 8.9,
+                "genres": [
+                    "Romance",
+                    "Comedy"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": "s-003",
+                "title": "The Bear",
+                "synopsis": "Seorang koki muda dari dunia kuliner fine dining pulang ke Chicago untuk mengelola kedai sandwich keluarganya.",
+                "year": 2022,
+                "genre": [
+                    "Comedy",
+                    "Drama"
+                ],
+                "thumbnail": "assets/images/poster-series/3_the bear.webp",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-007",
+                                "episode_number": 1,
+                                "title": "System",
+                                "duration": "27 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TB+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-008",
+                                "episode_number": 2,
+                                "title": "Hands",
+                                "duration": "29 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TB+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-009",
+                                "episode_number": 3,
+                                "title": "Brigade",
+                                "duration": "28 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TB+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-006",
+                "title": "Wednesday",
+                "synopsis": "Wednesday Addams menyelidiki misteri pembunuhan di Nevermore Academy sambil menghadapi kekuatan psikisnya.",
+                "year": 2022,
+                "genre": [
+                    "Comedy",
+                    "Mystery",
+                    "Fantasy"
+                ],
+                "thumbnail": "assets/images/poster-series/6_wednesday.webp",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-016",
+                                "episode_number": 1,
+                                "title": "Wednesday's Child Is Full of Woe",
+                                "duration": "60 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=W+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-017",
+                                "episode_number": 2,
+                                "title": "Woe Is the Loneliest Number",
+                                "duration": "50 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=W+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-018",
+                                "episode_number": 3,
+                                "title": "Friend or Woe",
+                                "duration": "47 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=W+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-013",
+                "title": "The Boys",
+                "synopsis": "Sekelompok vigilante berusaha mengungkap dan menghentikan para superhero korup yang menyalahgunakan kekuatan.",
+                "year": 2019,
+                "genre": [
+                    "Action",
+                    "Comedy",
+                    "Drama"
+                ],
+                "thumbnail": "assets/images/poster-series/13_theboys.jpg",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-037",
+                                "episode_number": 1,
+                                "title": "The Name of the Game",
+                                "duration": "61 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TB+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-038",
+                                "episode_number": 2,
+                                "title": "Cherry",
+                                "duration": "57 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TB+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-039",
+                                "episode_number": 3,
+                                "title": "Get Some",
+                                "duration": "55 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TB+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            }
+        ],
+        "Crime": [
+            {
+                "id": 20,
+                "title": "The Batman Part II",
+                "poster": "assets/images/poster-movies/20_poster tb2.jpg",
+                "trailer": "assets/videos/trailer-movies/t20_batman2-compress.mp4",
+                "year": 2026,
+                "rating": "PG-13",
+                "duration": "TBA",
+                "rate": 8.9,
+                "genres": [
+                    "Action",
+                    "Crime"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": "s-007",
+                "title": "Breaking Bad",
+                "synopsis": "Seorang guru kimia yang didiagnosis kanker mulai memproduksi narkoba bersama mantan muridnya demi masa depan keluarganya.",
+                "year": 2008,
+                "genre": [
+                    "Crime",
+                    "Drama",
+                    "Thriller"
+                ],
+                "thumbnail": "assets/images/poster-series/7_breakingbad.webp",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-019",
+                                "episode_number": 1,
+                                "title": "Pilot",
+                                "duration": "58 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=BB+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-020",
+                                "episode_number": 2,
+                                "title": "Cat's in the Bag...",
+                                "duration": "48 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=BB+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-021",
+                                "episode_number": 3,
+                                "title": "...And the Bag's in the River",
+                                "duration": "48 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=BB+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-008",
+                "title": "Sherlock",
+                "synopsis": "Detektif Sherlock Holmes dan John Watson memecahkan kasus rumit di London modern.",
+                "year": 2010,
+                "genre": [
+                    "Crime",
+                    "Mystery",
+                    "Drama"
+                ],
+                "thumbnail": "assets/images/poster-series/8_sherlock.jpg",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-022",
+                                "episode_number": 1,
+                                "title": "A Study in Pink",
+                                "duration": "89 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=S+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-023",
+                                "episode_number": 2,
+                                "title": "The Blind Banker",
+                                "duration": "89 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=S+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-024",
+                                "episode_number": 3,
+                                "title": "The Great Game",
+                                "duration": "89 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=S+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-011",
+                "title": "Peaky Blinders",
+                "synopsis": "Keluarga Shelby membangun pengaruh kriminal di Birmingham setelah Perang Dunia I.",
+                "year": 2013,
+                "genre": [
+                    "Crime",
+                    "Drama"
+                ],
+                "thumbnail": "assets/images/poster-series/11_peaky blinders.jpg",
+                "rate": 9.0,
+                "rating": "PG-13",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-031",
+                                "episode_number": 1,
+                                "title": "Episode 1",
+                                "duration": "56 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=PB+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-032",
+                                "episode_number": 2,
+                                "title": "Episode 2",
+                                "duration": "58 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=PB+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-033",
+                                "episode_number": 3,
+                                "title": "Episode 3",
+                                "duration": "55 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=PB+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            }
+        ],
+        "Drama": [
+            {
+                "id": 5,
+                "title": "Gladiator II",
+                "poster": "assets/images/poster-movies/5_poster gladiator2.jpeg",
+                "trailer": "assets/videos/trailer-movies/t5_g2-compress.mp4",
+                "year": 2024,
+                "rating": "R",
+                "duration": "2h 28m",
+                "rate": 8.9,
+                "genres": [
+                    "Action",
+                    "Drama"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 9,
+                "title": "Oppenheimer",
+                "poster": "assets/images/poster-movies/9_poster_OH.png",
+                "trailer": "assets/videos/trailer-movies/t9_oppenheimer-compress.mp4",
+                "year": 2023,
+                "rating": "R",
+                "duration": "3h",
+                "rate": 8.9,
+                "genres": [
+                    "Drama",
+                    "History"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": "s-001",
+                "title": "The Last of Us",
+                "synopsis": "Dua puluh tahun setelah peradaban hancur akibat jamur mematikan, seorang pria harus menyelundupkan gadis muda yang kebal melintasi Amerika.",
+                "year": 2023,
+                "genre": [
+                    "Action",
+                    "Horror",
+                    "Drama"
+                ],
+                "thumbnail": "assets/images/poster-series/1_the last of us.webp",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-001",
+                                "episode_number": 1,
+                                "title": "When You're Lost in the Darkness",
+                                "duration": "81 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=T+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-002",
+                                "episode_number": 2,
+                                "title": "Infected",
+                                "duration": "53 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=T+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-003",
+                                "episode_number": 3,
+                                "title": "Long, Long Time",
+                                "duration": "75 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=T+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-002",
+                "title": "Arcane",
+                "synopsis": "Kisah asal usul dua juara ikonik League of Legends yang terpisah di dua kota berseteru, Piltover dan Zaun.",
+                "year": 2021,
+                "genre": [
+                    "Animation",
+                    "Action",
+                    "Drama"
+                ],
+                "thumbnail": "assets/images/poster-series/2_arcane.webp",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-004",
+                                "episode_number": 1,
+                                "title": "Welcome to the Playground",
+                                "duration": "43 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=A+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-005",
+                                "episode_number": 2,
+                                "title": "Some Mysteries Are Better Left Unsolved",
+                                "duration": "41 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=A+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-006",
+                                "episode_number": 3,
+                                "title": "The Base Violence Necessary for Change",
+                                "duration": "44 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=A+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-003",
+                "title": "The Bear",
+                "synopsis": "Seorang koki muda dari dunia kuliner fine dining pulang ke Chicago untuk mengelola kedai sandwich keluarganya.",
+                "year": 2022,
+                "genre": [
+                    "Comedy",
+                    "Drama"
+                ],
+                "thumbnail": "assets/images/poster-series/3_the bear.webp",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-007",
+                                "episode_number": 1,
+                                "title": "System",
+                                "duration": "27 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TB+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-008",
+                                "episode_number": 2,
+                                "title": "Hands",
+                                "duration": "29 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TB+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-009",
+                                "episode_number": 3,
+                                "title": "Brigade",
+                                "duration": "28 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TB+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-004",
+                "title": "Stranger Things",
+                "synopsis": "Sekelompok remaja menghadapi fenomena supranatural dan eksperimen rahasia pemerintah di kota kecil Hawkins.",
+                "year": 2016,
+                "genre": [
+                    "Horror",
+                    "Drama",
+                    "Sci-Fi"
+                ],
+                "thumbnail": "assets/images/poster-series/4_stranger things.webp",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-010",
+                                "episode_number": 1,
+                                "title": "Chapter One: The Vanishing of Will Byers",
+                                "duration": "47 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ST+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-011",
+                                "episode_number": 2,
+                                "title": "Chapter Two: The Weirdo on Maple Street",
+                                "duration": "55 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ST+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-012",
+                                "episode_number": 3,
+                                "title": "Chapter Three: Holly, Jolly",
+                                "duration": "51 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ST+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-005",
+                "title": "House of the Dragon",
+                "synopsis": "Kisah klan Targaryen 200 tahun sebelum peristiwa Game of Thrones yang berujung pada perang saudara raksasa.",
+                "year": 2022,
+                "genre": [
+                    "Fantasy",
+                    "Action",
+                    "Drama"
+                ],
+                "thumbnail": "assets/images/poster-series/5_house of the dragon.jpg",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-013",
+                                "episode_number": 1,
+                                "title": "The Heirs of the Dragon",
+                                "duration": "66 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=HOTD+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-014",
+                                "episode_number": 2,
+                                "title": "The Rogue Prince",
+                                "duration": "54 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=HOTD+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-015",
+                                "episode_number": 3,
+                                "title": "Second of His Name",
+                                "duration": "63 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=HOTD+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-007",
+                "title": "Breaking Bad",
+                "synopsis": "Seorang guru kimia yang didiagnosis kanker mulai memproduksi narkoba bersama mantan muridnya demi masa depan keluarganya.",
+                "year": 2008,
+                "genre": [
+                    "Crime",
+                    "Drama",
+                    "Thriller"
+                ],
+                "thumbnail": "assets/images/poster-series/7_breakingbad.webp",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-019",
+                                "episode_number": 1,
+                                "title": "Pilot",
+                                "duration": "58 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=BB+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-020",
+                                "episode_number": 2,
+                                "title": "Cat's in the Bag...",
+                                "duration": "48 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=BB+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-021",
+                                "episode_number": 3,
+                                "title": "...And the Bag's in the River",
+                                "duration": "48 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=BB+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-008",
+                "title": "Sherlock",
+                "synopsis": "Detektif Sherlock Holmes dan John Watson memecahkan kasus rumit di London modern.",
+                "year": 2010,
+                "genre": [
+                    "Crime",
+                    "Mystery",
+                    "Drama"
+                ],
+                "thumbnail": "assets/images/poster-series/8_sherlock.jpg",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-022",
+                                "episode_number": 1,
+                                "title": "A Study in Pink",
+                                "duration": "89 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=S+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-023",
+                                "episode_number": 2,
+                                "title": "The Blind Banker",
+                                "duration": "89 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=S+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-024",
+                                "episode_number": 3,
+                                "title": "The Great Game",
+                                "duration": "89 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=S+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-011",
+                "title": "Peaky Blinders",
+                "synopsis": "Keluarga Shelby membangun pengaruh kriminal di Birmingham setelah Perang Dunia I.",
+                "year": 2013,
+                "genre": [
+                    "Crime",
+                    "Drama"
+                ],
+                "thumbnail": "assets/images/poster-series/11_peaky blinders.jpg",
+                "rate": 9.0,
+                "rating": "PG-13",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-031",
+                                "episode_number": 1,
+                                "title": "Episode 1",
+                                "duration": "56 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=PB+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-032",
+                                "episode_number": 2,
+                                "title": "Episode 2",
+                                "duration": "58 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=PB+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-033",
+                                "episode_number": 3,
+                                "title": "Episode 3",
+                                "duration": "55 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=PB+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-012",
+                "title": "The Queen's Gambit",
+                "synopsis": "Seorang pemain catur muda berbakat berjuang menghadapi tekanan, kecanduan, dan dunia kompetitif catur.",
+                "year": 2020,
+                "genre": [
+                    "Drama"
+                ],
+                "thumbnail": "assets/images/poster-series/12_thequeen.jpg",
+                "rate": 8.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-034",
+                                "episode_number": 1,
+                                "title": "Openings",
+                                "duration": "65 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TQG+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-035",
+                                "episode_number": 2,
+                                "title": "Exchanges",
+                                "duration": "65 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TQG+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-036",
+                                "episode_number": 3,
+                                "title": "Doubled Pawns",
+                                "duration": "66 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TQG+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-013",
+                "title": "The Boys",
+                "synopsis": "Sekelompok vigilante berusaha mengungkap dan menghentikan para superhero korup yang menyalahgunakan kekuatan.",
+                "year": 2019,
+                "genre": [
+                    "Action",
+                    "Comedy",
+                    "Drama"
+                ],
+                "thumbnail": "assets/images/poster-series/13_theboys.jpg",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-037",
+                                "episode_number": 1,
+                                "title": "The Name of the Game",
+                                "duration": "61 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TB+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-038",
+                                "episode_number": 2,
+                                "title": "Cherry",
+                                "duration": "57 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TB+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-039",
+                                "episode_number": 3,
+                                "title": "Get Some",
+                                "duration": "55 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TB+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            }
+        ],
+        "Fantasy": [
+            {
+                "id": 0,
+                "title": "Black Clover: Sword of the Wizard King",
+                "poster": "assets/images/poster-movies/21_poster black clover.jpg",
+                "trailer": "assets/videos/trailer-movies/t21_bcwk.mp4",
+                "year": 2023,
+                "rating": "PG-13",
+                "duration": "1h 53m",
+                "rate": 8.9,
+                "genres": [
+                    "Action",
+                    "Adventure",
+                    "Fantasy",
+                    "Animation"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": "s-005",
+                "title": "House of the Dragon",
+                "synopsis": "Kisah klan Targaryen 200 tahun sebelum peristiwa Game of Thrones yang berujung pada perang saudara raksasa.",
+                "year": 2022,
+                "genre": [
+                    "Fantasy",
+                    "Action",
+                    "Drama"
+                ],
+                "thumbnail": "assets/images/poster-series/5_house of the dragon.jpg",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-013",
+                                "episode_number": 1,
+                                "title": "The Heirs of the Dragon",
+                                "duration": "66 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=HOTD+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-014",
+                                "episode_number": 2,
+                                "title": "The Rogue Prince",
+                                "duration": "54 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=HOTD+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-015",
+                                "episode_number": 3,
+                                "title": "Second of His Name",
+                                "duration": "63 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=HOTD+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-006",
+                "title": "Wednesday",
+                "synopsis": "Wednesday Addams menyelidiki misteri pembunuhan di Nevermore Academy sambil menghadapi kekuatan psikisnya.",
+                "year": 2022,
+                "genre": [
+                    "Comedy",
+                    "Mystery",
+                    "Fantasy"
+                ],
+                "thumbnail": "assets/images/poster-series/6_wednesday.webp",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-016",
+                                "episode_number": 1,
+                                "title": "Wednesday's Child Is Full of Woe",
+                                "duration": "60 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=W+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-017",
+                                "episode_number": 2,
+                                "title": "Woe Is the Loneliest Number",
+                                "duration": "50 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=W+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-018",
+                                "episode_number": 3,
+                                "title": "Friend or Woe",
+                                "duration": "47 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=W+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-014",
+                "title": "Avatar: The Last Airbender",
+                "synopsis": "Aang, pengendali udara terakhir, harus menguasai empat elemen untuk menghentikan perang yang melanda dunia.",
+                "year": 2005,
+                "genre": [
+                    "Animation",
+                    "Adventure",
+                    "Fantasy"
+                ],
+                "thumbnail": "assets/images/poster-series/14_avatar.webp",
+                "rate": 9.0,
+                "rating": "PG-13",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-040",
+                                "episode_number": 1,
+                                "title": "The Boy in the Iceberg",
+                                "duration": "24 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ATLA+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-041",
+                                "episode_number": 2,
+                                "title": "The Avatar Returns",
+                                "duration": "24 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ATLA+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-042",
+                                "episode_number": 3,
+                                "title": "The Southern Air Temple",
+                                "duration": "24 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ATLA+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            }
+        ],
+        "History": [
+            {
+                "id": 9,
+                "title": "Oppenheimer",
+                "poster": "assets/images/poster-movies/9_poster_OH.png",
+                "trailer": "assets/videos/trailer-movies/t9_oppenheimer-compress.mp4",
+                "year": 2023,
+                "rating": "R",
+                "duration": "3h",
+                "rate": 8.9,
+                "genres": [
+                    "Drama",
+                    "History"
+                ],
+                "content_type": "movie"
+            }
+        ],
+        "Horror": [
+            {
+                "id": 4,
+                "title": "A Quiet Place: Day One",
+                "poster": "assets/images/poster-movies/4_poster_aqpdo.webp",
+                "trailer": "assets/videos/trailer-movies/t4_aqpdo-compress.mp4",
+                "year": 2024,
+                "rating": "PG-13",
+                "duration": "1h 40m",
+                "rate": 8.9,
+                "genres": [
+                    "Horror",
+                    "Sci-Fi"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 7,
+                "title": "Smile 2",
+                "poster": "assets/images/poster-movies/7_poster smile2.jpg",
+                "trailer": "assets/videos/trailer-movies/t7_s2-compress.mp4",
+                "year": 2024,
+                "rating": "R",
+                "duration": "2h 7m",
+                "rate": 8.9,
+                "genres": [
+                    "Horror",
+                    "Thriller"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 10,
+                "title": "Longlegs",
+                "poster": "assets/images/poster-movies/10_poster longlegs.webp",
+                "trailer": "assets/videos/trailer-movies/t10_longlegs-compress.mp4",
+                "year": 2024,
+                "rating": "R",
+                "duration": "1h 41m",
+                "rate": 8.9,
+                "genres": [
+                    "Horror",
+                    "Mystery"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 13,
+                "title": "Abigail",
+                "poster": "assets/images/poster-movies/13_poster abigail.jpg",
+                "trailer": "assets/videos/trailer-movies/t13_abigail-compress.mp4",
+                "year": 2024,
+                "rating": "R",
+                "duration": "1h 49m",
+                "rate": 8.9,
+                "genres": [
+                    "Horror",
+                    "Thriller"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 16,
+                "title": "The Conjuring: Last Rites",
+                "poster": "assets/images/poster-movies/16_poster tclr.webp",
+                "trailer": "assets/videos/trailer-movies/t16_tclr-compress.mp4",
+                "year": 2025,
+                "rating": "R",
+                "duration": "2h",
+                "rate": 8.9,
+                "genres": [
+                    "Horror",
+                    "Mystery"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": "s-001",
+                "title": "The Last of Us",
+                "synopsis": "Dua puluh tahun setelah peradaban hancur akibat jamur mematikan, seorang pria harus menyelundupkan gadis muda yang kebal melintasi Amerika.",
+                "year": 2023,
+                "genre": [
+                    "Action",
+                    "Horror",
+                    "Drama"
+                ],
+                "thumbnail": "assets/images/poster-series/1_the last of us.webp",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-001",
+                                "episode_number": 1,
+                                "title": "When You're Lost in the Darkness",
+                                "duration": "81 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=T+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-002",
+                                "episode_number": 2,
+                                "title": "Infected",
+                                "duration": "53 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=T+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-003",
+                                "episode_number": 3,
+                                "title": "Long, Long Time",
+                                "duration": "75 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=T+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-004",
+                "title": "Stranger Things",
+                "synopsis": "Sekelompok remaja menghadapi fenomena supranatural dan eksperimen rahasia pemerintah di kota kecil Hawkins.",
+                "year": 2016,
+                "genre": [
+                    "Horror",
+                    "Drama",
+                    "Sci-Fi"
+                ],
+                "thumbnail": "assets/images/poster-series/4_stranger things.webp",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-010",
+                                "episode_number": 1,
+                                "title": "Chapter One: The Vanishing of Will Byers",
+                                "duration": "47 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ST+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-011",
+                                "episode_number": 2,
+                                "title": "Chapter Two: The Weirdo on Maple Street",
+                                "duration": "55 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ST+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-012",
+                                "episode_number": 3,
+                                "title": "Chapter Three: Holly, Jolly",
+                                "duration": "51 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ST+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            }
+        ],
+        "Mystery": [
+            {
+                "id": 10,
+                "title": "Longlegs",
+                "poster": "assets/images/poster-movies/10_poster longlegs.webp",
+                "trailer": "assets/videos/trailer-movies/t10_longlegs-compress.mp4",
+                "year": 2024,
+                "rating": "R",
+                "duration": "1h 41m",
+                "rate": 8.9,
+                "genres": [
+                    "Horror",
+                    "Mystery"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 16,
+                "title": "The Conjuring: Last Rites",
+                "poster": "assets/images/poster-movies/16_poster tclr.webp",
+                "trailer": "assets/videos/trailer-movies/t16_tclr-compress.mp4",
+                "year": 2025,
+                "rating": "R",
+                "duration": "2h",
+                "rate": 8.9,
+                "genres": [
+                    "Horror",
+                    "Mystery"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": "s-006",
+                "title": "Wednesday",
+                "synopsis": "Wednesday Addams menyelidiki misteri pembunuhan di Nevermore Academy sambil menghadapi kekuatan psikisnya.",
+                "year": 2022,
+                "genre": [
+                    "Comedy",
+                    "Mystery",
+                    "Fantasy"
+                ],
+                "thumbnail": "assets/images/poster-series/6_wednesday.webp",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-016",
+                                "episode_number": 1,
+                                "title": "Wednesday's Child Is Full of Woe",
+                                "duration": "60 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=W+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-017",
+                                "episode_number": 2,
+                                "title": "Woe Is the Loneliest Number",
+                                "duration": "50 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=W+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-018",
+                                "episode_number": 3,
+                                "title": "Friend or Woe",
+                                "duration": "47 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=W+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-008",
+                "title": "Sherlock",
+                "synopsis": "Detektif Sherlock Holmes dan John Watson memecahkan kasus rumit di London modern.",
+                "year": 2010,
+                "genre": [
+                    "Crime",
+                    "Mystery",
+                    "Drama"
+                ],
+                "thumbnail": "assets/images/poster-series/8_sherlock.jpg",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-022",
+                                "episode_number": 1,
+                                "title": "A Study in Pink",
+                                "duration": "89 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=S+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-023",
+                                "episode_number": 2,
+                                "title": "The Blind Banker",
+                                "duration": "89 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=S+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-024",
+                                "episode_number": 3,
+                                "title": "The Great Game",
+                                "duration": "89 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=S+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            }
+        ],
+        "Romance": [
+            {
+                "id": 19,
+                "title": "Anyone But You",
+                "poster": "assets/images/poster-movies/19_poster anyone but you.jpeg",
+                "trailer": "assets/videos/trailer-movies/t19_aby-compress.mp4",
+                "year": 2023,
+                "rating": "R",
+                "duration": "1h 43m",
+                "rate": 8.9,
+                "genres": [
+                    "Romance",
+                    "Comedy"
+                ],
+                "content_type": "movie"
+            }
+        ],
+        "Sci-Fi": [
+            {
+                "id": 4,
+                "title": "A Quiet Place: Day One",
+                "poster": "assets/images/poster-movies/4_poster_aqpdo.webp",
+                "trailer": "assets/videos/trailer-movies/t4_aqpdo-compress.mp4",
+                "year": 2024,
+                "rating": "PG-13",
+                "duration": "1h 40m",
+                "rate": 8.9,
+                "genres": [
+                    "Horror",
+                    "Sci-Fi"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": "s-004",
+                "title": "Stranger Things",
+                "synopsis": "Sekelompok remaja menghadapi fenomena supranatural dan eksperimen rahasia pemerintah di kota kecil Hawkins.",
+                "year": 2016,
+                "genre": [
+                    "Horror",
+                    "Drama",
+                    "Sci-Fi"
+                ],
+                "thumbnail": "assets/images/poster-series/4_stranger things.webp",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-010",
+                                "episode_number": 1,
+                                "title": "Chapter One: The Vanishing of Will Byers",
+                                "duration": "47 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ST+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-011",
+                                "episode_number": 2,
+                                "title": "Chapter Two: The Weirdo on Maple Street",
+                                "duration": "55 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ST+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-012",
+                                "episode_number": 3,
+                                "title": "Chapter Three: Holly, Jolly",
+                                "duration": "51 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ST+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-009",
+                "title": "The Mandalorian",
+                "synopsis": "Seorang pemburu hadiah Mandalorian menjalani petualangan di galaksi jauh setelah jatuhnya Kekaisaran.",
+                "year": 2019,
+                "genre": [
+                    "Sci-Fi",
+                    "Action",
+                    "Adventure"
+                ],
+                "thumbnail": "assets/images/poster-series/9_themandalorian.jpg",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-025",
+                                "episode_number": 1,
+                                "title": "Chapter 1: The Mandalorian",
+                                "duration": "40 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TM+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-026",
+                                "episode_number": 2,
+                                "title": "Chapter 2: The Child",
+                                "duration": "32 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TM+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-027",
+                                "episode_number": 3,
+                                "title": "Chapter 3: The Sin",
+                                "duration": "37 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TM+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            },
+            {
+                "id": "s-015",
+                "title": "Fallout",
+                "synopsis": "Seorang perempuan meninggalkan tempat perlindungan bawah tanah dan menjelajahi dunia pasca-apokaliptik yang berbahaya.",
+                "year": 2024,
+                "genre": [
+                    "Sci-Fi",
+                    "Action",
+                    "Adventure"
+                ],
+                "thumbnail": "assets/images/poster-series/15_fallout.jpg",
+                "rate": 9.0,
+                "rating": "PG",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-043",
+                                "episode_number": 1,
+                                "title": "The End",
+                                "duration": "65 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=F+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-044",
+                                "episode_number": 2,
+                                "title": "The Target",
+                                "duration": "55 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=F+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-045",
+                                "episode_number": 3,
+                                "title": "The Head",
+                                "duration": "55 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=F+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            }
+        ],
+        "Spy": [
+            {
+                "id": 18,
+                "title": "Mission: Impossible — Dead Reckoning",
+                "poster": "assets/images/poster-movies/18_poster MSDR.jpg",
+                "trailer": "assets/videos/trailer-movies/t18_mi-compress.mp4",
+                "year": 2023,
+                "rating": "PG-13",
+                "duration": "2h 43m",
+                "rate": 8.9,
+                "genres": [
+                    "Action",
+                    "Spy"
+                ],
+                "content_type": "movie"
+            }
+        ],
+        "Thriller": [
+            {
+                "id": 7,
+                "title": "Smile 2",
+                "poster": "assets/images/poster-movies/7_poster smile2.jpg",
+                "trailer": "assets/videos/trailer-movies/t7_s2-compress.mp4",
+                "year": 2024,
+                "rating": "R",
+                "duration": "2h 7m",
+                "rate": 8.9,
+                "genres": [
+                    "Horror",
+                    "Thriller"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 12,
+                "title": "John Wick: Chapter 4",
+                "poster": "assets/images/poster-movies/12_poster js4.jpg",
+                "trailer": "assets/videos/trailer-movies/t12_jw4-compress.mp4",
+                "year": 2023,
+                "rating": "R",
+                "duration": "2h 49m",
+                "rate": 8.9,
+                "genres": [
+                    "Action",
+                    "Thriller"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": 13,
+                "title": "Abigail",
+                "poster": "assets/images/poster-movies/13_poster abigail.jpg",
+                "trailer": "assets/videos/trailer-movies/t13_abigail-compress.mp4",
+                "year": 2024,
+                "rating": "R",
+                "duration": "1h 49m",
+                "rate": 8.9,
+                "genres": [
+                    "Horror",
+                    "Thriller"
+                ],
+                "content_type": "movie"
+            },
+            {
+                "id": "s-007",
+                "title": "Breaking Bad",
+                "synopsis": "Seorang guru kimia yang didiagnosis kanker mulai memproduksi narkoba bersama mantan muridnya demi masa depan keluarganya.",
+                "year": 2008,
+                "genre": [
+                    "Crime",
+                    "Drama",
+                    "Thriller"
+                ],
+                "thumbnail": "assets/images/poster-series/7_breakingbad.webp",
+                "rate": 9.0,
+                "rating": "R",
+                "seasons": [
+                    {
+                        "season_number": 1,
+                        "episodes": [
+                            {
+                                "id": "e-019",
+                                "episode_number": 1,
+                                "title": "Pilot",
+                                "duration": "58 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=BB+Eps+1",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-020",
+                                "episode_number": 2,
+                                "title": "Cat's in the Bag...",
+                                "duration": "48 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=BB+Eps+2",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            },
+                            {
+                                "id": "e-021",
+                                "episode_number": 3,
+                                "title": "...And the Bag's in the River",
+                                "duration": "48 min",
+                                "thumbnail": "https://dummyimage.com/300x170/000/fff&text=BB+Eps+3",
+                                "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            }
+                        ]
+                    }
+                ],
+                "content_type": "series"
+            }
+        ]
+    }
+}
