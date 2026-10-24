@@ -1,21 +1,11 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
-import Login from "./pages/auth/Login.jsx";
-import Register from "./pages/auth/Register.jsx";
-import ForgotPassword from "./pages/auth/ForgotPassword.jsx";
-import Home from "./pages/home/Home.jsx";
+import { RouterProvider } from "react-router-dom";
+import { router } from "./router/route"; // Pastikan path ini benar sesuai struktur foldermu
 
-function App(){
+function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/sign-in" element={<Login />}/>
-          <Route path="/register" element={<Register />}/>
-          <Route path="/forgot-password" element={<ForgotPassword />}/>
-            
-      </Routes>
-    </BrowserRouter>
-  )
+    // Cukup panggil RouterProvider dan masukkan router-nya di sini
+    <RouterProvider router={router} />
+  );
 }
 
 export default App;

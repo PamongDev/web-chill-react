@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import useDropdown from "../hooks/useDropdown";
+import ProfileDropdown from "./ProfileDropdown";
 import "../styles/components.css";
 export default function Header({ username, email }) {
     const navigate = useNavigate();
@@ -54,53 +55,7 @@ export default function Header({ username, email }) {
                                 </svg>
                             </button>
 
-                            <div className="profile-dropdown">
-
-                                <div className="profile-dropdown-header">
-                                    <img
-                                        src="assets/images/main/logo app.png"
-                                        alt="Fahmi"
-                                        className="profile-dropdown-avatar"
-                                    />
-
-                                    <div className="profile-user-info">
-                                        <span className="profile-name">{username}</span>
-                                        <span className="profile-email">{email}</span>
-                                    </div>
-                                </div>
-
-                                <div className="profile-dropdown-divider"></div>
-
-                                <a href="#profile" className="profile-dropdown-item">
-                                    <span>My Profile</span>
-                                </a>
-
-                                <a href="#playlist" className="profile-dropdown-item">
-                                    <span>Playlist</span>
-                                </a>
-
-                                <a href="#favorites" className="profile-dropdown-item">
-                                    <span>Favorites</span>
-                                </a>
-
-                                <a href="#settings" className="profile-dropdown-item">
-                                    <span>Settings</span>
-                                </a>
-
-                                <a href="#help" className="profile-dropdown-item">
-                                    <span>Help Center</span>
-                                </a>
-
-                                <div className="profile-dropdown-divider"></div>
-
-                                <button
-                                    className="profile-dropdown-item profile-logout"
-                                    type="button" onClick={handleLogout}
-                                >
-                                    <span>Logout</span>
-                                </button>
-
-                            </div>
+                            <ProfileDropdown username={username} email={email} handleLogout={handleLogout}></ProfileDropdown>
                         </div>
 
                     </div>
