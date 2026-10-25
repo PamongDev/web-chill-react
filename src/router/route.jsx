@@ -12,6 +12,8 @@ import Playlist from "../pages/home/Playlist.jsx";
 import Genres from "../pages/home/Genres.jsx";
 import Movies from "../pages/home/Movies.jsx";
 import Series from "../pages/home/Series.jsx";
+import DetailMovie from "../pages/home/DetailMovie.jsx";
+import DetailSeries from "../pages/home/DetailSeries.jsx";
 
 
 
@@ -64,4 +66,12 @@ export const router = createBrowserRouter([
         path : "/genres",
         element : <Genres />
     },
+    {
+        path : "/movie/:id",
+        element : <DetailMovie />
+    },
+    {
+        path : "/series/:id",
+        element : <DetailSeries />
+    }
 ])

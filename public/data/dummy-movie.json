@@ -1,280 +1,848 @@
 {
     "movies": [
-    {
-        "id": 0,
-        "title": "Black Clover: Sword of the Wizard King",
-        "poster": "assets/images/poster-movies/21_poster black clover.jpg",
-        "trailer": "assets/videos/trailer-movies/t21_bcwk.mp4",
-        "key": "zhsAd5ORk1Y",
-        "year": 2023,
-        "rating": "PG-13",
-        "duration": "1h 53m",
-        "rate": 8.9,
-        "genres": ["Action", "Adventure", "Fantasy", "Animation"],
-        "synopsis": "Asta and the Magic Knights face their greatest challenge when Conrad Leto, a former Wizard King, returns alongside resurrected Wizard Kings seeking to destroy the Clover Kingdom."
-    },
-    {
-        "id": 1,
-        "title": "Dune: Part Two",
-        "poster": "assets/images/poster-movies/1_poster dune2.jpg",
-        "trailer": "assets/videos/trailer-movies/t1_dp2-compress.mp4",
-        "key": "Way9Dexny3w",
-        "year": 2024,
-        "rating": "PG-13",
-        "duration": "2h 46m",
-        "rate": 8.9,
-        "genres": ["Action", "Adventure"],
-        "synopsis": "Paul Atreides joins Chani and the Fremen in their fight against the forces that destroyed his family. As he embraces his destiny, Paul must confront visions of a dangerous future."
-    },
-    {
-        "id": 2,
-        "title": "Deadpool & Wolverine",
-        "poster": "assets/images/poster-movies/2_poster_deadpoolnwolverine.jpg",
-        "trailer": "assets/videos/trailer-movies/t2_dw-compress.mp4",
-        "key": "73_1biulkYk",
-        "year": 2024,
-        "rating": "R",
-        "duration": "2h 8m",
-        "rate": 8.9,
-        "genres": ["Action", "Comedy"],
-        "synopsis": "When the Time Variance Authority pulls Wade Wilson into a mission to save his universe, Deadpool recruits a reluctant Wolverine for an unpredictable adventure across the multiverse."
-    },
-    {
-        "id": 3,
-        "title": "Inside Out 2",
-        "poster": "assets/images/poster-movies/3_poster_insideout2.jpg",
-        "trailer": "assets/videos/trailer-movies/t3_io2-compress.mp4",
-        "key": "LEjhY15eCx0",
-        "year": 2024,
-        "rating": "PG",
-        "duration": "1h 40m",
-        "rate": 8.9,
-        "genres": ["Animation", "Comedy"],
-        "synopsis": "As Riley enters her teenage years, Joy and the other emotions encounter new arrivals, including Anxiety, Envy, and Embarrassment, forcing the team to navigate the challenges of growing up."
-    },
-    {
-        "id": 4,
-        "title": "A Quiet Place: Day One",
-        "poster": "assets/images/poster-movies/4_poster_aqpdo.webp",
-        "trailer": "assets/videos/trailer-movies/t4_aqpdo-compress.mp4",
-        "key": "YPY7J-flzE8",
-        "year": 2024,
-        "rating": "PG-13",
-        "duration": "1h 40m",
-        "rate": 8.9,
-        "genres": ["Horror", "Sci-Fi"],
-        "synopsis": "During the first day of an alien invasion, Samira finds herself trapped in New York City, where deadly creatures hunt by sound. Alongside a stranger, she struggles to survive the terrifying chaos."
-    },
-    {
-        "id": 5,
-        "title": "Gladiator II",
-        "poster": "assets/images/poster-movies/5_poster gladiator2.jpeg",
-        "trailer": "assets/videos/trailer-movies/t5_g2-compress.mp4",
-        "key": "4rgYUipGJNo",
-        "year": 2024,
-        "rating": "R",
-        "duration": "2h 28m",
-        "rate": 8.9,
-        "genres": ["Action", "Drama"],
-        "synopsis": "After Roman forces conquer his home, Lucius is forced into the Colosseum as a gladiator. Driven by revenge and inspired by the legacy of Maximus, he fights against the corrupt rulers of Rome."
-    },
-    {
-        "id": 6,
-        "title": "Kung Fu Panda 4",
-        "poster": "assets/images/poster-movies/6_poster KF4.png",
-        "trailer": "assets/videos/trailer-movies/t6_kp4-compress.mp4",
-        "key": "_inKs4eeHiI",
-        "year": 2024,
-        "rating": "PG",
-        "duration": "1h 34m",
-        "rate": 8.9,
-        "genres": ["Animation", "Adventure"],
-        "synopsis": "Po is chosen to become the Spiritual Leader of the Valley of Peace and must find a new Dragon Warrior. Alongside the clever fox Zhen, he faces a powerful sorceress capable of transforming into his enemies."
-    },
-    {
-        "id": 7,
-        "title": "Smile 2",
-        "poster": "assets/images/poster-movies/7_poster smile2.jpg",
-        "trailer": "assets/videos/trailer-movies/t7_s2-compress.mp4",
-        "key": "0HY6QFlBzUY",
-        "year": 2024,
-        "rating": "R",
-        "duration": "2h 7m",
-        "rate": 8.9,
-        "genres": ["Horror", "Thriller"],
-        "synopsis": "As pop star Skye Riley prepares for a major world tour, increasingly terrifying events begin to disrupt her life. She must confront a sinister force while struggling with the pressures of fame and her troubled past."
-    },
-    {
-        "id": 8,
-        "title": "The Fall Guy",
-        "poster": "assets/images/poster-movies/8_poster_tfg.jpg",
-        "trailer": "assets/videos/trailer-movies/t8_tfg-compress.mp4",
-        "key": "j7jPnwVGdZ8",
-        "year": 2024,
-        "rating": "PG-13",
-        "duration": "2h 6m",
-        "rate": 8.9,
-        "genres": ["Action", "Comedy"],
-        "synopsis": "Colt Seavers, a stuntman returning after a career-threatening accident, joins a film directed by his former girlfriend. When the movie's leading star disappears, Colt becomes entangled in a dangerous conspiracy."
-    },
-    {
-        "id": 9,
-        "title": "Oppenheimer",
-        "poster": "assets/images/poster-movies/9_poster_OH.png",
-        "trailer": "assets/videos/trailer-movies/t9_oppenheimer-compress.mp4",
-        "key": "bK6ldnjE3Y0",
-        "year": 2023,
-        "rating": "R",
-        "duration": "3h",
-        "rate": 8.9,
-        "genres": ["Drama", "History"],
-        "synopsis": "Physicist J. Robert Oppenheimer leads the Manhattan Project, a secret mission to develop the world's first atomic bomb. As his scientific achievements reshape history, he struggles with their devastating consequences."
-    },
-    {
-        "id": 10,
-        "title": "Longlegs",
-        "poster": "assets/images/poster-movies/10_poster longlegs.webp",
-        "trailer": "assets/videos/trailer-movies/t10_longlegs-compress.mp4",
-        "key": "OG7wOTE8NhE",
-        "year": 2024,
-        "rating": "R",
-        "duration": "1h 41m",
-        "rate": 8.9,
-        "genres": ["Horror", "Mystery"],
-        "synopsis": "FBI agent Lee Harker investigates a series of bizarre family murders connected to a mysterious serial killer known as Longlegs. As she uncovers disturbing occult clues, the case reveals a terrifying personal connection."
-    },
-    {
-        "id": 11,
-        "title": "Despicable Me 4",
-        "poster": "assets/images/poster-movies/11_poster DM4.jpg",
-        "trailer": "assets/videos/trailer-movies/t11_dm4-compress.mp4",
-        "key": "qQlr9-rF32A",
-        "year": 2024,
-        "rating": "PG",
-        "duration": "1h 35m",
-        "rate": 8.9,
-        "genres": ["Animation", "Comedy"],
-        "synopsis": "Gru and his family welcome a new baby while trying to stay ahead of escaped criminal Maxime Le Mal. With danger approaching, Gru, Lucy, and the Minions must work together to protect their loved ones."
-    },
-    {
-        "id": 12,
-        "title": "John Wick: Chapter 4",
-        "poster": "assets/images/poster-movies/12_poster js4.jpg",
-        "trailer": "assets/videos/trailer-movies/t12_jw4-compress.mp4",
-        "key": "qEVUtrk8_B4",
-        "year": 2023,
-        "rating": "R",
-        "duration": "2h 49m",
-        "rate": 8.9,
-        "genres": ["Action", "Thriller"],
-        "synopsis": "John Wick discovers a possible path to freedom from the High Table, but powerful enemies stand in his way. His fight takes him across the globe toward a decisive confrontation that could change his fate."
-    },
-    {
-        "id": 13,
-        "title": "Abigail",
-        "poster": "assets/images/poster-movies/13_poster abigail.jpg",
-        "trailer": "assets/videos/trailer-movies/t13_abigail-compress.mp4",
-        "key": "3PsP8MFH8p0",
-        "year": 2024,
-        "rating": "R",
-        "duration": "1h 49m",
-        "rate": 8.9,
-        "genres": ["Horror", "Thriller"],
-        "synopsis": "A group of criminals kidnaps Abigail, a young ballerina, and takes her to an isolated mansion for a ransom. Their plan quickly falls apart when they discover that their seemingly innocent captive hides a terrifying secret."
-    },
-    {
-        "id": 14,
-        "title": "Moana 2",
-        "poster": "assets/images/poster-movies/14_poster moana2.webp",
-        "trailer": "assets/videos/trailer-movies/t14_m2-compress.mp4",
-        "key": "YPnNrd9Xc44",
-        "year": 2024,
-        "rating": "PG",
-        "duration": "1h 40m",
-        "rate": 8.9,
-        "genres": ["Animation", "Adventure"],
-        "synopsis": "After receiving an unexpected call from her ancestors, Moana embarks on a daring voyage across distant seas with Maui and a new crew. Together, they seek to reconnect the scattered peoples of Oceania."
-    },
-    {
-        "id": 15,
-        "title": "Bad Boys: Ride or Die",
-        "poster": "assets/images/poster-movies/15_poster bad boys.webp",
-        "trailer": "assets/videos/trailer-movies/t15_bbrod-compress.mp4",
-        "key": "hRFY_Fesa9Q",
-        "year": 2024,
-        "rating": "R",
-        "duration": "1h 55m",
-        "rate": 8.9,
-        "genres": ["Action", "Comedy"],
-        "synopsis": "Miami detectives Mike Lowrey and Marcus Burnett become fugitives after their late police captain is accused of corruption. Determined to clear his name, they must uncover the truth while evading the authorities."
-    },
-    {
-        "id": 16,
-        "title": "The Conjuring: Last Rites",
-        "poster": "assets/images/poster-movies/16_poster tclr.webp",
-        "trailer": "assets/videos/trailer-movies/t16_tclr-compress.mp4",
-        "key": "bMgfsdYoEEo",
-        "year": 2025,
-        "rating": "R",
-        "duration": "2h",
-        "rate": 8.9,
-        "genres": ["Horror", "Mystery"],
-        "synopsis": "Paranormal investigators Ed and Lorraine Warren take on another disturbing case involving a family plagued by supernatural events. As the haunting intensifies, the Warrens confront a terrifying mystery that tests their faith and courage."
-    },
-    {
-        "id": 17,
-        "title": "Toy Story 5",
-        "poster": "assets/images/poster-movies/17_poster TS5.jpg",
-        "trailer": "assets/videos/trailer-movies/t17_ts5-compress.mp4",
-        "key": "c51ND9Hdbw0",
-        "year": 2026,
-        "rating": "PG",
-        "duration": "1h 40m",
-        "rate": 8.9,
-        "genres": ["Animation", "Adventure"],
-        "synopsis": "Woody, Buzz, Jessie, and the other toys face a new challenge when Bonnie becomes fascinated with Lilypad, a smart tablet with its own ideas about playtime. As technology changes their world, the toys must find a way to reconnect with their child."
-    },
-    {
-        "id": 18,
-        "title": "Mission: Impossible — Dead Reckoning",
-        "poster": "assets/images/poster-movies/18_poster MSDR.jpg",
-        "trailer": "assets/videos/trailer-movies/t18_mi-compress.mp4",
-        "key": "avz06PDqDbM",
-        "year": 2023,
-        "rating": "PG-13",
-        "duration": "2h 43m",
-        "rate": 8.9,
-        "genres": ["Action", "Spy"],
-        "synopsis": "Ethan Hunt and his IMF team race to stop a powerful artificial intelligence known as the Entity from threatening global security. Pursued by dangerous enemies, Ethan must track down a crucial key before it falls into the wrong hands."
-    },
-    {
-        "id": 19,
-        "title": "Anyone But You",
-        "poster": "assets/images/poster-movies/19_poster anyone but you.jpeg",
-        "trailer": "assets/videos/trailer-movies/t19_aby-compress.mp4",
-        "key": "ESEc6W2h9_k",
-        "year": 2023,
-        "rating": "R",
-        "duration": "1h 43m",
-        "rate": 8.9,
-        "genres": ["Romance", "Comedy"],
-        "synopsis": "Bea and Ben have an awkward first date that leaves them disliking each other. When they reunite at a destination wedding in Australia, they pretend to be a couple, only to discover that their feelings may be more complicated than they expected."
-    },
-    {
-        "id": 20,
-        "title": "The Batman Part II",
-        "poster": "assets/images/poster-movies/20_poster tb2.jpg",
-        "trailer": "assets/videos/trailer-movies/t20_batman2-compress.mp4",
-        "key": "T7_zMl_ZhdQ",
-        "year": 2026,
-        "rating": "PG-13",
-        "duration": "TBA",
-        "rate": 8.9,
-        "genres": ["Action", "Crime"],
-        "synopsis": "Bruce Wayne continues his mission to protect Gotham City as Batman. Facing new dangers in a city plagued by crime and corruption, he must rely on his detective skills and determination to uncover the truth."
-    }
-],
-    
+        {
+            "id": 0,
+            "title": "Black Clover: Sword of the Wizard King",
+            "poster": "assets/images/poster-movies/21_poster black clover.jpg",
+            "trailer": "assets/videos/trailer-movies/t21_bcwk.mp4",
+            "key": "zhsAd5ORk1Y",
+            "year": 2023,
+            "rating": "PG-13",
+            "duration": "1h 53m",
+            "rate": 8.9,
+            "genres": [
+                "Action",
+                "Adventure",
+                "Fantasy",
+                "Animation"
+            ],
+            "synopsis": "Asta and the Magic Knights face their greatest challenge when Conrad Leto, a former Wizard King, returns alongside resurrected Wizard Kings seeking to destroy the Clover Kingdom.",
+            "country": "Japan",
+            "director": "Ayataka Tanemura",
+            "cast": [
+                {
+                    "name": "Kana Yuuki",
+                    "character": "Noelle Silva"
+                },
+                {
+                    "name": "Nana Mizuki",
+                    "character": "Vanessa Enoteca"
+                },
+                {
+                    "name": "Gakuto Kajiwara",
+                    "character": "Asta"
+                },
+                {
+                    "name": "Nobunaga Shimazaki",
+                    "character": "Yuno Grinberryall"
+                },
+                {
+                    "name": "Junichi Suwabe",
+                    "character": "Yami Sukehiro"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "title": "Dune: Part Two",
+            "poster": "assets/images/poster-movies/1_poster dune2.jpg",
+            "trailer": "assets/videos/trailer-movies/t1_dp2-compress.mp4",
+            "key": "Way9Dexny3w",
+            "year": 2024,
+            "rating": "PG-13",
+            "duration": "2h 46m",
+            "rate": 8.9,
+            "genres": [
+                "Action",
+                "Adventure"
+            ],
+            "synopsis": "Paul Atreides joins Chani and the Fremen in their fight against the forces that destroyed his family. As he embraces his destiny, Paul must confront visions of a dangerous future.",
+            "country": "United States, Canada",
+            "director": "Denis Villeneuve",
+            "cast": [
+                {
+                    "name": "Zendaya",
+                    "character": "Chani"
+                },
+                {
+                    "name": "Rebecca Ferguson",
+                    "character": "Lady Jessica"
+                },
+                {
+                    "name": "Timothée Chalamet",
+                    "character": "Paul Atreides"
+                },
+                {
+                    "name": "Javier Bardem",
+                    "character": "Stilgar"
+                },
+                {
+                    "name": "Josh Brolin",
+                    "character": "Gurney Halleck"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Deadpool & Wolverine",
+            "poster": "assets/images/poster-movies/2_poster_deadpoolnwolverine.jpg",
+            "trailer": "assets/videos/trailer-movies/t2_dw-compress.mp4",
+            "key": "73_1biulkYk",
+            "year": 2024,
+            "rating": "R",
+            "duration": "2h 8m",
+            "rate": 8.9,
+            "genres": [
+                "Action",
+                "Comedy"
+            ],
+            "synopsis": "When the Time Variance Authority pulls Wade Wilson into a mission to save his universe, Deadpool recruits a reluctant Wolverine for an unpredictable adventure across the multiverse.",
+            "country": "United States",
+            "director": "Shawn Levy",
+            "cast": [
+                {
+                    "name": "Emma Corrin",
+                    "character": "Cassandra Nova"
+                },
+                {
+                    "name": "Morena Baccarin",
+                    "character": "Vanessa Carlysle"
+                },
+                {
+                    "name": "Ryan Reynolds",
+                    "character": "Wade Wilson / Deadpool"
+                },
+                {
+                    "name": "Hugh Jackman",
+                    "character": "Logan / Wolverine"
+                },
+                {
+                    "name": "Matthew Macfadyen",
+                    "character": "Mr. Paradox"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Inside Out 2",
+            "poster": "assets/images/poster-movies/3_poster_insideout2.jpg",
+            "trailer": "assets/videos/trailer-movies/t3_io2-compress.mp4",
+            "key": "LEjhY15eCx0",
+            "year": 2024,
+            "rating": "PG",
+            "duration": "1h 40m",
+            "rate": 8.9,
+            "genres": [
+                "Animation",
+                "Comedy"
+            ],
+            "synopsis": "As Riley enters her teenage years, Joy and the other emotions encounter new arrivals, including Anxiety, Envy, and Embarrassment, forcing the team to navigate the challenges of growing up.",
+            "country": "United States",
+            "director": "Kelsey Mann",
+            "cast": [
+                {
+                    "name": "Amy Poehler",
+                    "character": "Joy"
+                },
+                {
+                    "name": "Maya Hawke",
+                    "character": "Anxiety"
+                },
+                {
+                    "name": "Phyllis Smith",
+                    "character": "Sadness"
+                },
+                {
+                    "name": "Lewis Black",
+                    "character": "Anger"
+                },
+                {
+                    "name": "Tony Hale",
+                    "character": "Fear"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "A Quiet Place: Day One",
+            "poster": "assets/images/poster-movies/4_poster_aqpdo.webp",
+            "trailer": "assets/videos/trailer-movies/t4_aqpdo-compress.mp4",
+            "key": "YPY7J-flzE8",
+            "year": 2024,
+            "rating": "PG-13",
+            "duration": "1h 40m",
+            "rate": 8.9,
+            "genres": [
+                "Horror",
+                "Sci-Fi"
+            ],
+            "synopsis": "During the first day of an alien invasion, Samira finds herself trapped in New York City, where deadly creatures hunt by sound. Alongside a stranger, she struggles to survive the terrifying chaos.",
+            "country": "United States",
+            "director": "Michael Sarnoski",
+            "cast": [
+                {
+                    "name": "Lupita Nyong’o",
+                    "character": "Samira"
+                },
+                {
+                    "name": "Eliane Umuhire",
+                    "character": "Zena"
+                },
+                {
+                    "name": "Joseph Quinn",
+                    "character": "Eric"
+                },
+                {
+                    "name": "Alex Wolff",
+                    "character": "Reuben"
+                },
+                {
+                    "name": "Djimon Hounsou",
+                    "character": "Henri"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Gladiator II",
+            "poster": "assets/images/poster-movies/5_poster gladiator2.jpeg",
+            "trailer": "assets/videos/trailer-movies/t5_g2-compress.mp4",
+            "key": "4rgYUipGJNo",
+            "year": 2024,
+            "rating": "R",
+            "duration": "2h 28m",
+            "rate": 8.9,
+            "genres": [
+                "Action",
+                "Drama"
+            ],
+            "synopsis": "After Roman forces conquer his home, Lucius is forced into the Colosseum as a gladiator. Driven by revenge and inspired by the legacy of Maximus, he fights against the corrupt rulers of Rome.",
+            "country": "United States, United Kingdom",
+            "director": "Ridley Scott",
+            "cast": [
+                {
+                    "name": "Connie Nielsen",
+                    "character": "Lucilla"
+                },
+                {
+                    "name": "Yuval Gonen",
+                    "character": "Arishat"
+                },
+                {
+                    "name": "Paul Mescal",
+                    "character": "Lucius"
+                },
+                {
+                    "name": "Pedro Pascal",
+                    "character": "General Marcus Acacius"
+                },
+                {
+                    "name": "Denzel Washington",
+                    "character": "Macrinus"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Kung Fu Panda 4",
+            "poster": "assets/images/poster-movies/6_poster KF4.png",
+            "trailer": "assets/videos/trailer-movies/t6_kp4-compress.mp4",
+            "key": "_inKs4eeHiI",
+            "year": 2024,
+            "rating": "PG",
+            "duration": "1h 34m",
+            "rate": 8.9,
+            "genres": [
+                "Animation",
+                "Adventure"
+            ],
+            "synopsis": "Po is chosen to become the Spiritual Leader of the Valley of Peace and must find a new Dragon Warrior. Alongside the clever fox Zhen, he faces a powerful sorceress capable of transforming into his enemies.",
+            "country": "United States",
+            "director": "Mike Mitchell, Stephanie Ma Stine",
+            "cast": [
+                {
+                    "name": "Awkwafina",
+                    "character": "Zhen"
+                },
+                {
+                    "name": "Viola Davis",
+                    "character": "The Chameleon"
+                },
+                {
+                    "name": "Jack Black",
+                    "character": "Po"
+                },
+                {
+                    "name": "Dustin Hoffman",
+                    "character": "Master Shifu"
+                },
+                {
+                    "name": "James Hong",
+                    "character": "Mr. Ping"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "title": "Smile 2",
+            "poster": "assets/images/poster-movies/7_poster smile2.jpg",
+            "trailer": "assets/videos/trailer-movies/t7_s2-compress.mp4",
+            "key": "0HY6QFlBzUY",
+            "year": 2024,
+            "rating": "R",
+            "duration": "2h 7m",
+            "rate": 8.9,
+            "genres": [
+                "Horror",
+                "Thriller"
+            ],
+            "synopsis": "As pop star Skye Riley prepares for a major world tour, increasingly terrifying events begin to disrupt her life. She must confront a sinister force while struggling with the pressures of fame and her troubled past.",
+            "country": "United States",
+            "director": "Parker Finn",
+            "cast": [
+                {
+                    "name": "Naomi Scott",
+                    "character": "Skye Riley"
+                },
+                {
+                    "name": "Rosemarie DeWitt",
+                    "character": "Elizabeth Riley"
+                },
+                {
+                    "name": "Kyle Gallner",
+                    "character": "Joel"
+                },
+                {
+                    "name": "Lukas Gage",
+                    "character": "Lewis Fregoli"
+                },
+                {
+                    "name": "Ray Nicholson",
+                    "character": "Paul Hudson"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "title": "The Fall Guy",
+            "poster": "assets/images/poster-movies/8_poster_tfg.jpg",
+            "trailer": "assets/videos/trailer-movies/t8_tfg-compress.mp4",
+            "key": "j7jPnwVGdZ8",
+            "year": 2024,
+            "rating": "PG-13",
+            "duration": "2h 6m",
+            "rate": 8.9,
+            "genres": [
+                "Action",
+                "Comedy"
+            ],
+            "synopsis": "Colt Seavers, a stuntman returning after a career-threatening accident, joins a film directed by his former girlfriend. When the movie's leading star disappears, Colt becomes entangled in a dangerous conspiracy.",
+            "country": "United States",
+            "director": "David Leitch",
+            "cast": [
+                {
+                    "name": "Emily Blunt",
+                    "character": "Jody Moreno"
+                },
+                {
+                    "name": "Hannah Waddingham",
+                    "character": "Gail Meyer"
+                },
+                {
+                    "name": "Ryan Gosling",
+                    "character": "Colt Seavers"
+                },
+                {
+                    "name": "Aaron Taylor-Johnson",
+                    "character": "Tom Ryder"
+                },
+                {
+                    "name": "Winston Duke",
+                    "character": "Dan Tucker"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "title": "Oppenheimer",
+            "poster": "assets/images/poster-movies/9_poster_OH.png",
+            "trailer": "assets/videos/trailer-movies/t9_oppenheimer-compress.mp4",
+            "key": "bK6ldnjE3Y0",
+            "year": 2023,
+            "rating": "R",
+            "duration": "3h",
+            "rate": 8.9,
+            "genres": [
+                "Drama",
+                "History"
+            ],
+            "synopsis": "Physicist J. Robert Oppenheimer leads the Manhattan Project, a secret mission to develop the world's first atomic bomb. As his scientific achievements reshape history, he struggles with their devastating consequences.",
+            "country": "United States, United Kingdom",
+            "director": "Christopher Nolan",
+            "cast": [
+                {
+                    "name": "Emily Blunt",
+                    "character": "Katherine “Kitty” Oppenheimer"
+                },
+                {
+                    "name": "Florence Pugh",
+                    "character": "Jean Tatlock"
+                },
+                {
+                    "name": "Cillian Murphy",
+                    "character": "J. Robert Oppenheimer"
+                },
+                {
+                    "name": "Robert Downey Jr.",
+                    "character": "Lewis Strauss"
+                },
+                {
+                    "name": "Matt Damon",
+                    "character": "Leslie Groves"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "title": "Longlegs",
+            "poster": "assets/images/poster-movies/10_poster longlegs.webp",
+            "trailer": "assets/videos/trailer-movies/t10_longlegs-compress.mp4",
+            "key": "OG7wOTE8NhE",
+            "year": 2024,
+            "rating": "R",
+            "duration": "1h 41m",
+            "rate": 8.9,
+            "genres": [
+                "Horror",
+                "Mystery"
+            ],
+            "synopsis": "FBI agent Lee Harker investigates a series of bizarre family murders connected to a mysterious serial killer known as Longlegs. As she uncovers disturbing occult clues, the case reveals a terrifying personal connection.",
+            "country": "United States, Canada",
+            "director": "Osgood Perkins",
+            "cast": [
+                {
+                    "name": "Maika Monroe",
+                    "character": "Lee Harker"
+                },
+                {
+                    "name": "Alicia Witt",
+                    "character": "Ruth Harker"
+                },
+                {
+                    "name": "Kiernan Shipka",
+                    "character": "Carrie Anne Camera"
+                },
+                {
+                    "name": "Nicolas Cage",
+                    "character": "Longlegs"
+                },
+                {
+                    "name": "Blair Underwood",
+                    "character": "Agent Carter"
+                }
+            ]
+        },
+        {
+            "id": 11,
+            "title": "Despicable Me 4",
+            "poster": "assets/images/poster-movies/11_poster DM4.jpg",
+            "trailer": "assets/videos/trailer-movies/t11_dm4-compress.mp4",
+            "key": "qQlr9-rF32A",
+            "year": 2024,
+            "rating": "PG",
+            "duration": "1h 35m",
+            "rate": 8.9,
+            "genres": [
+                "Animation",
+                "Comedy"
+            ],
+            "synopsis": "Gru and his family welcome a new baby while trying to stay ahead of escaped criminal Maxime Le Mal. With danger approaching, Gru, Lucy, and the Minions must work together to protect their loved ones.",
+            "country": "United States",
+            "director": "Chris Renaud, Patrick Delage",
+            "cast": [
+                {
+                    "name": "Kristen Wiig",
+                    "character": "Lucy Wilde"
+                },
+                {
+                    "name": "Miranda Cosgrove",
+                    "character": "Margo"
+                },
+                {
+                    "name": "Steve Carell",
+                    "character": "Gru"
+                },
+                {
+                    "name": "Will Ferrell",
+                    "character": "Maxime Le Mal"
+                },
+                {
+                    "name": "Pierre Coffin",
+                    "character": "The Minions (voice)"
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "title": "John Wick: Chapter 4",
+            "poster": "assets/images/poster-movies/12_poster js4.jpg",
+            "trailer": "assets/videos/trailer-movies/t12_jw4-compress.mp4",
+            "key": "qEVUtrk8_B4",
+            "year": 2023,
+            "rating": "R",
+            "duration": "2h 49m",
+            "rate": 8.9,
+            "genres": [
+                "Action",
+                "Thriller"
+            ],
+            "synopsis": "John Wick discovers a possible path to freedom from the High Table, but powerful enemies stand in his way. His fight takes him across the globe toward a decisive confrontation that could change his fate.",
+            "country": "United States, Germany",
+            "director": "Chad Stahelski",
+            "cast": [
+                {
+                    "name": "Rina Sawayama",
+                    "character": "Akira Shimazu"
+                },
+                {
+                    "name": "Aimée Kwan",
+                    "character": "Mia, Caine’s daughter"
+                },
+                {
+                    "name": "Keanu Reeves",
+                    "character": "John Wick"
+                },
+                {
+                    "name": "Donnie Yen",
+                    "character": "Caine"
+                },
+                {
+                    "name": "Bill Skarsgård",
+                    "character": "Marquis de Gramont"
+                }
+            ]
+        },
+        {
+            "id": 13,
+            "title": "Abigail",
+            "poster": "assets/images/poster-movies/13_poster abigail.jpg",
+            "trailer": "assets/videos/trailer-movies/t13_abigail-compress.mp4",
+            "key": "3PsP8MFH8p0",
+            "year": 2024,
+            "rating": "R",
+            "duration": "1h 49m",
+            "rate": 8.9,
+            "genres": [
+                "Horror",
+                "Thriller"
+            ],
+            "synopsis": "A group of criminals kidnaps Abigail, a young ballerina, and takes her to an isolated mansion for a ransom. Their plan quickly falls apart when they discover that their seemingly innocent captive hides a terrifying secret.",
+            "country": "United States",
+            "director": "Matt Bettinelli-Olpin, Tyler Gillett",
+            "cast": [
+                {
+                    "name": "Melissa Barrera",
+                    "character": "Joey"
+                },
+                {
+                    "name": "Alisha Weir",
+                    "character": "Abigail"
+                },
+                {
+                    "name": "Kathryn Newton",
+                    "character": "Sammy"
+                },
+                {
+                    "name": "Dan Stevens",
+                    "character": "Frank"
+                },
+                {
+                    "name": "Kevin Durand",
+                    "character": "Peter"
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "title": "Moana 2",
+            "poster": "assets/images/poster-movies/14_poster moana2.webp",
+            "trailer": "assets/videos/trailer-movies/t14_m2-compress.mp4",
+            "key": "YPnNrd9Xc44",
+            "year": 2024,
+            "rating": "PG",
+            "duration": "1h 40m",
+            "rate": 8.9,
+            "genres": [
+                "Animation",
+                "Adventure"
+            ],
+            "synopsis": "After receiving an unexpected call from her ancestors, Moana embarks on a daring voyage across distant seas with Maui and a new crew. Together, they seek to reconnect the scattered peoples of Oceania.",
+            "country": "United States",
+            "director": "David Derrick Jr., Jason Hand, Dana Ledoux Miller",
+            "cast": [
+                {
+                    "name": "Auliʻi Cravalho",
+                    "character": "Moana"
+                },
+                {
+                    "name": "Nicole Scherzinger",
+                    "character": "Sina"
+                },
+                {
+                    "name": "Dwayne Johnson",
+                    "character": "Maui"
+                },
+                {
+                    "name": "Hualālai Chung",
+                    "character": "Moni"
+                },
+                {
+                    "name": "Temuera Morrison",
+                    "character": "Chief Tui"
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "title": "Bad Boys: Ride or Die",
+            "poster": "assets/images/poster-movies/15_poster bad boys.webp",
+            "trailer": "assets/videos/trailer-movies/t15_bbrod-compress.mp4",
+            "key": "hRFY_Fesa9Q",
+            "year": 2024,
+            "rating": "R",
+            "duration": "1h 55m",
+            "rate": 8.9,
+            "genres": [
+                "Action",
+                "Comedy"
+            ],
+            "synopsis": "Miami detectives Mike Lowrey and Marcus Burnett become fugitives after their late police captain is accused of corruption. Determined to clear his name, they must uncover the truth while evading the authorities.",
+            "country": "United States",
+            "director": "Adil El Arbi, Bilall Fallah",
+            "cast": [
+                {
+                    "name": "Vanessa Hudgens",
+                    "character": "Kelly"
+                },
+                {
+                    "name": "Paola Núñez",
+                    "character": "Rita Secada"
+                },
+                {
+                    "name": "Will Smith",
+                    "character": "Detective Mike Lowrey"
+                },
+                {
+                    "name": "Martin Lawrence",
+                    "character": "Detective Marcus Burnett"
+                },
+                {
+                    "name": "Alexander Ludwig",
+                    "character": "Dorn"
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "title": "The Conjuring: Last Rites",
+            "poster": "assets/images/poster-movies/16_poster tclr.webp",
+            "trailer": "assets/videos/trailer-movies/t16_tclr-compress.mp4",
+            "key": "bMgfsdYoEEo",
+            "year": 2025,
+            "rating": "R",
+            "duration": "2h",
+            "rate": 8.9,
+            "genres": [
+                "Horror",
+                "Mystery"
+            ],
+            "synopsis": "Paranormal investigators Ed and Lorraine Warren take on another disturbing case involving a family plagued by supernatural events. As the haunting intensifies, the Warrens confront a terrifying mystery that tests their faith and courage.",
+            "country": "United States",
+            "director": "Michael Chaves",
+            "cast": [
+                {
+                    "name": "Vera Farmiga",
+                    "character": "Lorraine Warren"
+                },
+                {
+                    "name": "Mia Tomlinson",
+                    "character": "Judy Warren"
+                },
+                {
+                    "name": "Patrick Wilson",
+                    "character": "Ed Warren"
+                },
+                {
+                    "name": "Ben Hardy",
+                    "character": "Tony Spera"
+                },
+                {
+                    "name": "Steve Coulter",
+                    "character": "Father Gordon"
+                }
+            ]
+        },
+        {
+            "id": 17,
+            "title": "Toy Story 5",
+            "poster": "assets/images/poster-movies/17_poster TS5.jpg",
+            "trailer": "assets/videos/trailer-movies/t17_ts5-compress.mp4",
+            "key": "c51ND9Hdbw0",
+            "year": 2026,
+            "rating": "PG",
+            "duration": "1h 40m",
+            "rate": 8.9,
+            "genres": [
+                "Animation",
+                "Adventure"
+            ],
+            "synopsis": "Woody, Buzz, Jessie, and the other toys face a new challenge when Bonnie becomes fascinated with Lilypad, a smart tablet with its own ideas about playtime. As technology changes their world, the toys must find a way to reconnect with their child.",
+            "country": "United States",
+            "director": "Andrew Stanton (co-director: Kenna Harris)",
+            "cast": [
+                {
+                    "name": "Joan Cusack",
+                    "character": "Jessie"
+                },
+                {
+                    "name": "Greta Lee",
+                    "character": "Lilypad"
+                },
+                {
+                    "name": "Tom Hanks",
+                    "character": "Woody"
+                },
+                {
+                    "name": "Tim Allen",
+                    "character": "Buzz Lightyear"
+                },
+                {
+                    "name": "Keanu Reeves",
+                    "character": "Belum diumumkan"
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "title": "Mission: Impossible — Dead Reckoning",
+            "poster": "assets/images/poster-movies/18_poster MSDR.jpg",
+            "trailer": "assets/videos/trailer-movies/t18_mi-compress.mp4",
+            "key": "avz06PDqDbM",
+            "year": 2023,
+            "rating": "PG-13",
+            "duration": "2h 43m",
+            "rate": 8.9,
+            "genres": [
+                "Action",
+                "Spy"
+            ],
+            "synopsis": "Ethan Hunt and his IMF team race to stop a powerful artificial intelligence known as the Entity from threatening global security. Pursued by dangerous enemies, Ethan must track down a crucial key before it falls into the wrong hands.",
+            "country": "United States",
+            "director": "Christopher McQuarrie",
+            "cast": [
+                {
+                    "name": "Rebecca Ferguson",
+                    "character": "Ilsa Faust"
+                },
+                {
+                    "name": "Hayley Atwell",
+                    "character": "Grace"
+                },
+                {
+                    "name": "Tom Cruise",
+                    "character": "Ethan Hunt"
+                },
+                {
+                    "name": "Simon Pegg",
+                    "character": "Benji Dunn"
+                },
+                {
+                    "name": "Ving Rhames",
+                    "character": "Luther Stickell"
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "title": "Anyone But You",
+            "poster": "assets/images/poster-movies/19_poster anyone but you.jpeg",
+            "trailer": "assets/videos/trailer-movies/t19_aby-compress.mp4",
+            "key": "ESEc6W2h9_k",
+            "year": 2023,
+            "rating": "R",
+            "duration": "1h 43m",
+            "rate": 8.9,
+            "genres": [
+                "Romance",
+                "Comedy"
+            ],
+            "synopsis": "Bea and Ben have an awkward first date that leaves them disliking each other. When they reunite at a destination wedding in Australia, they pretend to be a couple, only to discover that their feelings may be more complicated than they expected.",
+            "country": "United States",
+            "director": "Will Gluck",
+            "cast": [
+                {
+                    "name": "Sydney Sweeney",
+                    "character": "Bea"
+                },
+                {
+                    "name": "Alexandra Shipp",
+                    "character": "Claudia"
+                },
+                {
+                    "name": "Glen Powell",
+                    "character": "Ben"
+                },
+                {
+                    "name": "Darren Barnet",
+                    "character": "Jonathan"
+                },
+                {
+                    "name": "GaTa",
+                    "character": "Pete"
+                }
+            ]
+        },
+        {
+            "id": 20,
+            "title": "The Batman Part II",
+            "poster": "assets/images/poster-movies/20_poster tb2.jpg",
+            "trailer": "assets/videos/trailer-movies/t20_batman2-compress.mp4",
+            "key": "T7_zMl_ZhdQ",
+            "year": 2026,
+            "rating": "PG-13",
+            "duration": "TBA",
+            "rate": 8.9,
+            "genres": [
+                "Action",
+                "Crime"
+            ],
+            "synopsis": "Bruce Wayne continues his mission to protect Gotham City as Batman. Facing new dangers in a city plagued by crime and corruption, he must rely on his detective skills and determination to uncover the truth.",
+            "country": "United States",
+            "director": "Matt Reeves",
+            "cast": [
+                {
+                    "name": "Scarlett Johansson",
+                    "character": "Belum diumumkan"
+                },
+                {
+                    "name": "Jayme Lawson",
+                    "character": "Mayor Bella Reál"
+                },
+                {
+                    "name": "Robert Pattinson",
+                    "character": "Bruce Wayne / Batman"
+                },
+                {
+                    "name": "Colin Farrell",
+                    "character": "Oz Cobb / The Penguin"
+                },
+                {
+                    "name": "Sebastian Stan",
+                    "character": "Harvey Dent"
+                }
+            ]
+        }
+    ],
     "series": [
         {
             "id": "s-001",
@@ -288,8 +856,8 @@
             ],
             "thumbnail": "assets/images/poster-series/1_the last of us.webp",
             "key": "_zHPsmXCjB0",
-            "rate" : 9.0,
-            "rating" : "R",
+            "rate": 9.0,
+            "rating": "R",
             "seasons": [
                 {
                     "season_number": 1,
@@ -320,6 +888,30 @@
                         }
                     ]
                 }
+            ],
+            "country": "United States, Canada",
+            "director": "Craig Mazin, Neil Druckmann, Peter Hoar",
+            "cast": [
+                {
+                    "name": "Anna Torv",
+                    "character": "Tess Servopoulos"
+                },
+                {
+                    "name": "Nico Parker",
+                    "character": "Sarah Miller"
+                },
+                {
+                    "name": "Pedro Pascal",
+                    "character": "Joel Miller"
+                },
+                {
+                    "name": "Gabriel Luna",
+                    "character": "Tommy Miller"
+                },
+                {
+                    "name": "Nick Offerman",
+                    "character": "Bill"
+                }
             ]
         },
         {
@@ -334,8 +926,8 @@
             ],
             "thumbnail": "assets/images/poster-series/2_arcane.webp",
             "key": "fXmAurh012s",
-            "rate" : 9.0,
-            "rating" : "R",
+            "rate": 9.0,
+            "rating": "R",
             "seasons": [
                 {
                     "season_number": 1,
@@ -366,6 +958,30 @@
                         }
                     ]
                 }
+            ],
+            "country": "United States, France",
+            "director": "Pascal Charrue, Arnaud Delord",
+            "cast": [
+                {
+                    "name": "Hailee Steinfeld",
+                    "character": "Vi"
+                },
+                {
+                    "name": "Ella Purnell",
+                    "character": "Jinx"
+                },
+                {
+                    "name": "Toks Olagundoye",
+                    "character": "Mel Medarda"
+                },
+                {
+                    "name": "Kevin Alejandro",
+                    "character": "Jayce Talis"
+                },
+                {
+                    "name": "Jason Spisak",
+                    "character": "Silco"
+                }
             ]
         },
         {
@@ -379,8 +995,8 @@
             ],
             "thumbnail": "assets/images/poster-series/3_the bear.webp",
             "key": "gBmkI4jlaIo",
-            "rate" : 9.0,
-            "rating" : "R",
+            "rate": 9.0,
+            "rating": "R",
             "seasons": [
                 {
                     "season_number": 1,
@@ -410,6 +1026,30 @@
                             "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
                         }
                     ]
+                }
+            ],
+            "country": "United States",
+            "director": "Christopher Storer, Hiro Murai",
+            "cast": [
+                {
+                    "name": "Ayo Edebiri",
+                    "character": "Sydney Adamu"
+                },
+                {
+                    "name": "Abby Elliott",
+                    "character": "Natalie “Sugar” Berzatto"
+                },
+                {
+                    "name": "Jeremy Allen White",
+                    "character": "Carmen “Carmy” Berzatto"
+                },
+                {
+                    "name": "Ebon Moss-Bachrach",
+                    "character": "Richard “Richie” Jerimovich"
+                },
+                {
+                    "name": "Lionel Boyce",
+                    "character": "Marcus Brooks"
                 }
             ]
         },
@@ -456,6 +1096,30 @@
                         }
                     ]
                 }
+            ],
+            "country": "Pakistan",
+            "director": "Shehzad Kashmiri",
+            "cast": [
+                {
+                    "name": "Anayah Shah",
+                    "character": "Shireen"
+                },
+                {
+                    "name": "Sajal Aly",
+                    "character": "Rabia"
+                },
+                {
+                    "name": "Sahar Hashmi",
+                    "character": "Sher Bano"
+                },
+                {
+                    "name": "Danyal Zafar",
+                    "character": "Sar Buland Khan"
+                },
+                {
+                    "name": "Ahsan Khan",
+                    "character": "Sherdil"
+                }
             ]
         },
         {
@@ -470,8 +1134,8 @@
             ],
             "thumbnail": "assets/images/poster-series/5_house of the dragon.jpg",
             "key": "0JlMjgqduVw",
-            "rate" : 9.0,
-            "rating" : "R",
+            "rate": 9.0,
+            "rating": "R",
             "seasons": [
                 {
                     "season_number": 1,
@@ -502,6 +1166,30 @@
                         }
                     ]
                 }
+            ],
+            "country": "United States",
+            "director": "Miguel Sapochnik, Clare Kilner, Geeta Vasant Patel",
+            "cast": [
+                {
+                    "name": "Olivia Cooke",
+                    "character": "Alicent Hightower"
+                },
+                {
+                    "name": "Eve Best",
+                    "character": "Princess Rhaenys Targaryen"
+                },
+                {
+                    "name": "Matt Smith",
+                    "character": "Prince Daemon Targaryen"
+                },
+                {
+                    "name": "Paddy Considine",
+                    "character": "King Viserys I Targaryen"
+                },
+                {
+                    "name": "Fabien Frankel",
+                    "character": "Ser Criston Cole"
+                }
             ]
         },
         {
@@ -516,8 +1204,8 @@
             ],
             "thumbnail": "assets/images/poster-series/6_wednesday.webp",
             "key": "03u4xyj0TH4",
-            "rate" : 9.0,
-            "rating" : "R",
+            "rate": 9.0,
+            "rating": "R",
             "seasons": [
                 {
                     "season_number": 1,
@@ -548,6 +1236,30 @@
                         }
                     ]
                 }
+            ],
+            "country": "United States",
+            "director": "Tim Burton, Gandja Monteiro, James Marshall",
+            "cast": [
+                {
+                    "name": "Jenna Ortega",
+                    "character": "Wednesday Addams"
+                },
+                {
+                    "name": "Catherine Zeta-Jones",
+                    "character": "Morticia Addams"
+                },
+                {
+                    "name": "Emma Myers",
+                    "character": "Enid Sinclair"
+                },
+                {
+                    "name": "Luis Guzmán",
+                    "character": "Gomez Addams"
+                },
+                {
+                    "name": "Hunter Doohan",
+                    "character": "Tyler Galpin"
+                }
             ]
         },
         {
@@ -562,8 +1274,8 @@
             ],
             "thumbnail": "assets/images/poster-series/7_breakingbad.webp",
             "key": "1JLUn2DFW4w",
-            "rate" : 9.0,
-            "rating" : "R",
+            "rate": 9.0,
+            "rating": "R",
             "seasons": [
                 {
                     "season_number": 1,
@@ -594,6 +1306,30 @@
                         }
                     ]
                 }
+            ],
+            "country": "United States",
+            "director": "Vince Gilligan, Adam Bernstein, Michelle MacLaren",
+            "cast": [
+                {
+                    "name": "Anna Gunn",
+                    "character": "Skyler White"
+                },
+                {
+                    "name": "Betsy Brandt",
+                    "character": "Marie Schrader"
+                },
+                {
+                    "name": "Bryan Cranston",
+                    "character": "Walter White"
+                },
+                {
+                    "name": "Aaron Paul",
+                    "character": "Jesse Pinkman"
+                },
+                {
+                    "name": "Dean Norris",
+                    "character": "Hank Schrader"
+                }
             ]
         },
         {
@@ -608,8 +1344,8 @@
             ],
             "thumbnail": "assets/images/poster-series/8_sherlock.jpg",
             "key": "rXMrTALO2ME",
-            "rate" : 9.0,
-            "rating" : "R",
+            "rate": 9.0,
+            "rating": "R",
             "seasons": [
                 {
                     "season_number": 1,
@@ -640,6 +1376,30 @@
                         }
                     ]
                 }
+            ],
+            "country": "United Kingdom",
+            "director": "Paul McGuigan, Euros Lyn, Jeremy Lovering",
+            "cast": [
+                {
+                    "name": "Louise Brealey",
+                    "character": "Molly Hooper"
+                },
+                {
+                    "name": "Una Stubbs",
+                    "character": "Mrs. Hudson"
+                },
+                {
+                    "name": "Benedict Cumberbatch",
+                    "character": "Sherlock Holmes"
+                },
+                {
+                    "name": "Martin Freeman",
+                    "character": "Dr. John Watson"
+                },
+                {
+                    "name": "Mark Gatiss",
+                    "character": "Mycroft Holmes"
+                }
             ]
         },
         {
@@ -654,8 +1414,8 @@
             ],
             "thumbnail": "assets/images/poster-series/9_themandalorian.jpg",
             "key": "aOC8E8z_ifw",
-            "rate" : 9.0,
-            "rating" : "R",
+            "rate": 9.0,
+            "rating": "R",
             "seasons": [
                 {
                     "season_number": 1,
@@ -686,6 +1446,30 @@
                         }
                     ]
                 }
+            ],
+            "country": "United States",
+            "director": "Jon Favreau, Rick Famuyiwa, Bryce Dallas Howard",
+            "cast": [
+                {
+                    "name": "Katee Sackhoff",
+                    "character": "Bo-Katan Kryze"
+                },
+                {
+                    "name": "Emily Swallow",
+                    "character": "The Armorer"
+                },
+                {
+                    "name": "Pedro Pascal",
+                    "character": "Din Djarin / The Mandalorian"
+                },
+                {
+                    "name": "Carl Weathers",
+                    "character": "Greef Karga"
+                },
+                {
+                    "name": "Giancarlo Esposito",
+                    "character": "Moff Gideon"
+                }
             ]
         },
         {
@@ -700,8 +1484,8 @@
             ],
             "thumbnail": "assets/images/poster-series/10_onepiece.webp",
             "key": "3Gmo0EXHyKg",
-            "rate" : 9.0,
-            "rating" : "R",
+            "rate": 9.0,
+            "rating": "R",
             "seasons": [
                 {
                     "season_number": 1,
@@ -732,6 +1516,30 @@
                         }
                     ]
                 }
+            ],
+            "country": "Japan",
+            "director": "Kōnosuke Uda, Munehisa Sakai, Hiroaki Miyamoto",
+            "cast": [
+                {
+                    "name": "Mayumi Tanaka",
+                    "character": "Monkey D. Luffy (voice)"
+                },
+                {
+                    "name": "Akemi Okamura",
+                    "character": "Nami (voice)"
+                },
+                {
+                    "name": "Kazuya Nakai",
+                    "character": "Roronoa Zoro (voice)"
+                },
+                {
+                    "name": "Kappei Yamaguchi",
+                    "character": "Usopp (voice)"
+                },
+                {
+                    "name": "Hiroaki Hirata",
+                    "character": "Sanji (voice)"
+                }
             ]
         },
         {
@@ -745,8 +1553,8 @@
             ],
             "thumbnail": "assets/images/poster-series/11_peaky blinders.jpg",
             "key": "oVzVdvGIC7U",
-            "rate" : 9.0,
-            "rating" : "PG-13",
+            "rate": 9.0,
+            "rating": "PG-13",
             "seasons": [
                 {
                     "season_number": 1,
@@ -777,6 +1585,30 @@
                         }
                     ]
                 }
+            ],
+            "country": "United Kingdom",
+            "director": "Otto Bathurst, Tom Harper, Anthony Byrne",
+            "cast": [
+                {
+                    "name": "Helen McCrory",
+                    "character": "Polly Gray"
+                },
+                {
+                    "name": "Sophie Rundle",
+                    "character": "Ada Thorne / Ada Shelby"
+                },
+                {
+                    "name": "Cillian Murphy",
+                    "character": "Thomas “Tommy” Shelby"
+                },
+                {
+                    "name": "Paul Anderson",
+                    "character": "Arthur Shelby"
+                },
+                {
+                    "name": "Joe Cole",
+                    "character": "John Shelby"
+                }
             ]
         },
         {
@@ -789,8 +1621,8 @@
             ],
             "thumbnail": "assets/images/poster-series/12_thequeen.jpg",
             "key": "_H1G9BsxhDw",
-            "rate" : 8.0,
-            "rating" : "R",
+            "rate": 8.0,
+            "rating": "R",
             "seasons": [
                 {
                     "season_number": 1,
@@ -821,6 +1653,30 @@
                         }
                     ]
                 }
+            ],
+            "country": "United States",
+            "director": "Scott Frank",
+            "cast": [
+                {
+                    "name": "Anya Taylor-Joy",
+                    "character": "Beth Harmon"
+                },
+                {
+                    "name": "Moses Ingram",
+                    "character": "Jolene DeWitt"
+                },
+                {
+                    "name": "Thomas Brodie-Sangster",
+                    "character": "Benny Watts"
+                },
+                {
+                    "name": "Harry Melling",
+                    "character": "Harry Beltik"
+                },
+                {
+                    "name": "Bill Camp",
+                    "character": "Mr. Shaibel"
+                }
             ]
         },
         {
@@ -835,8 +1691,8 @@
             ],
             "thumbnail": "assets/images/poster-series/13_theboys.jpg",
             "key": "XNQbH1SDPRk",
-            "rate" : 9.0,
-            "rating" : "R",
+            "rate": 9.0,
+            "rating": "R",
             "seasons": [
                 {
                     "season_number": 1,
@@ -867,6 +1723,30 @@
                         }
                     ]
                 }
+            ],
+            "country": "United States",
+            "director": "Eric Kripke, Philip Sgriccia, Sarah Boyd",
+            "cast": [
+                {
+                    "name": "Erin Moriarty",
+                    "character": "Annie January / Starlight"
+                },
+                {
+                    "name": "Dominique McElligott",
+                    "character": "Queen Maeve"
+                },
+                {
+                    "name": "Karl Urban",
+                    "character": "Billy Butcher"
+                },
+                {
+                    "name": "Jack Quaid",
+                    "character": "Hughie Campbell"
+                },
+                {
+                    "name": "Antony Starr",
+                    "character": "Homelander / John Gillman"
+                }
             ]
         },
         {
@@ -881,8 +1761,8 @@
             ],
             "thumbnail": "assets/images/poster-series/14_avatar.webp",
             "key": "7b20GRFZBFE",
-            "rate" : 9.0,
-            "rating" : "PG-13",
+            "rate": 9.0,
+            "rating": "PG-13",
             "seasons": [
                 {
                     "season_number": 1,
@@ -913,6 +1793,30 @@
                         }
                     ]
                 }
+            ],
+            "country": "United States",
+            "director": "Dave Filoni, Lauren MacMullan, Giancarlo Volpe, Ethan Spaulding",
+            "cast": [
+                {
+                    "name": "Mae Whitman",
+                    "character": "Katara (voice)"
+                },
+                {
+                    "name": "Grey DeLisle",
+                    "character": "Princess Azula (voice)"
+                },
+                {
+                    "name": "Zach Tyler Eisen",
+                    "character": "Aang (voice)"
+                },
+                {
+                    "name": "Jack De Sena",
+                    "character": "Sokka (voice)"
+                },
+                {
+                    "name": "Dante Basco",
+                    "character": "Zuko (voice)"
+                }
             ]
         },
         {
@@ -927,8 +1831,8 @@
             ],
             "thumbnail": "assets/images/poster-series/15_fallout.jpg",
             "key": "0kQ8i2FpRDk",
-            "rate" : 9.0,
-            "rating" : "PG",
+            "rate": 9.0,
+            "rating": "PG",
             "seasons": [
                 {
                     "season_number": 1,
@@ -959,8 +1863,31 @@
                         }
                     ]
                 }
+            ],
+            "country": "United States",
+            "director": "Jonathan Nolan, Frederick E. O. Toye, Clare Kilner",
+            "cast": [
+                {
+                    "name": "Ella Purnell",
+                    "character": "Lucy MacLean"
+                },
+                {
+                    "name": "Sarita Choudhury",
+                    "character": "Lee Moldaver"
+                },
+                {
+                    "name": "Walton Goggins",
+                    "character": "Cooper Howard / The Ghoul"
+                },
+                {
+                    "name": "Aaron Moten",
+                    "character": "Maximus"
+                },
+                {
+                    "name": "Kyle MacLachlan",
+                    "character": "Hank MacLean"
+                }
             ]
         }
     ]
-
 }

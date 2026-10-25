@@ -1,12 +1,18 @@
+import { useNavigate } from "react-router-dom";
 export default function MovieCard({ movie }) {
     const firstGenre = movie.genres && movie.genres.length > 0 ? movie.genres[0] : null;
+    const navigate = useNavigate();
+
+    const handleClick =()=>{
+        navigate(`/movie/${movie.id}`);
+    } 
 
     return (
-        <article className="movie-card">
+        <article className="movie-card" onClick={handleClick}>
             <div className="movie-poster-wrap">
                 <img 
                     className="movie-poster" 
-                    src={movie.poster} 
+                    src={`/${movie.poster}`} 
                     alt={`${movie.title} poster`} 
                     loading="lazy" 
                 />

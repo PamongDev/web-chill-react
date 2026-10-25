@@ -16,7 +16,7 @@ export default function Header({ username, email, handleLogout }) {
             <div className="container navbar-wrap">
                 <nav className="navbar" aria-label="Main navigation">
                     <Link to="/" className="brand" aria-label="Chill home">
-                        <img src="assets/images/main/logo only no bg.png" alt="Chill"/>
+                        <img src="/assets/images/main/logo only no bg.png" alt="Chill"/>
                     </Link>
 
                     <HeaderNavbarMenus></HeaderNavbarMenus>

@@ -12,7 +12,7 @@ export default function ProfileDropdown({username, email, handleLogout, handleto
                 aria-expanded={isOpen}
             >
                 <img
-                    src="assets/images/main/logo app.png"
+                    src="/assets/images/main/logo app.png"
                     alt="Fahmi"
                     className="profile-avatar"
                 />

@@ -1,0 +1,261 @@
+/* --- DETAIL HERO BACKDROP --- */
+.detail-hero-backdrop {
+    position: relative;
+    width: 100%;
+    height: 50vh; /* Setengah tinggi layar */
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: calc(-1 * var(--header-height)); /* Naik agar masuk ke balik navbar transparan */
+}
+
+.backdrop-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    filter: blur(8px) saturate(1.2); /* Efek blur agar tidak bertabrakan dengan teks */
+}
+
+.backdrop-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, var(--color-bg) 0%, rgba(8,8,8,0.5) 100%);
+}
+
+.button-massive-play {
+    position: absolute;
+    z-index: 2;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50px;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.4);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.button-massive-play:hover {
+    transform: scale(1.05);
+    background: white;
+    color: black;
+}
+
+/* --- DETAIL CONTENT LAYOUT (Poster Kiri, Teks Kanan) --- */
+.detail-content-layout {
+    position: relative;
+    z-index: 5;
+    margin-top: -100px; /* Menarik konten agar menimpa bagian bawah backdrop */
+    display: flex;
+    gap: 3rem;
+    padding-bottom: 4rem;
+}
+
+.detail-poster-img {
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.detail-info-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.detail-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.1;
+}
+
+.detail-meta, .detail-genres, .detail-action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.genre-pill {
+    padding: 4px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+}
+
+.icon-button-outline {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid var(--color-border);
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+}
+
+.icon-button-outline:hover {
+    background: var(--color-card-hover);
+}
+
+.detail-synopsis {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--color-text-soft);
+    max-width: 800px;
+}
+
+.detail-credits p, .detail-credits li {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.detail-credits ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.5rem;
+}
+/* --- PREMIUM META --- */
+.premium-meta {
+    font-size: 1.05rem;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}
+.dot-separator {
+    color: var(--color-border);
+    font-size: 0.8rem;
+}
+.rate-text {
+    font-weight: 700;
+    color: #ffd700; /* Warna emas untuk rating */
+}
+
+/* --- CAST & DIRECTOR AVATAR GRID --- */
+.section-subtitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+.cast-grid {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    /* Sembunyikan scrollbar tapi tetap bisa digeser */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.cast-grid::-webkit-scrollbar {
+    display: none;
+}
+.cast-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 90px;
+    max-width: 100px;
+}
+.avatar-anon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--color-card-hover);
+    border: 2px solid var(--color-border-subtle);
+    display: grid;
+    place-items: center;
+    margin-bottom: 0.5rem;
+    transition: border-color 0.3s ease;
+}
+.cast-card:hover .avatar-anon {
+    border-color: var(--color-text-primary);
+}
+.icon-user {
+    width: 35px;
+    height: 35px;
+    color: var(--color-text-muted);
+}
+.actor-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
+}
+.character-name {
+    font-size: 0.8rem;
+    color: var(--color-text-soft);
+    line-height: 1.2;
+}
+
+/* --- STATIC COMMENTS --- */
+.detail-comments-section {
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--color-border-subtle);
+    padding-top: 1rem;
+    margin-bottom: 3rem;
+}
+.comment-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.comment-item {
+    display: flex;
+    gap: 1rem;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1rem;
+    border-radius: 8px;
+}
+.comment-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    color: white;
+    font-weight: bold;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+}
+.comment-body strong {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+}
+.comment-body p {
+    font-size: 0.95rem;
+    color: var(--color-text-soft);
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 768px) {
+    .detail-content-layout {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: -60px;
+    }
+    
+    .detail-meta, .detail-genres, .detail-action-buttons {
+        justify-content: center;
+    }
+}

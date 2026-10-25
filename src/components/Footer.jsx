@@ -3,7 +3,7 @@ export default function FooterHome(){
         <footer className="site-footer">
             <div className="container footer-grid">
                 <div className="footer-brand">
-                    <img src="assets/images/main/logo only no bg.png" alt="Chill"/>
+                    <img src="/assets/images/main/logo only no bg.png" alt="Chill"/>
                     <p>© 2026 Chill. All rights reserved.</p>
                     <p className="footer-muted">Your place to relax, discover, and watch.</p>
                 </div>

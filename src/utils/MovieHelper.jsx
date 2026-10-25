@@ -14,6 +14,10 @@ export function normalizeSeries(seriesItem, index) {
         duration: `${seriesItem.seasons?.length || 1} Season`,
         genres: Array.isArray(seriesItem.genre) ? seriesItem.genre : [],
         synopsis : seriesItem.synopsis ?? seriesItem.description ?? "" ,
+        cast : seriesItem.cast ?? "",
+        country : seriesItem.country ?? "",
+        director : seriesItem.director ?? "",
+
     };
 }
 
@@ -31,5 +35,8 @@ export function normalizeMovie(movie, index) {
         genres: Array.isArray(movie.genres) ? movie.genres : 
                 Array.isArray(movie.genre) ? movie.genre : 
                 typeof movie.genre === "string" ? movie.genre.split(",").map(i => i.trim()) : [],
+        cast : movie.cast ?? "",
+        country : movie.country ?? "",
+        director : movie.director ?? "",
     };
 }
