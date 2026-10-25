@@ -172,10 +172,11 @@
     padding-top: clamp(5rem, 15vh, 8rem);
     padding-left: clamp(1rem, 5vw, 4rem);
     padding-bottom: clamp(3rem, 10vh, 5rem);
+    box-sizing: border-box;
     
     /* Batasi lebar konten agar teks tidak menyeberang ke sisi kanan layar (menutupi video) */
-    max-width: 50vw; 
-    min-width: 600px;
+    max-width: 760px;
+    min-width: 0;
 }
 
 .hero-title {
@@ -216,12 +217,26 @@
 }
 
 .hero-description {
+    display: block;
+
+    /* Batasi panjang baris agar mudah dibaca */
+    max-width: 45ch;
+
     margin: 1.2rem 0 2rem;
-    
-    color: #e5e5e5;
-    font-size: clamp(1rem, 1.2vw, 1.15rem);
-    line-height: 1.5;
-    text-shadow: 1px 2px 6px rgba(0, 0, 0, 0.6);
+
+    color: rgba(255, 255, 255, 0.82);
+    font-size: clamp(0.95rem, 1.05vw, 1.1rem);
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+
+    /* Batasi synopsis maksimal 3 baris */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
 }
 
 .hero-actions {

@@ -4,249 +4,276 @@
         "id": 0,
         "title": "Black Clover: Sword of the Wizard King",
         "poster": "assets/images/poster-movies/21_poster black clover.jpg",
-        "trailer": "assets/videos/trailer-movies/t21_bcwk.mp4", 
-        "key" : "zhsAd5ORk1Y",
+        "trailer": "assets/videos/trailer-movies/t21_bcwk.mp4",
+        "key": "zhsAd5ORk1Y",
         "year": 2023,
         "rating": "PG-13",
         "duration": "1h 53m",
-        "rate" : 8.9,
-        "genres": ["Action", "Adventure", "Fantasy", "Animation"]
+        "rate": 8.9,
+        "genres": ["Action", "Adventure", "Fantasy", "Animation"],
+        "synopsis": "Asta and the Magic Knights face their greatest challenge when Conrad Leto, a former Wizard King, returns alongside resurrected Wizard Kings seeking to destroy the Clover Kingdom."
     },
     {
         "id": 1,
         "title": "Dune: Part Two",
         "poster": "assets/images/poster-movies/1_poster dune2.jpg",
         "trailer": "assets/videos/trailer-movies/t1_dp2-compress.mp4",
-        "key":"Way9Dexny3w",
+        "key": "Way9Dexny3w",
         "year": 2024,
         "rating": "PG-13",
         "duration": "2h 46m",
-        "rate" : 8.9,
-        "genres": ["Action", "Adventure"]
+        "rate": 8.9,
+        "genres": ["Action", "Adventure"],
+        "synopsis": "Paul Atreides joins Chani and the Fremen in their fight against the forces that destroyed his family. As he embraces his destiny, Paul must confront visions of a dangerous future."
     },
     {
         "id": 2,
         "title": "Deadpool & Wolverine",
         "poster": "assets/images/poster-movies/2_poster_deadpoolnwolverine.jpg",
-        "trailer": "assets/videos/trailer-movies/t2_dw-compress.mp4", 
-        "key":"73_1biulkYk",
+        "trailer": "assets/videos/trailer-movies/t2_dw-compress.mp4",
+        "key": "73_1biulkYk",
         "year": 2024,
         "rating": "R",
         "duration": "2h 8m",
-        "rate" : 8.9,
-        "genres": ["Action", "Comedy"]
+        "rate": 8.9,
+        "genres": ["Action", "Comedy"],
+        "synopsis": "When the Time Variance Authority pulls Wade Wilson into a mission to save his universe, Deadpool recruits a reluctant Wolverine for an unpredictable adventure across the multiverse."
     },
     {
         "id": 3,
         "title": "Inside Out 2",
         "poster": "assets/images/poster-movies/3_poster_insideout2.jpg",
-        "trailer": "assets/videos/trailer-movies/t3_io2-compress.mp4", 
-        "key" : "zhsAd5ORk1Y",
+        "trailer": "assets/videos/trailer-movies/t3_io2-compress.mp4",
+        "key": "LEjhY15eCx0",
         "year": 2024,
         "rating": "PG",
         "duration": "1h 40m",
-        "rate" : 8.9,
-        "genres": ["Animation", "Comedy"]
+        "rate": 8.9,
+        "genres": ["Animation", "Comedy"],
+        "synopsis": "As Riley enters her teenage years, Joy and the other emotions encounter new arrivals, including Anxiety, Envy, and Embarrassment, forcing the team to navigate the challenges of growing up."
     },
     {
         "id": 4,
         "title": "A Quiet Place: Day One",
         "poster": "assets/images/poster-movies/4_poster_aqpdo.webp",
-        "trailer": "assets/videos/trailer-movies/t4_aqpdo-compress.mp4", 
-        "key" : "zhsAd5ORk1Y",
+        "trailer": "assets/videos/trailer-movies/t4_aqpdo-compress.mp4",
+        "key": "YPY7J-flzE8",
         "year": 2024,
         "rating": "PG-13",
         "duration": "1h 40m",
-        "rate" : 8.9,
-        "genres": ["Horror", "Sci-Fi"]
+        "rate": 8.9,
+        "genres": ["Horror", "Sci-Fi"],
+        "synopsis": "During the first day of an alien invasion, Samira finds herself trapped in New York City, where deadly creatures hunt by sound. Alongside a stranger, she struggles to survive the terrifying chaos."
     },
     {
         "id": 5,
         "title": "Gladiator II",
         "poster": "assets/images/poster-movies/5_poster gladiator2.jpeg",
-        "trailer": "assets/videos/trailer-movies/t5_g2-compress.mp4", 
-        "key" : "zhsAd5ORk1Y",
+        "trailer": "assets/videos/trailer-movies/t5_g2-compress.mp4",
+        "key": "4rgYUipGJNo",
         "year": 2024,
         "rating": "R",
         "duration": "2h 28m",
-        "rate" : 8.9,
-        "genres": ["Action", "Drama"]
+        "rate": 8.9,
+        "genres": ["Action", "Drama"],
+        "synopsis": "After Roman forces conquer his home, Lucius is forced into the Colosseum as a gladiator. Driven by revenge and inspired by the legacy of Maximus, he fights against the corrupt rulers of Rome."
     },
     {
         "id": 6,
         "title": "Kung Fu Panda 4",
         "poster": "assets/images/poster-movies/6_poster KF4.png",
         "trailer": "assets/videos/trailer-movies/t6_kp4-compress.mp4",
-        "key" : "zhsAd5ORk1Y",
+        "key": "_inKs4eeHiI",
         "year": 2024,
         "rating": "PG",
         "duration": "1h 34m",
-        "rate" : 8.9,
-        "genres": ["Animation", "Adventure"]
+        "rate": 8.9,
+        "genres": ["Animation", "Adventure"],
+        "synopsis": "Po is chosen to become the Spiritual Leader of the Valley of Peace and must find a new Dragon Warrior. Alongside the clever fox Zhen, he faces a powerful sorceress capable of transforming into his enemies."
     },
     {
         "id": 7,
         "title": "Smile 2",
         "poster": "assets/images/poster-movies/7_poster smile2.jpg",
         "trailer": "assets/videos/trailer-movies/t7_s2-compress.mp4",
-        "key" : "zhsAd5ORk1Y",
+        "key": "0HY6QFlBzUY",
         "year": 2024,
         "rating": "R",
         "duration": "2h 7m",
-        "rate" : 8.9,
-        "genres": ["Horror", "Thriller"]
+        "rate": 8.9,
+        "genres": ["Horror", "Thriller"],
+        "synopsis": "As pop star Skye Riley prepares for a major world tour, increasingly terrifying events begin to disrupt her life. She must confront a sinister force while struggling with the pressures of fame and her troubled past."
     },
     {
         "id": 8,
         "title": "The Fall Guy",
         "poster": "assets/images/poster-movies/8_poster_tfg.jpg",
-        "trailer": "assets/videos/trailer-movies/t8_tfg-compress.mp4", 
-        "key" : "zhsAd5ORk1Y",
+        "trailer": "assets/videos/trailer-movies/t8_tfg-compress.mp4",
+        "key": "j7jPnwVGdZ8",
         "year": 2024,
         "rating": "PG-13",
         "duration": "2h 6m",
-        "rate" : 8.9,
-        "genres": ["Action", "Comedy"]
+        "rate": 8.9,
+        "genres": ["Action", "Comedy"],
+        "synopsis": "Colt Seavers, a stuntman returning after a career-threatening accident, joins a film directed by his former girlfriend. When the movie's leading star disappears, Colt becomes entangled in a dangerous conspiracy."
     },
     {
         "id": 9,
         "title": "Oppenheimer",
         "poster": "assets/images/poster-movies/9_poster_OH.png",
         "trailer": "assets/videos/trailer-movies/t9_oppenheimer-compress.mp4",
-        "key" : "zhsAd5ORk1Y",
+        "key": "bK6ldnjE3Y0",
         "year": 2023,
         "rating": "R",
         "duration": "3h",
-        "rate" : 8.9,
-        "genres": ["Drama", "History"]
+        "rate": 8.9,
+        "genres": ["Drama", "History"],
+        "synopsis": "Physicist J. Robert Oppenheimer leads the Manhattan Project, a secret mission to develop the world's first atomic bomb. As his scientific achievements reshape history, he struggles with their devastating consequences."
     },
     {
         "id": 10,
         "title": "Longlegs",
         "poster": "assets/images/poster-movies/10_poster longlegs.webp",
-        "trailer": "assets/videos/trailer-movies/t10_longlegs-compress.mp4", 
-        "key" : "zhsAd5ORk1Y",
+        "trailer": "assets/videos/trailer-movies/t10_longlegs-compress.mp4",
+        "key": "OG7wOTE8NhE",
         "year": 2024,
         "rating": "R",
         "duration": "1h 41m",
-        "rate" : 8.9,
-        "genres": ["Horror", "Mystery"]
+        "rate": 8.9,
+        "genres": ["Horror", "Mystery"],
+        "synopsis": "FBI agent Lee Harker investigates a series of bizarre family murders connected to a mysterious serial killer known as Longlegs. As she uncovers disturbing occult clues, the case reveals a terrifying personal connection."
     },
     {
         "id": 11,
         "title": "Despicable Me 4",
         "poster": "assets/images/poster-movies/11_poster DM4.jpg",
-        "trailer": "assets/videos/trailer-movies/t11_dm4-compress.mp4", 
-        "key" : "zhsAd5ORk1Y",
+        "trailer": "assets/videos/trailer-movies/t11_dm4-compress.mp4",
+        "key": "qQlr9-rF32A",
         "year": 2024,
         "rating": "PG",
         "duration": "1h 35m",
-        "rate" : 8.9,
-        "genres": ["Animation", "Comedy"]
+        "rate": 8.9,
+        "genres": ["Animation", "Comedy"],
+        "synopsis": "Gru and his family welcome a new baby while trying to stay ahead of escaped criminal Maxime Le Mal. With danger approaching, Gru, Lucy, and the Minions must work together to protect their loved ones."
     },
     {
         "id": 12,
         "title": "John Wick: Chapter 4",
         "poster": "assets/images/poster-movies/12_poster js4.jpg",
-        "trailer": "assets/videos/trailer-movies/t12_jw4-compress.mp4", 
-        "key" : "zhsAd5ORk1Y",
+        "trailer": "assets/videos/trailer-movies/t12_jw4-compress.mp4",
+        "key": "qEVUtrk8_B4",
         "year": 2023,
         "rating": "R",
         "duration": "2h 49m",
-        "rate" : 8.9,
-        "genres": ["Action", "Thriller"]
+        "rate": 8.9,
+        "genres": ["Action", "Thriller"],
+        "synopsis": "John Wick discovers a possible path to freedom from the High Table, but powerful enemies stand in his way. His fight takes him across the globe toward a decisive confrontation that could change his fate."
     },
     {
         "id": 13,
         "title": "Abigail",
         "poster": "assets/images/poster-movies/13_poster abigail.jpg",
-        "trailer": "assets/videos/trailer-movies/t13_abigail-compress.mp4", 
-        "key" : "zhsAd5ORk1Y",
+        "trailer": "assets/videos/trailer-movies/t13_abigail-compress.mp4",
+        "key": "3PsP8MFH8p0",
         "year": 2024,
         "rating": "R",
         "duration": "1h 49m",
-        "rate" : 8.9,
-        "genres": ["Horror", "Thriller"]
+        "rate": 8.9,
+        "genres": ["Horror", "Thriller"],
+        "synopsis": "A group of criminals kidnaps Abigail, a young ballerina, and takes her to an isolated mansion for a ransom. Their plan quickly falls apart when they discover that their seemingly innocent captive hides a terrifying secret."
     },
     {
         "id": 14,
         "title": "Moana 2",
         "poster": "assets/images/poster-movies/14_poster moana2.webp",
-        "trailer": "assets/videos/trailer-movies/t14_m2-compress.mp4", 
-        "key" : "zhsAd5ORk1Y",
+        "trailer": "assets/videos/trailer-movies/t14_m2-compress.mp4",
+        "key": "YPnNrd9Xc44",
         "year": 2024,
         "rating": "PG",
         "duration": "1h 40m",
-        "rate" : 8.9,
-        "genres": ["Animation", "Adventure"]
+        "rate": 8.9,
+        "genres": ["Animation", "Adventure"],
+        "synopsis": "After receiving an unexpected call from her ancestors, Moana embarks on a daring voyage across distant seas with Maui and a new crew. Together, they seek to reconnect the scattered peoples of Oceania."
     },
     {
         "id": 15,
         "title": "Bad Boys: Ride or Die",
         "poster": "assets/images/poster-movies/15_poster bad boys.webp",
-        "trailer": "assets/videos/trailer-movies/t15_bbrod-compress.mp4", "key" : "zhsAd5ORk1Y",
+        "trailer": "assets/videos/trailer-movies/t15_bbrod-compress.mp4",
+        "key": "hRFY_Fesa9Q",
         "year": 2024,
         "rating": "R",
         "duration": "1h 55m",
-        "rate" : 8.9,
-        "genres": ["Action", "Comedy"]
+        "rate": 8.9,
+        "genres": ["Action", "Comedy"],
+        "synopsis": "Miami detectives Mike Lowrey and Marcus Burnett become fugitives after their late police captain is accused of corruption. Determined to clear his name, they must uncover the truth while evading the authorities."
     },
     {
         "id": 16,
         "title": "The Conjuring: Last Rites",
         "poster": "assets/images/poster-movies/16_poster tclr.webp",
-        "trailer": "assets/videos/trailer-movies/t16_tclr-compress.mp4", "key" : "zhsAd5ORk1Y",
+        "trailer": "assets/videos/trailer-movies/t16_tclr-compress.mp4",
+        "key": "bMgfsdYoEEo",
         "year": 2025,
         "rating": "R",
         "duration": "2h",
-        "rate" : 8.9,
-        "genres": ["Horror", "Mystery"]
+        "rate": 8.9,
+        "genres": ["Horror", "Mystery"],
+        "synopsis": "Paranormal investigators Ed and Lorraine Warren take on another disturbing case involving a family plagued by supernatural events. As the haunting intensifies, the Warrens confront a terrifying mystery that tests their faith and courage."
     },
     {
         "id": 17,
         "title": "Toy Story 5",
         "poster": "assets/images/poster-movies/17_poster TS5.jpg",
-        "trailer": "assets/videos/trailer-movies/t17_ts5-compress.mp4", "key" : "zhsAd5ORk1Y",
+        "trailer": "assets/videos/trailer-movies/t17_ts5-compress.mp4",
+        "key": "c51ND9Hdbw0",
         "year": 2026,
         "rating": "PG",
         "duration": "1h 40m",
-        "rate" : 8.9,
-        "genres": ["Animation", "Adventure"]
+        "rate": 8.9,
+        "genres": ["Animation", "Adventure"],
+        "synopsis": "Woody, Buzz, Jessie, and the other toys face a new challenge when Bonnie becomes fascinated with Lilypad, a smart tablet with its own ideas about playtime. As technology changes their world, the toys must find a way to reconnect with their child."
     },
     {
         "id": 18,
         "title": "Mission: Impossible — Dead Reckoning",
         "poster": "assets/images/poster-movies/18_poster MSDR.jpg",
-        "trailer": "assets/videos/trailer-movies/t18_mi-compress.mp4", "key" : "zhsAd5ORk1Y",
+        "trailer": "assets/videos/trailer-movies/t18_mi-compress.mp4",
+        "key": "avz06PDqDbM",
         "year": 2023,
         "rating": "PG-13",
         "duration": "2h 43m",
-        "rate" : 8.9,
-        "genres": ["Action", "Spy"]
+        "rate": 8.9,
+        "genres": ["Action", "Spy"],
+        "synopsis": "Ethan Hunt and his IMF team race to stop a powerful artificial intelligence known as the Entity from threatening global security. Pursued by dangerous enemies, Ethan must track down a crucial key before it falls into the wrong hands."
     },
     {
         "id": 19,
         "title": "Anyone But You",
         "poster": "assets/images/poster-movies/19_poster anyone but you.jpeg",
-        "trailer": "assets/videos/trailer-movies/t19_aby-compress.mp4", "key" : "zhsAd5ORk1Y",
+        "trailer": "assets/videos/trailer-movies/t19_aby-compress.mp4",
+        "key": "ESEc6W2h9_k",
         "year": 2023,
         "rating": "R",
         "duration": "1h 43m",
-        "rate" : 8.9,
-        "genres": ["Romance", "Comedy"]
+        "rate": 8.9,
+        "genres": ["Romance", "Comedy"],
+        "synopsis": "Bea and Ben have an awkward first date that leaves them disliking each other. When they reunite at a destination wedding in Australia, they pretend to be a couple, only to discover that their feelings may be more complicated than they expected."
     },
     {
         "id": 20,
         "title": "The Batman Part II",
         "poster": "assets/images/poster-movies/20_poster tb2.jpg",
-        "trailer": "assets/videos/trailer-movies/t20_batman2-compress.mp4", "key" : "zhsAd5ORk1Y",
+        "trailer": "assets/videos/trailer-movies/t20_batman2-compress.mp4",
+        "key": "T7_zMl_ZhdQ",
         "year": 2026,
         "rating": "PG-13",
         "duration": "TBA",
-        "rate" : 8.9,
-        "genres": ["Action", "Crime"]
+        "rate": 8.9,
+        "genres": ["Action", "Crime"],
+        "synopsis": "Bruce Wayne continues his mission to protect Gotham City as Batman. Facing new dangers in a city plagued by crime and corruption, he must rely on his detective skills and determination to uncover the truth."
     }
-    ],
+],
     
     "series": [
         {
@@ -260,6 +287,7 @@
                 "Drama"
             ],
             "thumbnail": "assets/images/poster-series/1_the last of us.webp",
+            "key": "_zHPsmXCjB0",
             "rate" : 9.0,
             "rating" : "R",
             "seasons": [
@@ -305,6 +333,7 @@
                 "Drama"
             ],
             "thumbnail": "assets/images/poster-series/2_arcane.webp",
+            "key": "fXmAurh012s",
             "rate" : 9.0,
             "rating" : "R",
             "seasons": [
@@ -349,6 +378,7 @@
                 "Drama"
             ],
             "thumbnail": "assets/images/poster-series/3_the bear.webp",
+            "key": "gBmkI4jlaIo",
             "rate" : 9.0,
             "rating" : "R",
             "seasons": [
@@ -385,43 +415,43 @@
         },
         {
             "id": "s-004",
-            "title": "Stranger Things",
-            "synopsis": "Sekelompok remaja menghadapi fenomena supranatural dan eksperimen rahasia pemerintah di kota kecil Hawkins.",
-            "year": 2016,
+            "title": "Zanjeerain",
+            "synopsis": "The mountains of Zanjeerain hold many secrets. Tradition-bound families, power-hungry rivals, and those fighting to save loved ones collide in an emotional saga where deception runs deep and every decision could change everything.",
+            "year": 2024,
             "genre": [
-                "Horror",
                 "Drama",
-                "Sci-Fi"
+                "Thriller"
             ],
-            "thumbnail": "assets/images/poster-series/4_stranger things.webp",
-            "rate" : 9.0,
-            "rating" : "R",
+            "thumbnail": "assets/images/poster-series/4_zanjeerain.webp",
+            "key": "EEGrcoGtReM",
+            "rate": 8.0,
+            "rating": "TV-14",
             "seasons": [
                 {
                     "season_number": 1,
                     "episodes": [
                         {
-                            "id": "e-010",
+                            "id": "e-046",
                             "episode_number": 1,
-                            "title": "Chapter One: The Vanishing of Will Byers",
-                            "duration": "47 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ST+Eps+1",
+                            "title": "Episode 1",
+                            "duration": "45 min",
+                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=Z+Eps+1",
                             "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
                         },
                         {
-                            "id": "e-011",
+                            "id": "e-047",
                             "episode_number": 2,
-                            "title": "Chapter Two: The Weirdo on Maple Street",
-                            "duration": "55 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ST+Eps+2",
+                            "title": "Episode 2",
+                            "duration": "45 min",
+                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=Z+Eps+2",
                             "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
                         },
                         {
-                            "id": "e-012",
+                            "id": "e-048",
                             "episode_number": 3,
-                            "title": "Chapter Three: Holly, Jolly",
-                            "duration": "51 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ST+Eps+3",
+                            "title": "Episode 3",
+                            "duration": "45 min",
+                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=Z+Eps+3",
                             "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
                         }
                     ]
@@ -439,6 +469,7 @@
                 "Drama"
             ],
             "thumbnail": "assets/images/poster-series/5_house of the dragon.jpg",
+            "key": "0JlMjgqduVw",
             "rate" : 9.0,
             "rating" : "R",
             "seasons": [
@@ -484,6 +515,7 @@
                 "Fantasy"
             ],
             "thumbnail": "assets/images/poster-series/6_wednesday.webp",
+            "key": "03u4xyj0TH4",
             "rate" : 9.0,
             "rating" : "R",
             "seasons": [
@@ -529,6 +561,7 @@
                 "Thriller"
             ],
             "thumbnail": "assets/images/poster-series/7_breakingbad.webp",
+            "key": "1JLUn2DFW4w",
             "rate" : 9.0,
             "rating" : "R",
             "seasons": [
@@ -574,6 +607,7 @@
                 "Drama"
             ],
             "thumbnail": "assets/images/poster-series/8_sherlock.jpg",
+            "key": "rXMrTALO2ME",
             "rate" : 9.0,
             "rating" : "R",
             "seasons": [
@@ -619,6 +653,7 @@
                 "Adventure"
             ],
             "thumbnail": "assets/images/poster-series/9_themandalorian.jpg",
+            "key": "aOC8E8z_ifw",
             "rate" : 9.0,
             "rating" : "R",
             "seasons": [
@@ -664,6 +699,7 @@
                 "Action"
             ],
             "thumbnail": "assets/images/poster-series/10_onepiece.webp",
+            "key": "3Gmo0EXHyKg",
             "rate" : 9.0,
             "rating" : "R",
             "seasons": [
@@ -708,6 +744,7 @@
                 "Drama"
             ],
             "thumbnail": "assets/images/poster-series/11_peaky blinders.jpg",
+            "key": "oVzVdvGIC7U",
             "rate" : 9.0,
             "rating" : "PG-13",
             "seasons": [
@@ -751,6 +788,7 @@
                 "Drama"
             ],
             "thumbnail": "assets/images/poster-series/12_thequeen.jpg",
+            "key": "_H1G9BsxhDw",
             "rate" : 8.0,
             "rating" : "R",
             "seasons": [
@@ -796,6 +834,7 @@
                 "Drama"
             ],
             "thumbnail": "assets/images/poster-series/13_theboys.jpg",
+            "key": "XNQbH1SDPRk",
             "rate" : 9.0,
             "rating" : "R",
             "seasons": [
@@ -841,6 +880,7 @@
                 "Fantasy"
             ],
             "thumbnail": "assets/images/poster-series/14_avatar.webp",
+            "key": "7b20GRFZBFE",
             "rate" : 9.0,
             "rating" : "PG-13",
             "seasons": [
@@ -886,6 +926,7 @@
                 "Adventure"
             ],
             "thumbnail": "assets/images/poster-series/15_fallout.jpg",
+            "key": "0kQ8i2FpRDk",
             "rate" : 9.0,
             "rating" : "PG",
             "seasons": [

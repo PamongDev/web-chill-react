@@ -22,9 +22,10 @@ export function useMovies(){
                const normalizedSeries = rawSeries.map(normalizeSeries);
 
                const shuffleMovies = shuffleArray(normalizedMovies);
+               const shuffleSeries = shuffleArray(normalizedSeries);
 
                setMovies(shuffleMovies);
-               setSeries(normalizedSeries);
+               setSeries(shuffleSeries);
 
             } catch (error) {
                 console.error("Error:", error);

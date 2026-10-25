@@ -8,10 +8,12 @@ export function normalizeSeries(seriesItem, index) {
         title: seriesItem.title ?? `Series ${index + 1}`,
         // Map thumbnail ke poster agar MovieCard tidak error
         poster: seriesItem.thumbnail ?? "",
+        key : seriesItem.key ?? "",
         year: seriesItem.year ?? "—",
         rating: "TV-MA", // Default rating karena di JSON tidak ada
         duration: `${seriesItem.seasons?.length || 1} Season`,
         genres: Array.isArray(seriesItem.genre) ? seriesItem.genre : [],
+        synopsis : seriesItem.synopsis ?? seriesItem.description ?? "" ,
     };
 }
 
@@ -22,6 +24,7 @@ export function normalizeMovie(movie, index) {
         poster: movie.poster ?? movie.posterPath ?? movie.image ?? "",
         trailer: movie.trailer ?? movie.trailerPath ?? movie.video ?? "",
         key: movie.key ?? movie.videoid ?? movie.link ?? "", 
+        synopsis : movie.synopsis ?? movie.description ?? "" ,
         year: movie.year ?? movie.releaseYear ?? "—",
         rating: movie.rating ?? "—",
         duration: movie.duration ?? "—",

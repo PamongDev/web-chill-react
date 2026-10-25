@@ -16,8 +16,7 @@ export default function HeroContent({movie}){
                 ))}
             </div>
             <p className="hero-description">
-                {/* Jika di JSON tidak ada deskripsi, kita pakai teks default */}
-                {movie.synopsis || movie.description || "Sebuah petualangan luar biasa menanti Anda. Saksikan sekarang hanya di Chill."}
+                {movie.synopsis}
             </p>
 
             <div className="hero-actions">
