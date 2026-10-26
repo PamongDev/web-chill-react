@@ -1,4 +1,5 @@
 import MovieSection from "./MovieSection"
+import FeaturedSection from "../components/FeaturedSection";
 export default function PageContent({movies, series, isLoading}){
     const continueWatching = movies.slice(0, 15);
     const topMovies = movies.slice(1, 16);
@@ -6,7 +7,8 @@ export default function PageContent({movies, series, isLoading}){
     const newReleases = movies.slice(-15);
     const topSeries = series;
     return (
-        <div className="page-content">
+        <>
+            <div className="page-content">
                 <MovieSection 
                     eyebrow="KEEP WATCHING" 
                     title="Continue Watching" 
@@ -14,7 +16,13 @@ export default function PageContent({movies, series, isLoading}){
                     movies={continueWatching} 
                     isLoading={isLoading} 
                 />
-                
+            </div>
+
+
+            <FeaturedSection movies={movies} />
+
+
+            <div className="page-content">
                 <MovieSection 
                     eyebrow="POPULAR RIGHT NOW" 
                     title="Top Movies & Series" 
@@ -46,6 +54,7 @@ export default function PageContent({movies, series, isLoading}){
                     movies={topSeries} 
                     isLoading={isLoading} 
                 />
-        </div>
+            </div>
+        </>
     )
 } 

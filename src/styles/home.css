@@ -243,6 +243,53 @@
     -webkit-line-clamp: 3;
     overflow: hidden;
 }
+/* --- HERO SLIDER INDICATORS --- */
+.hero-slider-indicators {
+    position: absolute;
+    bottom: 30px; /* Jarak dari bawah layar */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px; /* Jarak antar titik */
+    z-index: 10;
+}
+/* --- ANIMASI TRANSISI SLIDER --- */
+.hero-slide-animation {
+    /* Menjalankan animasi bernama slideIn, durasi 0.7 detik, efek mulus di akhir */
+    animation: slideIn 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(80px); /* Teks mulai dari 80px di sebelah kanan */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Teks kembali ke posisi aslinya */
+    }
+}
+.slider-dot {
+    width: 30px;
+    height: 3px;
+    border-radius: 10%;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.slider-dot:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* Rahasia bentuk garis: Saat aktif, lebarnya dipanjangkan */
+.slider-dot.active {
+    width: 100px; 
+    border-radius: 4px; /* Sudut agak ditumpulkan */
+    background-color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Sedikit efek glow */
+}
 
 .hero-actions {
     display: flex;
@@ -537,7 +584,251 @@
 .footer-column a:focus-visible {
     color: var(--color-text-primary);
 }
+/* =========================================
+   FEATURED SECTION (COVER FLOW SLIDER)
+========================================= */
+.featured-section {
+    position: relative;
+    width: 100%;
+    
+    /* 1. HAPUS min-height: 85vh; */
+    /* 2. GANTI DENGAN INI: Memaksa section memiliki rasio presisi seperti video YouTube */
+    aspect-ratio: 16 / 9; 
+    
+    /* 3. Batas maksimal agar tidak raksasa di monitor PC yang sangat lebar */
+    max-height: 90vh; 
+    
+    display: flex;
+    align-items: center;
+    overflow: hidden; /* Wajib diaktifkan agar animasi kartu tidak tembus ke bawah */
+    margin-top: 2rem;
+    padding-top: clamp(5rem, 15vh, 8rem);
+    padding-left: clamp(1rem, 1vw, 1rem);
+    padding-bottom: clamp(3rem, 10vh, 5rem);
+    margin-top: 3rem;
+    background-color: #0f0f0f;
+}
 
+/* --- Backdrop Statis --- */
+.featured-backdrop {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
+
+.featured-backdrop img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    /* 4. Ganti 'center center' menjadi 'center top' 
+       Agar jika layar agak mengecil, yang dipertahankan adalah bagian atas (kepala karakter/judul), 
+       bukan bagian kaki yang tidak penting. */
+    object-position: center top; 
+}
+
+
+.featured-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+
+    background:
+        /* Vignette: menyamarkan seluruh tepi gambar */
+        radial-gradient(
+            ellipse at center,
+            transparent 35%,
+            rgba(15, 15, 15, 0.15) 60%,
+            rgba(15, 15, 15, 0.65) 82%,
+            #0f0f0f 100%
+        ),
+
+        /* Kiri: ruang gelap untuk teks */
+        linear-gradient(
+            90deg,
+            rgba(15, 15, 15, 0.95) 0%,
+            rgba(15, 15, 15, 0.5) 45%,
+            transparent 100%
+        ),
+
+        /* Bawah */
+        linear-gradient(
+            0deg,
+            #0f0f0f 0%,
+            rgba(15, 15, 15, 0.4) 18%,
+            transparent 45%
+        ),
+
+        /* Atas */
+        linear-gradient(
+            180deg,
+            rgba(15, 15, 15, 0.8) 0%,
+            transparent 25%
+        );
+}
+
+
+/* --- Layout Utama --- */
+.featured-layout {
+    position: relative;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+}
+
+/* --- Konten Teks Kiri --- */
+.featured-content {
+    flex: 0 1 38%;
+    min-width: 0;
+    animation: slideIn 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    margin-left: 2.5rem;
+}
+
+.featured-eyebrow {
+    color: #aaa;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.featured-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.featured-title {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 0.8rem;
+}
+
+.featured-meta {
+    display: flex;
+    gap: 0.8rem;
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.featured-synopsis {
+    color: #bbb;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Maksimal 3 baris */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* --- Area Slider Kanan --- */
+.featured-slider-area {
+    position: relative;
+    flex: 0 0 52%;
+    height: 460px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.featured-track {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 10rem;
+}
+
+/* --- ANIMASI KARTU (INTI COVER FLOW) --- */
+.featured-card-wrapper {
+    position: absolute;
+    top: 50%;
+    width: 300px;
+    transform: translateY(-50%);
+    transition:
+        left 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        opacity 0.6s ease;
+}
+
+/* 1. Kartu Utama (Paling depan, di samping teks) */
+.card-active {
+    left: 100px;
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+    z-index: 5;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+}/* Poster antrean pertama */
+.card-next-1 {
+    left: 260px;
+    opacity: 1;
+    transform: translateY(-50%) scale(0.86);
+    z-index: 4;
+}
+
+/* Poster antrean kedua */
+.card-next-2 {
+    left: 370px;
+    opacity: 0.8;
+    transform: translateY(-50%) scale(0.72);
+    z-index: 3;
+}
+
+/* Poster yang belum terlihat */
+.card-invisible {
+    left: 460px;
+    opacity: 0;
+    transform: translateY(-50%) scale(0.6);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* 5. MENGHILANG KE KIRI (Efek saat Next ditekan!) */
+.card-hidden-left {
+    left: -180px;
+    opacity: 0;
+    transform: translateY(-50%) scale(1.05);
+    z-index: 6;
+    pointer-events: none;
+}
+
+/* --- Tombol Next (Kaca Transparan) --- */
+.featured-next-btn {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    color: white;
+    cursor: pointer;
+    display: grid;
+    place-items: center;
+    transition: background 0.2s ease;
+}
+
+.featured-next-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.featured-next-btn svg {
+    width: 24px;
+    height: 24px;
+}
 
 /* =========================================================
    RESPONSIVE

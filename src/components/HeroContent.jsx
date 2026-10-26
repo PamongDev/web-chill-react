@@ -21,7 +21,9 @@ export default function HeroContent({movie}){
                 {movie.year && <span>{movie.year}</span>}
                 {movie.rating && <span>{movie.rating}</span>}
                 {movie.duration && <span>{movie.duration}</span>}
-                
+                {movie.rate && <span className="rate-text">⭐{movie.rate}</span>}
+            </div>
+            <div className="hero-meta">
                 {/* Looping genre agar rapi */}
                 {movie.genres && movie.genres.map((genre, index) => (
                     <span key={index}>{genre}</span>

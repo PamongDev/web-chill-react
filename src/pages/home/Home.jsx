@@ -23,7 +23,7 @@ function Home(){
         <>
         <Header username={user.username} email={user.email} handleLogout={handleLogout}></Header>
             <main>
-            <HeroSection featuredMovie={featuredMovie} />
+            <HeroSection movies={movies} />
             <PageContent movies={movies} series={series} isLoading={isLoading}/>
             </main>
         <FooterHome/>

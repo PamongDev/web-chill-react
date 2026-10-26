@@ -32,7 +32,9 @@ export default function MovieSection({ eyebrow, title, linkTo, movies, isLoading
                     onClick={() => handleScroll("left")}
                     aria-label="Scroll left"
                 >
-                    ❮
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
                 </button>
                 
                 <div className="movie-row" ref={rowRef}>
@@ -48,7 +50,9 @@ export default function MovieSection({ eyebrow, title, linkTo, movies, isLoading
                     onClick={() => handleScroll("right")}
                     aria-label="Scroll right"
                 >
-                    ❯
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
                 </button>
             </div>
         </section>
