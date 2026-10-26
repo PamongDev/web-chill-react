@@ -2,7 +2,7 @@ export default function ProfileDropdownHeader({ username, email }){
     return (
         <div className="profile-dropdown-header">
                 <img
-                    src="assets/images/main/logo app.png"
+                    src="/assets/images/main/logo app.png"
                     alt={username}
                     className="profile-dropdown-avatar"
                 />

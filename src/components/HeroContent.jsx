@@ -1,6 +1,18 @@
+import { useNavigate } from "react-router-dom";
 export default function HeroContent({movie}){
 
+    const navigate = useNavigate();
     if(!movie) return null;
+
+    const handleWatchNow = () =>{
+        const isSeries = movie.seasons !== undefined;
+
+        if(isSeries){
+            navigate(`/series/${movie.id}`);
+        }else {
+            navigate(`/movie/${movie.id}`);
+        }
+    }
     return (
         <div className="hero-content">
             <p className="eyebrow">CHILL ORIGINAL EXPERIENCE</p>
@@ -20,7 +32,7 @@ export default function HeroContent({movie}){
             </p>
 
             <div className="hero-actions">
-                <a className="button button-primary" href="#">▶ Watch Now</a>
+                <button className="button button-primary" onClick={handleWatchNow}>▶ Watch Now</button>
                 <button className="button button-secondary" type="button">＋ Playlist</button>
             </div>
         </div>

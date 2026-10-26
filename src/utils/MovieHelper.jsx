@@ -17,6 +17,7 @@ export function normalizeSeries(seriesItem, index) {
         cast : seriesItem.cast ?? "",
         country : seriesItem.country ?? "",
         director : seriesItem.director ?? "",
+        seasons : seriesItem.seasons ?? [],
 
     };
 }

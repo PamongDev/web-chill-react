@@ -3,12 +3,18 @@ export default function MovieCard({ movie }) {
     const firstGenre = movie.genres && movie.genres.length > 0 ? movie.genres[0] : null;
     const navigate = useNavigate();
 
-    const handleClick =()=>{
-        navigate(`/movie/${movie.id}`);
+    const handleWatchNow = () =>{
+        const isSeries = movie.seasons !== undefined;
+
+        if(isSeries){
+            navigate(`/series/${movie.id}`);
+        }else {
+            navigate(`/movie/${movie.id}`);
+        }
     } 
 
     return (
-        <article className="movie-card" onClick={handleClick}>
+        <article className="movie-card" onClick={handleWatchNow}>
             <div className="movie-poster-wrap">
                 <img 
                     className="movie-poster" 

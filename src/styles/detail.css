@@ -15,7 +15,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: top center;
+    object-position:top center ;
     filter: blur(8px) saturate(1.2); /* Efek blur agar tidak bertabrakan dengan teks */
 }
 
@@ -57,10 +57,15 @@
 }
 
 .detail-poster-img {
-    width: 300px;
+    width: 300px;    /* Ubah ini jadi 100% agar mengikuti pembungkusnya */
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.8);
     border: 1px solid rgba(255,255,255,0.1);
+}
+
+.detail-poster-side {
+    flex-shrink: 0; /* Wajib: Mencegah poster terkompresi sampai hilang */
+    width: 300px;   /* Pastikan lebar pembungkusnya sama dengan gambar */
 }
 
 .detail-info-side {
@@ -78,19 +83,49 @@
     line-height: 1.1;
 }
 
-.detail-meta, .detail-genres, .detail-action-buttons {
+.detail-meta, .detail-action-buttons {
     display: flex;
     align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
 }
 
+.detail-genres {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.6rem;
+    margin: 1rem 0; /* Memberi jarak aman antara Meta Info dan Tombol Aksi */
+}
+
+
 .genre-pill {
-    padding: 4px 12px;
-    border: 1px solid var(--color-border);
-    border-radius: 20px;
-    font-size: 0.8rem;
-    color: var(--color-text-secondary);
+    padding: 0.3rem 1.2rem;
+    
+    /* Efek kaca (Glassmorphism) yang sangat halus */
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50px; /* Bentuk bulat kapsul sempurna */
+    
+    /* Tipografi ala label film */
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #ccc;
+    letter-spacing: 1px;
+    text-transform: uppercase; /* Memaksa huruf kapital semua */
+    
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+    cursor: default; /* Kursor panah biasa, karena ini tag/label, bukan tombol klik */
+}
+
+/* Efek saat mouse melewati genre (Hover) */
+.genre-pill:hover {
+    border-color: rgba(255, 255, 255, 0.5);
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px); /* Mengambang sedikit ke atas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Bayangan lembut */
 }
 
 .icon-button-outline {
@@ -147,61 +182,63 @@
 
 /* --- CAST & DIRECTOR AVATAR GRID --- */
 .section-subtitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 700;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin: 2rem 0 1rem;
     color: white;
 }
 .cast-grid {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem; /* DIPERBESAR: Jarak antar aktor menjadi lebih lega */
     overflow-x: auto;
-    padding-bottom: 1rem;
-    /* Sembunyikan scrollbar tapi tetap bisa digeser */
+    padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
 .cast-grid::-webkit-scrollbar {
-    display: none;
+    display: block;
 }
 .cast-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    min-width: 90px;
-    max-width: 100px;
+    min-width: 200px; /* DIPERLEBAR: Agar nama yang panjang tidak turun ke baris baru terlalu cepat */
+    max-width: 250px;
 }
 .avatar-anon {
-    width: 70px;
-    height: 70px;
+    width: 8rem; /* DIPERBESAR: Dari 65px menjadi 100px */
+    height: 8rem;
     border-radius: 50%;
-    background: var(--color-card-hover);
-    border: 2px solid var(--color-border-subtle);
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid transparent;
     display: grid;
     place-items: center;
-    margin-bottom: 0.5rem;
-    transition: border-color 0.3s ease;
+    margin-bottom: 0.8rem; /* Jarak antara lingkaran dan teks agak dijauhkan */
+    transition: border-color 0.3s ease, background 0.3s ease;
 }
 .cast-card:hover .avatar-anon {
-    border-color: var(--color-text-primary);
+    border-color: white;
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.03); /* Tambahan efek zoom tipis saat di-hover */
 }
 .icon-user {
-    width: 35px;
-    height: 35px;
-    color: var(--color-text-muted);
+    width: 4rem; /* DIPERBESAR: Menyesuaikan lingkaran yang baru */
+    height: 4rem;
+    color: #888;
 }
 .actor-name {
-    font-size: 0.9rem;
+    font-size: 0.95rem; /* Sedikit dinaikkan agar proporsional dengan gambar */
     font-weight: 600;
-    line-height: 1.2;
+    line-height: 1.3;
     margin-bottom: 0.2rem;
+    color: #eee;
 }
 .character-name {
-    font-size: 0.8rem;
-    color: var(--color-text-soft);
-    line-height: 1.2;
+    font-size: 0.85rem;
+    color: #aaa;
+    line-height: 1.3;
 }
 
 /* --- STATIC COMMENTS --- */
@@ -244,6 +281,145 @@
     color: var(--color-text-soft);
     margin: 0;
     line-height: 1.4;
+}
+/* --- SERIES EPISODES --- */
+.series-episodes-section {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.season-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.season-dropdown {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.season-dropdown option {
+    background: var(--color-bg); /* Warna gelap agar dropdown tidak silau */
+}
+
+/* LIST EPISODE */
+.episodes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.episode-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    transition: background 0.3s;
+    cursor: pointer;
+}
+.episode-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+.episode-number {
+    font-size: 2rem;
+    color: var(--color-text-muted);
+    min-width: 40px;
+    text-align: center;
+}
+.episode-thumbnail {
+    position: relative;
+    width: 160px;
+    aspect-ratio: 16/9;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+.episode-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.episode-play-btn {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+.episode-card:hover .episode-play-btn {
+    opacity: 1;
+}
+.episode-info {
+    flex: 1;
+}
+.episode-title {
+    font-size: 1.1rem;
+    margin: 0 0 0.3rem 0;
+    color: white;
+}
+.episode-duration {
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+.episode-desc {
+    font-size: 0.9rem;
+    color: #aaa;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* --- TICKET ACTION BUTTONS --- */
+.detail-action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0; /* Memberi jarak pernapasan atas dan bawah */
+}
+
+.ticket-button {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(255, 255, 255, 0.03); /* Latar belakang kaca super tipis */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #eee;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px; /* Membentuk sudut tegas ala 'tiket' */
+    cursor: pointer;
+    backdrop-filter: blur(4px);
+    transition: all 0.2s ease-in-out;
+}
+
+.ticket-button svg {
+    width: 18px;
+    height: 18px;
+    color: var(--color-text-secondary); /* Icon sedikit meredup di awal */
+    transition: color 0.2s ease-in-out;
+}
+
+/* Efek saat kursor diarahkan ke tombol (Hover) */
+.ticket-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: white;
+    transform: translateY(-2px); /* Tombol sedikit terangkat */
+}
+
+.ticket-button:hover svg {
+    color: white; /* Icon menyala menjadi putih cerah */
 }
 
 /* RESPONSIVE HP */
