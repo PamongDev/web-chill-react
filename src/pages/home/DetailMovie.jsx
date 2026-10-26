@@ -31,12 +31,12 @@ export default function DetailMovie(){
            <main className="detail-page">
                 {/* --- 1. HERO BACKDROP --- */}
                 <section className="detail-hero-backdrop">
-                    <img src={`/${movie.poster}`} alt={`${movie.title} Background`} className="backdrop-img" />
+                    <img src={`/${movie.bg}`} alt={`${movie.title} Background`} className="backdrop-img" />
                     <div className="backdrop-overlay"></div>
                     
-                    <button className="button-massive-play" aria-label="Play Movie">
+                    {/* <button className="button-massive-play" aria-label="Play Movie">
                         ▶
-                    </button>
+                    </button> */}
                 </section>
 
                 {/* --- 2. LAYOUT ATAS (Poster Kiri, Info Kanan) --- */}
@@ -115,10 +115,29 @@ export default function DetailMovie(){
                         </p>
                     </div>
                 </section>
-                {/* 🔥 PENUTUP ADA DI SINI: Info Side dan Layout sudah ditutup 🔥 */}
+                
+                <section className="container detail-player-section">
+                    <h3 className="section-subtitle">Pemutar Video</h3>
+                    <div className="video-player-frame">
+                        <iframe 
+                            src={`https://www.youtube.com/embed/${movie.key}`} 
+                            title={movie.title} 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowFullScreen
+                        ></iframe>
+                    </div>
+                </section>
 
-                {/* --- 3. CAST & DIRECTOR (Sekarang jadi section terpisah, sejajar kiri) --- */}
-                <section className="container detail-cast-section" style={{ marginTop: "2rem" }}>
+                <section className="container detail-recommendations" style={{ marginTop: "2rem" }}>
+                    <MovieSection 
+                        eyebrow="SIMILAR TO THIS" 
+                        title="Tontonan Serupa" 
+                        movies={similarMovies} 
+                        isLoading={isLoading} 
+                    />
+                </section>
+
+                <section className="container detail-cast-section" style={{ marginTop: "6rem" }}>
                     <h3 className="section-subtitle">Sutradara & Pemeran</h3>
                     <div className="cast-grid">
                         {/* Sutradara */}
@@ -143,16 +162,6 @@ export default function DetailMovie(){
                             </div>
                         ))}
                     </div>
-                </section>
-
-                {/* --- 4. REKOMENDASI FILM --- */}
-                <section className="container detail-recommendations" style={{ marginTop: "2rem" }}>
-                    <MovieSection 
-                        eyebrow="SIMILAR TO THIS" 
-                        title="Tontonan Serupa" 
-                        movies={similarMovies} 
-                        isLoading={isLoading} 
-                    />
                 </section>
 
                 {/* --- 5. KOMENTAR STATIS --- */}

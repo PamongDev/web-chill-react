@@ -18,6 +18,7 @@ export function normalizeSeries(seriesItem, index) {
         country : seriesItem.country ?? "",
         director : seriesItem.director ?? "",
         seasons : seriesItem.seasons ?? [],
+        bg : seriesItem.bg ?? "",
 
     };
 }
@@ -39,5 +40,6 @@ export function normalizeMovie(movie, index) {
         cast : movie.cast ?? "",
         country : movie.country ?? "",
         director : movie.director ?? "",
+        bg : movie.bg ?? "",
     };
 }

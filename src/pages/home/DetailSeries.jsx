@@ -30,9 +30,9 @@ export default function DetailSeries(){
                 <main className="detail-page">
                     {/* --- 1. HERO BACKDROP --- */}
                     <section className="detail-hero-backdrop">
-                        <img src={`/${seriesItem.poster}`} alt={`${seriesItem.title} Background`} className="backdrop-img" />
+                        <img src={`/${seriesItem.bg}`} alt={`${seriesItem.title} Background`} className="backdrop-img" />
                         <div className="backdrop-overlay"></div>
-                        <button className="button-massive-play" aria-label="Play Movie">▶</button>
+                        {/* <button className="button-massive-play" aria-label="Play Movie">▶</button> */}
                     </section>
 
                     {/* --- 2. LAYOUT ATAS (Poster Kiri, Info Kanan) --- */}
@@ -113,6 +113,18 @@ export default function DetailSeries(){
                     </section> 
                     {/* TUTUP SECTION INFO DISINI! Sekarang yang di bawah ini akan jadi full-width */}
 
+                    <section className="container detail-player-section">
+                        <h3 className="section-subtitle">Pemutar Video</h3>
+                        <div className="video-player-frame">
+                            <iframe 
+                                src={`https://www.youtube.com/embed/${seriesItem.key}`} 
+                                title={seriesItem.title} 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowFullScreen
+                            ></iframe>
+                        </div>
+                    </section>
+
                     {/* --- 3. EPISODE (Sejajar Kiri) --- */}
                     <section className="container series-episodes-section">
                         <div className="season-header">
@@ -135,9 +147,13 @@ export default function DetailSeries(){
 
                         <div className="episodes-list">
                             {seriesItem.seasons?.[activeSeason]?.episodes?.map((eps) => {
-                                const thumbnailUrl = eps.thumbnail?.startsWith('http') 
-                                    ? eps.thumbnail 
-                                    : `/${eps.thumbnail || seriesItem.thumbnail}`;
+                                // 1. Pilih sumber gambar: eps.thumbnail -> seriesItem.bg -> seriesItem.thumbnail
+                                const rawImage = seriesItem.bg || seriesItem.thumbnail;
+
+                                // 2. Cek apakah URL dari internet (http) atau lokal (tambahkan /)
+                                const thumbnailUrl = rawImage?.startsWith('http') 
+                                    ? rawImage 
+                                    : `/${rawImage}`;
 
                                 return (
                                     <div className="episode-card" key={eps.id}>
