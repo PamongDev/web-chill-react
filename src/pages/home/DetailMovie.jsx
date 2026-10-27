@@ -1,10 +1,13 @@
 import { useParams } from "react-router-dom"
+import { useState } from "react"
+
 
 import Header from "../../components/Header"
 import FooterHome from "../../components/Footer"
 import MovieSection from "../../components/MovieSection"
 import { useMovies } from "../../hooks/useMovies"
 import { useAuth } from "../../hooks/useAuth"
+import { shareMovie } from "../../utils/shareHelper"
 import "../../styles/detail.css";
 import '../../styles/home.css';
 
@@ -13,6 +16,7 @@ export default function DetailMovie(){
     const { id } = useParams();
     const { user } = useAuth();
     const { movies, isLoading } = useMovies();
+    const { toastMessage, setToastMessage } = useState("");
 
     if(!user) return null;
     if(isLoading) return (<div className="loading-screen">Loading details...</div>);
@@ -20,6 +24,19 @@ export default function DetailMovie(){
     // find movies id
     const movie = movies.find(item=> item.id.toString() === id);
     if (!movie) return <div className="error-screen">Film tidak ditemukan!</div>;
+
+    const handleShare = async() =>{
+        const result = await shareMovie({
+            title : movie.title,
+            text : `Yuk nonton film ${movie.title} di Chill!`,
+            url : window.location.href
+        })
+
+        if(result.success && result.type === "clipboard"){
+            setToastMessage("Link Berhasil disalin ke clipboard!");
+            setTimeout(() => setToastMessage(""), 3000)
+        }
+    }
 
     // similar movies
     const similarMovies = movies.filter(m => m.id.toString() !== id).slice(0, 10);
@@ -98,16 +115,23 @@ export default function DetailMovie(){
                             </button>
 
                             {/* Tombol Bagikan */}
-                            <button className="ticket-button" aria-label="Share">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <circle cx="18" cy="5" r="3"/>
-                                    <circle cx="6" cy="12" r="3"/>
-                                    <circle cx="18" cy="19" r="3"/>
-                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
-                                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                            <button className="ticket-button" onClick={handleShare} aria-label="Bagikan Film">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                    <circle cx="18" cy="5" r="3" />
+                                    <circle cx="6" cy="12" r="3" />
+                                    <circle cx="18" cy="19" r="3" />
+                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+                                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
                                 </svg>
                                 Bagikan
                             </button>
+
+                            {/* Toast Notification melayang */}
+                            {toastMessage && (
+                                <div className="toast-notification">
+                                    {toastMessage}
+                                </div>
+                            )}
                         </div>
 
                         <p className="detail-synopsis">
