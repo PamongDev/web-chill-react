@@ -50,16 +50,16 @@ export default function GenrePage({ defaultType = "all" }){
             />
 
 
-            <main className="catalog-page" style={{ paddingTop: "120px" }}>
+            <main className="catalog-page">
                 <div className="catalog-section">                   
                     {/* --- HEADER GENRE --- */}
-                    <div className="catalog-controls" style={{ marginBottom: "3rem" }}>
+                    <div className="catalog-controls">
                         <div>
-                            <p className="eyebrow" style={{ color: "#aaa", letterSpacing: "2px", fontSize: "0.9rem" }}>
+                            <p className="eyebrow">
                                 EKSPLORASI KATEGORI
                             </p>
                             <h2 className="catalog-section-title" style={{ fontSize: "2.5rem", marginTop: "0.5rem" }}>
-                                {genreName} <span style={{ color: "#777", fontSize: "1.2rem", fontWeight: "normal" }}>({totalCount})</span>
+                                {genreName.charAt(0).toUpperCase() + genreName.slice(1)} Collections <span style={{ color: "#777", fontSize: "1.2rem", fontWeight: "normal" }}>({totalCount})</span>
                             </h2>
                         </div>
                     </div>

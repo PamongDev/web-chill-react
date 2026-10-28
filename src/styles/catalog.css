@@ -93,6 +93,7 @@
     /* Opsional: Jika layarmu sangat lebar (Ultrawide), batas maksimal kontennya */
     max-width: 300vh;
     margin: 0 auto;
+    padding-top: 1rem;
 }
 
 .catalog-hero-bg {
@@ -134,6 +135,7 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    
 }
 
 /* --- KONTROL & TOMBOL FILTER --- */

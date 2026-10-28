@@ -5,13 +5,14 @@ import { useMovies } from "../hooks/useMovies";
 export default function GenreModal({ isOpen, onClose }) {
     const { movies, series } = useMovies();
     const navigate = useNavigate();
+    const allMoviesSeries = [...(movies || []), ...(series || [])];
 
     // Mengambil semua genre unik dari seluruh data (Movie + Series) dan mengurutkannya sesuai abjad
     const allGenres = useMemo(() => {
-        if (!movies) return [];
-        const genres = [...new Set(movies.flatMap(m => m.genres || []))];
+        if (!allMoviesSeries) return [];
+        const genres = [...new Set(allMoviesSeries.flatMap(m => m.genres || []))];
         return genres.sort(); // Urutkan A-Z agar rapi
-    }, [movies]);
+    }, [allMoviesSeries]);
 
     // Jika modal tidak sedang dibuka, jangan render apa-apa
     if (!isOpen) return null;
