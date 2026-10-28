@@ -8,9 +8,9 @@ export default function HeroContent({movie}){
         const isSeries = movie.seasons !== undefined;
 
         if(isSeries){
-            navigate(`/series/${movie.id}`);
+            navigate(`/series/detail/${movie.id}`);
         }else {
-            navigate(`/movie/${movie.id}`);
+            navigate(`/movies/detail/${movie.id}`);
         }
     }
     return (

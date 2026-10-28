@@ -5,13 +5,16 @@ import HeaderNavbarMenus from "./HeaderNavbarMenus";
 import useScroll from "../hooks/useScroll";
 import { Link } from "react-router-dom";
 
+
 export default function Header({ username, email, handleLogout }) {
     const { isOpen, handletoogle, menuRef } = useDropdown();
+    
     
     // logic header
     const isScrolled = useScroll(10);    
     
     return (
+        <>
         <header className={`site-header ${isScrolled ? "scrolled" : ""}`}>
             <div className="container navbar-wrap">
                 <nav className="navbar" aria-label="Main navigation">
@@ -39,5 +42,7 @@ export default function Header({ username, email, handleLogout }) {
                 </nav>
             </div>
         </header>
+        
+        </>
     )
 }

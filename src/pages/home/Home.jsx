@@ -11,6 +11,8 @@ import { useEffect, useMemo, useState } from 'react';
 function Home(){
     // login logic
     const { movies, series, isLoading } = useMovies();
+
+    const topFiveMovies = movies ? movies.slice(0,5) : [];
     const { user, handleLogout } = useAuth();
     const library = [...(movies || []), ...(series || [])];
 
@@ -23,7 +25,7 @@ function Home(){
         <>
         <Header username={user.username} email={user.email} handleLogout={handleLogout}></Header>
             <main>
-            <HeroSection movies={movies} />
+            <HeroSection topFiveMovies={topFiveMovies} />
             <PageContent movies={movies} series={series} isLoading={isLoading}/>
             </main>
         <FooterHome/>

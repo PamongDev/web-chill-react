@@ -1,5 +1,4 @@
 export default function MovieTrailer({ video, isMuted }) {
-    console.log(video);
   if (!video) return null;
   const muted = isMuted ? "1" : "0";
   const videoId = video.key;

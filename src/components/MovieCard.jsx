@@ -8,9 +8,9 @@ export default function MovieCard({ movie, disable=false, badge=true }) {
         if(!disable){
             const isSeries = movie.seasons !== undefined;
             if(isSeries){
-                navigate(`/series/${movie.id}`);
+                navigate(`/series/detail/${movie.id}`);
             }else {
-                navigate(`/movie/${movie.id}`);
+                navigate(`/movies/detail/${movie.id}`);
             }
         }
     } 

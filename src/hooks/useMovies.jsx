@@ -10,7 +10,7 @@ export function useMovies(){
         const loadMovies = async () => {
             try {
                 // Pastikan file dummy-movie.json ada di folder public/data/
-                const response = await fetch("../data/dummy-movie.json");
+                const response = await fetch("/data/dummy-movie.json");
                 if (!response.ok) throw new Error("Gagal mengambil data");
                 
                 const json = await response.json();

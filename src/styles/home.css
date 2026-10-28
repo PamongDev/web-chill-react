@@ -81,6 +81,7 @@
     font-weight: var(--font-weight-semibold);
 
     transition: color var(--transition-fast);
+    cursor: pointer;
 }
 
 .desktop-nav a:hover,
@@ -246,12 +247,12 @@
 /* --- HERO SLIDER INDICATORS --- */
 .hero-slider-indicators {
     position: absolute;
-    bottom: 30px; /* Jarak dari bawah layar */
+    bottom: 60px; /* Jarak dari bawah layar */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     gap: 8px; /* Jarak antar titik */
-    z-index: 10;
+    z-index: 1;
 }
 /* --- ANIMASI TRANSISI SLIDER --- */
 .hero-slide-animation {
@@ -601,11 +602,9 @@
     display: flex;
     align-items: center;
     overflow: hidden; /* Wajib diaktifkan agar animasi kartu tidak tembus ke bawah */
-    margin-top: 2rem;
     padding-top: clamp(5rem, 15vh, 8rem);
     padding-left: clamp(1rem, 1vw, 1rem);
     padding-bottom: clamp(3rem, 10vh, 5rem);
-    margin-top: 3rem;
     background-color: #0f0f0f;
 }
 
@@ -845,6 +844,121 @@
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
     z-index: 9999;
     animation: slideUpToast 0.3s ease-out forwards;
+}
+
+/* =========================================
+   GENRE MODAL STYLES (GLASSMORPHISM)
+========================================= */
+.genre-modal-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    z-index: 1000; /* Pastikan selalu paling atas */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    animation: fadeIn 0.3s ease-out;
+}
+
+.genre-modal-content {
+    background: rgba(25, 25, 25, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    width: 90%;
+    max-width: 700px;
+    padding: 2.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    
+    transform: scale(0.95);
+    animation: scaleUp 0.3s ease-out forwards;
+}
+
+.genre-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 1rem;
+}
+
+.genre-modal-header h2 {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.close-modal-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.close-modal-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(90deg); /* Efek putar kecil saat di-hover */
+}
+
+/* --- KAPSUL GENRE --- */
+.genre-modal-body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.genre-capsule-btn {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ddd;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.genre-capsule-btn:hover {
+    background: white;
+    color: black;
+    border-color: white;
+    font-weight: 600;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Tombol Genre di Navbar agar bentuknya nyatu sama teks lain */
+.nav-genre-btn {
+    background: transparent;
+    border: none;
+    color: white; /* Sesuaikan warna menu navbarmu */
+    font-family: inherit;
+    font-size: 1rem; /* Sesuaikan ukuran teks menu */
+    cursor: pointer;
+    padding: 0;
+}
+
+/* --- ANIMASI --- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes scaleUp {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
 
 @keyframes slideUpToast {

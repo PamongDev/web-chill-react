@@ -1,7 +1,7 @@
 import { useState } from "react";
 import MovieCard from "./MovieCard";
 
-export default function FeaturedSection({ movies }) {
+export default function FeaturedSection({ movies, titleEyebrow="Best Featured for you today" }) {
     const [currentIndex, setCurrentIndex] = useState(0);
     
     // Ambil 5 film khusus untuk section ini
@@ -32,7 +32,7 @@ export default function FeaturedSection({ movies }) {
                 {/* --- BAGIAN KIRI: Hero Content --- */}
                 <div className="featured-content" key={activeMovie.id}>
                     <p className="eyebrow">Featured in Chill</p>
-                    <h2 className="featured-eyebrow">Best Featured for you today,</h2>
+                    <h2 className="featured-eyebrow">{titleEyebrow}</h2>
                     
                     <div className="featured-movie-info">
                         <h3 className="hero-title">{activeMovie.title}</h3>

@@ -1,0 +1,206 @@
+/* =========================================
+   CATALOG PAGE (MOVIES & SERIES)
+========================================= */
+
+.catalog-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+/* --- GENRE PILLS (SCROLL HORIZONTAL) --- */
+.genre-pills-container {
+    display: flex;
+    gap: 0.8rem;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    scrollbar-width: none; /* Menyembunyikan scrollbar di Firefox */
+}
+
+/* Menyembunyikan scrollbar di Chrome/Safari tapi tetap bisa digeser */
+.genre-pills-container::-webkit-scrollbar {
+    display: none;
+}
+
+.genre-filter-pill {
+    white-space: nowrap;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ccc;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+}
+
+.genre-filter-pill:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+.genre-filter-pill.active {
+    background: white;
+    color: black;
+    border-color: white;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* --- MOVIE GRID LENGKAP --- */
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* --- TAMPILAN JIKA KOSONG --- */
+.empty-state {
+    text-align: center;
+    padding: 4rem 0;
+    color: #888;
+    font-size: 1.1rem;
+}
+
+.empty-state span {
+    color: white;
+    font-weight: 600;
+}
+/* --- CATALOG HERO BANNER --- */
+.catalog-hero {
+    position: relative;
+    width: 100%;
+    height: 60vh; /* Tidak setinggi Home Hero, cukup 60% layar */
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 3rem;
+    margin-bottom: 2rem;
+}
+
+/* --- CATALOG SECTION (Jarak Kiri-Kanan) --- */
+.catalog-section {
+    /* Menggunakan clamp agar responsif: 
+       Min 1.5rem (HP), dinamis 5vw (Tablet), Max 4rem (Desktop) */
+    padding-left: clamp(1.5rem, 5vw, 4rem);
+    padding-right: clamp(1.5rem, 5vw, 4rem);
+    padding-bottom: 4rem; /* Jarak aman sebelum menyentuh Footer */
+    
+    /* Opsional: Jika layarmu sangat lebar (Ultrawide), batas maksimal kontennya */
+    max-width: 300vh;
+    margin: 0 auto;
+}
+
+.catalog-hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    z-index: 1;
+}
+
+.catalog-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(15, 15, 15, 1) 0%, rgba(15, 15, 15, 0.4) 50%, rgba(15, 15, 15, 0.1) 100%);
+    z-index: 2;
+}
+
+.catalog-hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 600px;
+    animation: slideUp 0.6s ease-out forwards;
+}
+
+.catalog-hero-content h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.catalog-hero-content p {
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* --- KONTROL & TOMBOL FILTER --- */
+.catalog-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.catalog-section-title {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
+}
+
+.filter-trigger-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(58, 58, 58, 0.1);
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    color: rgb(136, 132, 132);
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    backdrop-filter: blur(8px);
+    transition: all 0.2s ease;
+}
+
+.filter-trigger-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.filter-trigger-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ccc;
+}
+
+/* --- TOMBOL LOAD MORE --- */
+.load-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.load-more-btn {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 0.8rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.load-more-btn:hover {
+    background: white;
+    color: black;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* (movie-grid menggunakan CSS yang sudah ada sebelumnya) */

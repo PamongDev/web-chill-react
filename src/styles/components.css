@@ -289,8 +289,7 @@
 
     display: block;
     object-fit: cover;
-
-
+    
     transition: transform var(--transition-normal);
 }
 

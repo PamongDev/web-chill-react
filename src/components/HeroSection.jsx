@@ -3,12 +3,11 @@ import HeroMuteButton from "./HeroMuteButton";
 import HeroContent from "./HeroContent";
 import MovieTrailer from "./MovieTrailer";
 
-export default function HeroSection({ movies }){
+export default function HeroSection({ topFiveMovies }){
     const [isMuted, setIsMuted] = useState(true);
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const topFiveMovies = movies ? movies.slice(0,5) : [];
 
     const activeMovie = topFiveMovies[currentIndex];
     
