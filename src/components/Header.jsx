@@ -4,10 +4,14 @@ import "../styles/components.css";
 import HeaderNavbarMenus from "./HeaderNavbarMenus";
 import useScroll from "../hooks/useScroll";
 import { Link } from "react-router-dom";
+import SearchModal from "./SearchModal";
+import { useState } from "react";
 
 
 export default function Header({ username, email, handleLogout }) {
     const { isOpen, handletoogle, menuRef } = useDropdown();
+    const [isGenreModalOpen, setIsGenreModalOpen] = useState(false);
+    const [isSearchOpen, setIsSearchOpen] = useState(false);
     
     
     // logic header
@@ -26,7 +30,7 @@ export default function Header({ username, email, handleLogout }) {
 
                     <div className="nav-actions">
 
-                        <button className="icon-button" type="button" aria-label="Search">
+                        <button className="icon-button" type="button" aria-label="Search" onClick={() => setIsSearchOpen(true)} style={{ background: 'transparent', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer' }}>
                             <span aria-hidden="true">⌕</span>
                         </button>
 
@@ -42,6 +46,7 @@ export default function Header({ username, email, handleLogout }) {
                 </nav>
             </div>
         </header>
+        <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
         
         </>
     )

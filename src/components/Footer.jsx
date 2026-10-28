@@ -1,4 +1,21 @@
+import { useMemo } from "react";
+import { Link } from "react-router-dom";
+import { useMovies } from "../hooks/useMovies";
+import GenreBadge from "../components/GenreBadge";
+
 export default function FooterHome(){
+    const { movies } = useMovies();
+
+    // Ekstrak semua genre dari seluruh data film
+    const footerGenres = useMemo(() => {
+        if (!movies) return [];
+        
+        // 1. Ambil semua genre unik
+        const allUniqueGenres = [...new Set(movies.flatMap(m => m.genres || []))].sort();
+        
+        // 2. Batasi hanya 8 genre pertama agar desain footer tetap rapi
+        return allUniqueGenres; 
+    }, [movies]);
     return (
         <footer className="site-footer">
             <div className="container footer-grid">
@@ -11,16 +28,10 @@ export default function FooterHome(){
                 <div className="footer-column">
                     <h3>Genres</h3>
                     <div className="footer-links-grid">
-                        <a href="#">Action</a>
-                        <a href="#">Comedy</a>
-                        <a href="#">Drama</a>
-                        <a href="#">Horror</a>
-                        <a href="#">Romance</a>
-                        <a href="#">Sci-Fi</a>
-                        <a href="#">Thriller</a>
-                        <a href="#">Documentary</a>
-                        <a href="#">Animation</a>
-                        <a href="#">Fantasy</a>
+                        {footerGenres.map(genre => (
+                            // Panggil GenreBadge dengan type "all" (otomatis ke /genre/...)
+                            <GenreBadge key={genre} genre={genre} type="all" />
+                        ))}
                     </div>
                 </div>
 

@@ -5,11 +5,13 @@ import { useState } from "react"
 import Header from "../../components/Header"
 import FooterHome from "../../components/Footer"
 import MovieSection from "../../components/MovieSection"
+import GenreBadge from "../../components/GenreBadge"
 import { useMovies } from "../../hooks/useMovies"
 import { useAuth } from "../../hooks/useAuth"
 import { shareMovie } from "../../utils/shareHelper"
 import "../../styles/detail.css";
 import '../../styles/home.css';
+import { useMyList } from "../../hooks/useMyList"
 
 export default function DetailMovie(){
 
@@ -17,6 +19,7 @@ export default function DetailMovie(){
     const { user } = useAuth();
     const { movies, isLoading } = useMovies();
     const { toastMessage, setToastMessage } = useState("");
+    const { toggleMyList, isInList } = useMyList();
 
     if(!user) return null;
     if(isLoading) return (<div className="loading-screen">Loading details...</div>);
@@ -40,7 +43,7 @@ export default function DetailMovie(){
 
     // similar movies
     const similarMovies = movies.filter(m => m.id.toString() !== id).slice(0, 10);
-    
+    const isAdded = isInList(movie.id);
     return (
         <div className="detail-page-wrapper">
             <Header username={user.username} email={user.email} />
@@ -84,17 +87,32 @@ export default function DetailMovie(){
 
                         <div className="detail-genres">
                             {movie.genres?.map((g, idx) => (
-                                <span key={idx} className="genre-pill">{g}</span>
+                                <span key={idx} className="genre-pill"><GenreBadge key={g} genre={g} type="all" /></span>
                             ))}
                         </div>
 
                         <div className="detail-action-buttons">
                             
-                            <button className="ticket-button" aria-label="Add to Playlist">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M12 5v14M5 12h14"/>
-                                </svg>
-                                Playlist
+                            <button 
+                                className={`ticket-button ${isAdded ? "added" : ""}`} 
+                                onClick={() => toggleMyList(movie)}
+                            >
+                                {isAdded ? (
+                                    <>
+                                        <svg viewBox="0 0 24 24" width="20" fill="currentColor">
+                                            <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+                                        </svg>
+                                        Tersimpan
+                                    </>
+                                ) : (
+                                    <>
+                                        <svg viewBox="0 0 24 24" width="20" fill="none" stroke="currentColor" strokeWidth="2">
+                                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        </svg>
+                                        PlayList
+                                    </>
+                                )}
                             </button>
 
                             {/* Tombol Favorite */}

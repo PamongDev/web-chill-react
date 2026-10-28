@@ -1,0 +1,85 @@
+/* =========================================
+   FULL-SCREEN SEARCH MODAL
+========================================= */
+.search-modal-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 2000; /* Paling atas dari segalanya */
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 0.3s ease-out;
+    overflow-y: auto; /* Agar bisa di-scroll ke bawah */
+}
+
+/* --- BAGIAN HEADER SEARCH --- */
+.search-modal-top {
+    position: sticky;
+    top: 0;
+    background: rgba(15, 15, 15, 0.9);
+    padding: 2rem 0 1.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 10;
+}
+
+.search-modal-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-modal-icon {
+    width: 28px;
+    height: 28px;
+    color: #888;
+}
+
+.search-modal-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    outline: none;
+}
+
+.search-modal-input::placeholder {
+    color: #555;
+}
+
+.search-close-btn {
+    background: transparent;
+    border: none;
+    color: #aaa;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.search-close-btn:hover {
+    color: white;
+}
+
+/* --- BAGIAN BODY (HASIL GRID) --- */
+.search-modal-body {
+    padding-top: 3rem;
+    padding-bottom: 5rem;
+    flex: 1;
+}
+
+.search-empty-state {
+    text-align: center;
+    color: #777;
+    font-size: 1.5rem;
+    margin-top: 10vh;
+}
+
+.search-empty-state span {
+    color: white;
+    font-style: italic;
+}

@@ -194,6 +194,7 @@
     text-wrap: balance;
     overflow-wrap: break-word;
     word-break: normal;
+    padding-bottom: 1.15rem;
 
     text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.8);
 }
@@ -202,8 +203,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.6rem;
-
-    margin-top: 1.15rem;
 
     color: var(--color-text-secondary);
 
@@ -220,6 +219,10 @@
 .hero-meta span:not(:last-child)::after {
     content: "•";
     color: var(--color-text-muted);
+}
+
+.hero-meta span:hover{
+    color: var(--color-text-primary);
 }
 
 .hero-description {
@@ -572,7 +575,7 @@
 
 .footer-links-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
     gap: 0.65rem var(--space-4);
 }
 

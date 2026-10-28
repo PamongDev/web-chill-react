@@ -4,6 +4,7 @@ import { useState } from "react"
 import Header from "../../components/Header"
 import FooterHome from "../../components/Footer"
 import MovieSection from "../../components/MovieSection"
+import GenreBadge from "../../components/GenreBadge"
 import { shareMovie } from "../../utils/shareHelper"
 import { useMovies } from "../../hooks/useMovies"
 import { useAuth } from "../../hooks/useAuth"
@@ -78,7 +79,7 @@ export default function DetailSeries(){
 
                             <div className="detail-genres">
                                 {seriesItem.genres?.map((g, idx) => (
-                                    <span key={idx} className="genre-pill">{g}</span>
+                                    <span key={idx} className="genre-pill"><GenreBadge key={g} genre={g} type="all" /></span>
                                 ))}
                             </div>
 

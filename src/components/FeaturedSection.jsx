@@ -1,5 +1,7 @@
 import { useState } from "react";
 import MovieCard from "./MovieCard";
+import { Link } from "react-router-dom";
+import GenreBadge from "./GenreBadge";
 
 export default function FeaturedSection({ movies, titleEyebrow="Best Featured for you today" }) {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -46,7 +48,7 @@ export default function FeaturedSection({ movies, titleEyebrow="Best Featured fo
                         </div>
                         <div className="hero-meta">
                             {activeMovie.genres?.map((g, i) => (
-                                <span key={i}>{g}</span>
+                                <span key={i}><GenreBadge key={g} genre={g} type="all" /></span>
                             ))}
                         </div>
                         

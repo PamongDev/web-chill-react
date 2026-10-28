@@ -1,4 +1,6 @@
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import GenreBadge from "./GenreBadge";
 export default function HeroContent({movie}){
 
     const navigate = useNavigate();
@@ -24,9 +26,8 @@ export default function HeroContent({movie}){
                 {movie.rate && <span className="rate-text">⭐{movie.rate}</span>}
             </div>
             <div className="hero-meta">
-                {/* Looping genre agar rapi */}
                 {movie.genres && movie.genres.map((genre, index) => (
-                    <span key={index}>{genre}</span>
+                    <span key={index}><GenreBadge key={genre} genre={genre} type="all" /></span>
                 ))}
             </div>
             <p className="hero-description">
