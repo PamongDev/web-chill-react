@@ -20,7 +20,6 @@ export default function HeroSection({ topFiveMovies }){
 
             <HeroMuteButton isMuted={isMuted} 
             onToggle={() => setIsMuted(!isMuted)} />
-            {/* <div className="featured-overlay"></div> */}
             <div key={activeMovie.id} className="hero-slide-animation">
                 <HeroContent movie={activeMovie} />
             </div>

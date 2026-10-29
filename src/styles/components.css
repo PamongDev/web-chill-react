@@ -113,41 +113,93 @@
 ========================================================= */
 
 .icon-button {
-    width: 40px;
-    height: 40px;
+    position: relative;
 
     display: grid;
     place-items: center;
+    flex-shrink: 0;
 
-    background: transparent;
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-full);
+    width: 42px;
+    height: 42px;
+    padding: 0;
 
-    color: var(--color-text-primary);
+    color: #fff;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
 
     cursor: pointer;
 
     transition:
-        background-color var(--transition-fast),
-        border-color var(--transition-fast);
+        background 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
 }
 
+.icon-button svg {
+    width: 21px;
+    height: 21px;
+
+    transition:
+        transform 0.25s ease,
+        color 0.25s ease;
+}
+
+/* Hover: subtle red glow */
 .icon-button:hover {
-    background: var(--color-surface-hover);
-    border-color: var(--color-border-hover);
-}
+    color: #fff;
+    background: rgba(229, 9, 20, 0.15);
+    border-color: rgba(229, 9, 20, 0.8);
 
-.icon-button:focus-visible {
-    outline: 2px solid var(--color-border-focus);
-    outline-offset: 2px;
-}
-
-.icon-button span {
-    font-size: 1.5rem;
-    line-height: 1;
+    box-shadow: 0 0 18px rgba(229, 9, 20, 0.12);
     transform: translateY(-1px);
 }
 
+.icon-button:hover svg {
+    transform: scale(1.08);
+}
+
+.icon-button:active {
+    transform: scale(0.94);
+}
+
+.icon-button:focus-visible {
+    outline: 2px solid #e50914;
+    outline-offset: 3px;
+}
+
+/* Ketika berada di atas header transparan */
+.site-header:not(.scrolled) .icon-button {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* Ketika header berubah menjadi kapsul hitam */
+.site-header.scrolled .icon-button {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+    .icon-button {
+        width: 38px;
+        height: 38px;
+    }
+
+    .icon-button svg {
+        width: 19px;
+        height: 19px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .icon-button,
+    .icon-button svg {
+        transition: none;
+    }
+}
 
 /* =========================================================
    EYEBROW (label kecil di atas judul)
@@ -390,75 +442,81 @@
 }
 
 /* --- WADAH SEMUA BADGE DI ATAS POSTER --- */
+
 .card-badges-top {
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    z-index: 3;
+
     display: flex;
-    justify-content: space-between; /* Kiri ke ujung, Kanan ke ujung */
     align-items: flex-start;
-    
-    padding: var(--space-2, 8px);
-    z-index: 2;
-    pointer-events: none; /* Agar tidak mengganggu klik gambar */
+    justify-content: space-between;
+    gap: 6px;
+
+    pointer-events: none;
 }
 
-.badge-group-left {
+.badge-group-left,
+.badge-group-right {
     display: flex;
-    gap: 6px; /* Jarak antara badge Rate dan Age */
-    flex-wrap: wrap; /* Mencegah bentrok jika layar kecil */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
-/* --- DASAR SEMUA BADGE --- */
+.badge-group-right {
+    justify-content: flex-end;
+}
+
 .badge {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 4px;
-    
-    font-size: 0.65rem;
-    font-weight: 700;
-    line-height: 1;
-    letter-spacing: 0.5px;
-    
-    padding: 4px 6px;
-    border-radius: 4px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
 
-/* --- BADGE KACA BURAM (RATE & AGE) --- */
-.glass-badge {
-    background: rgba(20, 20, 20, 0.6); /* Hitam tembus pandang */
-    color: #f1f1f1;
-    
-    /* Efek Kaca Super Mewah */
+    min-height: 24px;
+    padding: 4px 7px;
+
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 5px;
+
+    color: #fff;
+    background: rgba(12, 12, 12, 0.76);
     backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px); /* Untuk Safari */
-    
-    /* Border putih super tipis agar efek kacanya tegas */
-    border: 1px solid rgba(255, 255, 255, 0.15); 
+    -webkit-backdrop-filter: blur(8px);
+
+    font-size: 0.68rem;
+    font-weight: 750;
+    line-height: 1;
+    white-space: nowrap;
 }
 
-/* Sedikit modifikasi untuk rating usia agar teks agak keabu-abuan */
-.rating-badge {
-    color: var(--color-text-secondary, #b3b3b3);
+.score-badge .icon-star {
+    color: #f5c451;
+    font-size: 0.85rem;
 }
 
-/* --- BADGE PREMIUM --- */
+.age-badge {
+    color: #e5e5e5;
+}
+
+.type-badge {
+    background: rgba(229, 9, 20, 0.88);
+    border-color: rgba(229, 9, 20, 0.8);
+    letter-spacing: 0.4px;
+    font-size: 0.62rem;
+}
+
 .premium-badge {
-    background: linear-gradient(135deg, #f5c518, #b8860b);
-    color: #141414; /* Teks gelap karena background terang */
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #f5d78e;
+    border-color: rgba(245, 215, 142, 0.3);
+    background: rgba(58, 43, 15, 0.88);
+    font-size: 0.6rem;
+    letter-spacing: 0.3px;
 }
 
-/* --- UKURAN SVG ICONS --- */
-.icon-star {
-    width: 12px;
-    height: 12px;
-    color: #f5c518; /* Warna kuning khas IMDb */
-}
 
 .icon-crown {
     width: 12px;
@@ -503,7 +561,7 @@
 
     object-fit: cover;
 
-    border-radius: var(--radius-md);
+    border-radius: 50%;
     border: 1px solid var(--color-border);
 
     transition:
@@ -585,7 +643,7 @@
 
     object-fit: cover;
 
-    border-radius: var(--radius-md);
+    border-radius: 50%;
     border: 1px solid var(--color-border);
 }
 

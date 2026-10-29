@@ -29,8 +29,24 @@ export default function Header({ username, email, handleLogout }) {
 
                     <div className="nav-actions">
 
-                        <button className="icon-button" type="button" aria-label="Search" onClick={() => setIsSearchOpen(true)} style={{ background: 'transparent', border: 'none', color: 'white', fontSize: '1.5rem', cursor: 'pointer' }}>
-                            <span aria-hidden="true">⌕</span>
+                        <button
+                            className="icon-button"
+                            type="button"
+                            aria-label="Search"
+                            title="Search"
+                            onClick={() => setIsSearchOpen(true)}
+                        >
+                            <svg
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                strokeWidth="1.8"
+                                strokeLinecap="round"
+                                aria-hidden="true"
+                            >
+                                <circle cx="10.8" cy="10.8" r="6.8" />
+                                <path d="m16 16 4.2 4.2" /> 
+                            </svg>
                         </button>
 
                         <div className={`profile-menu ${isOpen ? "is-open" : ""}`} ref={menuRef}>
