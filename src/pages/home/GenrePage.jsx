@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import { useParams, useSearchParams } from "react-router-dom";
 import { useMovies } from "../../hooks/useMovies";
+import { useAuth } from "../../hooks/useAuth";
 import Header from "../../components/Header";
 import FooterHome from "../../components/Footer";
 import MovieCard from "../../components/MovieCard";
@@ -10,7 +11,8 @@ export default function GenrePage({ defaultType = "all" }){
 
     const { genreName } = useParams();
     const { movies, series, isLoading } = useMovies();
-
+    const {user, handleLogout} = useAuth();
+    
     const allMoviesSeries = [...(movies || []), ...(series || [])];
     
     const [visibleCount, setVisibleCount] = useState(12);
@@ -39,10 +41,10 @@ export default function GenrePage({ defaultType = "all" }){
     const displayedMovies = genreMovies.slice(0, visibleCount);
     const hasMore = visibleCount < totalCount;
     
-    console.log({displayedMovies});
+    if(!user) return null;
     return(
         <>
-            <Header />
+            <Header username={user.username} email={user.email} handleLogout={handleLogout}/>
             <FeaturedSection 
                 movies={genreMovies.slice(0,5)} 
 
@@ -52,7 +54,6 @@ export default function GenrePage({ defaultType = "all" }){
 
             <main className="catalog-page">
                 <div className="catalog-section">                   
-                    {/* --- HEADER GENRE --- */}
                     <div className="catalog-controls">
                         <div>
                             <p className="eyebrow">

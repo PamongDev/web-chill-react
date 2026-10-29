@@ -16,10 +16,11 @@ import { useMyList } from "../../hooks/useMyList"
 export default function DetailMovie(){
 
     const { id } = useParams();
-    const { user } = useAuth();
+    const { user, handleLogout } = useAuth();
     const { movies, isLoading } = useMovies();
     const { toastMessage, setToastMessage } = useState("");
     const { toggleMyList, isInList } = useMyList();
+    
 
     if(!user) return null;
     if(isLoading) return (<div className="loading-screen">Loading details...</div>);
@@ -46,7 +47,7 @@ export default function DetailMovie(){
     const isAdded = isInList(movie.id);
     return (
         <div className="detail-page-wrapper">
-            <Header username={user.username} email={user.email} />
+            <Header username={user.username} email={user.email} handleLogout={handleLogout}/>
 
            <main className="detail-page">
                 {/* --- 1. HERO BACKDROP --- */}
@@ -116,12 +117,6 @@ export default function DetailMovie(){
                             </button>
 
                             {/* Tombol Favorite */}
-                            <button className="ticket-button" aria-label="Add to Favorite">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-                                </svg>
-                                Favorite
-                            </button>
 
                             {/* Tombol Trailer */}
                             <button className="ticket-button" aria-label="Play Trailer">

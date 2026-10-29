@@ -2,7 +2,7 @@ export default function ProfileDropdownHeader({ username, email }){
     return (
         <div className="profile-dropdown-header">
                 <img
-                    src="/assets/images/main/logo app.png"
+                    src="https://api.dicebear.com/7.x/avataaars/svg?seed=PamongDev&backgroundColor=1f1f1f"
                     alt={username}
                     className="profile-dropdown-avatar"
                 />

@@ -8,12 +8,16 @@ import GenreBadge from "../../components/GenreBadge"
 import { shareMovie } from "../../utils/shareHelper"
 import { useMovies } from "../../hooks/useMovies"
 import { useAuth } from "../../hooks/useAuth"
+import { useMyList } from "../../hooks/useMyList"
 import "../../styles/detail.css";
 import '../../styles/home.css';
+
+
 export default function DetailSeries(){
     const { id } = useParams();
-    const { user } = useAuth();
+    const { user, handleLogout } = useAuth();
     const { series, isLoading } = useMovies();
+    const { toggleMyList, isInList } = useMyList();
 
     const [activeSeason, setActiveSeason] = useState(0);
     const { toastMessage, setToastMessage } = useState("");
@@ -38,10 +42,10 @@ export default function DetailSeries(){
                 setTimeout(() => setToastMessage(""), 3000)
             }
         }
-
+    const isAdded = isInList(seriesItem.id);
     return(
         <div className="detail-page-wrapper">
-            <Header username={user.username} email={user.email} />
+            <Header username={user.username} email={user.email} handleLogout={handleLogout}/>
 
                 <main className="detail-page">
                     {/* --- 1. HERO BACKDROP --- */}
@@ -85,22 +89,28 @@ export default function DetailSeries(){
 
                             <div className="detail-action-buttons">
                                 {/* Tombol Playlist */}
-                                <button className="ticket-button" aria-label="Add to Playlist">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M12 5v14M5 12h14"/>
-                                    </svg>
-                                    Playlist
-                                </button>
+                                <button 
+                                        className={`ticket-button ${isAdded ? "added" : ""}`} 
+                                        onClick={() => toggleMyList(seriesItem)}
+                                    >
+                                        {isAdded ? (
+                                            <>
+                                                <svg viewBox="0 0 24 24" width="20" fill="currentColor">
+                                                    <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
+                                                </svg>
+                                                Tersimpan
+                                            </>
+                                        ) : (
+                                            <>
+                                                <svg viewBox="0 0 24 24" width="20" fill="none" stroke="currentColor" strokeWidth="2">
+                                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                                </svg>
+                                                PlayList
+                                            </>
+                                        )}
+                                    </button>
 
-                                {/* Tombol Favorite */}
-                                <button className="ticket-button" aria-label="Add to Favorite">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-                                    </svg>
-                                    Favorite
-                                </button>
-
-                                {/* Tombol Trailer */}
                                 <button className="ticket-button" aria-label="Play Trailer">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                         <circle cx="12" cy="12" r="10"/>

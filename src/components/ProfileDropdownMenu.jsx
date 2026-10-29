@@ -5,9 +5,6 @@ export default function ProfileDropdownMenu(){
     const dropdownMenus =[
         { title: "My Profile", path: "/profile" },
         { title: "Playlist", path: "/playlist" },
-        { title: "Favorites", path: "/favorites" },
-        { title: "Settings", path: "/settings" },
-        { title: "Help Center", path: "/help" }
     ]
 
     return(

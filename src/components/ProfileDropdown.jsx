@@ -12,7 +12,7 @@ export default function ProfileDropdown({username, email, handleLogout, handleto
                 aria-expanded={isOpen}
             >
                 <img
-                    src="/assets/images/main/logo app.png"
+                    src="https://api.dicebear.com/7.x/avataaars/svg?seed=PamongDev&backgroundColor=1f1f1f"
                     alt="Fahmi"
                     className="profile-avatar"
                 />

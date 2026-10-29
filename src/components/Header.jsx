@@ -10,7 +10,6 @@ import { useState } from "react";
 
 export default function Header({ username, email, handleLogout }) {
     const { isOpen, handletoogle, menuRef } = useDropdown();
-    const [isGenreModalOpen, setIsGenreModalOpen] = useState(false);
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     
     

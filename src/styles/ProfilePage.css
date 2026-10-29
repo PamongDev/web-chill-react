@@ -1,0 +1,167 @@
+/* =========================================
+   PROFILE PAGE STYLES
+========================================= */
+.profile-main {
+    padding-top: 130px;
+    padding-bottom: 80px;
+    min-height: 80vh;
+}
+
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-header-meta {
+    margin-bottom: 2rem;
+}
+
+.profile-eyebrow {
+    color: #aaa;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+.profile-title {
+    color: white;
+    font-size: 2.2rem;
+    margin-top: 0.3rem;
+}
+
+/* --- CARD PROFIL --- */
+.profile-card {
+    background: rgba(25, 25, 25, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.profile-user-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.profile-avatar-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    object-fit: cover;
+}
+
+.profile-user-name-row {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.profile-user-name {
+    color: white;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.profile-badge {
+    background: linear-gradient(135deg, #e50914, #ff512f);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0.3rem 0.8rem;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+}
+
+.profile-user-email {
+    color: #aaa;
+    margin-top: 0.4rem;
+    font-size: 0.95rem;
+}
+
+.profile-user-joined {
+    color: #666;
+    margin-top: 0.2rem;
+    font-size: 0.8rem;
+}
+
+/* --- DETAIL KEANGGOTAAN --- */
+.profile-details-section {
+    margin-top: 2rem;
+}
+
+.profile-section-title {
+    color: #ddd;
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+}
+
+.profile-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.profile-stat-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 1rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.profile-stat-label {
+    color: #888;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.profile-stat-value {
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 0.4rem;
+}
+
+/* --- TOMBOL NAVIGASI --- */
+.profile-actions {
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.profile-btn-primary {
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+
+.profile-btn-primary:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.profile-btn-secondary {
+    text-decoration: none;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ccc;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+}
+
+.profile-btn-secondary:hover {
+    border-color: white;
+    color: white;
+}

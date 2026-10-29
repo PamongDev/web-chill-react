@@ -1,0 +1,356 @@
+
+.nf-page {
+    --red: #e50914;
+
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: 90px 24px 60px;
+    overflow: hidden;
+
+    color: #fff;
+    background:
+        radial-gradient(ellipse at 50% 45%, #241012 0%, transparent 48%),
+        #080808;
+    text-align: center;
+}
+
+/* Decorative background */
+
+.nf-page::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+
+    content: "";
+    opacity: 0.15;
+
+    background-image:
+        linear-gradient(#ffffff0a 1px, transparent 1px),
+        linear-gradient(90deg, #ffffff0a 1px, transparent 1px);
+    background-size: 48px 48px;
+
+    mask-image: linear-gradient(to bottom, transparent, black, transparent);
+}
+
+.nf-glow {
+    position: absolute;
+    z-index: -1;
+    top: 25%;
+    left: 50%;
+
+    width: 420px;
+    height: 300px;
+    border-radius: 50%;
+    background: #e50914;
+    filter: blur(160px);
+    opacity: 0.12;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+/* Brand */
+
+.nf-brand {
+    position: absolute;
+    top: 25px;
+    left: max(24px, calc((100% - 1200px) / 2));
+
+    display: inline-flex;
+    align-items: center;
+}
+
+.nf-brand img {
+    display: block;
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    transition: opacity 0.25s ease;
+}
+
+.nf-brand:hover img {
+    opacity: 0.8;
+}
+
+/* Main content */
+
+.nf-content {
+    width: 100%;
+    max-width: 760px;
+    animation: nf-enter 0.7s ease both;
+}
+
+.nf-eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin: 0 0 24px;
+    color: #aaa;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.nf-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--red);
+    box-shadow: 0 0 12px #e50914aa;
+}
+
+/* Giant 404 */
+
+.nf-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin: 0 0 28px;
+
+    font-size: clamp(8rem, 24vw, 15rem);
+    font-weight: 950;
+    line-height: 0.85;
+    letter-spacing: -0.09em;
+
+    color: #fff;
+    text-shadow: 0 12px 60px #e509141c;
+    user-select: none;
+}
+
+.nf-zero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 0.68em;
+    height: 0.68em;
+    margin-inline: 0.04em;
+
+    border: 0.065em solid #e5091480;
+    border-top-color: var(--red);
+    border-radius: 50%;
+
+    color: var(--red);
+    background: #e5091410;
+
+    box-shadow:
+        inset 0 0 35px #e509141c,
+        0 0 35px #e5091415;
+
+    animation: nf-spin 18s linear infinite;
+}
+
+.nf-zero svg {
+    width: 38%;
+    height: 38%;
+    margin-left: 5%;
+}
+
+/* Message */
+
+.nf-content h1 {
+    margin: 0;
+
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: -1px;
+}
+
+.nf-content h1 span {
+    color: var(--red);
+}
+
+.nf-description {
+    max-width: 480px;
+    margin: 20px auto 30px;
+
+    color: #a7a7a7;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+/* Buttons */
+
+.nf-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.nf-home-btn,
+.nf-back-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    min-height: 48px;
+    padding: 0 20px;
+
+    border-radius: 8px;
+    font: inherit;
+    font-size: 0.88rem;
+    font-weight: 800;
+    text-decoration: none;
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.nf-home-btn {
+    color: #fff;
+    background: var(--red);
+    border: 1px solid var(--red);
+    box-shadow: 0 6px 24px #e509142b;
+}
+
+.nf-home-btn svg {
+    width: 18px;
+    height: 18px;
+}
+
+.nf-home-btn:hover {
+    background: #b20710;
+    border-color: #b20710;
+    transform: translateY(-2px);
+}
+
+.nf-back-btn {
+    color: #ddd;
+    background: #ffffff08;
+    border: 1px solid #ffffff25;
+}
+
+.nf-back-btn:hover {
+    color: #fff;
+    background: #ffffff12;
+    border-color: #ffffff55;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+
+.nf-footer {
+    margin-top: 50px;
+    color: #686868;
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.nf-footer span {
+    color: #aaa;
+}
+
+.nf-decoration {
+    position: absolute;
+    right: -25px;
+    bottom: 18px;
+
+    color: #ffffff09;
+    font-size: clamp(1rem, 3vw, 2rem);
+    font-weight: 900;
+    white-space: nowrap;
+    letter-spacing: 3px;
+    pointer-events: none;
+}
+
+/* Animations */
+
+@keyframes nf-enter {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes nf-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+    .nf-page {
+        padding: 90px 20px 55px;
+    }
+
+    .nf-brand {
+        top: 20px;
+        left: 20px;
+    }
+
+    .nf-brand img {
+        width: 100px;
+    }
+
+    .nf-eyebrow {
+        font-size: 0.62rem;
+        letter-spacing: 1.2px;
+    }
+
+    .nf-number {
+        gap: 4px;
+        margin-bottom: 28px;
+        font-size: clamp(7rem, 34vw, 10rem);
+    }
+
+    .nf-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .nf-description {
+        font-size: 0.88rem;
+    }
+
+    .nf-actions {
+        flex-direction: column;
+    }
+
+    .nf-home-btn,
+    .nf-back-btn {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .nf-footer {
+        font-size: 0.55rem;
+        letter-spacing: 1px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nf-content,
+    .nf-zero {
+        animation: none;
+    }
+
+    .nf-home-btn,
+    .nf-back-btn {
+        transition: none;
+    }
+}

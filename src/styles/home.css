@@ -398,7 +398,8 @@
 }
 
 .movie-section {
-    padding-top: 2rem;
+    padding-top: 1.7rem;
+    margin-bottom: 1.5rem;
 }
 
 .section-heading {
@@ -439,7 +440,6 @@
     grid-auto-flow: column;
     grid-auto-columns: minmax(200px, 20%);
     gap: 1.2rem;
-
     overflow-x: auto;
 
     padding-left: clamp(1.5rem, 4vw, 3.5rem);
@@ -457,6 +457,35 @@
 
 /* Untuk Firefox, IE, dan Edge */
 .movie-row {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* --- PENYESUAIAN UNTUK BARIS LANDSCAPE --- */
+.movie-row.landscape-row {
+    display: flex;
+    flex-wrap: nowrap; /* WAJIB: Memaksa kartu berjajar menyamping, tidak turun ke bawah */
+    gap: 1.5rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 1rem; /* Ruang bernapas di bawah agar shadow tidak terpotong */
+    margin-left: 4rem;
+    
+    /* Agar scroll smooth di HP */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Memastikan kartu berhenti dengan rapi saat di-scroll */
+.movie-row.landscape-row > * {
+    scroll-snap-align: start;
+}
+
+/* Menyembunyikan scrollbar bawah agar sebersih Netflix */
+.movie-row.landscape-row::-webkit-scrollbar {
+    display: none;
+}
+.movie-row.landscape-row {
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
 }
@@ -531,8 +560,7 @@
 ========================================================= */
 
 .site-footer {
-    border-top: 1px solid var(--color-border);
-    background: var(--color-footer-bg);
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .footer-grid {
@@ -594,7 +622,7 @@
 .featured-section {
     position: relative;
     width: 100%;
-    
+    margin-top: 2rem;
     /* 1. HAPUS min-height: 85vh; */
     /* 2. GANTI DENGAN INI: Memaksa section memiliki rasio presisi seperti video YouTube */
     aspect-ratio: 16 / 9; 

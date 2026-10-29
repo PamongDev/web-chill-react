@@ -1,0 +1,156 @@
+/* =========================================
+   CONTINUE WATCHING CARD (PREMIUM LAYOUT)
+========================================= */
+.continue-card {
+    width: 100%;
+    min-width: 280px;
+    max-width: 320px;
+    cursor: pointer;
+    flex: 0 0 auto;
+    /* Efek melompat dihilangkan, posisi card tetap solid */
+}
+
+/* --- IMAGE WRAPPER (CANVAS) --- */
+.continue-image-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    overflow: hidden; /* WAJIB: Membatasi zoom gambar agar tidak keluar kotak */
+    background: #1a1a1a;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.continue-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    transition: transform 0.4s ease;
+}
+
+/* Hanya gambar di dalamnya yang membesar saat di-hover */
+.continue-card:hover .continue-img {
+    transform: scale(1.08);
+}
+
+/* --- GRADIENT OVERLAY BAWAH --- */
+.continue-gradient {
+    position: absolute;
+    inset: 0;
+    /* Membuat gelap di bawah, transparan di atas */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.4) 40%, transparent 100%);
+    pointer-events: none; /* Agar tidak menghalangi klik */
+    z-index: 1;
+}
+
+/* --- TEKS INFO (DI DALAM KIRI BAWAH) --- */
+.continue-info-inside {
+    position: absolute;
+    bottom: 12px; /* Posisinya pas di atas progress bar */
+    left: 12px;
+    right: 12px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    transition: transform 0.3s ease;
+}
+
+.continue-title {
+    margin: 0;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+.continue-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.75rem;
+    color: #ccc;
+    font-weight: 500;
+}
+
+.continue-type {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 6px;
+    border-radius: 4px;
+    color: white;
+    backdrop-filter: blur(4px);
+}
+
+.continue-dot {
+    font-size: 10px;
+    color: #888;
+}
+
+/* Animasi tambahan: Teks sedikit naik saat card di-hover */
+.continue-card:hover .continue-info-inside {
+    transform: translateY(-4px);
+}
+
+/* --- OVERLAY TOMBOL PLAY (TENGAH) --- */
+.continue-overlay-play {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+}
+
+.continue-card:hover .continue-overlay-play {
+    opacity: 1;
+}
+
+.play-circle {
+    width: 48px;
+    height: 48px;
+    background: rgba(0, 0, 0, 0.6);
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    backdrop-filter: blur(4px);
+    transition: transform 0.2s, background 0.2s, border-color 0.2s;
+}
+
+.play-circle svg {
+    width: 24px;
+    height: 24px;
+    margin-left: 4px;
+}
+
+.continue-card:hover .play-circle {
+    transform: scale(1.15);
+    background: rgba(229, 9, 20, 0.9);
+    border-color: rgba(229, 9, 20, 0.9);
+}
+
+/* --- PROGRESS BAR --- */
+.progress-bar-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.3);
+    z-index: 4;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: #e50914;
+    box-shadow: 0 0 10px rgba(229, 9, 20, 0.8);
+}

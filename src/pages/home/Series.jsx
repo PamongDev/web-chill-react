@@ -1,5 +1,6 @@
 import { useState, useMemo } from "react";
 import { useMovies } from "../../hooks/useMovies";
+import { useAuth } from "../../hooks/useAuth";
 import Header from "../../components/Header";
 import FooterHome from "../../components/Footer";
 import MovieCard from "../../components/MovieCard";
@@ -11,6 +12,7 @@ import FeaturedSection from "../../components/FeaturedSection";
 export default function Series() {
     const { series, isLoading } = useMovies();
     const [visibleCount, setVisibleCount] = useState(12);
+    const {user, handleLogout} = useAuth();
 
     const { onlySeries, heroSeries, genreCollections } = useMemo(() => {
         if (!series) return { onlySeries: [], heroSeries: null, genreCollections: [] };
@@ -63,10 +65,10 @@ export default function Series() {
 
     const displayedMovies = onlySeries.slice(0, visibleCount);
     const hasMore = visibleCount < onlySeries.length;
-
+    if (!user) return null;
     return (
         <div className="page-wrapper">
-            <Header />
+            <Header username={user.username} email={user.username} handleLogout={handleLogout}/>
 
             <main className="catalog-page">
                 {/* --- 1. HERO BANNER KHUSUS MOVIES --- */}
