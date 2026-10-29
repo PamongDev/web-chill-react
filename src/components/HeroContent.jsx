@@ -38,7 +38,11 @@ export default function HeroContent({movie}){
             </p>
 
             <div className="hero-actions">
-                <button className="button button-primary" onClick={handleWatchNow}>▶ Watch Now</button>
+                <button className="button button-primary" onClick={handleWatchNow}>
+                    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M7 4.5C7 3.72 7.86 3.24 8.53 3.66L20 10.66C20.64 11.05 20.64 11.95 20 12.34L8.53 19.34C7.86 19.76 7 19.28 7 18.5V4.5Z" />
+                    </svg> Watch Now
+                </button>
                 <button 
                     className={`button button-secondary ${isAdded ? "added" : ""}`} 
                     onClick={() => toggleMyList(movie)}

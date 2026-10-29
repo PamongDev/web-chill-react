@@ -3,7 +3,7 @@ import MovieCard from "./MovieCard";
 import { Link } from "react-router-dom";
 import GenreBadge from "./GenreBadge";
 
-export default function FeaturedSection({ movies, titleEyebrow="Best Featured for you today" }) {
+export default function FeaturedSection({ movies, titleEyebrow="Best Featured for you today", hero=false}) {
     const [currentIndex, setCurrentIndex] = useState(0);
     
     // Ambil 5 film khusus untuk section ini
@@ -19,7 +19,7 @@ export default function FeaturedSection({ movies, titleEyebrow="Best Featured fo
     };
 
     return (
-        <section className="featured-section">
+        <section className={`featured-section ${hero ? "hero" : ""}`}>
             <div className="featured-backdrop">
                 <img 
                     src={`/${activeMovie.bg || activeMovie.poster || activeMovie.thumbnail}`} 

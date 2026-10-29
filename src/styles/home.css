@@ -411,7 +411,7 @@
 
 .movie-section {
     padding-top: 1.7rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 .section-heading {
@@ -636,7 +636,6 @@
     width: 100%;
 
     /* Tarik section ke belakang header */
-    margin-top: calc(-1 * var(--header-height));
 
     aspect-ratio: 16 / 9;
     max-height: 90vh;
@@ -654,6 +653,10 @@
     padding-bottom: clamp(3rem, 10vh, 5rem);
 
     background-color: #0f0f0f;
+}
+
+.featured-section .hero{
+    margin-top: calc(-1 * var(--header-height));
 }
 
 /* --- Backdrop Statis --- */

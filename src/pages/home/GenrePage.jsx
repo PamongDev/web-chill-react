@@ -47,8 +47,8 @@ export default function GenrePage({ defaultType = "all" }){
             <Header username={user.username} email={user.email} handleLogout={handleLogout}/>
             <FeaturedSection 
                 movies={genreMovies.slice(0,5)} 
-
                 titleEyebrow={`${genreName} Highlights`} 
+                hero={true}
             />
 
 

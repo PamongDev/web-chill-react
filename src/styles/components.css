@@ -64,6 +64,11 @@
     background: var(--color-primary);
     color: var(--color-text-primary);
 }
+.button-primary svg{
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+}
 
 .button-primary:hover {
     background: var(--color-primary-hover);
@@ -124,7 +129,7 @@
     padding: 0;
 
     color: #fff;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(6, 6, 6, 0.694);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 50%;
 
@@ -149,7 +154,7 @@
 /* Hover: subtle red glow */
 .icon-button:hover {
     color: #fff;
-    background: rgba(229, 9, 20, 0.15);
+    background: rgba(10, 10, 10, 0.15);
     border-color: rgba(229, 9, 20, 0.8);
 
     box-shadow: 0 0 18px rgba(229, 9, 20, 0.12);
@@ -171,7 +176,7 @@
 
 /* Ketika berada di atas header transparan */
 .site-header:not(.scrolled) .icon-button {
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(0, 0, 0, 0);
     border-color: rgba(255, 255, 255, 0.18);
 }
 

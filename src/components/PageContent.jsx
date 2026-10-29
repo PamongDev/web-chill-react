@@ -55,7 +55,7 @@ export default function PageContent({movies, series, isLoading}){
             </div>
 
 
-            <FeaturedSection movies={movies} />
+            <FeaturedSection movies={movies} mt={0}/>
 
             <div className="page-content">
                 <MovieSection 

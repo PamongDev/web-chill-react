@@ -6,6 +6,7 @@ import useScroll from "../hooks/useScroll";
 import { Link } from "react-router-dom";
 import SearchModal from "./SearchModal";
 import { useState } from "react";
+import SearchButton from "./SearchButton";
 
 
 export default function Header({ username, email, handleLogout }) {
@@ -29,32 +30,14 @@ export default function Header({ username, email, handleLogout }) {
 
                     <div className="nav-actions">
 
-                        <button
-                            className="icon-button"
-                            type="button"
-                            aria-label="Search"
-                            title="Search"
-                            onClick={() => setIsSearchOpen(true)}
-                        >
-                            <svg
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                strokeWidth="1.8"
-                                strokeLinecap="round"
-                                aria-hidden="true"
-                            >
-                                <circle cx="10.8" cy="10.8" r="6.8" />
-                                <path d="m16 16 4.2 4.2" /> 
-                            </svg>
-                        </button>
+                        <SearchButton onclick={() => setIsSearchOpen(true)} />
 
                         <div className={`profile-menu ${isOpen ? "is-open" : ""}`} ref={menuRef}>
                             <ProfileDropdown username={username} email={email} 
                             handleLogout={handleLogout}
                             isOpen={isOpen}
-                            handletoogle={handletoogle}>
-                            </ProfileDropdown>
+                            handletoogle={handletoogle}
+                            />
                         </div>
 
                     </div>

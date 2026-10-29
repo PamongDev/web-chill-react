@@ -13,12 +13,8 @@ function Home(){
     const { movies, series, isLoading } = useMovies();
 
     const topFiveMovies = movies ? movies.slice(0,5) : [];
-    const { user, handleLogout } = useAuth();
-    const library = [...(movies || []), ...(series || [])];
-
-    const randomIndex = Math.floor(Math.random() * library.length);
-    const featuredMovie = library[randomIndex];
     
+    const { user, handleLogout } = useAuth();
     if (!user) return null;   
 
     return(

@@ -56,8 +56,17 @@ export default function GenreSection({ movies = [], genres }) {
                     </p>
 
                     <div className="genre-controls">
-                        <button onClick={() => changeGenre(-1)} aria-label="Genre sebelumnya">‹</button>
-                        <button onClick={() => changeGenre(1)} aria-label="Genre selanjutnya">›</button>
+                        <button onClick={() => changeGenre(-1)} aria-label="Genre sebelumnya">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button onClick={() => changeGenre(1)} aria-label="Genre selanjutnya">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                        </button>
+
                     </div>
                 </div>
 
@@ -72,13 +81,15 @@ export default function GenreSection({ movies = [], genres }) {
                             onClick={() => scrollCards(-1)}
                             aria-label="Geser genre ke kiri"
                         >
-                            ‹
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
                         </button>
 
                         <div className="genre-track" ref={trackRef}>
                             {genres.map((item, index) => (
                                 <Link
-                                    to={`/genre/${encodeURIComponent(item.name)}`}
+                                    to={`/a/genre/${encodeURIComponent(item.name)}`}
                                     className={`genre-card ${
                                         index === currentIndex ? "active" : ""
                                     }`}
@@ -100,7 +111,9 @@ export default function GenreSection({ movies = [], genres }) {
                             onClick={() => scrollCards(1)}
                             aria-label="Geser genre ke kanan"
                         >
-                            ›
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
                         </button>
                     </div>
                 </div>

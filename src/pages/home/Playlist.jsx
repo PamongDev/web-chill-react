@@ -15,7 +15,7 @@ export default function Playlist() {
     return (
         <>
             <Header username={user.username} email={user.username} handleLogout={handleLogout}/>
-            <FeaturedSection movies={myList.slice(0,4)} titleEyebrow="Your Playlist Make Your day"/>
+            <FeaturedSection movies={myList.slice(0,4)} titleEyebrow="Your Playlist Make Your day" hero={true}/>
         <div className="page-wrapper">
 
             <main className="catalog-page" style={{ paddingTop: "2rem" }}>
