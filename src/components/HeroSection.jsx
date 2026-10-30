@@ -5,10 +5,7 @@ import MovieTrailer from "./MovieTrailer";
 
 export default function HeroSection({ topFiveMovies }){
     const [isMuted, setIsMuted] = useState(true);
-
     const [currentIndex, setCurrentIndex] = useState(0);
-
-
     const activeMovie = topFiveMovies[currentIndex];
     
     if(!activeMovie) return null;
