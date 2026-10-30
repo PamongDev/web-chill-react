@@ -1,11 +1,10 @@
-import '../../styles/home.css';
-import Header from '../../components/Header';
-import HeroSection from '../../components/HeroSection'
-import PageContent from '../../components/PageContent'
-import FooterHome from '../../components/Footer'
-import { useMovies } from '../../hooks/useMovies'
+import Header from "../../components/header/Header"
+import HeroSection from '../../components/hero/HeroSection'
+import PageContent from '../../components/sections/PageContent'
+import FooterHome from '../../components/layout/Footer'
+import { useMovies } from '../../hooks/useMovies'   
 import { useAuth } from '../../hooks/useAuth'
-import { useEffect, useMemo, useState } from 'react';
+import '../../styles/home.css';
 
 
 function Home(){

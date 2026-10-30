@@ -1,5 +1,5 @@
 import { RouterProvider } from "react-router-dom";
-import { router } from "./router/route"; // Pastikan path ini benar sesuai struktur foldermu
+import { router } from "./routes/router"; // Pastikan path ini benar sesuai struktur foldermu
 
 function App() {
   return (

@@ -1,229 +1,56 @@
-import { useParams } from "react-router-dom"
-import { useState } from "react"
+import Header from "../../components/header/Header";
+import FooterHome from "../../components/layout/Footer";
+import MovieSection from "../../components/sections/MovieSection";
+import DetailHeroBackdrop from "../../components/detail/DetailHeroBackdrop";
+import DetailOverview from "../../components/detail/DetailOverview";
+import DetailVideoPlayer from "../../components/detail/DetailVideoPlayer";
+import DetailCast from "../../components/detail/DetailCast";
+import DetailComments from "../../components/detail/DetailComments";
 
+import { useMovieDetail } from "../../hooks/useMovieDetail";
 
-import Header from "../../components/Header"
-import FooterHome from "../../components/Footer"
-import MovieSection from "../../components/MovieSection"
-import GenreBadge from "../../components/GenreBadge"
-import { useMovies } from "../../hooks/useMovies"
-import { useAuth } from "../../hooks/useAuth"
-import { shareMovie } from "../../utils/shareHelper"
 import "../../styles/detail.css";
-import '../../styles/home.css';
-import { useMyList } from "../../hooks/useMyList"
+import "../../styles/home.css";
 
-export default function DetailMovie(){
+export default function DetailMovie() {
+    const {
+        user,
+        handleLogout,
+        movie,
+        similarMovies,
+        isLoading,
+        isAdded,
+        toastMessage,
+        toggleMyList,
+        handleShare,
+    } = useMovieDetail();
 
-    const { id } = useParams();
-    const { user, handleLogout } = useAuth();
-    const { movies, isLoading } = useMovies();
-    const { toastMessage, setToastMessage } = useState("");
-    const { toggleMyList, isInList } = useMyList();
-    
-
-    if(!user) return null;
-    if(isLoading) return (<div className="loading-screen">Loading details...</div>);
-
-    // find movies id
-    const movie = movies.find(item=> item.id.toString() === id);
+    if (!user) return null;
+    if (isLoading) return <div className="loading-screen">Loading details...</div>;
     if (!movie) return <div className="error-screen">Film tidak ditemukan!</div>;
 
-    const handleShare = async() =>{
-        const result = await shareMovie({
-            title : movie.title,
-            text : `Yuk nonton film ${movie.title} di Chill!`,
-            url : window.location.href
-        })
-
-        if(result.success && result.type === "clipboard"){
-            setToastMessage("Link Berhasil disalin ke clipboard!");
-            setTimeout(() => setToastMessage(""), 3000)
-        }
-    }
-
-    // similar movies
-    const similarMovies = movies.filter(m => m.id.toString() !== id).slice(0, 10);
-    const isAdded = isInList(movie.id);
     return (
         <div className="detail-page-wrapper">
-            <Header username={user.username} email={user.email} handleLogout={handleLogout}/>
+            <Header username={user.username} email={user.email} handleLogout={handleLogout} />
 
-           <main className="detail-page">
-                {/* --- 1. HERO BACKDROP --- */}
-                <section className="detail-hero-backdrop">
-                    <img src={`/${movie.bg}`} alt={`${movie.title} Background`} className="backdrop-img" />
-                    <div className="backdrop-overlay"></div>
-                    
-                    {/* <button className="button-massive-play" aria-label="Play Movie">
-                        ▶
-                    </button> */}
-                </section>
-
-                {/* --- 2. LAYOUT ATAS (Poster Kiri, Info Kanan) --- */}
-                <section className="container detail-content-layout">
-                    {/* Kiri: Poster */}
-                    <div className="detail-poster-side">
-                        <img src={`/${movie.poster}`} alt={movie.title} className="detail-poster-img" />
-                    </div>
-
-                    {/* Kanan: Info */}
-                    <div className="detail-info-side">
-                        <h1 className="detail-title">{movie.title}</h1>
-
-                        <div className="detail-meta premium-meta">
-                            {movie.rating && <span className="badge glass-badge rating-badge">{movie.rating}</span>}
-                            {movie.year && <span>{movie.year}</span>}
-                            <span className="dot-separator">•</span>
-                            {movie.duration && <span>{movie.duration}</span>}
-                            {movie.country && (
-                                <>
-                                    <span className="dot-separator">•</span>
-                                    <span>{movie.country}</span>
-                                </>
-                            )}
-                            <span className="dot-separator">•</span>
-                            {movie.rate && <span className="rate-text">⭐ {movie.rate}</span>}
-                        </div>
-
-                        <div className="detail-genres">
-                            {movie.genres?.map((g, idx) => (
-                                <span key={idx} className="genre-pill"><GenreBadge key={g} genre={g} type="all" /></span>
-                            ))}
-                        </div>
-
-                        <div className="detail-action-buttons">
-                            
-                            <button 
-                                className={`ticket-button ${isAdded ? "added" : ""}`} 
-                                onClick={() => toggleMyList(movie)}
-                            >
-                                {isAdded ? (
-                                    <>
-                                        <svg viewBox="0 0 24 24" width="20" fill="currentColor">
-                                            <path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/>
-                                        </svg>
-                                        Tersimpan
-                                    </>
-                                ) : (
-                                    <>
-                                        <svg viewBox="0 0 24 24" width="20" fill="none" stroke="currentColor" strokeWidth="2">
-                                            <line x1="12" y1="5" x2="12" y2="19"></line>
-                                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                                        </svg>
-                                        PlayList
-                                    </>
-                                )}
-                            </button>
-
-                            {/* Tombol Favorite */}
-
-                            {/* Tombol Trailer */}
-                            <button className="ticket-button" aria-label="Play Trailer">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <circle cx="12" cy="12" r="10"/>
-                                    <polygon points="10 8 16 12 10 16 10 8"/>
-                                </svg>
-                                Trailer
-                            </button>
-
-                            {/* Tombol Bagikan */}
-                            <button className="ticket-button" onClick={handleShare} aria-label="Bagikan Film">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                    <circle cx="18" cy="5" r="3" />
-                                    <circle cx="6" cy="12" r="3" />
-                                    <circle cx="18" cy="19" r="3" />
-                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
-                                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
-                                </svg>
-                                Bagikan
-                            </button>
-
-                            {/* Toast Notification melayang */}
-                            {toastMessage && (
-                                <div className="toast-notification">
-                                    {toastMessage}
-                                </div>
-                            )}
-                        </div>
-
-                        <p className="detail-synopsis">
-                            {movie.synopsis }
-                        </p>
-                    </div>
-                </section>
-                
-                <section className="container detail-player-section">
-                    <h3 className="section-subtitle">Pemutar Video</h3>
-                    <div className="video-player-frame">
-                        <iframe 
-                            src={`https://www.youtube.com/embed/${movie.key}`} 
-                            title={movie.title} 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowFullScreen
-                        ></iframe>
-                    </div>
-                </section>
-
+            <main className="detail-page">
+                <DetailHeroBackdrop bg={movie.bg} title={movie.title} />
+                <DetailOverview 
+                    movie={movie} 
+                    isAdded={isAdded} 
+                    onToggleMyList={toggleMyList} 
+                    onShare={handleShare} 
+                    toastMessage={toastMessage} 
+                />
+                <DetailVideoPlayer videoKey={movie.key} title={movie.title} />
                 <section className="container detail-recommendations" style={{ marginTop: "2rem" }}>
-                    <MovieSection 
-                        eyebrow="SIMILAR TO THIS" 
-                        title="Tontonan Serupa" 
-                        movies={similarMovies} 
-                        isLoading={isLoading} 
-                    />
+                    <MovieSection eyebrow="SIMILAR TO THIS" title="Tontonan Serupa" movies={similarMovies} isLoading={isLoading} />
                 </section>
-
-                <section className="container detail-cast-section" style={{ marginTop: "6rem" }}>
-                    <h3 className="section-subtitle">Sutradara & Pemeran</h3>
-                    <div className="cast-grid">
-                        {/* Sutradara */}
-                        {movie.director && (
-                            <div className="cast-card">
-                                <div className="avatar-anon">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" className="icon-user"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                                </div>
-                                <span className="actor-name">{movie.director}</span>
-                                <span className="character-name">Sutradara</span>
-                            </div>
-                        )}
-                        
-                        {/* Deretan Pemeran */}
-                        {movie.cast?.map((actor, index) => (
-                            <div className="cast-card" key={index}>
-                                <div className="avatar-anon">
-                                    <svg viewBox="0 0 24 24" fill="currentColor" className="icon-user"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                                </div>
-                                <span className="actor-name">{actor.name}</span>
-                                <span className="character-name">{actor.character}</span>
-                            </div>
-                        ))}
-                    </div>
-                </section>
-
-                {/* --- 5. KOMENTAR STATIS --- */}
-                <section className="container detail-comments-section" style={{ marginTop: "1rem" }}>
-                    <h3 className="section-subtitle">Komentar Pilihan</h3>
-                    <div className="comment-list">
-                        <div className="comment-item">
-                            <div className="comment-avatar">M</div>
-                            <div className="comment-body">
-                                <strong>Muhamad Fahmi</strong>
-                                <p>Animasi pertarungannya gila banget! Studio Pierrot all out di film ini. Wajib nonton buat fans anime action 🔥</p>
-                            </div>
-                        </div>
-                        <div className="comment-item">
-                            <div className="comment-avatar">A</div>
-                            <div className="comment-body">
-                                <strong>Asep Setiawan</strong>
-                                <p>Jalan ceritanya lumayan klise, tapi terbayar lunas sama visual efeknya yang super mewah.</p>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                <DetailCast director={movie.director} cast={movie.cast} />
+                <DetailComments />
             </main>
 
             <FooterHome />
         </div>
-    ) ;
+    );
 }
