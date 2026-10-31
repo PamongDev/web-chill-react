@@ -403,13 +403,21 @@
    CONTENT
 ========================================================= */
 
+/* ========================================
+   MOVIE SECTION
+======================================== */
+
 .page-content {
+    width: 100%;
     max-width: 100%;
-    padding-left: clamp(1.5rem, 4vw, 3.5rem);
-    padding-right: clamp(1.5rem, 4vw, 3.5rem);
+    min-width: 0;
+    box-sizing: border-box;
+
+    padding-inline: clamp(1.5rem, 4vw, 3.5rem);
 }
 
 .movie-section {
+    min-width: 0;
     padding-top: 1.7rem;
     margin-bottom: 2rem;
 }
@@ -425,7 +433,6 @@
 
 .section-heading h2 {
     margin: 0;
-
     font-size: clamp(1.1rem, 2vw, 1.45rem);
     line-height: 1.15;
     letter-spacing: -0.02em;
@@ -433,12 +440,9 @@
 
 .section-link {
     flex-shrink: 0;
-
     color: var(--color-text-secondary);
-
     font-size: 0.82rem;
     font-weight: var(--font-weight-bold);
-
     transition: color var(--transition-fast);
 }
 
@@ -447,126 +451,136 @@
     color: var(--color-text-primary);
 }
 
+
+/* ========================================
+   MOVIE ROW
+======================================== */
+
 .movie-row {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: minmax(200px, 20%);
     gap: 1.2rem;
-    overflow-x: auto;
 
-    padding-left: clamp(1.5rem, 4vw, 3.5rem);
-    padding-right: clamp(1.5rem, 4vw, 3.5rem);
+    min-width: 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding-inline: clamp(1.5rem, 4vw, 3.5rem);
     padding-bottom: 1rem;
 
     scroll-snap-type: x proximity;
-    scrollbar-width: thin;
-    scrollbar-color: var(--color-border) transparent;
     scroll-behavior: smooth;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
 }
+
 .movie-row::-webkit-scrollbar {
     display: none;
 }
 
-/* Untuk Firefox, IE, dan Edge */
-.movie-row {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-}
-
-/* --- PENYESUAIAN UNTUK BARIS LANDSCAPE --- */
-.movie-row.landscape-row {
-    display: flex;
-    flex-wrap: nowrap; /* WAJIB: Memaksa kartu berjajar menyamping, tidak turun ke bawah */
-    gap: 1.5rem;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding-bottom: 1rem; /* Ruang bernapas di bawah agar shadow tidak terpotong */
-    margin-left: 4rem;
-    
-    /* Agar scroll smooth di HP */
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-}
-
-/* Memastikan kartu berhenti dengan rapi saat di-scroll */
-.movie-row.landscape-row > * {
+.movie-row > * {
     scroll-snap-align: start;
 }
 
-/* Menyembunyikan scrollbar bawah agar sebersih Netflix */
-.movie-row.landscape-row::-webkit-scrollbar {
-    display: none;
-}
+
+/* ========================================
+   LANDSCAPE ROW
+======================================== */
+
 .movie-row.landscape-row {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    margin-left: 0;
+    scroll-snap-type: x mandatory;
 }
 
-/* --- WADAH SLIDER UTAMA --- */
+.movie-row.landscape-row > * {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+}
+
+
+/* ========================================
+   SLIDER WRAPPER
+======================================== */
+
 .slider-wrapper {
     position: relative;
     display: flex;
     align-items: center;
-    /* Nilai negatif dari padding .page-content agar menembus batas */
+
+    min-width: 0;
+
     margin-left: calc(-1 * clamp(1.5rem, 4vw, 3.5rem));
     margin-right: calc(-1 * clamp(1.5rem, 4vw, 3.5rem));
 }
-/* --- WADAH SLIDER UTAMA --- */
-/* --- TOMBOL KIRI KANAN (SLIDER) --- */
+
+
+/* ========================================
+   SLIDER BUTTONS
+======================================== */
+
 .slider-button {
     position: absolute;
     top: 0;
-    bottom: var(--space-4); /* Mengimbangi padding bottom di movie-row */
+    bottom: var(--space-4);
     z-index: 10;
-    
-    width: 50px;
-    
+
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    background: rgba(0, 0, 0, 0.5);
+
+    width: 50px;
+
+    background: transparent;
     color: white;
     border: none;
-    
+
     font-size: 1rem;
     cursor: pointer;
-    
+
     opacity: 0;
     visibility: hidden;
-    transition: all var(--transition-fast, 0.2s) ease-in-out;
+
+    transition:
+        opacity 0.2s ease,
+        color 0.2s ease;
 }
 
-/* Tombol Kiri: Diberi gradasi hitam memudar ke kanan */
-.slider-button.left { 
-    left: 0; 
-    background: linear-gradient(to right, rgba(8,8,8, 0.9) 0%, rgba(8,8,8, 0) 100%);
+.slider-button.left {
+    left: 0;
+    background: linear-gradient(
+        to right,
+        rgba(8, 8, 8, 0.9),
+        transparent
+    );
 }
 
-/* Tombol Kanan: Diberi gradasi hitam memudar ke kiri */
-.slider-button.right { 
-    right: 0; 
-    background: linear-gradient(to left, rgba(8,8,8, 0.9) 0%, rgba(8,8,8, 0) 100%);
+.slider-button.right {
+    right: 0;
+    background: linear-gradient(
+        to left,
+        rgba(8, 8, 8, 0.9),
+        transparent
+    );
 }
 
-/* Tampilkan tombol HANYA saat area baris film disentuh mouse */
-.slider-wrapper:hover .slider-button {
+.slider-wrapper:hover .slider-button,
+.slider-wrapper:focus-within .slider-button {
     opacity: 1;
     visibility: visible;
 }
 
-/* Efek membesar saat tombol panah disorot */
 .slider-button:hover {
-    font-size: 1.2rem;
-    color: white; /* Kamu bisa ganti ke var(--color-primary) jika ingin warna merah */
+    color: var(--color-primary);
 }
 
-/* Sembunyikan tombol slider di HP (layar sentuh) karena user HP cukup di-swipe */
-@media (max-width: 900px) {
-    .slider-button {
-        display: none;
-    }
-}
 /* =========================================================
    FOOTER
 ========================================================= */
@@ -1027,111 +1041,3 @@
    RESPONSIVE
 ========================================================= */
 
-@media (max-width: 900px) {
-    :root {
-        --header-height: 64px;
-    }
-
-    .desktop-nav {
-        gap: var(--space-4);
-    }
-
-    .desktop-nav a:nth-child(1) {
-        display: none;
-    }
-
-    .hero {
-        min-height: 640px;
-    }
-
-    .hero-overlay {
-        background:
-            linear-gradient(90deg, rgba(8, 8, 8, 0.93) 0%, rgba(8, 8, 8, 0.66) 55%, rgba(8, 8, 8, 0.36) 100%),
-            linear-gradient(0deg, var(--color-bg) 0%, rgba(8, 8, 8, 0.12) 40%, rgba(8, 8, 8, 0.35) 100%);
-    }
-
-    .movie-row {
-        grid-auto-columns: minmax(170px, 25%);
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .footer-brand {
-        grid-column: 1 / -1;
-    }
-    .hero-title {
-        font-size: clamp(2.2rem, 5.5vw, 3.8rem);
-        line-height: 1.1;
-    }
-
-}
-
-@media (max-width: 650px) {
-    .navbar {
-        gap: 0.8rem;
-    }
-
-    .brand img {
-        width: 40px;
-        height: 40px;
-    }
-    .hero-title {
-        font-size: clamp(1.8rem, 8vw, 2.8rem);
-        line-height: 1.12;
-        letter-spacing: -0.025em;
-    }
-
-    .desktop-nav,
-    .profile-link {
-        display: none;
-    }
-
-    .hero {
-        min-height: 620px;
-        align-items: flex-end;
-    }
-
-    .hero-video {
-        object-position: 62% center;
-    }
-
-    .hero-overlay {
-        background: 
-            linear-gradient(to top, rgba(14, 14, 14, 1) 0%, rgba(14, 14, 14, 0.6) 50%, transparent 100%);
-    }
-
-    .hero-content {
-        padding-top: 8rem;
-        padding-bottom: var(--space-8);
-        max-width: 100%;
-        min-width: 100%;
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-
-    .hero-description {
-        max-width: 100%;
-        margin-bottom: 1.25rem;
-    }
-
-    .hero-actions .button {
-        flex: 1 1 auto;
-    }
-
-    .movie-section {
-        padding-top: 1.6rem;
-    }
-
-    .movie-row {
-        grid-auto-columns: minmax(150px, 42vw);
-        gap: 0.7rem;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-8);
-    }
-    
-}

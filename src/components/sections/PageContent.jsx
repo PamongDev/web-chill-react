@@ -25,8 +25,8 @@ export default function PageContent({ movies, series, isLoading }) {
                     isLoading={isLoading} 
                 />
                 <MovieSection 
-                    eyebrow="KEEP WATCHING" 
-                    title="Continue Watching" 
+                    eyebrow="TRENDING NOW" 
+                    title="Chill Watching" 
                     linkTo="/movies" 
                     movies={continueWatching} 
                     isLoading={isLoading} 
@@ -38,7 +38,7 @@ export default function PageContent({ movies, series, isLoading }) {
             <div className="page-content">
                 <MovieSection 
                     eyebrow="POPULAR RIGHT NOW" 
-                    title="Top Movies & Series" 
+                    title="Popular Movies & Series" 
                     linkTo="/movies" 
                     movies={topMovies} 
                     isLoading={isLoading} 

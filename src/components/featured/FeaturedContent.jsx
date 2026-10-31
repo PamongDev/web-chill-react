@@ -9,7 +9,7 @@ export default function FeaturedContent({ movie, titleEyebrow }) {
             <div className="featured-movie-info">
                 <h3 className="hero-title">{movie.title}</h3>
 
-                <div className="hero-meta">
+                <div className="featured-meta">
                     {movie.year && <span>{movie.year}</span>}
                     {movie.rating && <span>{movie.rating}</span>}
                     {movie.duration && <span>{movie.duration}</span>}

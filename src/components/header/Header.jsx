@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import SearchModal from "../search/SearchModal"
 import { useState } from "react";
 import SearchButton from "./SearchButton"
+import MobileBottomNav from "../layout/MobileBottomNav";
 
 
 export default function Header({ username, email, handleLogout }) {
@@ -45,6 +46,7 @@ export default function Header({ username, email, handleLogout }) {
             </div>
         </header>
         <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+        <MobileBottomNav />
         
         </>
     )
