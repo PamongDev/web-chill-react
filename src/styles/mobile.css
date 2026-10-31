@@ -350,22 +350,24 @@
 
         padding-inline: clamp(1rem, 4vw, 1.5rem);
         padding-bottom: 0.8rem;
+        
+        /* Hapus margin-left kaku di sini agar tidak merusak kalkulasi track */
+        margin-left: 0; 
 
         scroll-snap-type: x mandatory;
     }
 
 
     /* Landscape Movie Cards */
-
-    .movie-row.landscape-row {
+    .movie-row .landscape-row {
         display: flex;
         flex-wrap: nowrap;
         gap: 0.85rem;
 
-        margin-left: 0;
         padding-inline: clamp(1rem, 4vw, 1.5rem);
-
         scroll-snap-type: x mandatory;
+        
+        /* Ubah 'left: 10%' karena elemen non-absolute mengabaikan properti left */
     }
 
     .movie-row.landscape-row > * {
@@ -373,16 +375,27 @@
     }
 
 
-    /* Slider Edge-to-Edge */
-
+    /* --- KUNCI UTAMA: GESER SLIDER KE KANAN LEWAT WRAPPER --- */
     .slider-wrapper {
-        margin-left: calc(-1 * clamp(1rem, 4vw, 1.5rem));
+        /* Perbaiki sintaks calc dan tambahkan dorongan ke kanan (misal 1.5rem / 24px) */
+        margin-left: calc(-1 * clamp(1rem, 4vw, 1.5rem) + 1.5rem);
         margin-right: calc(-1 * clamp(1rem, 4vw, 1.5rem));
+        
+        /* Alternatif paling aman jika ingin menggeser seluruh slider ke kanan: */
+        padding-left: 1.5rem; 
+    }
+
+
+    .continue-card {
+        width: 80%;
+        min-width: 200px;
+        max-width: 200px;
+        cursor: pointer;
+        flex: 0 0 auto;
     }
 
 
     /* Touch Screen: Swipe Instead of Arrow Buttons */
-
     .slider-button {
         display: none;
     }
@@ -404,12 +417,12 @@
     }
 
     .featured-layout {
+        top: 2rem;
         flex-direction: column-reverse; /* Teks di bawah, Slider di atas (atau sebaliknya, sesuaikan selera) */
-        gap: 1rem;
+        gap: 2px;
         align-items: center;
-        justify-content: center;
-        height: 100%;
-        margin-top: 2rem; /* Ruang bernapas dari header */
+        flex: 0 0 150%;/* Ruang bernapas dari header */
+
     }
 
     /* --- Area Teks Utama --- */
@@ -460,27 +473,24 @@
 ======================================== */
 
     .featured-slider-area {
-        --card-width: min(180px, 48vw);
-
         position: relative;
         display: block;
-
         width: 100%;
-        height: clamp(260px, 82vw, 320px);
+        
+        /* 1. Berikan tinggi mutlak yang cukup lega agar bayangan kartu tidak terpotong */
+        height: 350px; 
         flex: none;
         margin: 0;
-
         overflow: hidden;
     }
 
     .featured-track {
         position: absolute;
         inset: 0;
-
         display: block;
         width: 100%;
-        height: 100vh;
-
+        /* 2. Tinggi lintasan ikuti induknya saja, jangan pakai vh */
+        height: 100%; 
         margin: 0;
         padding: 0;
         overflow: visible;
@@ -490,13 +500,12 @@
     .featured-card-wrapper {
         position: absolute;
         top: 50%;
-
-        width: var(--card-width);
-        aspect-ratio: 2 / 3;
-        height: auto;
-
+        
+        /* Set manual lebarnya 200px dan tinggi 300px agar rasio 2:3 terkunci rapat */
+        width: 200px;
+        height: 300px; 
+        
         margin: 0;
-
         transform: translate(-50%, -50%);
         transition:
             left 0.55s ease,
@@ -504,16 +513,13 @@
             opacity 0.4s ease;
     }
 
-    /* Pastikan MovieCard mengikuti ukuran wrapper */
-    .featured-card-wrapper .movie-card {
-        width: 100%;
-        height: 100%;
-    }
-
+    .featured-card-wrapper .movie-card,
     .featured-card-wrapper .movie-poster-wrap {
-        width: 100%;
+        width: auto;
         height: 100%;
-        aspect-ratio: unset;
+        margin: 0;
+        /* Kembalikan rasio aslinya, jangan di-unset! */
+        aspect-ratio: 2 / 3 !important; 
     }
 
     /* Poster memenuhi seluruh card */
@@ -522,7 +528,9 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center;
     }
+
 
 
     /* ========================================
@@ -531,7 +539,8 @@
     ======================================== */
 
     .featured-card-wrapper.card-active {
-        left: -8%;
+        /* 5. Ganti -8% jadi 50% agar kartu berdiri persis di tengah layar */
+        left: 4%; 
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
         z-index: 5;
@@ -539,7 +548,7 @@
     }
 
     .featured-card-wrapper.card-hidden-left {
-        left: -110px;
+        left: -70%; /* Terbuang ke kiri */
         opacity: 0;
         transform: translate(-50%, -50%) scale(0.85);
         z-index: 6;
@@ -547,15 +556,15 @@
     }
 
     .featured-card-wrapper.card-next-1 {
-        left: calc(100% + 110px);
-        opacity: 0;
+        left: 120%; /* Mengantre di kanan layar */
+        opacity: 0; /* Di mobile, antrean disembunyikan agar bersih */
         transform: translate(-50%, -50%) scale(0.85);
         z-index: 4;
         pointer-events: none;
     }
 
     .featured-card-wrapper.card-next-2 {
-        left: calc(100% + 330px);
+        left: 150%; 
         opacity: 0;
         transform: translate(-50%, -50%) scale(0.72);
         z-index: 3;
@@ -563,13 +572,12 @@
     }
 
     .featured-card-wrapper.card-invisible {
-        left: calc(100% + 550px);
+        left: 180%;
         opacity: 0;
         transform: translate(-50%, -50%) scale(0.6);
         z-index: 2;
         pointer-events: none;
     }
-
 
     /* NEXT BUTTON */
     .featured-next-btn {
@@ -577,19 +585,14 @@
         top: 50%;
         right: 12px;
         z-index: 10;
-
         width: 42px;
         height: 42px;
-
         transform: translateY(-50%);
-
         display: grid;
         place-items: center;
-
         background: rgba(255, 255, 255, 0.12);
         border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 50%;
-
         backdrop-filter: blur(8px);
         -webkit-backdrop-filter: blur(8px);
     }
@@ -608,9 +611,61 @@
        FOOTER
     ==================================== */
 
+    /* ========================================
+       FOOTER — MOBILE RESPONSIVE
+    ======================================== */
+    
+    .site-footer {
+        /* PENTING: Tambahkan padding bawah ekstra agar teks "Terms of Service" 
+           tidak tertutup oleh Bottom Navigation Bar (tinggi ~65-75px) */
+        padding-bottom: 85px; 
+        width: 53rem;
+    }
+
     .footer-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-8);
+        /* Ubah tata letak dari 3 kolom menjadi 1 kolom vertikal ke bawah */
+        grid-template-rows: 1fr;
+        gap: 1rem; /* Jarak antar bagian (Brand, Genre, Help) */
+        
+        padding-top: 0.5rem;
+        padding-bottom: 1rem;
+        padding-left: 3rem;
+        padding-right: 0rem;
+    }
+    .footer-brand{
+        justify-content: center;
+    }
+    .footer-brand img {
+        width: 100px; /* Logo sedikit dikecilkan di HP */
+        height: auto;
+        margin-bottom: 0.8rem;
+        justify-self: center;
+    }
+
+    .footer-column{
+        display: none;
+    }
+
+    .footer-links-grid {
+        /* Genre Links: Ubah dari 3 kolom menjadi 2 kolom saja agar pas di HP */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem 1rem;
+    }
+
+    .footer-column h3 {
+        font-size: 1rem; /* Pertegas sedikit ukuran judul kolom */
+        margin-bottom: 1rem;
+        color: #ffffff;
+    }
+
+    .footer-brand p,
+    .footer-column a {
+        font-size: 0.85rem;
+        text-align: center;
+    }
+    
+    .footer-links-list {
+        gap: 0.8rem; /* Beri jarak sentuh (touch target) yang lebih longgar untuk jari */
     }
     .movie-section {
         padding-top: 1.3rem;
@@ -633,131 +688,803 @@
     }
 
 
-    /* Movie Row */
-    .movie-row {
-        grid-auto-columns: minmax(130px, 42vw);
-        gap: 0.75rem;
-        padding-bottom: 0.8rem;
-
-        scroll-snap-type: x mandatory;
-    }
-
-
-    /* ====================================
-       MOVIE CARD
-    ==================================== */
-
-    .movie-card {
-        width: 100%;
-        min-width: 0;
-        border-radius: 9px;
-    }
-
-    .movie-poster-wrap {
-        width: 100%;
-        aspect-ratio: 2 / 3;
-        border-radius: 9px;
-    }
-
-    .movie-poster {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-
-    /* ====================================
-       MOVIE OVERLAY
-    ==================================== */
-
+    /* --------------------------------------
+       G. MOVIE CARD (MOBILE SCALING & TOUCH)
+       -------------------------------------- */
+    
+    /* 1. Overlay (Judul & Info) selalu terlihat karena HP tidak ada Hover */
     .movie-card-overlay {
-        inset: 0;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-
-        padding: 10px 8px;
-
-        /* Selalu terlihat di layar sentuh */
-        opacity: 1;
-
+        opacity: 1; 
+        padding: 10px; /* Kurangi padding agar info tidak terlalu ke atas */
+        /* Gradien dibuat lebih pendek agar wajah aktor di poster tidak tertutup hitam semua */
         background: linear-gradient(
             to top,
             rgba(0, 0, 0, 0.95) 0%,
-            rgba(0, 0, 0, 0.65) 30%,
-            rgba(0, 0, 0, 0.12) 65%,
+            rgba(0, 0, 0, 0.6) 45%,
             transparent 100%
         );
-
-        transition: none;
     }
 
+    /* 2. Perkecil Teks Judul dan Metadata */
     .movie-title {
-        font-size: 0.8rem;
-        line-height: 1.25;
-        font-weight: 650;
-
-        margin: 0;
-
-        -webkit-line-clamp: 2;
-        line-clamp: 2;
+        font-size: 0.9rem; /* Ukuran pas untuk baca di layar kecil */
+        line-height: 1.2;
     }
 
     .movie-detail {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        gap: 3px 5px;
-
-        margin-top: 5px;
-
-        font-size: 0.6rem;
-        line-height: 1.3;
+        font-size: 0.65rem;
+        margin-top: 4px;
+        gap: 4px;
     }
 
     .movie-detail span:not(:last-child)::after {
-        margin-left: 5px;
+        margin-left: 4px; /* Rapatkan titik separator */
     }
 
-
-    /* ====================================
-       BADGES
-    ==================================== */
-
+    /* 3. Padatkan Area Badge (Rating, Premium, dll) */
     .card-badges-top {
-        top: 7px;
-        left: 7px;
-        right: 7px;
+        top: 6px;
+        left: 6px;
+        right: 6px;
         gap: 4px;
     }
 
     .badge-group-left,
     .badge-group-right {
-        gap: 3px;
+        gap: 4px;
     }
 
     .badge {
-        min-height: 19px;
-        padding: 4px 5px;
-
-        font-size: 0.55rem;
+        min-height: 20px;
+        padding: 2px 5px;
+        font-size: 0.55rem; /* Font super kecil tapi tajam */
         border-radius: 4px;
-        letter-spacing: 0;
     }
 
-    .type-badge {
-        font-size: 0.52rem;
+    .score-badge .icon-star {
+        font-size: 0.65rem;
     }
 
-    .premium-badge {
+    .type-badge, .premium-badge {
         font-size: 0.5rem;
+        letter-spacing: 0.2px;
     }
 
     .icon-crown {
         width: 10px;
         height: 10px;
     }
+
+    /* 4. Samakan Skeleton Loading dengan ukuran kartu asli */
+    .loading-card,
+    .error-card {
+        min-height: unset; /* Buang batas minimum statis */
+        aspect-ratio: 2/3; /* Paksa rasio sama dengan poster */
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+
+    /* ## Genre section */
+    .genre-section {
+        min-height: auto; /* Hilangkan paksaan 100vh di mobile agar flow natural */
+        margin-top: 1rem;
+    }
+
+    .genre-backdrop img {
+        min-height: auto; /* Izinkan gambar menyesuaikan tinggi kontainer */
+    }
+
+    .genre-inner {
+        width: 100%;
+        /* Padding atas 120px memberi ruang agar gambar backdrop / kepala karakter terlihat */
+        padding: 120px 20px 40px; 
+        margin: 0;
+        box-sizing: border-box;
+    }
+    .genre-overlay {
+        background:
+            linear-gradient(to right, rgba(8, 8, 8, 0.95) 0%, rgba(8, 8, 8, 0.6) 50%, transparent 100%),
+            linear-gradient(to top, #080808 0%, transparent 40%);
+    }
+
+    /* --- Area Hero Genre --- */
+    .genre-hero {
+        max-width: 100%;
+        text-align: left; /* Teks rata kiri adalah kunci tampilan premium/cinematic */
+    }
+
+    .genre-eyebrow {
+        font-size: 0.7rem;
+        margin-bottom: 8px;
+    }
+
+    .genre-hero h2 {
+        /* Kurangi heading: tidak raksasa, tapi tetap tegas */
+        font-size: clamp(2rem, 8vw, 2.6rem); 
+        margin: 8px 0 16px;
+        line-height: 1.1;
+    }
+
+    .genre-movie {
+        font-size: 0.85rem;
+    }
+
+    .genre-synopsis {
+        font-size: 0.85rem;
+        line-height: 1.6;
+        margin: 16px 0 24px;
+        width: 90%; /* Jangan mentok sampai tepi kanan layar */
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3; /* Pastikan maksimal 3 baris */
+        line-clamp: 3;
+        overflow: hidden;
+    }
+
+    .genre-controls {
+        justify-content: left; /* Rata tengah kontrol hero */
+        margin-bottom: 24px;
+    }
+
+    /* --- Area Browse Genre (Track Kartu) --- */
+    /* --- Area Browse Genre (Track Kartu) --- */
+    .genre-browse {
+        margin-top: 40px; 
+    }
+
+    .genre-heading {
+        margin-bottom: 16px;
+        /* Geser juga judul "Browse Genres" agar sejajar dengan track wrapper di bawahnya */
+        padding-left: 1.5rem; 
+        padding-right: 20px;
+        justify-content: flex-start; /* Ubah ke flex-start agar judul ikut rata kiri tapi menjorok ke kanan */
+    }
+
+    .genre-heading h3 {
+        font-size: 1.2rem;
+    }
+
+    .genre-track-wrapper {
+        /* Ubah width dan margin agar kontainer bergeser ke kanan */
+        width: calc(100% - 1rem);
+        margin-left: 1.5rem; /* Tambah nilai ini (misal 1.5rem atau 2rem) untuk menggeser lebih jauh ke kanan */
+    }
+
+    /* Sembunyikan Tombol Panah Kiri/Kanan di Mobile */
+    .genre-track-btn {
+        display: none !important;
+    }
+
+    .genre-track {
+        padding: 0 20px 20px; 
+        gap: 12px;
+        scroll-padding-left: 20px; 
+        
+        -ms-overflow-style: none;  
+        scrollbar-width: none; 
+        margin-left: 4rem;
+    }
+    
+    .genre-track::-webkit-scrollbar { 
+        display: none; 
+    }
+
+    /* --- Ukuran Kartu Genre di Mobile --- */
+    .genre-card {
+        flex: 0 0 160px; /* Terkunci rapi di ukuran 160px */
+        height: 110px;
+        border-radius: 8px; /* Sudut lebih mulus untuk mobile */
+    }
+
+    .genre-card h4 {
+        font-size: 1.1rem;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+    }
+
+    .genre-inner .featured-eyebrow,
+    .genre-inner .hero-title,
+    .genre-inner .genre-movie,
+    .genre-inner .genre-synopsis
+    {
+        position: relative;
+        flex: none; 
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        text-align: left;
+        margin-left: -2rem;
+        
+        /* Ganti padding: 0 45px; menjadi ini: */ /* Mengecilkan jarak kiri agar teks tergeser ke kiri */
+    }
+    .genre-inner .genre-synopsis{
+    /* 1. Wajib jadikan flex container khusus (WebKit Box) */
+        display: -webkit-box;
+        
+        /* 2. Atur arah orientasi teks menjadi vertikal dari atas ke bawah */
+        -webkit-box-orient: vertical;
+        
+        /* 3. Tentukan batas maksimal jumlah baris (di sini 3 baris) */
+        -webkit-line-clamp: 3;
+        
+        /* 4. Properti standar modern (sebagai pelengkap dukungan browser) */
+        line-clamp: 3;
+        
+        /* 5. Sembunyikan bagian teks yang meluber melewati baris ke-3 */
+        overflow: hidden;
+
+    }
+    /* ========================================
+       CATALOG PAGE — MOBILE RESPONSIVE
+    ======================================== */
+
+    /* 1. Hero Banner: Lebih rendah agar tidak mendominasi layar HP */
+    .catalog-hero {
+        height: 45vh; /* Kurangi dari 60vh agar grid cepat terlihat */
+        min-height: 350px;
+        padding-bottom: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .catalog-hero-content {
+        padding: 0 1.5rem; /* Beri jarak aman dari tepi */
+        text-align: center; /* Rata tengah agar elegan */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .catalog-hero-content h2 {
+        font-size: clamp(2rem, 8vw, 2.5rem); /* Perkecil judul hero */
+        margin-bottom: 0.5rem;
+    }
+
+    .catalog-hero-content p {
+        font-size: 0.85rem;
+        -webkit-line-clamp: 2; /* Singkat deskripsi menjadi 2 baris */
+        width: 95%; /* Jangan mentok pinggir layar */
+    }
+
+    /* 2. Tata Letak Section: Kurangi padding kiri/kanan di HP */
+    .catalog-section {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 3rem;
+        padding-top: 0.5rem;
+    }
+
+    /* 3. Grid Film: Ubah jumlah kolom agar kartu tidak kekecilan */
+    .catalog-section .movie-grid{
+        /* Memaksa grid minimal selebar 110px agar di layar sangat kecil bisa muat 2-3 kolom */
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 0.8rem; /* Kurangi jarak antar kartu */
+        margin-top: 0.5rem;
+    }
+
+    /* 4. Filter Genre Pills: Pastikan nyaman untuk di-swipe */
+    .genre-pills-container {
+        gap: 0.5rem;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1.5rem;
+        /* Tambahkan ini agar pergerakan swipe lebih mulus */
+        -webkit-overflow-scrolling: touch; 
+        scroll-snap-type: x mandatory;
+    }
+
+    .genre-filter-pill {
+        padding: 0.4rem 1rem;
+        font-size: 0.8rem; /* Perkecil teks filter */
+        scroll-snap-align: start;
+    }
+
+    /* 5. Header Section & Tombol Filter */
+    .catalog-controls {
+        flex-direction: column; /* Tumpuk judul dan tombol filter */
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .catalog-section-title {
+        font-size: 1.3rem;
+    }
+
+    .filter-trigger-btn {
+        width: 100%; /* Tombol filter memanjang 100% memudahkan jempol menekan */
+        justify-content: center;
+        padding: 0.8rem;
+    }
+
+    /* 6. Tombol Load More */
+    .load-more-container {
+        margin-top: 2rem;
+    }
+
+    .load-more-btn {
+        width: 100%; /* Lebarkan ke ukuran penuh */
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+    /* ========================================
+   DETAIL PAGE — MOBILE
+======================================== */
+    /* ====================================
+       HERO BACKDROP
+    ==================================== */
+
+    .detail-hero-backdrop {
+        position: relative;
+
+        width: 100%;
+        height: 58svh;
+        min-height: 300px;
+        max-height: 460px;
+
+        margin-top: calc(-1 * var(--header-height));
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+    }
+
+    .backdrop-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+    }
+
+    .backdrop-overlay {
+        background: linear-gradient(
+            to top,
+            var(--color-bg) 0%,
+            rgba(8, 8, 8, 0.25) 55%,
+            rgba(8, 8, 8, 0.35) 100%
+        );
+    }
+
+    /* Tombol Play di tengah backdrop */
+    .button-massive-play {
+        top: 50%;
+        left: 50%;
+
+        margin-top: 0;
+        padding: 0.8rem 1.6rem;
+
+        font-size: 1rem;
+        white-space: nowrap;
+
+        transform: translate(-50%, -50%);
+    }
+
+    .button-massive-play:hover {
+        transform: translate(-50%, -50%) scale(1.03);
+    }
+
+
+    /* ====================================
+       DETAIL CONTENT
+    ==================================== */
+
+    .detail-content-layout {
+        position: relative;
+        z-index: 5;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        width: 100%;
+        box-sizing: border-box;
+
+        gap: 1.5rem;
+
+        /* Tumpang tindih sedikit dengan backdrop */
+        padding: 0 1rem 2.5rem;
+    }
+
+
+    /* ====================================
+       POSTER
+    ==================================== */
+    .detail-poster-side {
+        flex: 0 0 95px;
+        width: 220px;
+        min-width: 100px;
+
+        margin: -13rem auto 0;
+
+    }
+
+    .detail-poster-img {
+        display: block;
+
+        width: 100px;
+        max-width: 220px;
+        height: auto;
+        margin-left: 2.3rem;
+
+        aspect-ratio: 2 / 3;
+        object-fit: cover;
+        box-sizing: border-box;
+
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 12px 35px rgba(0, 0, 0, 0.65);
+    }
+
+
+    /* ====================================
+       MOVIE INFORMATION
+    ==================================== */
+
+    .detail-info-side {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        min-width: 0;
+
+        padding-top: 0;
+        gap: 0.1rem;
+        margin-top: -3rem;
+    }
+
+    .detail-title {
+        font-size: 1.5rem;
+        margin: 0;
+
+        line-height: 1.11;
+        font-weight: 800;
+        
+        overflow-wrap: anywhere;
+    }
+
+    .detail-meta {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        gap: 0.5rem;
+        font-size: 0.82rem;
+    }
+
+    .premium-meta {
+        font-size: 0.85rem;
+    }
+
+    .dot-separator {
+        font-size: 0.65rem;
+    }
+
+    .rate-text {
+        font-size: 0.85rem;
+    }
+
+
+    /* ====================================
+       GENRE
+    ==================================== */
+
+    .detail-genres {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        gap: 0.45rem;
+        margin: 0.4rem 0;
+    }
+
+    .genre-pill {
+        padding: 0.3rem 0.75rem;
+
+        font-size: 0.65rem;
+        letter-spacing: 0.7px;
+    }
+
+    .genre-pill:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+
+    /* ====================================
+       ACTION BUTTONS
+    ==================================== */
+
+    .detail-action-buttons {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        gap: 0.6rem;
+        margin: 0.8rem 0;
+    }
+
+    .ticket-button {
+        justify-content: center;
+
+        flex: 1 1 130px;
+        min-height: 42px;
+
+        padding: 0.6rem 0.8rem;
+
+        font-size: 0.82rem;
+    }
+
+    .ticket-button:hover {
+        transform: none;
+    }
+
+    .ticket-button svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .icon-button-outline {
+        width: 40px;
+        height: 40px;
+
+        flex-shrink: 0;
+        font-size: 1rem;
+    }
+
+
+    /* ====================================
+       SYNOPSIS
+    ==================================== */
+
+    .detail-synopsis {
+        max-width: 100%;
+
+        margin: 0;
+
+        font-size: 0.9rem;
+        line-height: 1.6;
+
+        color: var(--color-text-soft);
+    }
+
+
+    /* ====================================
+       CREDITS
+    ==================================== */
+
+    .detail-credits {
+        margin-top: 0.5rem;
+    }
+
+    .detail-credits p,
+    .detail-credits li {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .detail-credits ul {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.5rem;
+    }
+
+
+    /* ====================================
+       CAST SECTION
+    ==================================== */
+
+    .section-subtitle {
+        margin: 1.5rem 0 0.5rem;
+        font-size: 0.95rem;
+    }
+
+    .cast-grid {
+        display: flex;
+        gap: 0.8rem;
+
+        margin-inline: -1rem;
+        padding: 1rem;
+
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scroll-snap-type: x proximity;
+        -webkit-overflow-scrolling: touch;
+
+        scrollbar-width: none;
+    }
+
+    .cast-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .cast-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        flex: 0 0 120px;
+        min-width: 120px;
+        max-width: 120px;
+
+        scroll-snap-align: start;
+    }
+
+    .avatar-anon {
+        width: 130px;
+        height: 130px;
+
+        margin-bottom: 0.65rem;
+
+        transition: none;
+    }
+
+    .icon-user {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .actor-name {
+        font-size: 0.8rem;
+    }
+
+    .character-name {
+        font-size: 0.72rem;
+    }
+
+
+    /* ====================================
+       VIDEO PLAYER
+    ==================================== */
+
+    .detail-player-section {
+        margin-top: 1.5rem;
+        margin-bottom: 3rem;
+        padding-inline: 1rem;
+    }
+
+    .video-player-frame {
+        width: 100%;
+
+        aspect-ratio: 16 / 9;
+
+        border-radius: 8px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.45);
+    }
+
+    .video-player-frame iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* ====================================
+       SERIES EPISODES
+    ==================================== */
+
+    .series-episodes-section {
+        margin-top: 1.5rem;
+        padding-top: 1.5rem;
+    }
+
+    .season-header {
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+
+        margin-bottom: 1rem;
+    }
+
+    .season-dropdown {
+        max-width: 100%;
+        padding: 0.45rem 0.7rem;
+        font-size: 0.85rem;
+    }
+
+    .series-episodes-section .episodes-list {
+        gap: 0.3rem;
+    }
+
+    .series-episodes-section .episode-card {
+        display: grid;
+        grid-template-columns: 25px 115px minmax(0, 1fr);
+
+        align-items: center;
+        border-radius: 8px;
+        padding: 0.2px;
+    }
+
+    .episode-number {
+        min-width: 0;
+        font-size: 1.15rem;
+    }
+
+    .episode-thumbnail {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        border-radius: 6px;
+    }
+
+    .episode-info {
+        min-width: 0;
+        display: none;
+    }
+
+    .episode-title {
+        font-size: 0.85rem;
+        line-height: 1.3;
+    }
+
+    .episode-duration {
+        font-size: 0.7rem;
+        margin-bottom: 0.3rem;
+    }
+
+    .episode-desc {
+        font-size: 0.72rem;
+        line-height: 1.4;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+
+    .episode-play-btn {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.2);
+    }
+    .detail-info-side .detail-title {
+        font-size: 1.5rem;
+        line-height: 1.2;
+    }
+
+
+    /* ====================================
+       COMMENTS
+    ==================================== */
+
+    .detail-comments-section {
+        margin-top: 1.5rem;
+        margin-bottom: 2.5rem;
+        padding-top: 1rem;
+    }
+
+    .comment-list {
+        gap: 0.75rem;
+    }
+
+    .comment-item {
+        gap: 0.7rem;
+        padding: 0.8rem;
+    }
+
+    .comment-avatar {
+        width: 34px;
+        height: 34px;
+
+        flex-shrink: 0;
+        font-size: 0.85rem;
+    }
+
+    .comment-body {
+        min-width: 0;
+    }
+
+    .comment-body strong {
+        font-size: 0.82rem;
+    }
+
+    .comment-body p {
+        font-size: 0.83rem;
+        line-height: 1.5;
+        overflow-wrap: anywhere;
+    }
+    
+
+    
+
 }
 
 
