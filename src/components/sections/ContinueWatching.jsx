@@ -1,15 +1,18 @@
+// ContinueWatching.jsx
 import LandscapeCard from "../common/LandscapeCard";
 import SectionHeader from "../common/SectionHeader";
 import SliderButton from "../common/SliderButton";
-import useSliderScroll from "../../hooks/useSliderScroll";
+import { useSliderScroll } from "../../hooks/useSliderScroll";
 
 export default function ContinueWatching({ eyebrow, title, linkTo, movies, isLoading }) {
-    // 💡 Wajib dipanggil di dalam body fungsi, SEBELUM 'return'
     const { rowRef, handleScroll } = useSliderScroll();
+
+    if (!Array.isArray(movies) || movies.length === 0) return null;
 
     const titleId = `${title.toLowerCase().replace(/\s+/g, "-")}-heading`;
 
     return (
+        // Hapus style display: none, biarkan polos
         <section className="movie-section" aria-labelledby={titleId}>
             <SectionHeader 
                 eyebrow={eyebrow} 
@@ -19,10 +22,8 @@ export default function ContinueWatching({ eyebrow, title, linkTo, movies, isLoa
             />
 
             <div className="slider-wrapper">
-                {/* 💡 Panggil fungsi handleScroll di handler onClick */}
                 <SliderButton direction="left" onClick={() => handleScroll("left")} />
                 
-                {/* 💡 Oper ref murni ke div */}
                 <div className="movie-row landscape-row" ref={rowRef}>
                     {isLoading ? (
                         <p>Loading movies...</p>

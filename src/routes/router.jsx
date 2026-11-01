@@ -2,17 +2,17 @@ import { createBrowserRouter } from "react-router-dom";
 
 // Pages
 import Login from "../pages/auth/Login";
-import Register from "../pages/auth/Register.jsx";
-import ForgotPassword from "../pages/auth/ForgotPassword.jsx";
-import Home from "../pages/home/Home.jsx";
-import Profile from "../pages/home/Profile.jsx";
-import Playlist from "../pages/home/Playlist.jsx";
-import Movies from "../pages/home/Movies.jsx";
-import Series from "../pages/home/Series.jsx";
-import DetailMovie from "../pages/home/DetailMovie.jsx";
-import DetailSeries from "../pages/home/DetailSeries.jsx";
-import GenrePage from "../pages/home/GenrePage.jsx";
-import NotFound from "../pages/error/NotFound.jsx";
+import Register from "../pages/auth/Register";
+import ForgotPassword from "../pages/auth/ForgotPassword";
+import Home from "../pages/home/Home";
+import Profile from "../pages/home/Profile";
+import Playlist from "../pages/home/Playlist";
+import Movies from "../pages/home/Movies";
+import Series from "../pages/home/Series";
+import DetailMovie from "../pages/home/DetailMovie";
+import DetailSeries from "../pages/home/DetailSeries";
+import GenrePage from "../pages/home/GenrePage";
+import NotFound from "../pages/error/NotFound";
 
 // Route Guards
 import ProtectedRoute from "./ProtectedRoute";

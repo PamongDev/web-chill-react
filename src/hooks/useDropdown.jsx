@@ -1,10 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 
 
-export default function useDropdown(){
+export const useDropdown = () => {
     const [isOpen, setIsOpen] = useState(false);
     const menuRef = useRef(null);
-    const handletoogle = () => setIsOpen((prev) => !prev);
+    const handleToggle = () => setIsOpen((prev) => !prev);
 
     useEffect(()=>{
         function handleOutsideClick(event){
@@ -19,5 +19,5 @@ export default function useDropdown(){
             document.removeEventListener("click", handleOutsideClick);
         }
     }, [])
-    return { isOpen, handletoogle, menuRef };
+    return { isOpen, handleToggle, menuRef };
 }

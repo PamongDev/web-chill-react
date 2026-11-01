@@ -1,10 +1,9 @@
 import MovieCard from "../common/MovieCard";
 import SectionHeader from "../common/SectionHeader";
 import SliderButton from "../common/SliderButton";
-import useSliderScroll from "../../hooks/useSliderScroll";
+import { useSliderScroll } from "../../hooks/useSliderScroll";
 
 export default function MovieSection({ eyebrow, title, linkTo, movies, isLoading }) {
-    // Re-use Custom Hook scroll yang sama
     const { rowRef, handleScroll } = useSliderScroll();
     
     // Format id heading agar ramah aksesibilitas (aria-labelledby)

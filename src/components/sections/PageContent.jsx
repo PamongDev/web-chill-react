@@ -1,6 +1,6 @@
 import MovieSection from "./MovieSection";
-import GenreSection from "../genre/GenreSection"
-import FeaturedSection from "../featured/FeaturedSection"
+import GenreSection from "../genre/GenreSection";
+import FeaturedSection from "../featured/FeaturedSection";
 import ContinueWatching from "./ContinueWatching";
 import { usePageContentData } from "../../hooks/usePageContentData";
 
@@ -13,17 +13,28 @@ export default function PageContent({ movies, series, isLoading }) {
         newReleases, 
         genres 
     } = usePageContentData(movies, series);
+    
+    // KUNCI PERBAIKAN: 
+    // Hitung langsung dari myList, tidak perlu useState!
+    const playlistMovies = myList ?? [];
 
     return (
         <>
             <div className="page-content">
-                <ContinueWatching 
-                    eyebrow="KEEP WATCHING" 
-                    title="Continue Watching" 
-                    linkTo="/playlist" 
-                    movies={myList} 
-                    isLoading={isLoading} 
-                />
+                {/* 
+                   Jika hasMyList bernilai true, render ContinueWatching.
+                   Jika false, tidak perlu merender apa pun (otomatis hilang).
+                */}
+                {playlistMovies.length > 0 && (
+                    <ContinueWatching
+                        eyebrow="KEEP WATCHING"
+                        title="Continue Watching"
+                        linkTo="/playlist"
+                        movies={playlistMovies}
+                        isLoading={isLoading}
+                    />
+                )}
+                
                 <MovieSection 
                     eyebrow="TRENDING NOW" 
                     title="Chill Watching" 

@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-export default function useSliderScroll(scrollRatio = 0.75) {
+export const useSliderScroll = (scrollRatio = 0.75) => {
     const rowRef = useRef(null);
 
     const handleScroll = (direction) => {

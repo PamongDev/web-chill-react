@@ -52,6 +52,7 @@ Sistem autentikasi berjalan secara *client-side* menggunakan data statis (`publi
 3. Mencari ketepatan `username` menggunakan fungsi `.find()`.
 4. Jika `username` valid, mencocokkan `password`.
 5. Jika berhasil, menyimpan objek kredensial (nama dan email) ke `localStorage` (`userLoggedIn`) dan mengeksekusi `navigate('/')`.
+6. Untuk mencoba masuk ke beranda, anda bisa memasukan `username` = `fahmi`, `password` = `123`
 
 
 

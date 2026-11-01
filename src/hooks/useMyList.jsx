@@ -3,18 +3,43 @@ import { createContext, useContext, useState, useEffect } from "react";
 // Buat Context
 const MyListContext = createContext();
 
+function getMyListStorageKey() {
+    const sessionData = localStorage.getItem("userLoggedIn");
+
+    try {
+        const user = JSON.parse(sessionData || "null");
+        if (typeof user?.username !== "string" || !user.username) {
+            throw new Error("The logged-in user has no valid username.");
+        }
+
+        return `chill_mylist:${encodeURIComponent(user.username.toLowerCase())}`;
+    } catch (error) {
+        console.error("Failed to determine MyList storage key:", error);
+        throw error;
+    }
+}
+
 // Provider untuk membungkus aplikasi
 export function MyListProvider({ children }) {
-    // 1. Ambil data dari localStorage saat aplikasi pertama kali dimuat
+    const [storageKey] = useState(getMyListStorageKey);
     const [myList, setMyList] = useState(() => {
-        const savedList = localStorage.getItem("chill_mylist");
-        return savedList ? JSON.parse(savedList) : [];
+        try {
+            const savedList = JSON.parse(
+                localStorage.getItem(storageKey) || "[]"
+            );
+
+            return Array.isArray(savedList) ? savedList : [];
+
+        } catch (error) {
+            console.error("Failed to load MyList:", error);
+            return [];
+        }
     });
 
     // 2. Setiap kali myList berubah, simpan otomatis ke localStorage
     useEffect(() => {
-        localStorage.setItem("chill_mylist", JSON.stringify(myList));
-    }, [myList]);
+        localStorage.setItem(storageKey, JSON.stringify(myList));
+    }, [myList, storageKey]);
 
     // 3. Fungsi untuk mengecek apakah film sudah ada di list
     const isInList = (id) => {

@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import { useNavigate } from "react-router-dom";
 export default function MovieCard({ movie, disable=false, badge=true }) {
     const firstGenre = movie.genres && movie.genres.length > 0 ? movie.genres[0] : null;

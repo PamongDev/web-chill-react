@@ -1,8 +1,8 @@
-import useDropdown from "../../hooks/useDropdown";
+import { useDropdown } from "../../hooks/useDropdown";
 import ProfileDropdown from "./ProfileDropdown";
 import "../../styles/components.css"
 import HeaderNavbarMenus from "./HeaderNavbarMenus";
-import useScroll from "../../hooks/useScroll";
+import { useScroll } from "../../hooks/useScroll";
 import { Link } from "react-router-dom";
 import SearchModal from "../search/SearchModal"
 import { useState } from "react";
@@ -11,7 +11,7 @@ import MobileBottomNav from "../layout/MobileBottomNav";
 
 
 export default function Header({ username, email, handleLogout }) {
-    const { isOpen, handletoogle, menuRef } = useDropdown();
+    const { isOpen, handleToggle, menuRef } = useDropdown();
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     
     
@@ -37,7 +37,7 @@ export default function Header({ username, email, handleLogout }) {
                             <ProfileDropdown username={username} email={email} 
                             handleLogout={handleLogout}
                             isOpen={isOpen}
-                            handletoogle={handletoogle}
+                            handletoogle={handleToggle}
                             />
                         </div>
 
