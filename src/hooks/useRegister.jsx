@@ -6,6 +6,7 @@ export function useRegister() {
     const [dataRegister, setDataRegister] = useState({ 
         username: "", 
         email: "",
+        phone: "",
         password: "", 
         confirmPassword: "" 
     });
@@ -23,10 +24,10 @@ export function useRegister() {
         setMessage("");
         setIsSuccess(false);
 
-        const { username, email, password, confirmPassword } = dataRegister;
+        const { username, email, phone, password, confirmPassword } = dataRegister;
 
         // 1. Validasi Input Kosong
-        if (!username || !email || !password || !confirmPassword) {
+        if (!username || !email || !phone || !password || !confirmPassword) {
             setMessage("Semua kolom wajib diisi");
             return;
         }

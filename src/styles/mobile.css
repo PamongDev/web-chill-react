@@ -417,11 +417,11 @@
     }
 
     .featured-layout {
-        top: 2rem;
+        top: 4rem;
         flex-direction: column-reverse; /* Teks di bawah, Slider di atas (atau sebaliknya, sesuaikan selera) */
-        gap: 2px;
+        gap: 2rem;
         align-items: center;
-        flex: 0 0 150%;/* Ruang bernapas dari header */
+        flex: 0 0 130%;/* Ruang bernapas dari header */
 
     }
 
@@ -1303,15 +1303,16 @@
         flex-direction: column;
         align-items: center;
 
-        flex: 0 0 120px;
-        min-width: 120px;
-        max-width: 120px;
+        flex: 0 0 80px;
+        min-width: 80px;
+        max-width: 80px;
 
         scroll-snap-align: start;
+        display: none;
     }
 
     .avatar-anon {
-        width: 130px;
+        width: 80px;
         height: 130px;
 
         margin-bottom: 0.65rem;
@@ -1480,6 +1481,88 @@
         font-size: 0.83rem;
         line-height: 1.5;
         overflow-wrap: anywhere;
+    }
+    /* ========================================
+       GENRE MODAL — MOBILE OPTIMIZED
+    ======================================== */
+    
+     .genre-modal-overlay {
+        padding: 1rem;
+        height: 100dvh;
+        box-sizing: border-box;
+    }
+
+    .genre-modal-content {
+        width: 100%;
+        max-width: 420px;
+
+        max-height: 85dvh;
+        padding: 1.25rem;
+
+        display: flex;
+        flex-direction: column;
+
+        border-radius: 14px;
+        overflow: hidden;
+    }
+
+    /* HEADER */
+    .genre-modal-header {
+        flex-shrink: 0;
+        margin-bottom: 1.25rem;
+        padding-bottom: 0.85rem;
+    }
+
+    .genre-modal-header h2 {
+        font-size: 1.25rem;
+    }
+
+    .close-modal-btn {
+        width: 34px;
+        height: 34px;
+        flex-shrink: 0;
+    }
+
+    .close-modal-btn svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    /* GENRE LIST */
+    .genre-modal-body {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.7rem;
+
+        min-height: 0;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+
+        padding: 0.1rem 0.15rem 0.5rem;
+    }
+
+    /* GENRE CAPSULE */
+    .genre-capsule-btn {
+        width: 100%;
+        min-width: 0;
+        min-height: 42px;
+
+        padding: 0.65rem 0.5rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        box-sizing: border-box;
+        white-space: nowrap;
+
+        font-size: 0.9rem;
+        border-radius: 50px;
+    }
+
+    .genre-capsule-btn:hover {
+        transform: none;
+        box-shadow: none;
     }
     
 

@@ -49,6 +49,20 @@ export default function RegisterForm({ dataRegister, message, isSuccess, isLoadi
                         required
                     />
                 </div>
+                <div className="form-group">
+                    <label htmlFor="phone">Phone Number</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        name="phone"
+                        className="input"
+                        placeholder="Enter your phone number"
+                        autoComplete="tel"
+                        value={dataRegister.phone}
+                        onChange={onChange}
+                        required
+                    />
+                </div>
 
                 <div className="form-group">
                     <label htmlFor="password">Password</label>
@@ -103,7 +117,7 @@ export default function RegisterForm({ dataRegister, message, isSuccess, isLoadi
                 </div>
 
                 <p className="register-text">
-                    Already have an account? <Link to="/login">Sign in here</Link>
+                    Already have an account? <Link to="/sign-in">Sign in here</Link>
                 </p>
             </form>
         </div>

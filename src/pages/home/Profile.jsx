@@ -27,7 +27,7 @@ export default function Profile() {
                     <section className="profile-card">
                         <ProfileUserHeader userProfile={userProfile} />
                         <ProfileMembership userProfile={userProfile} />
-                        <ProfileActions />
+                        <ProfileActions handleLogout={handleLogout} />
 
                         <div className="profile-card-footer">
                             <span>YOUR SPACE. YOUR STORIES.</span>
