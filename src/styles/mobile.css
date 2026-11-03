@@ -1564,6 +1564,15 @@
         transform: none;
         box-shadow: none;
     }
+
+    /* ========================================
+       HERO MUTE BUTTON — MOBILE RESPONSIVE
+    ======================================== */
+    
+    .hero .hero-mute-button {
+        display: none;
+    }
+
     
 
     
