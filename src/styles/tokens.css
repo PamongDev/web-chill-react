@@ -94,7 +94,7 @@
        TYPOGRAPHY
     ======================================== */
 
-    --font-family-base: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --font-family-base: 'Lato', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
     /* Font size */
     --font-size-xs: 12px;
