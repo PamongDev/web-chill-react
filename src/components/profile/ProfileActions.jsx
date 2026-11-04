@@ -8,6 +8,9 @@ export default function ProfileActions({handleLogout}) {
                 <span className="profile-btn-arrow">↗</span>
             </Link>
 
+            <Link to="/h" className="profile-btn-secondary">
+                History tontonan
+            </Link>
             <Link to="/" className="profile-btn-secondary">
                 Kembali ke Beranda
             </Link>

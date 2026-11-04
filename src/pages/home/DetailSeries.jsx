@@ -25,7 +25,7 @@ export default function DetailSeries() {
         activeSeason,
         setActiveSeason,
         toastMessage,
-        toggleMyList,
+        toggleWatchlist,
         handleShare,
     } = useSeriesDetail();
 
@@ -42,7 +42,7 @@ export default function DetailSeries() {
                 <DetailOverview 
                     movie={seriesItem} 
                     isAdded={isAdded} 
-                    onToggleMyList={toggleMyList} 
+                    toggleWatchlist={toggleWatchlist} 
                     onShare={handleShare} 
                     toastMessage={toastMessage} 
                 />

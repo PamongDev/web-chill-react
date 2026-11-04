@@ -6,7 +6,7 @@ export default function MovieCard({ movie, disable=false, badge=true }) {
 
     const handleWatchNow = () =>{
         if(!disable){
-            const isSeries = movie.seasons !== undefined;
+            const isSeries = movie.seasons !== undefined || movie.type === "series";
             if(isSeries){
                 navigate(`/series/detail/${movie.id}`);
             }else {
@@ -39,7 +39,7 @@ export default function MovieCard({ movie, disable=false, badge=true }) {
 
                         <div className="badge-group-right">
                             <span className="badge age-badge">
-                                {movie.type ||
+                                {movie.type?.toUpperCase() ||
                                     (movie.seasons || movie.episodes
                                         ? "SERIES"
                                         : "MOVIE")}

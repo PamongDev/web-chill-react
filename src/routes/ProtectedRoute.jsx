@@ -1,5 +1,5 @@
 import { Navigate, Outlet } from "react-router-dom";
-import { MyListProvider } from "../hooks/useMyList";
+import { UserDataProvider } from "../hooks/useUserData";
 
 export default function ProtectedRoute() {
     const userLoggedIn = localStorage.getItem("userLoggedIn");
@@ -9,8 +9,8 @@ export default function ProtectedRoute() {
     }
 
     return (
-        <MyListProvider>
+        <UserDataProvider>
             <Outlet />
-        </MyListProvider>
+        </UserDataProvider>
     );
 }

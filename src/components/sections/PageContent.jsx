@@ -6,32 +6,26 @@ import { usePageContentData } from "../../hooks/usePageContentData";
 
 export default function PageContent({ movies, series, isLoading }) {
     const { 
-        myList, 
+        watchHistory, // Ambil state history
         continueWatching, 
         topMovies, 
         trending, 
         newReleases, 
         genres 
     } = usePageContentData(movies, series);
-    
-    // KUNCI PERBAIKAN: 
-    // Hitung langsung dari myList, tidak perlu useState!
-    const playlistMovies = myList ?? [];
 
     return (
         <>
             <div className="page-content">
-                {/* 
-                   Jika hasMyList bernilai true, render ContinueWatching.
-                   Jika false, tidak perlu merender apa pun (otomatis hilang).
-                */}
-                {playlistMovies.length > 0 && (
-                    <ContinueWatching
-                        eyebrow="KEEP WATCHING"
-                        title="Continue Watching"
-                        linkTo="/playlist"
-                        movies={playlistMovies}
-                        isLoading={isLoading}
+
+                {watchHistory && watchHistory.length > 0 && (
+                    <ContinueWatching 
+                        eyebrow="KEEP WATCHING" 
+                        title="Continue Watching" 
+                        // LinkTo bisa kamu arahkan ke "/history" jika nanti ada halamannya
+                        linkTo="/h/" 
+                        movies={watchHistory} 
+                        isLoading={isLoading} 
                     />
                 )}
                 

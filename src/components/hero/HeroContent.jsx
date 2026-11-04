@@ -1,10 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import GenreBadge from "../genre/GenreBadge"
-import { useMyList } from "../../hooks/useMyList";
+import { useUserData } from "../../hooks/useUserData";
 export default function HeroContent({movie}){
 
     const navigate = useNavigate();
-    const { toggleMyList, isInList } = useMyList();
+    const { toggleWatchlist, isInWatchlist } = useUserData();
     if(!movie) return null;
 
     const handleWatchNow = () =>{
@@ -16,7 +16,7 @@ export default function HeroContent({movie}){
             navigate(`/movies/detail/${movie.id}`);
         }
     }
-    const isAdded = isInList(movie.id);
+    const isAdded = isInWatchlist(movie.id);
     return (
         <div className="hero-content">
             <p className="eyebrow">CHILL ORIGINAL EXPERIENCE</p>
@@ -44,7 +44,7 @@ export default function HeroContent({movie}){
                 </button>
                 <button 
                     className={`button button-secondary ${isAdded ? "added" : ""}`} 
-                    onClick={() => toggleMyList(movie)}
+                    onClick={() => toggleWatchlist(movie)}
                 >
                     {isAdded ? (
                         <>

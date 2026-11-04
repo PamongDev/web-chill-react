@@ -3,7 +3,7 @@ import GenreBadge from "../genre/GenreBadge"
 export default function DetailOverview({ 
     movie, 
     isAdded, 
-    onToggleMyList, 
+    toggleWatchlist, 
     onShare, 
     toastMessage 
 }) {
@@ -45,7 +45,7 @@ export default function DetailOverview({
                     {/* Tombol Playlist */}
                     <button 
                         className={`ticket-button ${isAdded ? "added" : ""}`} 
-                        onClick={() => onToggleMyList(movie)}
+                        onClick={() => toggleWatchlist(movie)}
                     >
                         {isAdded ? (
                             <>

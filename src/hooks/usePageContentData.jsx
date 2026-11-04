@@ -1,8 +1,10 @@
 import { useMemo } from "react";
-import { useMyList } from "./useMyList";
+// Import hook yang baru kita buat
+import { useUserData } from "./useUserData"; 
 
 export function usePageContentData(movies = [], series = []) {
-    const { myList } = useMyList();
+
+    const { watchHistory, watchlist } = useUserData();
 
     const continueWatching = useMemo(() => movies.slice(0, 15), [movies]);
     const topMovies = useMemo(() => movies.slice(1, 16), [movies]);
@@ -29,7 +31,8 @@ export function usePageContentData(movies = [], series = []) {
     }, [movies]);
 
     return {
-        myList,
+        watchlist,     // Untuk dikirim ke halaman Playlist nanti
+        watchHistory,  // Untuk dikirim ke Continue Watching
         continueWatching,
         topMovies,
         trending,

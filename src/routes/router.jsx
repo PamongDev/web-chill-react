@@ -17,6 +17,7 @@ import NotFound from "../pages/error/NotFound";
 // Route Guards
 import ProtectedRoute from "./ProtectedRoute";
 import PublicRoute from "./PublicRoute";
+import HistoryPage from "../pages/home/History";
 
 export const router = createBrowserRouter([
     // --- GUEST / PUBLIC ROUTES (Hanya untuk yang BELUM Login) ---
@@ -81,6 +82,10 @@ export const router = createBrowserRouter([
             {
                 path: "/a/genre/:genreName",
                 element: <GenrePage defaultType="all" />,
+            },
+            {
+                path: "/h/",
+                element: <HistoryPage defaultType="all" />,
             },
         ],
     },

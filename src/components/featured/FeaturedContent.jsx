@@ -22,7 +22,7 @@ export default function FeaturedContent({ movie, titleEyebrow }) {
                     ))}
                 </div>
 
-                <p className="hero-description">{movie.synopsis}</p>
+                <p className="hero-description">{movie.synopsis ?? movie.description }</p>
             </div>
         </div>
     );

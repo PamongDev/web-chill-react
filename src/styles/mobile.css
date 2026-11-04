@@ -502,7 +502,7 @@
         top: 50%;
         
         /* Set manual lebarnya 200px dan tinggi 300px agar rasio 2:3 terkunci rapat */
-        width: 200px;
+        width: 220px;
         height: 300px; 
         
         margin: 0;
@@ -522,6 +522,9 @@
         aspect-ratio: 2 / 3 !important; 
     }
 
+    .featured-card-wrapper .movie-card-overlay{
+        display: none; /* Overlay di mobile tidak perlu muncul */
+    }
     /* Poster memenuhi seluruh card */
     .featured-card-wrapper .movie-poster {
         display: block;
@@ -1573,9 +1576,11 @@
         display: none;
     }
 
-    
-
-    
+    .history-grid{
+        grid-template-rows: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 0.8rem;
+        margin-left: 1.5rem;
+    }
 
 }
 

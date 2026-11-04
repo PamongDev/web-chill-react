@@ -2,14 +2,14 @@ import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useMovies } from "./useMovies";
 import { useAuth } from "./useAuth";
-import { useMyList } from "./useMyList";
+import { useUserData } from "./useUserData";
 import { shareMovie } from "../utils/shareHelper";
 
 export function useSeriesDetail() {
     const { id } = useParams();
     const { user, handleLogout } = useAuth();
     const { series, isLoading } = useMovies();
-    const { toggleMyList, isInList } = useMyList();
+    const { toggleWatchlist, isInWatchlist } = useUserData();
 
     const [activeSeason, setActiveSeason] = useState(0);
     const [toastMessage, setToastMessage] = useState("");
@@ -18,7 +18,7 @@ export function useSeriesDetail() {
     const similarSeries = series
         ? series.filter((s) => s.id.toString() !== id).slice(0, 10)
         : [];
-    const isAdded = seriesItem ? isInList(seriesItem.id) : false;
+    const isAdded = seriesItem ? isInWatchlist(seriesItem.id) : false;
 
     const handleShare = async () => {
         if (!seriesItem) return;
@@ -44,7 +44,7 @@ export function useSeriesDetail() {
         activeSeason,
         setActiveSeason,
         toastMessage,
-        toggleMyList,
+        toggleWatchlist,
         handleShare,
     };
 }

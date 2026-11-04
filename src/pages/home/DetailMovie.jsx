@@ -21,7 +21,7 @@ export default function DetailMovie() {
         isLoading,
         isAdded,
         toastMessage,
-        toggleMyList,
+        toggleWatchlist,
         handleShare,
     } = useMovieDetail();
 
@@ -38,7 +38,7 @@ export default function DetailMovie() {
                 <DetailOverview 
                     movie={movie} 
                     isAdded={isAdded} 
-                    onToggleMyList={toggleMyList} 
+                    toggleWatchlist={toggleWatchlist} 
                     onShare={handleShare} 
                     toastMessage={toastMessage} 
                 />

@@ -4,7 +4,7 @@ import "../../styles/landscapeCard.css";
 export default function LandscapeCard({ movie, progressPercent, timeLabel }) {
     const navigate = useNavigate();
 
-    const isSeries = movie.seasons !== undefined;
+    const isSeries = movie.seasons !== undefined || movie.type === "series";
     const typeLabel = isSeries ? "Series" : "Movie";
 
     const handlePlayClick = () => {

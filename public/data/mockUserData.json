@@ -1,0 +1,230 @@
+{
+    "watchlist": [
+        {
+            "id": 2,
+            "title": "Deadpool & Wolverine",
+            "type": "movie",
+            "year": 2024,
+            "duration": "2h 8m",
+            "rate": 8.9,
+            "rating": "R",
+            "description": "When the Time Variance Authority pulls Wade Wilson into a mission to save his universe, Deadpool recruits a reluctant Wolverine for an unpredictable adventure across the multiverse.",
+            "genres": [
+                "Action",
+                "Comedy"
+            ],
+            "youtubeVideoId": "73_1biulkYk",
+            "poster": "assets/images/poster-movies/2_poster_deadpoolnwolverine.jpg",
+            "bg": "assets/images/bg-movies/m2.jpeg"
+        },
+        {
+            "id": 6,
+            "title": "Kung Fu Panda 4",
+            "type": "movie",
+            "year": 2024,
+            "duration": "1h 34m",
+            "rate": 8.9,
+            "rating": "PG",
+            "description": "Po is chosen to become the Spiritual Leader of the Valley of Peace and must find a new Dragon Warrior. Alongside the clever fox Zhen, he faces a powerful sorceress capable of transforming into his enemies.",
+            "genres": [
+                "Animation",
+                "Adventure"
+            ],
+            "youtubeVideoId": "_inKs4eeHiI",
+            "poster": "assets/images/poster-movies/6_poster KF4.png",
+            "bg": "assets/images/bg-movies/m6.jpg"
+        },
+        {
+            "id": "s-002",
+            "title": "Arcane",
+            "type": "series",
+            "year": 2021,
+            "duration": "43 min",
+            "rate": 9.0,
+            "rating": "R",
+            "description": "Kisah asal usul dua juara ikonik League of Legends yang terpisah di dua kota berseteru, Piltover dan Zaun.",
+            "genres": [
+                "Animation",
+                "Action",
+                "Drama"
+            ],
+            "youtubeVideoId": "fXmAurh012s",
+            "poster": "assets/images/poster-series/2_arcane.webp",
+            "bg": "assets/images/bg-series/s2.jpg"
+        },
+        {
+            "id": "s-005",
+            "title": "House of the Dragon",
+            "type": "series",
+            "year": 2022,
+            "duration": "61 min",
+            "rate": 9.0,
+            "rating": "R",
+            "description": "Kisah klan Targaryen 200 tahun sebelum peristiwa Game of Thrones yang berujung pada perang saudara raksasa.",
+            "genres": [
+                "Fantasy",
+                "Action",
+                "Drama"
+            ],
+            "youtubeVideoId": "0JlMjgqduVw",
+            "poster": "assets/images/poster-series/5_house of the dragon.jpg",
+            "bg": "assets/images/bg-series/s5.jpg"
+        },
+        {
+            "id": 9,
+            "title": "Oppenheimer",
+            "type": "movie",
+            "year": 2023,
+            "duration": "3h",
+            "rate": 8.9,
+            "rating": "R",
+            "description": "Physicist J. Robert Oppenheimer leads the Manhattan Project, a secret mission to develop the world's first atomic bomb. As his scientific achievements reshape history, he struggles with their devastating consequences.",
+            "genres": [
+                "Drama",
+                "History"
+            ],
+            "youtubeVideoId": "bK6ldnjE3Y0",
+            "poster": "assets/images/poster-movies/9_poster_OH.png",
+            "bg": "assets/images/bg-movies/m9.jpg"
+        },
+        {
+            "id": "s-006",
+            "title": "Wednesday",
+            "type": "series",
+            "year": 2022,
+            "duration": "52 min",
+            "rate": 9.0,
+            "rating": "R",
+            "description": "Wednesday Addams menyelidiki misteri pembunuhan di Nevermore Academy sambil menghadapi kekuatan psikisnya.",
+            "genres": [
+                "Comedy",
+                "Mystery",
+                "Fantasy"
+            ],
+            "youtubeVideoId": "03u4xyj0TH4",
+            "poster": "assets/images/poster-series/6_wednesday.webp",
+            "bg": "assets/images/bg-series/s6.webp"
+        }
+    ],
+    "history": [
+        {
+            "id": 1,
+            "title": "Dune: Part Two",
+            "type": "movie",
+            "year": 2024,
+            "duration": "2h 46m",
+            "rate": 8.9,
+            "rating": "PG-13",
+            "description": "Paul Atreides joins Chani and the Fremen in their fight against the forces that destroyed his family. As he embraces his destiny, Paul must confront visions of a dangerous future.",
+            "genres": [
+                "Action",
+                "Adventure"
+            ],
+            "youtubeVideoId": "Way9Dexny3w",
+            "poster": "assets/images/poster-movies/1_poster dune2.jpg",
+            "bg": "assets/images/bg-movies/m1.jpg",
+            "progress": 45,
+            "lastTime": 4470
+        },
+        {
+            "id": 4,
+            "title": "A Quiet Place: Day One",
+            "type": "movie",
+            "year": 2024,
+            "duration": "1h 40m",
+            "rate": 8.9,
+            "rating": "PG-13",
+            "description": "During the first day of an alien invasion, Samira finds herself trapped in New York City, where deadly creatures hunt by sound. Alongside a stranger, she struggles to survive the terrifying chaos.",
+            "genres": [
+                "Horror",
+                "Sci-Fi"
+            ],
+            "youtubeVideoId": "YPY7J-flzE8",
+            "poster": "assets/images/poster-movies/4_poster_aqpdo.webp",
+            "bg": "assets/images/bg-movies/m4.jpg",
+            "progress": 72,
+            "lastTime": 4320
+        },
+        {
+            "id": "s-001",
+            "title": "The Last of Us",
+            "type": "series",
+            "year": 2023,
+            "duration": "70 min",
+            "rate": 9.0,
+            "rating": "R",
+            "description": "Dua puluh tahun setelah peradaban hancur akibat jamur mematikan, seorang pria harus menyelundupkan gadis muda yang kebal melintasi Amerika.",
+            "genres": [
+                "Action",
+                "Horror",
+                "Drama"
+            ],
+            "youtubeVideoId": "_zHPsmXCjB0",
+            "poster": "assets/images/poster-series/1_the last of us.webp",
+            "bg": "assets/images/bg-series/s1.jpg",
+            "lastEpisode": "S1:E2",
+            "progress": 35,
+            "lastTime": 1113
+        },
+        {
+            "id": 5,
+            "title": "Gladiator II",
+            "type": "movie",
+            "year": 2024,
+            "duration": "2h 28m",
+            "rate": 8.9,
+            "rating": "R",
+            "description": "After Roman forces conquer his home, Lucius is forced into the Colosseum as a gladiator. Driven by revenge and inspired by the legacy of Maximus, he fights against the corrupt rulers of Rome.",
+            "genres": [
+                "Action",
+                "Drama"
+            ],
+            "youtubeVideoId": "4rgYUipGJNo",
+            "poster": "assets/images/poster-movies/5_poster gladiator2.jpeg",
+            "bg": "assets/images/bg-movies/m5.jpg",
+            "progress": 28,
+            "lastTime": 416
+        },
+        {
+            "id": "s-003",
+            "title": "The Bear",
+            "type": "series",
+            "year": 2022,
+            "duration": "28 min",
+            "rate": 9.0,
+            "rating": "R",
+            "description": "Seorang koki muda dari dunia kuliner fine dining pulang ke Chicago untuk mengelola kedai sandwich keluarganya.",
+            "genres": [
+                "Comedy",
+                "Drama"
+            ],
+            "youtubeVideoId": "gBmkI4jlaIo",
+            "poster": "assets/images/poster-series/3_the bear.webp",
+            "bg": "assets/images/bg-series/s3.jpg",
+            "lastEpisode": "S1:E3",
+            "progress": 60,
+            "lastTime": 1008
+        },
+        {
+            "id": "s-007",
+            "title": "Breaking Bad",
+            "type": "series",
+            "year": 2008,
+            "duration": "51 min",
+            "rate": 9.0,
+            "rating": "R",
+            "description": "Seorang guru kimia yang didiagnosis kanker mulai memproduksi narkoba bersama mantan muridnya demi masa depan keluarganya.",
+            "genres": [
+                "Crime",
+                "Drama",
+                "Thriller"
+            ],
+            "youtubeVideoId": "1JLUn2DFW4w",
+            "poster": "assets/images/poster-series/7_breakingbad.webp",
+            "bg": "assets/images/bg-series/s7.jpg",
+            "lastEpisode": "S1:E1",
+            "progress": 18,
+            "lastTime": 626
+        }
+    ]
+}

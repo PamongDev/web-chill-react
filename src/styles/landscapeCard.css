@@ -154,3 +154,49 @@
     background: #e50914;
     box-shadow: 0 0 10px rgba(229, 9, 20, 0.8);
 }
+/* CARD */
+/* --- Wrapper Card --- */
+.history-card-wrapper {
+    position: relative; /* INI KUNCI AGAR TOMBOL TIDAK TERBANG */
+    display: inline-block; 
+    width: 100%; /* Memastikan wrapper menempel pas dengan ukuran card */
+}
+
+/* --- Tombol Hapus --- */
+.remove-history-btn {
+    position: absolute; /* Posisi relatif terhadap wrapper card */
+    top: 8px; /* Jarak dari atas card */
+    right: 8px; /* Jarak dari kanan card */
+    z-index: 10;
+    
+    background: rgba(20, 20, 20, 0.6); 
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+    color: white;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.8);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.history-card-wrapper:hover .remove-history-btn {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+.remove-history-btn:hover {
+    background: #E50914; 
+    border-color: #E50914;
+    transform: scale(1.1); 
+}
