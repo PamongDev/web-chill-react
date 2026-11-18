@@ -3,12 +3,11 @@
         {
             "id": 0,
             "title": "Black Clover: Sword of the Wizard King",
-            "poster": "assets/images/poster-movies/21_poster black clover.jpg",
-            "trailer": "assets/videos/trailer-movies/t21_bcwk.mp4",
+            "poster": "https://m.media-amazon.com/images/M/MV5BOGIxZjZlZjUtODM0OC00NDJlLWI5ZjItNDg3MGJmODVmZWNhXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
             "bg" : "assets/images/bg-movies/m0.jpg",
             "key": "zhsAd5ORk1Y",
             "year": 2023,
-            "rating": "PG-13",
+            "rating": "TV-14",
             "duration": "1h 53m",
             "rate": 8.9,
             "genres": [
@@ -46,17 +45,17 @@
         {
             "id": 1,
             "title": "Dune: Part Two",
-            "poster": "assets/images/poster-movies/1_poster dune2.jpg",
-            "trailer": "assets/videos/trailer-movies/t1_dp2-compress.mp4",
+            "poster": "https://m.media-amazon.com/images/M/MV5BNTc0YmQxMjEtODI5MC00NjFiLTlkMWUtOGQ5NjFmYWUyZGJhXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
             "bg" : "assets/images/bg-movies/m1.jpg",
             "key": "Way9Dexny3w",
             "year": 2024,
             "rating": "PG-13",
             "duration": "2h 46m",
-            "rate": 8.9,
+            "rate": 8.4,
             "genres": [
                 "Action",
-                "Adventure"
+                "Adventure",
+                "Drama"
             ],
             "synopsis": "Paul Atreides joins Chani and the Fremen in their fight against the forces that destroyed his family. As he embraces his destiny, Paul must confront visions of a dangerous future.",
             "country": "United States, Canada",
@@ -87,8 +86,7 @@
         {
             "id": 2,
             "title": "Deadpool & Wolverine",
-            "poster": "assets/images/poster-movies/2_poster_deadpoolnwolverine.jpg",
-            "trailer": "assets/videos/trailer-movies/t2_dw-compress.mp4",
+            "poster": "https://m.media-amazon.com/images/M/MV5BZTk5ODY0MmQtMzA3Ni00NGY1LThiYzItZThiNjFiNDM4MTM3XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
             "bg" : "assets/images/bg-movies/m2.jpeg",
             "key": "73_1biulkYk",
             "year": 2024,
@@ -97,10 +95,11 @@
             "rate": 8.9,
             "genres": [
                 "Action",
-                "Comedy"
+                "Comedy",
+                "Adventure"
             ],
             "synopsis": "When the Time Variance Authority pulls Wade Wilson into a mission to save his universe, Deadpool recruits a reluctant Wolverine for an unpredictable adventure across the multiverse.",
-            "country": "United States",
+            "country": "United States, Canada",
             "director": "Shawn Levy",
             "cast": [
                 {
@@ -128,8 +127,7 @@
         {
             "id": 3,
             "title": "Inside Out 2",
-            "poster": "assets/images/poster-movies/3_poster_insideout2.jpg",
-            "trailer": "assets/videos/trailer-movies/t3_io2-compress.mp4",
+            "poster": "https://m.media-amazon.com/images/M/MV5BYWY3MDE2Y2UtOTE3Zi00MGUzLTg2MTItZjE1ZWVkMGVlODRmXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
             "bg" : "assets/images/bg-movies/m3.jpg",
             "key": "LEjhY15eCx0",
             "year": 2024,
@@ -138,7 +136,8 @@
             "rate": 8.9,
             "genres": [
                 "Animation",
-                "Comedy"
+                "Comedy",
+                "Adventure"
             ],
             "synopsis": "As Riley enters her teenage years, Joy and the other emotions encounter new arrivals, including Anxiety, Envy, and Embarrassment, forcing the team to navigate the challenges of growing up.",
             "country": "United States",
@@ -169,8 +168,7 @@
         {
             "id": 4,
             "title": "A Quiet Place: Day One",
-            "poster": "assets/images/poster-movies/4_poster_aqpdo.webp",
-            "trailer": "assets/videos/trailer-movies/t4_aqpdo-compress.mp4",
+            "poster": "https://m.media-amazon.com/images/M/MV5BMDdjZTljZWMtMDIwNi00MTA5LTkxZmItNmY0NDA3ZDM0N2M2XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
             "bg" : "assets/images/bg-movies/m4.jpg",
             "key": "YPY7J-flzE8",
             "year": 2024,
@@ -179,7 +177,8 @@
             "rate": 8.9,
             "genres": [
                 "Horror",
-                "Sci-Fi"
+                "Sci-Fi",
+                "Drama"
             ],
             "synopsis": "During the first day of an alien invasion, Samira finds herself trapped in New York City, where deadly creatures hunt by sound. Alongside a stranger, she struggles to survive the terrifying chaos.",
             "country": "United States",
@@ -210,16 +209,15 @@
         {
             "id": 5,
             "title": "Gladiator II",
-            "poster": "assets/images/poster-movies/5_poster gladiator2.jpeg",
-            "trailer": "assets/videos/trailer-movies/t5_g2-compress.mp4",
+            "poster": "https://m.media-amazon.com/images/M/MV5BMWYzZTM5ZGQtOGE5My00NmM2LWFlMDEtMGNjYjdmOWM1MzA1XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
             "bg" : "assets/images/bg-movies/m5.jpg",
             "key": "4rgYUipGJNo",
             "year": 2024,
             "rating": "R",
             "duration": "2h 28m",
-            "rate": 8.9,
+            "rate": 6.4,
             "genres": [
-                "Action",
+                "Adventure",
                 "Drama"
             ],
             "synopsis": "After Roman forces conquer his home, Lucius is forced into the Colosseum as a gladiator. Driven by revenge and inspired by the legacy of Maximus, he fights against the corrupt rulers of Rome.",
@@ -251,8 +249,7 @@
         {
             "id": 6,
             "title": "Kung Fu Panda 4",
-            "poster": "assets/images/poster-movies/6_poster KF4.png",
-            "trailer": "assets/videos/trailer-movies/t6_kp4-compress.mp4",
+            "poster": "https://m.media-amazon.com/images/M/MV5BMzJlNGYxYzQtOTg4MC00OTMyLTkwYzMtZDRlNTgwY2YwOWYxXkEyXkFqcGc@._V1_QL75_UX380_CR0,20,380,562_.jpg",
             "bg" : "assets/images/bg-movies/m6.jpg",
             "key": "_inKs4eeHiI",
             "year": 2024,
@@ -261,7 +258,9 @@
             "rate": 8.9,
             "genres": [
                 "Animation",
-                "Adventure"
+                "Adventure",
+                "Comedy",
+                "Action"
             ],
             "synopsis": "Po is chosen to become the Spiritual Leader of the Valley of Peace and must find a new Dragon Warrior. Alongside the clever fox Zhen, he faces a powerful sorceress capable of transforming into his enemies.",
             "country": "United States",
@@ -292,8 +291,7 @@
         {
             "id": 7,
             "title": "Smile 2",
-            "poster": "assets/images/poster-movies/7_poster smile2.jpg",
-            "trailer": "assets/videos/trailer-movies/t7_s2-compress.mp4",
+            "poster": "https://m.media-amazon.com/images/M/MV5BYTg5OTMyMGMtYzMwNC00NDMyLWE0OGUtMTQ1ODcwM2FjOTM4XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
             "bg" : "assets/images/bg-movies/m7.png",
             "key": "0HY6QFlBzUY",
             "year": 2024,
@@ -302,7 +300,8 @@
             "rate": 8.9,
             "genres": [
                 "Horror",
-                "Thriller"
+                "Thriller",
+                "Mystery"
             ],
             "synopsis": "As pop star Skye Riley prepares for a major world tour, increasingly terrifying events begin to disrupt her life. She must confront a sinister force while struggling with the pressures of fame and her troubled past.",
             "country": "United States",
@@ -333,17 +332,17 @@
         {
             "id": 8,
             "title": "The Fall Guy",
-            "poster": "assets/images/poster-movies/8_poster_tfg.jpg",
-            "trailer": "assets/videos/trailer-movies/t8_tfg-compress.mp4",
+            "poster": "https://m.media-amazon.com/images/M/MV5BMjA3ODU4OTgxMV5BMl5BanBnXkFtZTcwMjc0MDI1OQ@@._V1_SX300.jpg",
             "bg" : "assets/images/bg-movies/m8.jpg",
             "key": "j7jPnwVGdZ8",
             "year": 2024,
             "rating": "PG-13",
             "duration": "2h 6m",
-            "rate": 8.9,
+            "rate": 7.3,
             "genres": [
                 "Action",
-                "Comedy"
+                "Comedy",
+                "Crime"
             ],
             "synopsis": "Colt Seavers, a stuntman returning after a career-threatening accident, joins a film directed by his former girlfriend. When the movie's leading star disappears, Colt becomes entangled in a dangerous conspiracy.",
             "country": "United States",
@@ -374,17 +373,17 @@
         {
             "id": 9,
             "title": "Oppenheimer",
-            "poster": "assets/images/poster-movies/9_poster_OH.png",
-            "trailer": "assets/videos/trailer-movies/t9_oppenheimer-compress.mp4",
+            "poster": "https://m.media-amazon.com/images/M/MV5BN2JkMDc5MGQtZjg3YS00NmFiLWIyZmQtZTJmNTM5MjVmYTQ4XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
             "bg" : "assets/images/bg-movies/m9.jpg",
             "key": "bK6ldnjE3Y0",
             "year": 2023,
             "rating": "R",
             "duration": "3h",
-            "rate": 8.9,
+            "rate": 8.2,
             "genres": [
                 "Drama",
-                "History"
+                "History",
+                "Biography"
             ],
             "synopsis": "Physicist J. Robert Oppenheimer leads the Manhattan Project, a secret mission to develop the world's first atomic bomb. As his scientific achievements reshape history, he struggles with their devastating consequences.",
             "country": "United States, United Kingdom",
@@ -415,17 +414,17 @@
         {
             "id": 10,
             "title": "Longlegs",
-            "poster": "assets/images/poster-movies/10_poster longlegs.webp",
-            "trailer": "assets/videos/trailer-movies/t10_longlegs-compress.mp4",
+            "poster": "https://m.media-amazon.com/images/M/MV5BMmJkNGNiNjgtMzFlYy00ZDI5LWI2YzktZGVjYjI5MjQyMGU3XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
             "bg" : "assets/images/bg-movies/m10.png",
             "key": "OG7wOTE8NhE",
             "year": 2024,
             "rating": "R",
             "duration": "1h 41m",
-            "rate": 8.9,
+            "rate": 7.7,
             "genres": [
                 "Horror",
-                "Mystery"
+                "Mystery",
+                "Crime"
             ],
             "synopsis": "FBI agent Lee Harker investigates a series of bizarre family murders connected to a mysterious serial killer known as Longlegs. As she uncovers disturbing occult clues, the case reveals a terrifying personal connection.",
             "country": "United States, Canada",
@@ -456,17 +455,17 @@
         {
             "id": 11,
             "title": "Despicable Me 4",
-            "poster": "assets/images/poster-movies/11_poster DM4.jpg",
-            "trailer": "assets/videos/trailer-movies/t11_dm4-compress.mp4",
+            "poster": "https://m.media-amazon.com/images/M/MV5BNzY0ZTlhYzgtOTgzZC00ZTg2LTk4NTEtZDllM2E2NGE5Njg2XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
             "bg" : "assets/images/bg-movies/m11.jpg",
             "key": "qQlr9-rF32A",
             "year": 2024,
             "rating": "PG",
             "duration": "1h 35m",
-            "rate": 8.9,
+            "rate": 6.2,
             "genres": [
                 "Animation",
-                "Comedy"
+                "Comedy",
+                "Adventure"
             ],
             "synopsis": "Gru and his family welcome a new baby while trying to stay ahead of escaped criminal Maxime Le Mal. With danger approaching, Gru, Lucy, and the Minions must work together to protect their loved ones.",
             "country": "United States",
@@ -497,17 +496,17 @@
         {
             "id": 12,
             "title": "John Wick: Chapter 4",
-            "poster": "assets/images/poster-movies/12_poster js4.jpg",
-            "trailer": "assets/videos/trailer-movies/t12_jw4-compress.mp4",
+            "poster": "https://m.media-amazon.com/images/M/MV5BY2Q2ZmI5ZjUtNWVhMC00YzJkLTlmYjMtY2RmZDhkNzEzYjZhXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
             "bg" : "assets/images/bg-movies/m12.jpg",
             "key": "qEVUtrk8_B4",
             "year": 2023,
             "rating": "R",
             "duration": "2h 49m",
-            "rate": 8.9,
+            "rate": 7.6,
             "genres": [
                 "Action",
-                "Thriller"
+                "Thriller",
+                "Crime"
             ],
             "synopsis": "John Wick discovers a possible path to freedom from the High Table, but powerful enemies stand in his way. His fight takes him across the globe toward a decisive confrontation that could change his fate.",
             "country": "United States, Germany",
@@ -538,17 +537,17 @@
         {
             "id": 13,
             "title": "Abigail",
-            "poster": "assets/images/poster-movies/13_poster abigail.jpg",
-            "trailer": "assets/videos/trailer-movies/t13_abigail-compress.mp4",
+            "poster": "https://m.media-amazon.com/images/M/MV5BNmUxMDRiNjQtYjE0NS00OWZkLTlhZjktYjQ1MmNjNDlhNDdkXkEyXkFqcGc@._V1_QL75_UX380_CR0,20,380,562_.jpg",
             "bg" : "assets/images/bg-movies/m13.jpeg",
             "key": "3PsP8MFH8p0",
             "year": 2024,
             "rating": "R",
             "duration": "1h 49m",
-            "rate": 8.9,
+            "rate": 6.5,
             "genres": [
                 "Horror",
-                "Thriller"
+                "Thriller",
+                "Action"
             ],
             "synopsis": "A group of criminals kidnaps Abigail, a young ballerina, and takes her to an isolated mansion for a ransom. Their plan quickly falls apart when they discover that their seemingly innocent captive hides a terrifying secret.",
             "country": "United States",
@@ -579,17 +578,17 @@
         {
             "id": 14,
             "title": "Moana 2",
-            "poster": "assets/images/poster-movies/14_poster moana2.webp",
-            "trailer": "assets/videos/trailer-movies/t14_m2-compress.mp4",
+            "poster": "https://m.media-amazon.com/images/M/MV5BZDUxNThhYTUtYjgxNy00MGQ4LTgzOTEtZjg1YTU5NTcwNThlXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
             "bg" : "assets/images/bg-movies/m14.jpg",
             "key": "YPnNrd9Xc44",
             "year": 2024,
             "rating": "PG",
             "duration": "1h 40m",
-            "rate": 8.9,
+            "rate": 6.3,
             "genres": [
                 "Animation",
-                "Adventure"
+                "Adventure",
+                "Comedy"
             ],
             "synopsis": "After receiving an unexpected call from her ancestors, Moana embarks on a daring voyage across distant seas with Maui and a new crew. Together, they seek to reconnect the scattered peoples of Oceania.",
             "country": "United States",
@@ -620,17 +619,17 @@
         {
             "id": 15,
             "title": "Bad Boys: Ride or Die",
-            "poster": "assets/images/poster-movies/15_poster bad boys.webp",
-            "trailer": "assets/videos/trailer-movies/t15_bbrod-compress.mp4",
+            "poster": "https://m.media-amazon.com/images/M/MV5BZWNjZWUwNDgtYTM4ZC00Zjk0LTg3ZWItNGEyZmVkZTIxZDk0XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
             "bg" : "assets/images/bg-movies/m15.jpg",
             "key": "hRFY_Fesa9Q",
             "year": 2024,
             "rating": "R",
             "duration": "1h 55m",
-            "rate": 8.9,
+            "rate": 6.5,
             "genres": [
                 "Action",
-                "Comedy"
+                "Comedy",
+                "Adventure"
             ],
             "synopsis": "Miami detectives Mike Lowrey and Marcus Burnett become fugitives after their late police captain is accused of corruption. Determined to clear his name, they must uncover the truth while evading the authorities.",
             "country": "United States",
@@ -661,17 +660,17 @@
         {
             "id": 16,
             "title": "The Conjuring: Last Rites",
-            "poster": "assets/images/poster-movies/16_poster tclr.webp",
-            "trailer": "assets/videos/trailer-movies/t16_tclr-compress.mp4",
+            "poster": "https://m.media-amazon.com/images/M/MV5BM2VmMzRkYzgtMzg2ZC00OTFkLTkwMTYtNTMxNjM2YzI1MjgyXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
             "bg" : "assets/images/bg-movies/m16.webp",
             "key": "bMgfsdYoEEo",
             "year": 2025,
             "rating": "R",
             "duration": "2h",
-            "rate": 8.9,
+            "rate": 6.2,
             "genres": [
                 "Horror",
-                "Mystery"
+                "Mystery",
+                "Thriller"
             ],
             "synopsis": "Paranormal investigators Ed and Lorraine Warren take on another disturbing case involving a family plagued by supernatural events. As the haunting intensifies, the Warrens confront a terrifying mystery that tests their faith and courage.",
             "country": "United States",
@@ -702,17 +701,17 @@
         {
             "id": 17,
             "title": "Toy Story 5",
-            "poster": "assets/images/poster-movies/17_poster TS5.jpg",
-            "trailer": "assets/videos/trailer-movies/t17_ts5-compress.mp4",
+            "poster": "https://m.media-amazon.com/images/M/MV5BZTI1YTBiNmEtYWUxZi00YzFkLWIzNjMtMmZjMmY2NzM0ZWMzXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
             "bg" : "assets/images/bg-movies/m17.jpg",
             "key": "c51ND9Hdbw0",
             "year": 2026,
             "rating": "PG",
             "duration": "1h 40m",
-            "rate": 8.9,
+            "rate": 7.4,
             "genres": [
                 "Animation",
-                "Adventure"
+                "Adventure",
+                "Comedy"
             ],
             "synopsis": "Woody, Buzz, Jessie, and the other toys face a new challenge when Bonnie becomes fascinated with Lilypad, a smart tablet with its own ideas about playtime. As technology changes their world, the toys must find a way to reconnect with their child.",
             "country": "United States",
@@ -743,8 +742,7 @@
         {
             "id": 18,
             "title": "Mission: Impossible — Dead Reckoning",
-            "poster": "assets/images/poster-movies/18_poster MSDR.jpg",
-            "trailer": "assets/videos/trailer-movies/t18_mi-compress.mp4",
+            "poster": "https://a.ltrbxd.com/resized/film-poster/5/0/3/4/0/2/503402-mission-impossible-dead-reckoning-part-one-0-2000-0-3000-crop.jpg",
             "bg" : "assets/images/bg-movies/m18.jpg",
             "key": "avz06PDqDbM",
             "year": 2023,
@@ -753,7 +751,8 @@
             "rate": 8.9,
             "genres": [
                 "Action",
-                "Spy"
+                "Spy",
+                "Comedy"
             ],
             "synopsis": "Ethan Hunt and his IMF team race to stop a powerful artificial intelligence known as the Entity from threatening global security. Pursued by dangerous enemies, Ethan must track down a crucial key before it falls into the wrong hands.",
             "country": "United States",
@@ -784,14 +783,13 @@
         {
             "id": 19,
             "title": "Anyone But You",
-            "poster": "assets/images/poster-movies/19_poster anyone but you.jpeg",
-            "trailer": "assets/videos/trailer-movies/t19_aby-compress.mp4",
+            "poster": "https://m.media-amazon.com/images/M/MV5BOTdiMzFjNWQtZjgyMC00OGE3LThjMDgtMDg4OTRmYTY4NGI3XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
             "bg" : "assets/images/bg-movies/m19.webp",
             "key": "ESEc6W2h9_k",
             "year": 2023,
             "rating": "R",
             "duration": "1h 43m",
-            "rate": 8.9,
+            "rate": 6.1,
             "genres": [
                 "Romance",
                 "Comedy"
@@ -825,8 +823,7 @@
         {
             "id": 20,
             "title": "The Batman Part II",
-            "poster": "assets/images/poster-movies/20_poster tb2.jpg",
-            "trailer": "assets/videos/trailer-movies/t20_batman2-compress.mp4",
+            "poster": "https://a.ltrbxd.com/resized/film-poster/7/2/3/6/8/6/723686-the-batman-part-ii-0-2000-0-3000-crop.jpg",
             "bg" : "assets/images/bg-movies/m20.jpg",
             "key": "T7_zMl_ZhdQ",
             "year": 2026,
@@ -835,7 +832,8 @@
             "rate": 8.9,
             "genres": [
                 "Action",
-                "Crime"
+                "Crime",
+                "Drama"
             ],
             "synopsis": "Bruce Wayne continues his mission to protect Gotham City as Batman. Facing new dangers in a city plagued by crime and corruption, he must rely on his detective skills and determination to uncover the truth.",
             "country": "United States",
@@ -875,7 +873,7 @@
                 "Horror",
                 "Drama"
             ],
-            "thumbnail": "assets/images/poster-series/1_the last of us.webp",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BYWI3ODJlMzktY2U5NC00ZjdlLWE1MGItNWQxZDk3NWNjN2RhXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
             "bg" : "assets/images/bg-series/s1.jpg",
             "key": "_zHPsmXCjB0",
             "rate": 9.0,
@@ -889,24 +887,24 @@
                             "episode_number": 1,
                             "title": "When You're Lost in the Darkness",
                             "duration": "81 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=T+Eps+1",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s1.jpg",
+                            "video_url": "_zHPsmXCjB0"
                         },
                         {
                             "id": "e-002",
                             "episode_number": 2,
                             "title": "Infected",
                             "duration": "53 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=T+Eps+2",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s1.jpg",
+                            "video_url": "_zHPsmXCjB0"
                         },
                         {
                             "id": "e-003",
                             "episode_number": 3,
                             "title": "Long, Long Time",
                             "duration": "75 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=T+Eps+3",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s1.jpg",
+                            "video_url": "_zHPsmXCjB0"
                         }
                     ]
                 }
@@ -946,7 +944,7 @@
                 "Action",
                 "Drama"
             ],
-            "thumbnail": "assets/images/poster-series/2_arcane.webp",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BYjA2NzhlMDItNWRmZC00MzRjLWE3ZjAtZjBlZDAwOWY2ODdjXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
             "bg" : "assets/images/bg-series/s2.jpg",
             "key": "fXmAurh012s",
             "rate": 9.0,
@@ -960,24 +958,24 @@
                             "episode_number": 1,
                             "title": "Welcome to the Playground",
                             "duration": "43 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=A+Eps+1",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s2.jpg",
+                            "video_url": "fXmAurh012s"
                         },
                         {
                             "id": "e-005",
                             "episode_number": 2,
                             "title": "Some Mysteries Are Better Left Unsolved",
                             "duration": "41 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=A+Eps+2",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s2.jpg",
+                            "video_url": "fXmAurh012s"
                         },
                         {
                             "id": "e-006",
                             "episode_number": 3,
                             "title": "The Base Violence Necessary for Change",
                             "duration": "44 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=A+Eps+3",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s2.jpg",
+                            "video_url": "fXmAurh012s"
                         }
                     ]
                 }
@@ -1016,7 +1014,7 @@
                 "Comedy",
                 "Drama"
             ],
-            "thumbnail": "assets/images/poster-series/3_the bear.webp",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjk2NWI5OTctODcwYy00NGRmLWFmN2YtOTZiNzFiYjVlODBkXkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
             "bg" : "assets/images/bg-series/s3.jpg",
             "key": "gBmkI4jlaIo",
             "rate": 9.0,
@@ -1030,24 +1028,24 @@
                             "episode_number": 1,
                             "title": "System",
                             "duration": "27 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TB+Eps+1",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s3.jpg",
+                            "video_url": "gBmkI4jlaIo"
                         },
                         {
                             "id": "e-008",
                             "episode_number": 2,
                             "title": "Hands",
                             "duration": "29 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TB+Eps+2",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s3.jpg",
+                            "video_url": "gBmkI4jlaIo"
                         },
                         {
                             "id": "e-009",
                             "episode_number": 3,
                             "title": "Brigade",
                             "duration": "28 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TB+Eps+3",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s3.jpg",
+                            "video_url": "gBmkI4jlaIo"
                         }
                     ]
                 }
@@ -1086,10 +1084,10 @@
                 "Drama",
                 "Thriller"
             ],
-            "thumbnail": "assets/images/poster-series/4_zanjeerain.webp",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BNmZjY2Y3MzktOGU4Ni00ZTgyLTg5NWEtZDQ2NjYzNmRhMDc0XkEyXkFqcGc@._V1_QL75_UY562_CR35,0,380,562_.jpg",
             "bg" : "assets/images/bg-series/s4.jpg",
             "key": "EEGrcoGtReM",
-            "rate": 8.0,
+            "rate": 9.7,
             "rating": "TV-14",
             "seasons": [
                 {
@@ -1100,24 +1098,24 @@
                             "episode_number": 1,
                             "title": "Episode 1",
                             "duration": "45 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=Z+Eps+1",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s4.jpg",
+                            "video_url": "EEGrcoGtReM"
                         },
                         {
                             "id": "e-047",
                             "episode_number": 2,
                             "title": "Episode 2",
                             "duration": "45 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=Z+Eps+2",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s4.jpg",
+                            "video_url": "EEGrcoGtReM"
                         },
                         {
                             "id": "e-048",
                             "episode_number": 3,
                             "title": "Episode 3",
                             "duration": "45 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=Z+Eps+3",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s4.jpg",
+                            "video_url": "EEGrcoGtReM"
                         }
                     ]
                 }
@@ -1157,7 +1155,7 @@
                 "Action",
                 "Drama"
             ],
-            "thumbnail": "assets/images/poster-series/5_house of the dragon.jpg",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BOWU2ZDA0M2EtNWEyYy00MWUwLWI4NjAtYzkxMDFjYzZkNGFiXkEyXkFqcGc@._V1_QL75_UY562_CR35,0,380,562_.jpg",
             "bg" : "assets/images/bg-series/s5.jpg",
             "key": "0JlMjgqduVw",
             "rate": 9.0,
@@ -1171,24 +1169,24 @@
                             "episode_number": 1,
                             "title": "The Heirs of the Dragon",
                             "duration": "66 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=HOTD+Eps+1",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s5.jpg",
+                            "video_url": "0JlMjgqduVw"
                         },
                         {
                             "id": "e-014",
                             "episode_number": 2,
                             "title": "The Rogue Prince",
                             "duration": "54 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=HOTD+Eps+2",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s5.jpg",
+                            "video_url": "0JlMjgqduVw"
                         },
                         {
                             "id": "e-015",
                             "episode_number": 3,
                             "title": "Second of His Name",
                             "duration": "63 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=HOTD+Eps+3",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s5.jpg",
+                            "video_url": "0JlMjgqduVw"
                         }
                     ]
                 }
@@ -1228,7 +1226,7 @@
                 "Mystery",
                 "Fantasy"
             ],
-            "thumbnail": "assets/images/poster-series/6_wednesday.webp",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BY2E1NDI5OWEtODJmYi00Nzg2LWI4MjUtODFiMTU2YWViOTU3XkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
             "bg" : "assets/images/bg-series/s6.webp",
             "key": "03u4xyj0TH4",
             "rate": 9.0,
@@ -1242,24 +1240,24 @@
                             "episode_number": 1,
                             "title": "Wednesday's Child Is Full of Woe",
                             "duration": "60 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=W+Eps+1",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s6.webp",
+                            "video_url": "03u4xyj0TH4"
                         },
                         {
                             "id": "e-017",
                             "episode_number": 2,
                             "title": "Woe Is the Loneliest Number",
                             "duration": "50 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=W+Eps+2",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s6.webp",
+                            "video_url": "03u4xyj0TH4"
                         },
                         {
                             "id": "e-018",
                             "episode_number": 3,
                             "title": "Friend or Woe",
                             "duration": "47 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=W+Eps+3",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s6.webp",
+                            "video_url": "03u4xyj0TH4"
                         }
                     ]
                 }
@@ -1299,10 +1297,10 @@
                 "Drama",
                 "Thriller"
             ],
-            "thumbnail": "assets/images/poster-series/7_breakingbad.webp",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BMzU5ZGYzNmQtMTdhYy00OGRiLTg0NmQtYjVjNzliZTg1ZGE4XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
             "bg" : "assets/images/bg-series/s7.jpg",
             "key": "1JLUn2DFW4w",
-            "rate": 9.0,
+            "rate": 9.5,
             "rating": "R",
             "seasons": [
                 {
@@ -1313,24 +1311,24 @@
                             "episode_number": 1,
                             "title": "Pilot",
                             "duration": "58 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=BB+Eps+1",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s7.jpg",
+                            "video_url": "1JLUn2DFW4w"
                         },
                         {
                             "id": "e-020",
                             "episode_number": 2,
                             "title": "Cat's in the Bag...",
                             "duration": "48 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=BB+Eps+2",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s7.jpg",
+                            "video_url": "1JLUn2DFW4w"
                         },
                         {
                             "id": "e-021",
                             "episode_number": 3,
                             "title": "...And the Bag's in the River",
                             "duration": "48 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=BB+Eps+3",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s7.jpg",
+                            "video_url": "1JLUn2DFW4w"
                         }
                     ]
                 }
@@ -1370,7 +1368,7 @@
                 "Mystery",
                 "Drama"
             ],
-            "thumbnail": "assets/images/poster-series/8_sherlock.jpg",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BMjRhZDdjMDYtMTg5Yy00NGI4LWI3ZDgtYjNkNDc4MzJkNDRjXkEyXkFqcGc@._V1_QL75_UY562_CR22,0,380,562_.jpg",
             "bg" : "assets/images/bg-series/s8.jpg",
             "key": "rXMrTALO2ME",
             "rate": 9.0,
@@ -1384,24 +1382,24 @@
                             "episode_number": 1,
                             "title": "A Study in Pink",
                             "duration": "89 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=S+Eps+1",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s8.jpg",
+                            "video_url": "rXMrTALO2ME4"
                         },
                         {
                             "id": "e-023",
                             "episode_number": 2,
                             "title": "The Blind Banker",
                             "duration": "89 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=S+Eps+2",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s8.jpg",
+                            "video_url": "rXMrTALO2ME4"
                         },
                         {
                             "id": "e-024",
                             "episode_number": 3,
                             "title": "The Great Game",
                             "duration": "89 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=S+Eps+3",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s8.jpg",
+                            "video_url": "rXMrTALO2ME4"
                         }
                     ]
                 }
@@ -1441,7 +1439,7 @@
                 "Action",
                 "Adventure"
             ],
-            "thumbnail": "assets/images/poster-series/9_themandalorian.jpg",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BNjgxZGM0OWUtZGY1MS00MWRmLTk2N2ItYjQyZTI1OThlZDliXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
             "bg" : "assets/images/bg-series/s9.jpg",
             "key": "aOC8E8z_ifw",
             "rate": 9.0,
@@ -1455,24 +1453,24 @@
                             "episode_number": 1,
                             "title": "Chapter 1: The Mandalorian",
                             "duration": "40 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TM+Eps+1",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s9.jpg",
+                            "video_url": "aOC8E8z_ifw"
                         },
                         {
                             "id": "e-026",
                             "episode_number": 2,
                             "title": "Chapter 2: The Child",
                             "duration": "32 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TM+Eps+2",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s9.jpg",
+                            "video_url": "aOC8E8z_ifw"
                         },
                         {
                             "id": "e-027",
                             "episode_number": 3,
                             "title": "Chapter 3: The Sin",
                             "duration": "37 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TM+Eps+3",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s9.jpg",
+                            "video_url": "aOC8E8z_ifw"
                         }
                     ]
                 }
@@ -1512,7 +1510,7 @@
                 "Adventure",
                 "Action"
             ],
-            "thumbnail": "assets/images/poster-series/10_onepiece.webp",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BMTNjNGU4NTUtYmVjMy00YjRiLTkxMWUtNzZkMDNiYjZhNmViXkEyXkFqcGc@._V1_QL75_UY562_CR15,0,380,562_.jpg",
             "bg" : "assets/images/bg-series/s10.jpg",
             "key": "3Gmo0EXHyKg",
             "rate": 9.0,
@@ -1526,24 +1524,24 @@
                             "episode_number": 1,
                             "title": "I'm Luffy! The Man Who's Gonna Be King of the Pirates!",
                             "duration": "24 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=OP+Eps+1",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s10.jpg",
+                            "video_url": "3Gmo0EXHyKg"
                         },
                         {
                             "id": "e-029",
                             "episode_number": 2,
                             "title": "The Great Swordsman Appears! Pirate Hunter, Roronoa Zoro!",
                             "duration": "24 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=OP+Eps+2",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s10.jpg",
+                            "video_url": "3Gmo0EXHyKg"
                         },
                         {
                             "id": "e-030",
                             "episode_number": 3,
                             "title": "Morgan vs. Luffy! Who's the Mysterious Pretty Girl?",
                             "duration": "24 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=OP+Eps+3",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s10.jpg",
+                            "video_url": "3Gmo0EXHyKg"
                         }
                     ]
                 }
@@ -1582,7 +1580,7 @@
                 "Crime",
                 "Drama"
             ],
-            "thumbnail": "assets/images/poster-series/11_peaky blinders.jpg",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BOGM0NGY3ZmItOGE2ZC00OWIxLTk0N2EtZWY4Yzg3ZDlhNGI3XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
             "bg" : "assets/images/bg-series/s11.jpg",
             "key": "oVzVdvGIC7U",
             "rate": 9.0,
@@ -1596,24 +1594,24 @@
                             "episode_number": 1,
                             "title": "Episode 1",
                             "duration": "56 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=PB+Eps+1",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s11.jpg",
+                            "video_url": "oVzVdvGIC7U"
                         },
                         {
                             "id": "e-032",
                             "episode_number": 2,
                             "title": "Episode 2",
                             "duration": "58 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=PB+Eps+2",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s11.jpg",
+                            "video_url": "oVzVdvGIC7U"
                         },
                         {
                             "id": "e-033",
                             "episode_number": 3,
                             "title": "Episode 3",
                             "duration": "55 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=PB+Eps+3",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s11.jpg",
+                            "video_url": "oVzVdvGIC7U"
                         }
                     ]
                 }
@@ -1651,7 +1649,7 @@
             "genre": [
                 "Drama"
             ],
-            "thumbnail": "assets/images/poster-series/12_thequeen.jpg",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BMmRlNjQxNWQtMjk1OS00N2QxLTk0YWQtMzRhYjY5YTFhNjMxXkEyXkFqcGc@._V1_QL75_UX380_CR0,0,380,562_.jpg",
             "bg" : "assets/images/bg-series/s12.jpg",
             "key": "_H1G9BsxhDw",
             "rate": 8.0,
@@ -1665,24 +1663,24 @@
                             "episode_number": 1,
                             "title": "Openings",
                             "duration": "65 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TQG+Eps+1",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s12.jpg",
+                            "video_url": "_H1G9BsxhDw"
                         },
                         {
                             "id": "e-035",
                             "episode_number": 2,
                             "title": "Exchanges",
                             "duration": "65 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TQG+Eps+2",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s12.jpg",
+                            "video_url": "_H1G9BsxhDw"
                         },
                         {
                             "id": "e-036",
                             "episode_number": 3,
                             "title": "Doubled Pawns",
                             "duration": "66 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TQG+Eps+3",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s12.jpg",
+                            "video_url": "_H1G9BsxhDw"
                         }
                     ]
                 }
@@ -1722,7 +1720,7 @@
                 "Comedy",
                 "Drama"
             ],
-            "thumbnail": "assets/images/poster-series/13_theboys.jpg",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BZjU4OWNiYzQtMzc1NS00NjZlLTgyYTctZWY4ZmEzMTkxYjA4XkEyXkFqcGc@._V1_QL75_UX380_CR0,4,380,562_.jpg",
             "bg" : "assets/images/bg-series/s13.jpg",
             "key": "XNQbH1SDPRk",
             "rate": 9.0,
@@ -1736,24 +1734,24 @@
                             "episode_number": 1,
                             "title": "The Name of the Game",
                             "duration": "61 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TB+Eps+1",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s13.jpg",
+                            "video_url": "XNQbH1SDPRk"
                         },
                         {
                             "id": "e-038",
                             "episode_number": 2,
                             "title": "Cherry",
                             "duration": "57 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TB+Eps+2",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s13.jpg",
+                            "video_url": "XNQbH1SDPRk"
                         },
                         {
                             "id": "e-039",
                             "episode_number": 3,
                             "title": "Get Some",
                             "duration": "55 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=TB+Eps+3",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s13.jpg",
+                            "video_url": "XNQbH1SDPRk"
                         }
                     ]
                 }
@@ -1793,7 +1791,7 @@
                 "Adventure",
                 "Fantasy"
             ],
-            "thumbnail": "assets/images/poster-series/14_avatar.webp",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BMDMwMThjYWYtY2Q2OS00OGM2LTlkODQtNDJlZTZmMjAyYmFhXkEyXkFqcGc@._V1_QL75_UY562_CR1,0,380,562_.jpg",
             "bg" : "assets/images/bg-series/s14.jpg",
             "key": "7b20GRFZBFE",
             "rate": 9.0,
@@ -1807,24 +1805,24 @@
                             "episode_number": 1,
                             "title": "The Boy in the Iceberg",
                             "duration": "24 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ATLA+Eps+1",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s14.jpg",
+                            "video_url": "7b20GRFZBFE"
                         },
                         {
                             "id": "e-041",
                             "episode_number": 2,
                             "title": "The Avatar Returns",
                             "duration": "24 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ATLA+Eps+2",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s14.jpg",
+                            "video_url": "7b20GRFZBFE"
                         },
                         {
                             "id": "e-042",
                             "episode_number": 3,
                             "title": "The Southern Air Temple",
                             "duration": "24 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=ATLA+Eps+3",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s14.jpg",
+                            "video_url": "7b20GRFZBFE"
                         }
                     ]
                 }
@@ -1864,7 +1862,7 @@
                 "Action",
                 "Adventure"
             ],
-            "thumbnail": "assets/images/poster-series/15_fallout.jpg",
+            "thumbnail": "https://m.media-amazon.com/images/M/MV5BYzE1MTZmY2ItMTgxNi00OGU5LTk4NTItMmY2ODFhYzhjZjRkXkEyXkFqcGc@._V1_QL75_UX380_CR0,57,380,562_.jpg",
             "bg" : "assets/images/bg-series/s15.png",
             "key": "0kQ8i2FpRDk",
             "rate": 9.0,
@@ -1878,24 +1876,24 @@
                             "episode_number": 1,
                             "title": "The End",
                             "duration": "65 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=F+Eps+1",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s15.jpg",
+                            "video_url": "0kQ8i2FpRDk"
                         },
                         {
                             "id": "e-044",
                             "episode_number": 2,
                             "title": "The Target",
                             "duration": "55 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=F+Eps+2",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s15.jpg",
+                            "video_url": "0kQ8i2FpRDk"
                         },
                         {
                             "id": "e-045",
                             "episode_number": 3,
                             "title": "The Head",
                             "duration": "55 min",
-                            "thumbnail": "https://dummyimage.com/300x170/000/fff&text=F+Eps+3",
-                            "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+                            "thumbnail": "assets/images/bg-series/s15.jpg",
+                            "video_url": "0kQ8i2FpRDk"
                         }
                     ]
                 }

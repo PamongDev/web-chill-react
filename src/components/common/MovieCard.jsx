@@ -21,7 +21,7 @@ export default function MovieCard({ movie, disable=false, badge=true }) {
             <div className="movie-poster-wrap">
                 <img
                     className="movie-poster"
-                    src={`/${movie.poster}`}
+                    src={`${movie.poster}`}
                     alt={`${movie.title} poster`}
                     loading="lazy"
                 />
